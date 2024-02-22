@@ -18,8 +18,8 @@
 			margin: 0;
 		}
 		.leaflet-container {
-			height: 600px;
-			width: 1000px;
+			height: 800px;
+			width: 1200px;
 			max-width: 100%;
 			max-height: 100%;
 		}
@@ -33,26 +33,60 @@
 
 <script type="text/javascript">
 
-	const map = L.map('map', {
-		center: [-17, -67],
-		zoom: 3
-	});
+	var startTime = '2018-03-19T10:00:00';
+	var endTime = '2018-03-23T00:00:00';
+	var timeStep = 1000 * 60 * 60;
+	var range = false;
+    var sliderControl = null;
+
+
 
 //	const wmsLayer = L.tileLayer.wms('http://ows.mundialis.de/services/service?', {
 //		layers: 'OSM-WMS'
 //	}).addTo(map);
-	
+
+
 	var OpenStreetMap_Mapnik = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		maxZoom: 19,
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-	}).addTo(map);
-		
+	});
+	//map.addLayer(OpenStreetMap_Mapnik)
+	
+	const map = L.map('map', {
+		center: [33, -89],
+		zoom: 7,
+		layers: OpenStreetMap_Mapnik
+	});
+	
 	const wmsLayer2 = L.tileLayer.wms('https://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r-t.cgi?', {
 		layers: 'nexrad-n0r-wmst',
 		format: 'image/png',
 		transparent: true,
+		time: startTime,
 		opacity: 0.6
-	}).addTo(map);
+	});
+	map.addLayer(wmsLayer2)
+	
+	// Creating scale control
+	var scale = L.control.scale();
+	scale.addTo(map);
+	
+	 // Initialize slider options
+//	sliderControl = L.control.sliderControl({
+//		position: "topright",
+//		layer: wmsLayer2,
+//		startTime: startTime, 
+//		endTime: endTime,
+//		timeStep: timeStep,
+//		range: range 
+ //    });
+	  
+    //Make sure to add the slider to the map 
+  //  Map.addControl(sliderControl);
+
+    //And initialize the slider
+//    sliderControl.startSlider();
+	
+
 
 </script>
 
