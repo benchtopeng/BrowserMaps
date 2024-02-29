@@ -5,12 +5,13 @@
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<title>WMS example - Leaflet</title>
+	<title>WMS Viewer (Chip)</title>
 	
 	<link rel="shortcut icon" type="image/x-icon" href="https://leafletjs.com/examples/wms/docs/images/favicon.ico">
 
     <link rel="stylesheet" href="./WMS-Leaflet3_files/leaflet.css">
     <script src="./WMS-Leaflet3_files/leaflet.js.download"></script>
+
 
 	<style>
 		html, body {
@@ -29,96 +30,191 @@
 </head>
 <body>
 
-<div id="map" class="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" style="position: relative;">
-	<div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);">
-		<div class="leaflet-pane leaflet-tile-pane">
-			<div class="leaflet-layer " style="z-index: 1; opacity: 1;">
-				<div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(0px, 0px, 0px) scale(1);">
+	<div id="map" class="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" style="position: relative;">
+		<div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);">
+			<div class="leaflet-pane leaflet-tile-pane">
+				<div class="leaflet-layer " style="z-index: 1; opacity: 1;">
+					<div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 18; transform: translate3d(0px, 0px, 0px) scale(1);">
+					</div>
+				</div>
+			</div>
+			<div class="leaflet-pane leaflet-overlay-pane">
+			</div>
+			<div class="leaflet-pane leaflet-shadow-pane">
+			</div>
+			<div class="leaflet-pane leaflet-marker-pane">
+			</div>
+			<div class="leaflet-pane leaflet-tooltip-pane">
+			</div>
+			<div class="leaflet-pane leaflet-popup-pane">
+			</div>
+			<div class="leaflet-proxy leaflet-zoom-animated">
+			</div>
+		</div>
+		<div class="leaflet-control-container">
+			<div class="leaflet-top leaflet-left">
+				<div class="leaflet-control-zoom leaflet-bar leaflet-control">
+					<a class="leaflet-control-zoom-in" href="https://leafletjs.com/examples/wms/wms-example2.html#" title="Zoom in" role="button" aria-label="Zoom in" aria-disabled="false">
+						<span aria-hidden="true">+</span>
+					</a>
+					<a class="leaflet-control-zoom-out" href="https://leafletjs.com/examples/wms/wms-example2.html#" title="Zoom out" role="button" aria-label="Zoom out" aria-disabled="false">
+						<span aria-hidden="true">−</span>
+					</a>
+				</div>
+			</div>
+			<div class="leaflet-top leaflet-right">
+			</div>
+			<div class="leaflet-bottom leaflet-left">
+			
+			<div class='leaflet-control-zoom leaflet-bar row' id='dateTimeBar'>
+				<div class='col-xs-4' id='dateButtonCol'></div>
+				<div class='col-xs-8' id="datetimepickercol">
+					<div class='input-group date' id='datetimepicker'>
+						<input readonly type='text' class="form-control" id="datetimeform-control" />
+						<!-- <span class="input-group-addon" id="datetimepicker-calendaricon">
+							<span class="glyphicon glyphicon-calendar"></span>
+						</span> -->
+					</div>
+				</div>
+			</div>		
+			
+			
+			
+			
+			</div>
+			<div class="leaflet-bottom leaflet-right">
+				<div class="leaflet-control-attribution leaflet-control">
+					<a href="https://leafletjs.com/" title="A JavaScript library for interactive maps">
+					<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" class="leaflet-attribution-flag">
+						<path fill="#4C7BE1" d="M0 0h12v4H0z"></path>
+						<path fill="#FFD500" d="M0 4h12v3H0z"></path>
+						<path fill="#E0BC00" d="M0 7h12v1H0z"></path>
+					</svg>
+					Leaflet</a>
 				</div>
 			</div>
 		</div>
-		<div class="leaflet-pane leaflet-overlay-pane"></div>
-		<div class="leaflet-pane leaflet-shadow-pane"></div>
-		<div class="leaflet-pane leaflet-marker-pane"></div>
-		<div class="leaflet-pane leaflet-tooltip-pane"></div>
-		<div class="leaflet-pane leaflet-popup-pane"></div>
-		<div class="leaflet-proxy leaflet-zoom-animated"></div>
 	</div>
-	<div class="leaflet-control-container">
-		<div class="leaflet-top leaflet-left">
-			<div class="leaflet-control-zoom leaflet-bar leaflet-control">
-				<a class="leaflet-control-zoom-in" href="https://leafletjs.com/examples/wms/wms-example2.html#" title="Zoom in" role="button" aria-label="Zoom in" aria-disabled="false"><span aria-hidden="true">+</span></a>
-				<a class="leaflet-control-zoom-out" href="https://leafletjs.com/examples/wms/wms-example2.html#" title="Zoom out" role="button" aria-label="Zoom out" aria-disabled="false"><span aria-hidden="true">−</span></a>
-			</div>
-		</div>
-		<div class="leaflet-top leaflet-right"></div>
-		<div class="leaflet-bottom leaflet-left"></div>
-		<div class="leaflet-bottom leaflet-right">
-			<div class="leaflet-control-attribution leaflet-control">
-				<a href="https://leafletjs.com/" title="A JavaScript library for interactive maps"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" class="leaflet-attribution-flag"><path fill="#4C7BE1" d="M0 0h12v4H0z"></path><path fill="#FFD500" d="M0 4h12v3H0z"></path><path fill="#E0BC00" d="M0 7h12v1H0z"></path></svg> Leaflet</a>
-			</div>
-		</div>
-	</div>
-</div>
-
-<script type="text/javascript">
-
-	var startTime = '2018-03-19T10:00:00';
-	var endTime = '2018-03-23T00:00:00';
-	var timeStep = 1000 * 60 * 60;
-	var range = false;
-    var sliderControl = null;
-
-
-
-//	const wmsLayer = L.tileLayer.wms('http://ows.mundialis.de/services/service?', {
-//		layers: 'OSM-WMS'
-//	}).addTo(map);
-
-
-	var OpenStreetMap_Mapnik = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-	});
-	//map.addLayer(OpenStreetMap_Mapnik)
 	
-	const map = L.map('map', {
-		center: [33, -89],
-		zoom: 7,
-		layers: OpenStreetMap_Mapnik
-	});
-	
-	const wmsLayer2 = L.tileLayer.wms('https://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r-t.cgi?', {
-		layers: 'nexrad-n0r-wmst',
-		format: 'image/png',
-		transparent: true,
-		time: startTime,
-		opacity: 0.6
-	});
-	map.addLayer(wmsLayer2)
-	
-	// Creating scale control
-	var scale = L.control.scale();
-	scale.addTo(map);
-	
-	 // Initialize slider options
-//	sliderControl = L.control.sliderControl({
-//		position: "topright",
-//		layer: wmsLayer2,
-//		startTime: startTime, 
-//		endTime: endTime,
-//		timeStep: timeStep,
-//		range: range 
- //    });
-	  
-    //Make sure to add the slider to the map 
-  //  Map.addControl(sliderControl);
+	<script type="text/javascript">
+		var WMSVIEWER_NUM_MAPS_INITIAL = 2;
+		//if (isSmallScreen()) WMSVIEWER_NUM_MAPS_INITIAL = 1;
 
-    //And initialize the slider
-//    sliderControl.startSlider();
-	
+		var WMSVIEWER_NUM_MAPS_MAX = 4;
+		var WMSVIEWER_PUBLIC_MODE = true;
+		var DEFAULT_MAP_CENTER = [33.0, -89];
+		var DEFAULT_MAP_ZOOM = 7;
+		var DEFAULT_SHOW_LEGENDS = WMSVIEWER_NUM_MAPS_INITIAL > 1;
+
+		var DEFAULT_LAYERS = [
+			"NOAA Radar Something",
+			"Infrasound Something"];
+
+		//if (!IGNORE_MAPBOX_LAYERS) {
+		//	DEFAULT_LAYERS[0] = ['Aerial']
+		//	DEFAULT_PUBLIC_LAYERS[0] = ['Aerial']
+		//}
+		var DEFAULT_DATETIME = '2018-03-19T10:00:00';
+		var URLLayers = [];
+
+		// check if URL contains parameters, e.g., go.html?N=3&DUMMY=23
+		console.log("location = " + location);
+		console.log("location.search = " + location.search);
+		if (location.search) {
+			var parameters = location.search.substring(1).split("&");
+			for (var iparam = 0; iparam < parameters.length; ++iparam) {
+				var parsed = parameters[iparam].split("=");
+				console.log("Parsed " + iparam + ": " + parsed);
+				if (parsed.length == 2) {
+					var param = parsed[0].toLowerCase(),
+						value = parsed[1];
+					if (param === 'n') {
+						var nmaps = Number(value);
+						if (isNaN(nmaps)) console.log("Invalid number of maps: " + nmaps);
+						else WMSVIEWER_NUM_MAPS_INITIAL = Math.floor(nmaps);
+					} else if (param === 'lat') {
+						var lat = Number(value);
+						if (isNaN(lat)) console.log("Invalid latitude: " + value);
+						else DEFAULT_MAP_CENTER[0] = lat;
+					} else if (param === 'lng') {
+						var lng = Number(value);
+						if (isNaN(lng)) console.log("Invalid longitude: " + value);
+						else DEFAULT_MAP_CENTER[1] = lng;
+					} else if (param === 'zoom') {
+						var zoom = Number(value);
+						if (isNaN(zoom)) console.log("Invalid zoom: " + value);
+						else DEFAULT_MAP_ZOOM = zoom;
+					} else if (param === 'legends') {
+						DEFAULT_SHOW_LEGENDS = value.toLowerCase() === 'true';
+					} else if (param === 'datetime') {
+						DEFAULT_DATETIME = value;
+					} else if (param === 'maps') {
+						var layers = value.split('%20').join(' ').split(";"); // replaces '%20' with ' ' then splits at ';'
+						for (var i in layers) {
+							if (i < DEFAULT_LAYERS.length) DEFAULT_LAYERS[i] = layers[i];
+							else break;
+						};
+						//console.log(value);
+						//console.log(layers);
+						//console.log(DEFAULT_LAYERS);
+					} else if (param === 'params') {
+						URLLayers = URLLayers.concat([value.split(";")[0]]);
+					} else console.log("Unrecognized parameter: " + param + ", with value: " + value);
+					continue;
+				} else {
+					console.log('Bad param (= not found): ' + parameters[iparam]);
+				};
+
+			};
+
+		}
+		if (WMSVIEWER_NUM_MAPS_INITIAL < 1) WMSVIEWER_NUM_MAPS_INITIAL = 1;
+		if (WMSVIEWER_NUM_MAPS_INITIAL > WMSVIEWER_NUM_MAPS_MAX) WMSVIEWER_NUM_MAPS_INITIAL = WMSVIEWER_NUM_MAPS_MAX;
+	<!-- /script> -->
+
+	<!-- script type="text/javascript" --> 
+
+		//var startTime = '2018-03-19T10:00:00';
+		var startTime = DEFAULT_DATETIME;
+		var endTime = '2018-03-23T00:00:00';
+		var timeStep = 1000 * 60 * 60;
+		var range = false;
+		var sliderControl = null;
+		
+
+	//	const wmsLayer = L.tileLayer.wms('http://ows.mundialis.de/services/service?', {
+	//		layers: 'OSM-WMS'
+	//	}).addTo(map);
 
 
-</script>
+		var OpenStreetMap_Mapnik = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+		});
+		//map.addLayer(OpenStreetMap_Mapnik)
+		
+		const map = L.map('map', {
+			center: DEFAULT_MAP_CENTER,
+			zoom: DEFAULT_MAP_ZOOM,
+			zoomControl: true,
+			layers: OpenStreetMap_Mapnik
+		});
+		
+		const wmsLayer2 = L.tileLayer.wms('https://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r-t.cgi?', {
+			layers: 'nexrad-n0r-wmst',
+			format: 'image/png',
+			transparent: true,
+			time: startTime,
+			opacity: 0.6
+		});
+		map.addLayer(wmsLayer2)
+		
+		// Creating scale control
+		var scale = L.control.scale();
+		scale.addTo(map);
+
+
+
+	</script>
 
 
 
