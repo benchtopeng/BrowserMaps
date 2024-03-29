@@ -1,35 +1,155 @@
 <!DOCTYPE html>
-<!-- saved from url=(0052)https://leafletjs.com/examples/wms/wms-example2.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<!--<base target="_top">--><base href="." target="_top">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<title>WMS Viewer (Chip)</title>
 	
+	<!--
 	<link rel="shortcut icon" type="image/x-icon" href="https://leafletjs.com/examples/wms/docs/images/favicon.ico">
-
-    <link rel="stylesheet" href="./WMS-Leaflet3_files/leaflet.css">
+    <link rel="stylesheet" href="./WMS-Leaflet3_files/leaflet.css">	
     <script src="./WMS-Leaflet3_files/leaflet.js.download"></script>
+	-->
+	
+	<link rel="stylesheet" href="./assets/style/bootstrap.min.css" />
+	<link rel="stylesheet" href="./assets/style/bootstrap-datetimepicker.css" />
+	<link rel="stylesheet" href="./assets/style/main.css" />
+	
+	<script src="./assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="./assets/js/moment.js"></script>
+	<script type="text/javascript" src="./assets/js/moment-timezone-with-data.js"></script>
+	<script type="text/javascript" src="./assets/js/collapse.js"></script>
+	<script type="text/javascript" src="./assets/js/transition.js"></script>
+	<script type="text/javascript" src="./assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./assets/js/bootstrap-datetimepicker.js"></script>
 
+	<link rel="stylesheet" href="./assets/style/jsoneditor.min.css">
+	<script type="text/javascript" src="./assets/js/jsoneditor.min.js"></script>
+	
+	<style type="text/css">
+		html,
+		body {
+			width: 99.7%;
+			height: 99.5%;
+			margin: 0.02em 0 0 0;
+		}
+		/*#containerT {float: left;  width: 100%; height: 3%; /* padding:  20px 20px 20px 20px* /} */
+		/*#containerT .slider { width: 10%; height: 10%; } */
 
-	<style>
-		html, body {
-			height: 100%;
-			margin: 0;
+		#containerL,
+		#containerR {
+			width: 49.6%;
+			height: 99.5%;
 		}
-		.leaflet-container {
-			height: 800px;
-			width: 1200px;
-			max-width: 100%;
-			max-height: 100%;
+
+		#containerL {
+			float: left;
+			/*border-right:1px solid #313030;  border-top:1px solid #313030;*/
 		}
+
+		#containerR {
+			float: right;
+			/*border-left:1px solid #313030;  border-top:1px solid #313030;*/
+		}
+		/*
+        #containerL .map { width: 100%; height: 50%; border-bottom:1px solid #313030; }
+        #containerR .map { width: 100%; height: 50%; border-bottom:1px solid #313030; }
+        #containerL .map { width: 100%; height: 100%; border-bottom:1px solid #313030; }
+        #containerR .map { width: 100%; height: 100%; border-bottom:1px solid #313030; }
+        */
+
+		div.line_separator {
+			height: 1px;
+			background: #717171;
+			border-bottom: 1px solid #313030;
+		}
+
+		.titlecaption {
+			padding: 3px 3px;
+			font: 14px/16px Arial, Helvetica, sans-serif;
+			background: white;
+			background: rgba(255, 255, 255, /*0.9*/
+			1.0);
+			box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+			border-radius: 5px;
+		}
+
+		.titlecaption h4 {
+			margin: 0 0 0px;
+			color: /*#777*/
+			black;
+		}
+		
+		
+		/* .leaflet-container {  */
+		/*	width: 99.5%;   */
+		/*	height: 99.5%;  */
+		/* }  */
+
 	</style>
 
 	
 </head>
 <body>
 
+	<!-- detect small screens (e.g., old iPhones) -->
+	<script type="text/javascript">
+		function isSmallScreen() {
+			return screen.width < 500 || screen.height < 500
+		}
+	</script>
+	
+	<!--div class="line_separator"></div-->
+	<div id="containerL">
+		<!--div id="map_0" class="map"></div-->
+		<!--div id="map_2" class="map"></div-->
+	</div>
+	<div id="containerR">
+		<!--div id="map_1" class="map"></div-->
+		<!--div id="map_3" class="map"></div-->
+	</div>
+
+	<div class='leaflet-control-zoom leaflet-bar row' id='dateTimeBar'>
+		<div class='col-xs-4' id='dateButtonCol'></div>
+		<div class='col-xs-8' id="datetimepickercol">
+			<div class='input-group date' id='datetimepicker'>
+				<input readonly type='text' class="form-control" id="datetimeform-control" />
+				<!-- <span class="input-group-addon" id="datetimepicker-calendaricon">
+					<span class="glyphicon glyphicon-calendar"></span>
+				</span> -->
+			</div>
+		</div>
+	</div>
+	
+	<div id="geocode-selector"></div>
+	
+	<!-- core Leaflet --> 
+	<link rel="stylesheet" href="./dependencies/leaflet-0.7.3/leaflet.css" />
+	<script src="./dependencies/leaflet-0.7.3/leaflet-src.js"></script>
+		
+
+	<!-- Leaflet plugins -->
+	<!--    sync maps -->
+	<script src="./dependencies/Leaflet.Sync-master/L.Map.Sync.js"></script>
+	
+
+	<!--    track mouse lat/lon  -->
+	<link rel="stylesheet" href="./dependencies/Leaflet.MousePosition-master/src/L.Control.MousePosition.css" />
+	<script src="./dependencies/Leaflet.MousePosition-master/src/L.Control.MousePosition.js"></script>
+	
+	<!--   easy buttons -->
+	<link href="./assets/fonts/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" />
+	<script src="./dependencies/Leaflet.EasyButton-master/easy-button.js"></script>
+	
+	<!--    sidebar control  -->
+	<link rel="stylesheet" href="./dependencies/leaflet-sidebar-master/src/L.Control.Sidebar.css" />
+	<script src="./dependencies/leaflet-sidebar-master/src/L.Control.Sidebar.js"></script>
+	
+<!--
 	<div id="map" class="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" style="position: relative;">
 		<div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);">
 			<div class="leaflet-pane leaflet-tile-pane">
@@ -65,25 +185,22 @@
 			<div class="leaflet-top leaflet-right">
 			</div>
 			<div class="leaflet-bottom leaflet-left">
-			
-			<div class='leaflet-control-zoom leaflet-bar row' id='dateTimeBar'>
-				<div class='col-xs-4' id='dateButtonCol'></div>
-				<div class='col-xs-8' id="datetimepickercol">
-					<div class='input-group date' id='datetimepicker'>
-						<input readonly type='text' class="form-control" id="datetimeform-control" />
-						<!-- <span class="input-group-addon" id="datetimepicker-calendaricon">
-							<span class="glyphicon glyphicon-calendar"></span>
-						</span> -->
+				<div class='leaflet-control-zoom leaflet-bar row' id='dateTimeBar'>
+				
+					<div class='col-xs-4' id='dateButtonCol'></div>
+					<div class='col-xs-8' id="datetimepickercol">
+						<div class='input-group date' id='datetimepicker'>
+							<input readonly type='text' class="form-control" id="datetimeform-control" />
+							<!-- <span class="input-group-addon" id="datetimepicker-calendaricon">
+								<span class="glyphicon glyphicon-calendar"></span>
+							</span> -->
+						</div>
 					</div>
-				</div>
-			</div>		
-			
-			
-			
-			
+				</div>		
 			</div>
 			<div class="leaflet-bottom leaflet-right">
 				<div class="leaflet-control-attribution leaflet-control">
+				<!--
 					<a href="https://leafletjs.com/" title="A JavaScript library for interactive maps">
 					<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" class="leaflet-attribution-flag">
 						<path fill="#4C7BE1" d="M0 0h12v4H0z"></path>
@@ -91,47 +208,65 @@
 						<path fill="#E0BC00" d="M0 7h12v1H0z"></path>
 					</svg>
 					Leaflet</a>
+				-->
 				</div>
+				
 			</div>
 		</div>
 	</div>
 	
+	
 	<script type="text/javascript">
-		var WMSVIEWER_NUM_MAPS_INITIAL = 2;
-		//if (isSmallScreen()) WMSVIEWER_NUM_MAPS_INITIAL = 1;
+		var GEOWATCH_NUM_MAPS_INITIAL = 1;  //Changed from 2 by Chip
+		//if (isSmallScreen()) GEOWATCH_NUM_MAPS_INITIAL = 1;
 
-		var WMSVIEWER_NUM_MAPS_MAX = 4;
-		var WMSVIEWER_PUBLIC_MODE = true;
+		var GEOWATCH_NUM_MAPS_MAX = 4;
+		var GEOWATCH_PUBLIC_MODE = true;
 		var DEFAULT_MAP_CENTER = [33.0, -89];
 		var DEFAULT_MAP_ZOOM = 7;
-		var DEFAULT_SHOW_LEGENDS = WMSVIEWER_NUM_MAPS_INITIAL > 1;
-
+		var IGNORE_MAPBOX_LAYERS = false;
+		var DEFAULT_SHOW_STREETS = !IGNORE_MAPBOX_LAYERS;
+		var DEFAULT_SHOW_HILLSHADING = true;
+		var DEFAULT_SHOW_ADVANCED_LAYERS = false;
+		var DEFAULT_SHOW_LEGENDS = GEOWATCH_NUM_MAPS_INITIAL > 1;
 		var DEFAULT_LAYERS = [
-			"NOAA Radar Something",
-			"Infrasound Something"];
+			"(CUI) Volumetric Soil Moisture 0-10cm, 10km (LIS72)",
+			"(CUI) Volumetric Soil Moisture, 30m GeoWATCH (from LIS/GALWEM)",
+			"(CUI) TWI, 30m (ROI/Terrain Tiles)",
+			"(CUI) USDA Soil Class, 30m (SSURGO/STATSGO/Finland/Sweden/VISNAV/LIS72)"];
+			
+		var DEFAULT_PUBLIC_LAYERS = [
+			"NEXRAD Radar (nexrad-n0r-wmst)",
+			"(U) Volumetric Soil Moisture 0-10cm, 10km (LIS72)",
+			"(U) Volumetric Soil Moisture, 30m GeoWATCH (from LIS/LIS3H)",
+			"(U) TWI, 30m (Terrain Tiles)",
+			"(U) USDA Soil Class, 30m (SSURGO/STATSGO/LIS72)"];
 
-		//if (!IGNORE_MAPBOX_LAYERS) {
-		//	DEFAULT_LAYERS[0] = ['Aerial']
-		//	DEFAULT_PUBLIC_LAYERS[0] = ['Aerial']
-		//}
-		var DEFAULT_DATETIME = '2018-03-19T10:00:00';
+		//var DEFAULT_LAYERS = [
+		//	"NOAA Radar Something",
+		//	"Infrasound Something"];
+
+		if (!IGNORE_MAPBOX_LAYERS) {
+			DEFAULT_LAYERS[0] = ['Aerial']
+			DEFAULT_PUBLIC_LAYERS[0] = ['Aerial']
+		}
+		var DEFAULT_DATETIME = '2018-03-19T18:00:00Z';
 		var URLLayers = [];
 
 		// check if URL contains parameters, e.g., go.html?N=3&DUMMY=23
-		console.log("location = " + location);
-		console.log("location.search = " + location.search);
+		console.log("WMS_Leaflet3.html: Option string from URL = " + location.search);
 		if (location.search) {
 			var parameters = location.search.substring(1).split("&");
 			for (var iparam = 0; iparam < parameters.length; ++iparam) {
 				var parsed = parameters[iparam].split("=");
-				console.log("Parsed " + iparam + ": " + parsed);
+				console.log("WMS_Leaflet3.html: Parsed " + iparam + ": " + parsed);
 				if (parsed.length == 2) {
 					var param = parsed[0].toLowerCase(),
 						value = parsed[1];
 					if (param === 'n') {
 						var nmaps = Number(value);
 						if (isNaN(nmaps)) console.log("Invalid number of maps: " + nmaps);
-						else WMSVIEWER_NUM_MAPS_INITIAL = Math.floor(nmaps);
+						else GEOWATCH_NUM_MAPS_INITIAL = Math.floor(nmaps);
 					} else if (param === 'lat') {
 						var lat = Number(value);
 						if (isNaN(lat)) console.log("Invalid latitude: " + value);
@@ -166,15 +301,16 @@
 				};
 
 			};
-
 		}
-		if (WMSVIEWER_NUM_MAPS_INITIAL < 1) WMSVIEWER_NUM_MAPS_INITIAL = 1;
-		if (WMSVIEWER_NUM_MAPS_INITIAL > WMSVIEWER_NUM_MAPS_MAX) WMSVIEWER_NUM_MAPS_INITIAL = WMSVIEWER_NUM_MAPS_MAX;
-	<!-- /script> -->
+		if (GEOWATCH_NUM_MAPS_INITIAL < 1) GEOWATCH_NUM_MAPS_INITIAL = 1;
+		if (GEOWATCH_NUM_MAPS_INITIAL > GEOWATCH_NUM_MAPS_MAX) GEOWATCH_NUM_MAPS_INITIAL = GEOWATCH_NUM_MAPS_MAX;
+	</script>
 
-	<!-- script type="text/javascript" --> 
+	<script type="text/javascript"> 
 
-		//var startTime = '2018-03-19T10:00:00';
+/* uncomment this to make the maps work in the old school way
+
+		//var startTime = '2018-03-19T10:00:00Z';
 		var startTime = DEFAULT_DATETIME;
 		var endTime = '2018-03-23T00:00:00';
 		var timeStep = 1000 * 60 * 60;
@@ -212,12 +348,30 @@
 		var scale = L.control.scale();
 		scale.addTo(map);
 
-
+		console.log("WMS-Leaflet3: layers added to map")
+		
+*/
 
 	</script>
 
 
 
 
+	<script type="text/javascript" src="./components/dateChanger.js"></script>
+	<script type="text/javascript" src="./components/layerChanger.js"></script>
+	<script type="text/javascript" src="./components/maps.js"></script>
+	<!-- <script type="text/javascript" src="./components/popups.js"></script> -->
+	<script type="text/javascript" src="./components/sidebars/addLayerSidebar/addLayerSidebar.js"></script>
+	<!-- <script type="text/javascript" src="./components/sidebars/addLayerSidebar/soilMoistureDownscaling.js"></script> -->
+	<!-- <script type="text/javascript" src="./components/sidebars/addLayerSidebar/arithmetic.js"></script> -->
+	<!-- <script type="text/javascript" src="./components/sidebars/addLayerSidebar/absoluteTemporalStatistics.js"></script> -->
+	<!-- <script type="text/javascript" src="./components/sidebars/addLayerSidebar/relativeTemporalStatistics.js"></script> -->
+	<!-- <script type="text/javascript" src="./components/sidebars/addLayerSidebar/relativeTemporalStatisticsSoilStrength.js"></script> -->
+	<!-- <script type="text/javascript" src="./components/sidebars/addLayerSidebar/spatialConvolution.js"></script> -->
+	<script type="text/javascript" src="./components/sidebars/addLayerSidebar/colormap.js"></script>
+	<!-- <script type="text/javascript" src="./components/cui_page/cui.js"></script> -->
 
-</body></html>
+
+
+</body>
+</html>

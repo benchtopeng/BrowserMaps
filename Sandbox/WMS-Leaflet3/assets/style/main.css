@@ -1,0 +1,83 @@
+/* #datetimepicker-calendaricon, */
+#datetimeform-control {
+  font-size: 14px;
+  font-weight: bold;
+  background-color: white;
+  border: 0px;
+  text-align: center;
+  height: 30px;
+  padding-left: 2px;
+  padding-right: 2px;
+
+  /* Because calendar glyphicon is hidden, enable the form-control pointer */
+  cursor: pointer;
+  background: transparent;
+}
+
+/* Hide the calendar glyphicon for now */
+#datetimepicker-calendaricon {
+  display: none;
+  width: 0px;
+}
+#datetimepicker {
+  width: 100%;
+}
+
+#dateButtonCol,
+#datetimepickercol {
+  padding-left: 0px;
+  height: 30px;
+}
+
+#hourViewHeaderPrev,
+#hourViewHeaderNext {
+  display: none;
+}
+.bootstrap-datetimepicker-widget.usetwentyfour td.hour:after {
+  content: "h";
+}
+.remove {
+  display: none;
+}
+#hourViewHeaderPrev,
+#hourViewHeaderNext {
+  display: table-cell;
+}
+textarea,
+input,
+select {
+  width: inherit;
+  line-height: 1;
+  resize: none;
+  white-space: nowrap;
+}
+.no-padding-left {
+  padding-left: 0px;
+}
+.no-padding-right {
+  padding-right: 0px;
+}
+.margin-minus-ten {
+  margin-left: -10%;
+}
+.margin-minus-five {
+  margin-left: -5%;
+}
+.padding {
+  padding-top: 15px;
+}
+.w-25 {
+  width: 25%;
+}
+.w-50 {
+  width: 50%;
+}
+.w-75 {
+  width: 75%;
+}
+.w-90 {
+  width: 90%;
+}
+.w-100 {
+  width: 100%;
+}
