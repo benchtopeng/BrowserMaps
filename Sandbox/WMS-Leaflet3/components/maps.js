@@ -2206,13 +2206,14 @@ GEOWATCH_JSON_MAP_DATA_CREATED = $.getJSON(main_map_json_file)
   })
   .fail(function(data) {
 	  */
-  
+  //function(data) {
+	  {
 	console.log('maps.js: Warning: Could not get JSON GeoWATCH map layer specs from http GET at: ' + main_map_json_file + ".  Proceeding with defaults...");
 	
 	//console.log(data)
 
 	MAIN_GEOWATCH_LAYER_INFO = DEFAULT_MAIN_GEOWATCH_LAYER_INFO;
-	data = MAIN_GEOWATCH_LAYER_INFO;
+	var data = MAIN_GEOWATCH_LAYER_INFO;
 	//console.log("maps.js: new json = " + MAIN_GEOWATCH_LAYER_INFO);
 	//console.log("maps.js: MAIN_GEOWATCH_LAYER_INFO.default_time = " + MAIN_GEOWATCH_LAYER_INFO.default_time);
 
@@ -2243,4 +2244,4 @@ GEOWATCH_JSON_MAP_DATA_CREATED = $.getJSON(main_map_json_file)
 	
 	
 //  });
-
+  }
