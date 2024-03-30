@@ -172,7 +172,7 @@ L.Control.LayerChanger = L.Control.extend({
 		
 		//prepare it to add a radar layer as the default
 		keepPreviousSelection = true;
-		previouslySelectedLayerName = "CONUS NEXRAD Base Reflectivity (N0R)";
+		previouslySelectedLayerName = "CONUS NEXRAD Base Reflectivity (N0Q)";
 	}
 		
 
