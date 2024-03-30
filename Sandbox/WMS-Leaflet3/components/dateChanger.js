@@ -26,28 +26,42 @@ L.Control.DateChanger = L.Control.extend({
     maps: undefined,
 
     dayUpIcon: 'fa-step-forward',
-    dayUpTitle: 'Advance +1 time interval',
+    dayUpTitle: 'Advance + Minutes',
     dayUpText: '',
     dayUpFn: function(e) {
       alert('dayUpFn callback not defined');
     },
 
     dayDownIcon: 'fa-step-backward',
-    dayDownTitle: 'Advance -1 time interval',
+    dayDownTitle: 'Advance - Minutes',
     dayDownText: '',
     dayDownFn: function(e) {
       alert('dayDownFn callback not defined');
     },
 
     monthUpIcon: 'fa-fast-forward',
-    monthUpTitle: 'Advance +8 time intervals',
+    monthUpTitle: 'Advance + Hours',
     monthUpText: '',
     monthUpFn: function(e) {
       alert('monthUpFn callback not defined');
     },
 
     monthDownIcon: 'fa-fast-backward',
-    monthDownTitle: 'Advance -8 time intervals',
+    monthDownTitle: 'Advance - Hours',
+    monthDownText: '',
+    monthDownFn: function(e) {
+      alert('monthDownFn callback not defined');
+    },
+
+    monthUpIcon: 'fa-fast-forward',
+    monthUpTitle: 'Advance + Hours',
+    monthUpText: '',
+    monthUpFn: function(e) {
+      alert('monthUpFn callback not defined');
+    },
+
+    monthDownIcon: 'fa-fast-backward',
+    monthDownTitle: 'Advance - Hours',
     monthDownText: '',
     monthDownFn: function(e) {
       alert('monthDownFn callback not defined');
@@ -58,14 +72,15 @@ L.Control.DateChanger = L.Control.extend({
 
   // set displayed date (if in the available list)
   setDateAndTime: function(newDateStr) {
-    // console.log('DEBUG: setDateAndTime called for ' + newDateStr);
+    //console.log('dateChanger: setDateAndTime called for ' + newDateStr);
     var newDate = moment(newDateStr);
     var changed = false;
     for (var idx_date = 0; idx_date < this._availableDates.length; ++idx_date) {
       if (this._availableDates[idx_date].isSame(newDate, 'year') &&
       this._availableDates[idx_date].isSame(newDate, 'month') &&
       this._availableDates[idx_date].isSame(newDate, 'day') &&
-      this._availableDates[idx_date].isSame(newDate, 'hour')) {
+      this._availableDates[idx_date].isSame(newDate, 'hour') &&
+	  this._availableDates[idx_date].isSame(newDate, 'minute')) { //added minute by Chip
         // There is surely a better way, but this hacks around the issue when
         // setting to a time for which there is LIS and GALWEM data - future data
         // is given with a 1 second offset, which doesn't play nicely with hour
@@ -78,8 +93,8 @@ L.Control.DateChanger = L.Control.extend({
         changed = true;
         break;
       } else if (this._availableDates[idx_date].isSame(newDate, 'year') &&
-      this._availableDates[idx_date].isSame(newDate, 'month') &&
-      this._availableDates[idx_date].isSame(newDate, 'day')) {
+        this._availableDates[idx_date].isSame(newDate, 'month') &&
+        this._availableDates[idx_date].isSame(newDate, 'day')) {
         this._selectedDateIndex = idx_date;
         changed = true;
       }
@@ -91,16 +106,23 @@ L.Control.DateChanger = L.Control.extend({
       var bkcolor = (this.getDateAndTime() > (new Date("2024-02-20T09:00:00Z"))) ? "rgb(0, 255, 255)" : 'white';
       this.container.style.backgroundColor = bkcolor;
       this.selectedHour = $('#datetimepicker').data('DateTimePicker').date().hour();
+	  this.selectedMinute = $('#datetimepicker').data('DateTimePicker').date().minute();
       this.updateSelectedHour();
-      // console.log('DEBUG: refreshed maps, set to valid date = ' + this._availableDates[this._selectedDateIndex].format());
+	  this.updateSelectedMinute(); //added Chip
+      //console.log('dateChanger: refreshed maps, set to valid date = ' + this._availableDates[this._selectedDateIndex].format());
     }
     return changed;
   },
   // increment date by specified number of dates
   incrementSelectedDateAndTime: function(deltaIndex, thresholdTimeToRecolor) {
+	//console.log("dateChanger: incrementSelectedDateAndTime: deltaIndex = " + deltaIndex);
+	//console.log("dateChanger: incrementSelectedDateAndTime: this._selectedDateIndex = " + this._selectedDateIndex);
+	  
     var index = this._selectedDateIndex + deltaIndex;
     if (index < 0) index = 0;
     if (index > this._availableDates.length - 1) index = this._availableDates.length - 1;
+	//console.log("dateChanger: incrementSelectedDateAndTime: index = " + index + ", this._availableDates[index] = " + this._availableDates[index]);
+
     this.setDateAndTime(this._availableDates[index]);
   },
 
@@ -112,8 +134,17 @@ L.Control.DateChanger = L.Control.extend({
       } else {
         $(td).removeClass('active');
       }
-    });
-  },
+  })},
+  
+  updateSelectedMinute: function() {
+    var self = this;
+    $('.timepicker-minutes').find('th').each (function(col, th) {
+      if (self.selectedMinute === parseInt($(th).text())) {
+        $(th).addClass('active');
+      } else {
+        $(th).removeClass('active');
+      }
+  })},
 
   onAdd: function(map) {
     var zoomName = 'leaflet-control-zoom';
@@ -170,7 +201,7 @@ L.Control.DateChanger = L.Control.extend({
 
     this._dateField = $('#datetimepicker').datetimepicker({
       timeZone: 'UTC',
-      format: 'ddd, DD MMM YYYY H:00:00 z',
+      format: 'ddd, DD MMM YYYY H:mm:00 z',  //Chip replaced 00 with mm
       ignoreReadonly: true,
       widgetPositioning: {
         vertical: 'top',
@@ -217,7 +248,9 @@ L.Control.DateChanger = L.Control.extend({
       } else {
         day = e;
       }
-      if (!day.isSame(self._availableDates[self._selectedDateIndex], 'hour') ||
+      if (
+	  !day.isSame(self._availableDates[self._selectedDateIndex], 'minute') || //added by Chip
+	  !day.isSame(self._availableDates[self._selectedDateIndex], 'hour') ||
       !day.isSame(self._availableDates[self._selectedDateIndex], 'day') ||
       !day.isSame(self._availableDates[self._selectedDateIndex], 'month') ||
       !day.isSame(self._availableDates[self._selectedDateIndex], 'year')) {
@@ -242,10 +275,12 @@ L.Control.DateChanger = L.Control.extend({
         var seltime = L.DomUtil.get('selectTime')
         seltime.style.width = 'auto';
         seltime.style.height = 'auto';
+		//$('#datetimepicker').data('DateTimePicker').actions.showMinutes(); //added by Chip
         $('#datetimepicker').data('DateTimePicker').actions.showHours();
         e.target = $('#selectTime');
         $('#datetimepicker').data('DateTimePicker').actions.togglePicker(e);
         self.updateSelectedHour();
+		self.updateSelectedMinute(); //added Chip
       }
     };
 
@@ -272,11 +307,14 @@ L.Control.DateChanger = L.Control.extend({
         if (date.hours() !== hour) {
           self.setDateAndTime(date.clone().hours(hour));
         }
+		
     };
 
     $('#datetimepicker').on('dp.change', function(e) {  
-    // console.log('DEBUG: change event = ' + JSON.stringify(e));
-      if (!e.date.isSame(self._availableDates[self._selectedDateIndex], 'hour') ||
+      //console.log('dateChanger: change event = ' + JSON.stringify(e));
+      if (
+	  !e.date.isSame(self._availableDates[self._selectedDateIndex], 'minute') || //added by Chip
+      !e.date.isSame(self._availableDates[self._selectedDateIndex], 'hour') ||
       !e.date.isSame(self._availableDates[self._selectedDateIndex], 'day') ||
       !e.date.isSame(self._availableDates[self._selectedDateIndex], 'month') ||
       !e.date.isSame(self._availableDates[self._selectedDateIndex], 'year')) {
@@ -285,8 +323,10 @@ L.Control.DateChanger = L.Control.extend({
     });
 
     $('#datetimepicker').on('dp.update', function(e) {
-        // console.log('DEBUG: update event = ' + JSON.stringify(e));
-        if (!e.viewDate.isSame(self._availableDates[self._selectedDateIndex], 'hour') ||
+        //console.log('dateChanger: update event = ' + JSON.stringify(e));
+        if (
+		!e.viewDate.isSame(self._availableDates[self._selectedDateIndex], 'minute') ||  //added by Chip
+		!e.viewDate.isSame(self._availableDates[self._selectedDateIndex], 'hour') ||
         !e.viewDate.isSame(self._availableDates[self._selectedDateIndex], 'day') ||
         !e.viewDate.isSame(self._availableDates[self._selectedDateIndex], 'month') ||
         !e.viewDate.isSame(self._availableDates[self._selectedDateIndex], 'year')) {

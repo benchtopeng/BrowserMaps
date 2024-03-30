@@ -130,7 +130,7 @@ L.Control.LayerChanger = L.Control.extend({
     var map = this._map;
 
     // remove all old layers, but save list of overlay layers so can add back
-	console.log("layerChanger: updateLayersInMenu: starting...keepPreviousSelection=" + keepPreviousSelection);
+	//console.log("layerChanger: updateLayersInMenu: starting...keepPreviousSelection=" + keepPreviousSelection);
 
     var self = this;
     var overlays = [];
@@ -141,8 +141,8 @@ L.Control.LayerChanger = L.Control.extend({
       console.log(previouslySelectedLayerName);
     };
     for (var i in maplayers) {
-		console.log("layerChanger.js: updateLayersInMenu: mplayers = ");
-		console.log(maplayers[i]);
+		//console.log("layerChanger.js: updateLayersInMenu: mplayers = ");
+		//console.log(maplayers[i]);
 		
       try {
         if (maplayers[i].overlay) overlays[overlays.length] = maplayers[i];
@@ -244,14 +244,14 @@ L.Control.LayerChanger = L.Control.extend({
 
 
     // add back overlays (need to be on top so visible!)
-	//console.log("layerChanger.js: updateLayersInMenu (D): overlays.length = " + overlays.length);
+	//console.log("layerChanger.js: upCdateLayersInMenu (D): overlays.length = " + overlays.length);
     for (var i = 0; i < overlays.length; i++) self._map.addLayer(overlays[i]);
 	
 	// Added markers by chip
 	for (var i in arrayLocations.features) {
 		var lon = arrayLocations.features[i].geometry.coordinates[0];
 		var lat = arrayLocations.features[i].geometry.coordinates[1];
-		console.log("layerChanger: updateLayersInMenu: lat = " + lat + ", lon = " + lon)
+		//console.log("layerChanger: updateLayersInMenu: lat = " + lat + ", lon = " + lon)
 		var marker = L.marker([lat, lon], {icon: arrayIcons[i]}).addTo(map)
 			.bindPopup(arrayLocations.features[i].properties.description);		
 		//	.bindPopup('A pretty CSS popup.<br> Easily customizable.');
@@ -267,7 +267,7 @@ L.Control.LayerChanger = L.Control.extend({
 
   onAdd: function(map) {
 
-	console.log("layerChanger: onAdd: starting...");
+	//console.log("layerChanger: onAdd: starting...");
 
     // create the control.
     // use native HTML select element, but need special handling to get it to work on
@@ -292,7 +292,7 @@ L.Control.LayerChanger = L.Control.extend({
     // ***************************************************
     var self = this;
     menu.addEventListener('change', function(evt) {
-	  console.log("layerChanger: onAdd: addEventListener 'change': starting...");
+	  //console.log("layerChanger: onAdd: addEventListener 'change': starting...");
 
       var previousSelectionStr = this.options[self.options.mostRecentSelectedIndex].text;
       var pendingSelectionStr = this.options[this.selectedIndex].text;
@@ -318,8 +318,8 @@ L.Control.LayerChanger = L.Control.extend({
       var overlays = [];
 	  var baselayers= []
       var maplayers = self._map._layers;
-	  console.log("layerChanger: change: removing all maplayers...");
-	  console.log(maplayers);
+	  //console.log("layerChanger: change: removing all maplayers...");
+	  //console.log(maplayers);
       for (var i in maplayers) {
         if (maplayers[i].overlay) {
 			overlays[overlays.length] = maplayers[i];
@@ -336,14 +336,14 @@ L.Control.LayerChanger = L.Control.extend({
       var value = this.options[this.selectedIndex].value;
       var str = this.options[this.selectedIndex].text;
       var newLayer = self.options.layers[value].mapLayer;
-	  console.log("layerChanger: change: new layer = ");
-	  console.log(newLayer);
+	  //console.log("layerChanger: change: new layer = ");
+	  //console.log(newLayer);
 	  if (newLayer.overlay == true) {
 		  //add the old base layers first
-		  console.log("layerChanger: change: adding base layers");
+		  //console.log("layerChanger: change: adding base layers");
 		  for (var i in baselayers) self._map.addLayer(baselayers[i]);
 	  }
-	  console.log("layerChanger: change: adding new layer");
+	  //console.log("layerChanger: change: adding new layer");
       self._map.addLayer(newLayer);
       self.checkVisibilityofMapboxLogo(self._map, newLayer);
 
@@ -373,8 +373,8 @@ L.Control.LayerChanger = L.Control.extend({
 	  
 	  // if this was a change in baselayer, add back overlays (need to be on top so visible!)
 	  if (newLayer.overlay == false) {
-		  console.log("layerChanger: change: adding overlays back in...");
-		  console.log(overlays)
+		  //console.log("layerChanger: change: adding overlays back in...");
+		  //console.log(overlays)
 		  for (var i in overlays) self._map.addLayer(overlays[i]);
 		  
 		    
@@ -382,7 +382,7 @@ L.Control.LayerChanger = L.Control.extend({
 		  for (var i in arrayLocations.features) {
 			var lon = arrayLocations.features[i].geometry.coordinates[0];
 			var lat = arrayLocations.features[i].geometry.coordinates[1];
-			console.log("layerChanger: updateLayersInMenu: lat = " + lat + ", lon = " + lon)
+			//console.log("layerChanger: updateLayersInMenu: lat = " + lat + ", lon = " + lon)
 			var marker = L.marker([lat, lon], {icon: arrayIcons[i]}).addTo(map)
 				.bindPopup(arrayLocations.features[i].properties.description);		
 			//	.bindPopup('A pretty CSS popup.<br> Easily customizable.');
