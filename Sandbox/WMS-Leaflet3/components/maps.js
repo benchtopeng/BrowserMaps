@@ -2167,10 +2167,12 @@ function createMap(main_geowatch_layer_info, idx_map, maps, dasspTimeLayers, lef
 var GEOWATCH_JSON_MAP_DATA_CREATED, MAIN_GEOWATCH_LAYER_INFO;
 var main_map_json_file = './main_map.json'
 
+/*
 GEOWATCH_JSON_MAP_DATA_CREATED = $.getJSON(main_map_json_file)
   .done(function(data) {
     MAIN_GEOWATCH_LAYER_INFO = data;
   })
+
   .then( function() {
       //console.log("maps.jps: GEOWATCH_JSON_MAP_DATA_CREATED = " + GEOWATCH_JSON_MAP_DATA_CREATED);
 
@@ -2203,7 +2205,8 @@ GEOWATCH_JSON_MAP_DATA_CREATED = $.getJSON(main_map_json_file)
 
   })
   .fail(function(data) {
-	  
+	  */
+  
 	console.log('maps.js: Warning: Could not get JSON GeoWATCH map layer specs from http GET at: ' + main_map_json_file + ".  Proceeding with defaults...");
 	
 	//console.log(data)
@@ -2239,5 +2242,5 @@ GEOWATCH_JSON_MAP_DATA_CREATED = $.getJSON(main_map_json_file)
 	setNumberOfVisibleMaps(maps, GEOWATCH_NUM_MAPS_INITIAL);
 	
 	
-  });
+//  });
 
