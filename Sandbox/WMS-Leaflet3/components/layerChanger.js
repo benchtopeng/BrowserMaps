@@ -16,19 +16,9 @@
 // This GeoJSON contains features that include an "icon"
 // property. The value of the "icon" property corresponds
 // to an image in the Mapbox Light style's sprite.
-const places = {
+const arrayLocations = {
 	'type': 'FeatureCollection',
 	'features': [
-		{
-			'type': 'Feature',
-			'properties': {	'description': "WLT",'icon': 'downTriangle'	},
-			'geometry': {'type': 'Point', 'coordinates': [-86.83890086, 34.88339657]}
-		},
-		{
-			'type': 'Feature',
-			'properties': {	'description': "WLB",'icon': 'downTriangle'	},
-			'geometry': {'type': 'Point', 'coordinates': [-87.2405405, 34.60448088]}
-		},
 		{
 			'type': 'Feature',
 			'properties': {	'description': "ALAM",'icon': 'downTriangle'	},
@@ -38,9 +28,43 @@ const places = {
 			'type': 'Feature',
 			'properties': {	'description': "ScottOrchard",'icon': 'downTriangle'	},
 			'geometry': {'type': 'Point', 'coordinates': [-86.62662163, 34.9962665]}
-		}
+		},
+		{
+			'type': 'Feature',
+			'properties': {	'description': "WLB",'icon': 'downTriangle'	},
+			'geometry': {'type': 'Point', 'coordinates': [-87.2405405, 34.60448088]}
+		},
+				{
+			'type': 'Feature',
+			'properties': {	'description': "WLT",'icon': 'downTriangle'	},
+			'geometry': {'type': 'Point', 'coordinates': [-86.83890086, 34.88339657]}
+		},
+
 	]
 };
+var ArrayIcon = L.Icon.extend({
+    options: {
+        shadowUrl: 'assets/circleX_black.png',
+        iconSize:     [16,16],
+        shadowSize:   [16,16],
+        iconAnchor:   [8,8],
+        shadowAnchor: [8,8],
+        popupAnchor:  [0,8]
+    }
+});
+var arrayIcons = [new ArrayIcon({iconUrl: 'assets/circleX_red.png'}),
+				  new ArrayIcon({iconUrl: 'assets/circleX_green.png'}),
+				  new ArrayIcon({iconUrl: 'assets/circleX_blue.png'}),
+				  new ArrayIcon({iconUrl: 'assets/circleX_yellow.png'}),
+				  new ArrayIcon({iconUrl: 'assets/circleX_magenta.png'}),
+				  new ArrayIcon({iconUrl: 'assets/circleX_cyan.png'}),
+				  new ArrayIcon({iconUrl: 'assets/circleX_gray2.png'}),
+				  new ArrayIcon({iconUrl: 'assets/circleX_gray4.png'}),
+				  new ArrayIcon({iconUrl: 'assets/circleX_gray6.png'}),
+				  new ArrayIcon({iconUrl: 'assets/circleX_gray8.png'}),
+				  new ArrayIcon({iconUrl: 'assets/circleX_black.png'}),
+				  new ArrayIcon({iconUrl: 'assets/circleX_clear.png'})]
+/*
 var markerIcon = L.icon({
     iconUrl: 'assets/downTriangle.png',
     shadowUrl: 'assets/downTriangle.png',
@@ -51,6 +75,7 @@ var markerIcon = L.icon({
     shadowAnchor: [10, 20],  // the same for the shadow
     popupAnchor:  [0, -20] // point from which the popup should open relative to the iconAnchor
 });
+*/
 var track1 = [[	34.957	,	-87.138	]	,
 			[	34.955	,	-87.057	]	,
 			[	34.97	,	-87.097	]	,
@@ -138,6 +163,19 @@ L.Control.LayerChanger = L.Control.extend({
     // remove all previously added items from menu
     while (menu.firstChild) menu.removeChild(menu.firstChild);
 
+	//choose defaults if none were selected
+	if (!keepPreviousSelection && (previouslySelectedLayerName == null)) {
+		//add a base map...the first layer
+		map.addLayer(layers[0].mapLayer);
+		this.checkVisibilityofMapboxLogo(map, layers[0].mapLayer);
+		this.options.mostRecentSelectedIndex = 0;
+		
+		//prepare it to add a radar layer as the default
+		keepPreviousSelection = true;
+		previouslySelectedLayerName = "CONUS NEXRAD Base Reflectivity (N0R)";
+	}
+		
+
     // add the (grouped) layers to the layer selection list
     this.options.layers = layers;
     var previousGroup = null;
@@ -153,7 +191,7 @@ L.Control.LayerChanger = L.Control.extend({
       opt.innerHTML = layers[i].displayName;
       opt.value = i;
       previousGroup.appendChild(opt);
-
+	  
       if (keepPreviousSelection && previouslySelectedLayerName != null) {
         if (previouslySelectedLayerName == layers[i].displayName && !defaultLayerHasBeenSet) {
           opt.selected = true;
@@ -172,13 +210,36 @@ L.Control.LayerChanger = L.Control.extend({
       };
 
     }
-    // if default layer wasn't found, select the first one
+    
+	/*
+	// if default layer wasn't found, select the first one
     if (!defaultLayerHasBeenSet) {
 	  //console.log("layerChanger.js: updateLayersInMenu C: layers[0].displayName = " + layers[0].displayName)
       map.addLayer(layers[0].mapLayer);
       this.checkVisibilityofMapboxLogo(map, layers[0].mapLayer);
       this.options.mostRecentSelectedIndex = 0;
+	  
+	  if (0) {
+		previouslySelectedLayerName = "CONUS NEXRAD Base Reflectivity (N0R)"
+		for (var i in layers) {  //find this layer
+			if (previouslySelectedLayerName == layers[i].displayName && !defaultLayerHasBeenSet) { //is this our layer?
+				//set the selection menu to this item
+				var opt = document.createElement('option', 'leaflet-control' + ' leaflet-bar');
+				opt.innerHTML = layers[i].displayName;
+				opt.value = i;
+				//previousGroup.appendChild(opt);
+				
+				//put this layer on the map itself
+				opt.selected = true;  //this makes
+				map.addLayer(layers[i].mapLayer);
+				this.options.mostRecentSelectedIndex = i;
+				defaultLayerHasBeenSet = true;
+				this.checkVisibilityofMapboxLogo(map, layers[i].mapLayer)
+			};
+		}
+	  }
     }
+	*/
     if (previousGroup) menu.appendChild(previousGroup);
 
 
@@ -187,16 +248,16 @@ L.Control.LayerChanger = L.Control.extend({
     for (var i = 0; i < overlays.length; i++) self._map.addLayer(overlays[i]);
 	
 	// Added markers by chip
-	for (var i in places.features) {
-		var lon = places.features[i].geometry.coordinates[0];
-		var lat = places.features[i].geometry.coordinates[1];
+	for (var i in arrayLocations.features) {
+		var lon = arrayLocations.features[i].geometry.coordinates[0];
+		var lat = arrayLocations.features[i].geometry.coordinates[1];
 		console.log("layerChanger: updateLayersInMenu: lat = " + lat + ", lon = " + lon)
-		var marker = L.marker([lat, lon], {icon: markerIcon}).addTo(map)
-			.bindPopup(places.features[i].properties.description);		
+		var marker = L.marker([lat, lon], {icon: arrayIcons[i]}).addTo(map)
+			.bindPopup(arrayLocations.features[i].properties.description);		
 		//	.bindPopup('A pretty CSS popup.<br> Easily customizable.');
 		//	.openPopup();
-		console.log("layerChanger: updateLayersInMenu: marker = ");
-		console.log(marker);
+		//console.log("layerChanger: updateLayersInMenu: marker = ");
+		//console.log(marker);
 	}
 	// Add Storm Track
 //    var polyline1 = L.polyline(track1, {color: 'red'}).addTo(map);
@@ -315,6 +376,24 @@ L.Control.LayerChanger = L.Control.extend({
 		  console.log("layerChanger: change: adding overlays back in...");
 		  console.log(overlays)
 		  for (var i in overlays) self._map.addLayer(overlays[i]);
+		  
+		    
+		  // Added markers and storm tracks by chip
+		  for (var i in arrayLocations.features) {
+			var lon = arrayLocations.features[i].geometry.coordinates[0];
+			var lat = arrayLocations.features[i].geometry.coordinates[1];
+			console.log("layerChanger: updateLayersInMenu: lat = " + lat + ", lon = " + lon)
+			var marker = L.marker([lat, lon], {icon: arrayIcons[i]}).addTo(map)
+				.bindPopup(arrayLocations.features[i].properties.description);		
+			//	.bindPopup('A pretty CSS popup.<br> Easily customizable.');
+			//	.openPopup();
+			//console.log("layerChanger: updateLayersInMenu: marker = ");
+			//console.log(marker);
+		  }
+		  // Add Storm Track
+//        var polyline1 = L.polyline(track1, {color: 'red'}).addTo(map);
+//        var polyline2 = L.polyline(track2, {color: 'red'}).addTo(map);
+//	      var polyline3 = L.polyline(track3, {color: 'red'}).addTo(map);   
 	  }
 
 	  /* Commented by Chip
@@ -323,17 +402,6 @@ L.Control.LayerChanger = L.Control.extend({
       if (sidebar.showGridCheckBox && sidebar.showGridCheckBox.checked) self._map.grid.addTo(self._map)
 	  */
   
-		// Added marker by chip
-//		var lon = places.features[0].geometry.coordinates[0];
-//		var lat = places.features[0].geometry.coordinates[1];
-//		console.log("layerChanger: updateLayersInMenu: lat = " + lat + ", lon = " + lon)
-//		marker = L.marker([lat, lon]).addTo(map)
-//			.bindPopup(places.features[0].properties.description);		
-//		//	.bindPopup('A pretty CSS popup.<br> Easily customizable.');
-//		//	.openPopup();
-//		console.log("layerChanger: updateLayersInMenu: marker = ");
-//		console.log(marker);
-	
     });
 
     // special handling for touch interfaces

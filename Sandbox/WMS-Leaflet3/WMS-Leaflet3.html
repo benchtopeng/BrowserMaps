@@ -222,34 +222,24 @@
 
 		var GEOWATCH_NUM_MAPS_MAX = 4;
 		var GEOWATCH_PUBLIC_MODE = true;
-		var DEFAULT_MAP_CENTER = [33.0, -89];
-		var DEFAULT_MAP_ZOOM = 7;
+		var DEFAULT_MAP_CENTER = [34.75, -86.75];
+		var DEFAULT_MAP_ZOOM = 8;
 		var IGNORE_MAPBOX_LAYERS = false;
 		var DEFAULT_SHOW_STREETS = !IGNORE_MAPBOX_LAYERS;
 		var DEFAULT_SHOW_HILLSHADING = true;
 		var DEFAULT_SHOW_ADVANCED_LAYERS = false;
 		var DEFAULT_SHOW_LEGENDS = GEOWATCH_NUM_MAPS_INITIAL > 1;
 		var DEFAULT_LAYERS = [
-			"(CUI) Volumetric Soil Moisture 0-10cm, 10km (LIS72)",
-			"(CUI) Volumetric Soil Moisture, 30m GeoWATCH (from LIS/GALWEM)",
-			"(CUI) TWI, 30m (ROI/Terrain Tiles)",
-			"(CUI) USDA Soil Class, 30m (SSURGO/STATSGO/Finland/Sweden/VISNAV/LIS72)"];
+			"Streets and Borders (MapBox)"];
 			
 		var DEFAULT_PUBLIC_LAYERS = [
-			"NEXRAD Radar (nexrad-n0r-wmst)",
-			"(U) Volumetric Soil Moisture 0-10cm, 10km (LIS72)",
-			"(U) Volumetric Soil Moisture, 30m GeoWATCH (from LIS/LIS3H)",
-			"(U) TWI, 30m (Terrain Tiles)",
-			"(U) USDA Soil Class, 30m (SSURGO/STATSGO/LIS72)"];
+			"Streets and Borders (MapBox)",
+			"NEXRAD Radar (nexrad-n0r-wmst)"];
 
-		//var DEFAULT_LAYERS = [
-		//	"NOAA Radar Something",
-		//	"Infrasound Something"];
-
-		if (!IGNORE_MAPBOX_LAYERS) {
-			DEFAULT_LAYERS[0] = ['Aerial']
-			DEFAULT_PUBLIC_LAYERS[0] = ['Aerial']
-		}
+		//if (!IGNORE_MAPBOX_LAYERS) {
+		//	DEFAULT_LAYERS[0] = ['Streets and Borders (MapBox)']
+		//	DEFAULT_PUBLIC_LAYERS[0] = ['Streets and Borders (MapBox)']
+		//}
 		var DEFAULT_DATETIME = '2018-03-19T18:00:00Z';
 		var URLLayers = [];
 
@@ -308,49 +298,6 @@
 
 	<script type="text/javascript"> 
 
-/* uncomment this to make the maps work in the old school way
-
-		//var startTime = '2018-03-19T10:00:00Z';
-		var startTime = DEFAULT_DATETIME;
-		var endTime = '2018-03-23T00:00:00';
-		var timeStep = 1000 * 60 * 60;
-		var range = false;
-		var sliderControl = null;
-		
-
-	//	const wmsLayer = L.tileLayer.wms('http://ows.mundialis.de/services/service?', {
-	//		layers: 'OSM-WMS'
-	//	}).addTo(map);
-
-
-		var OpenStreetMap_Mapnik = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-		});
-		//map.addLayer(OpenStreetMap_Mapnik)
-		
-		const map = L.map('map', {
-			center: DEFAULT_MAP_CENTER,
-			zoom: DEFAULT_MAP_ZOOM,
-			zoomControl: true,
-			layers: OpenStreetMap_Mapnik
-		});
-		
-		const wmsLayer2 = L.tileLayer.wms('https://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r-t.cgi?', {
-			layers: 'nexrad-n0r-wmst',
-			format: 'image/png',
-			transparent: true,
-			time: startTime,
-			opacity: 0.6
-		});
-		map.addLayer(wmsLayer2)
-		
-		// Creating scale control
-		var scale = L.control.scale();
-		scale.addTo(map);
-
-		console.log("WMS-Leaflet3: layers added to map")
-		
-*/
 
 	</script>
 

@@ -73,7 +73,6 @@ DEFAULT_MAIN_GEOWATCH_LAYER_INFO = {
   },
   "layer_specs": [
  
-  
      {
       "name": "State Borders (Nat Weather Service)",
 	  "url": "https://mapservices.weather.noaa.gov:443/static/services/nws_reference_maps/nws_reference_map/MapServer/WMSServer?",
