@@ -49,7 +49,7 @@ var ArrayIcon = L.Icon.extend({
         shadowSize:   [16,16],
         iconAnchor:   [8,8],
         shadowAnchor: [8,8],
-        popupAnchor:  [0,8]
+        popupAnchor:  [0,-8]
     }
 });
 var arrayIcons = [new ArrayIcon({iconUrl: 'assets/circleX_red.png'}),
