@@ -1,7 +1,9 @@
 # WMS Viewer (BrowserMaps)
- Interactive Maps in a Web Browser
+Interactive Maps in a Web Browser
 
- Live link: https://benchtopeng.github.io/BrowserMaps/Sandbox/WMS-Leaflet3/WMS-Leaflet3.html
+Live link for Mar 19, 2018: https://benchtopeng.github.io/BrowserMaps/Sandbox/WMS-Leaflet3/WMS-Leaflet3.html
+
+Generic Landing page: https://benchtopeng.github.io/BrowserMaps/
  
 # Start a Python Web Server
 
