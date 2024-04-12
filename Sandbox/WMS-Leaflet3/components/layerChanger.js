@@ -34,10 +34,15 @@ const arrayLocations = {
 			'properties': {	'description': "WLB",'icon': 'downTriangle'	},
 			'geometry': {'type': 'Point', 'coordinates': [-87.2405405, 34.60448088]}
 		},
-				{
+		{
 			'type': 'Feature',
 			'properties': {	'description': "WLT",'icon': 'downTriangle'	},
 			'geometry': {'type': 'Point', 'coordinates': [-86.83890086, 34.88339657]}
+		},
+		{
+			'type': 'Feature',
+			'properties': {	'description': "Chunky",'icon': 'downTriangle'	},
+			'geometry': {'type': 'Point', 'coordinates': [-88.96902047, 32.33351041]}
 		},
 
 	]
