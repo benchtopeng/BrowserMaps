@@ -136,7 +136,6 @@
 	<!--    sync maps -->
 	<script src="./dependencies/Leaflet.Sync-master/L.Map.Sync.js"></script>
 	
-
 	<!--    track mouse lat/lon  -->
 	<link rel="stylesheet" href="./dependencies/Leaflet.MousePosition-master/src/L.Control.MousePosition.css" />
 	<script src="./dependencies/Leaflet.MousePosition-master/src/L.Control.MousePosition.js"></script>
@@ -148,6 +147,9 @@
 	<!--    sidebar control  -->
 	<link rel="stylesheet" href="./dependencies/leaflet-sidebar-master/src/L.Control.Sidebar.css" />
 	<script src="./dependencies/leaflet-sidebar-master/src/L.Control.Sidebar.js"></script>
+	
+	<!--   KML Reader Layer -->
+	<script type="text/javascript" src="./dependencies/leaflet-plugins-2/layer/vector/KML.js"></script>
 	
 <!--
 	<div id="map" class="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" style="position: relative;">
@@ -242,6 +244,7 @@
 		//}
 		var DEFAULT_DATETIME = '2018-03-19T23:00:00Z';
 		var URLLayers = [];
+		var DEFAULT_KML_FNAME = ""
 
 		// check if URL contains parameters, e.g., go.html?N=3&DUMMY=23
 		console.log("WMS_Leaflet3.html: Option string from URL = " + location.search);
@@ -273,6 +276,9 @@
 						DEFAULT_SHOW_LEGENDS = value.toLowerCase() === 'true';
 					} else if (param === 'datetime') {
 						DEFAULT_DATETIME = value;
+					} else if (param === 'kml_fname') {
+					    DEFAULT_KML_FNAME = value;
+						//console.log("WMS_Leaflet3: default kml fname = " + DEFAULT_KML_FNAME)
 					} else if (param === 'maps') {
 						var layers = value.split('%20').join(' ').split(";"); // replaces '%20' with ' ' then splits at ';'
 						for (var i in layers) {

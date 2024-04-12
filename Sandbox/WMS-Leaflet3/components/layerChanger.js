@@ -369,8 +369,20 @@ L.Control.LayerChanger = L.Control.extend({
       //    }
       //  }
       //}
-      
-	  
+
+/*      
+	  // Add KML Marks (by Chip)
+	  //console.log("layerChanger: DEFAULT_KML_FNAME.length = " + DEFAULT_KML_FNAME.length)
+	  if (DEFAULT_KML_FNAME.length > 0) {
+		  //let kml_fname = "./data/tornados_lsr_201803190000_201803192359.kml
+		  let kml_fname = "./data/" + DEFAULT_KML_FNAME
+		  console.log("layerChanger: onAdd: adding KML file: " + kml_fname)
+		  var tornados = new L.KML(kml_fname, {async: true});
+		  tornados.on("loaded", function(e) { map.fitBounds(e.target.getBounds()); });
+		  map.addLayer(tornados);
+	  }
+*/	
+	
 	  // if this was a change in baselayer, add back overlays (need to be on top so visible!)
 	  if (newLayer.overlay == false) {
 		  //console.log("layerChanger: change: adding overlays back in...");
