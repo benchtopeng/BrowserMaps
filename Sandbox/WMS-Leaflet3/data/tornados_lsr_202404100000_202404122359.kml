@@ -19,8 +19,8 @@
 </Schema>
 <Folder><name>0b7f50e3d8884a3b8567c5d545f10e41</name>
   <Placemark>
-	<name>2 NNW Oak Ridge: TORNADO, EF0</name>
-	<description>2024/04/10, 01:00UTC</description>
+	<name>2 NNW Oak Ridge</name>
+	<!-- <description>2024/04/10, 01:00UTC</description> -->
 	<ExtendedData><SchemaData schemaUrl="#0b7f50e3d8884a3b8567c5d545f10e41">
 		<SimpleData name="Office">JAN</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/09 20:00</SimpleData>
@@ -39,8 +39,8 @@
       <Point><coordinates>-90.72,32.5</coordinates></Point>
   </Placemark>
   <Placemark>
-	<name>3 NW Learned: TORNADO, </name>
-	<description>2024/04/10 01:23UTC</description>
+	<name>3 NW Learned</name>
+	<!-- <description>2024/04/10 01:23UTC</description> -->
 	<ExtendedData><SchemaData schemaUrl="#0b7f50e3d8884a3b8567c5d545f10e41">
 		<SimpleData name="Office">JAN</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/09 20:23</SimpleData>
@@ -59,8 +59,8 @@
       <Point><coordinates>-90.58,32.23</coordinates></Point>
   </Placemark>
   <Placemark>
-	<name>1 SE Livingston: TORNADO, EF0</name>
-	<description>2024/04/10 09:35UTC</description>
+	<name>1 SE Livingston</name> 
+	<!-- <description>2024/04/10 09:35UTC</description> -->
 	<ExtendedData><SchemaData schemaUrl="#0b7f50e3d8884a3b8567c5d545f10e41">
 		<SimpleData name="Office">JAN</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/10 04:35</SimpleData>

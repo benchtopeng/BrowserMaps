@@ -1,8 +1,10 @@
 
-L.KML = L.FeatureGroup.extend({
+L.KML_LSR = L.FeatureGroup.extend({
 	options: {
 		async: true
 	},
+	datetime_UTC_str:'',
+	event_type:'',
 
 	initialize: function (kml, options) {
 		L.Util.setOptions(this, options);
@@ -56,7 +58,7 @@ L.KML = L.FeatureGroup.extend({
 	},
 
 	_addKML: function (xml) {
-		var layers = L.KML.parseKML(xml);
+		var layers = L.KML_LSR.parseKML(xml);
 		if (!layers || !layers.length) return;
 		for (var i = 0; i < layers.length; i++) {
 			this.fire('addlayer', {
@@ -64,14 +66,14 @@ L.KML = L.FeatureGroup.extend({
 			});
 			this.addLayer(layers[i]);
 		}
-		this.latLngs = L.KML.getLatLngs(xml);
+		this.latLngs = L.KML_LSR.getLatLngs(xml);
 		this.fire('loaded');
 	},
 
 	latLngs: []
 });
 
-L.Util.extend(L.KML, {
+L.Util.extend(L.KML_LSR, {
 
 	parseKML: function (xml) {
 		var style = this.parseStyles(xml);
@@ -89,11 +91,11 @@ L.Util.extend(L.KML, {
 			l = this.parsePlacemark(el[j], xml, style);
 			if (l) { layers.push(l); }
 		}
-		el = xml.getElementsByTagName('GroundOverlay');
-		for (var k = 0; k < el.length; k++) {
-			l = this.parseGroundOverlay(el[k]);
-			if (l) { layers.push(l); }
-		}
+//		el = xml.getElementsByTagName('GroundOverlay');
+//		for (var k = 0; k < el.length; k++) {
+//			l = this.parseGroundOverlay(el[k]);
+//			if (l) { layers.push(l); }
+//		}
 		return layers;
 	},
 
@@ -164,7 +166,7 @@ L.Util.extend(L.KML, {
 		el = xml.getElementsByTagName('IconStyle');
 		if (el && el[0]) { ioptions = _parse(el[0]); }
 		if (ioptions.href) {
-			style.icon = new L.KMLIcon({
+			style.icon = new L.KML_LSR_Icon({
 				iconUrl: ioptions.href,
 				shadowUrl: null,
 				anchorRef: {x: ioptions.x, y: ioptions.y},
@@ -215,12 +217,12 @@ L.Util.extend(L.KML, {
 			l = this.parsePlacemark(el[j], xml, style);
 			if (l) { layers.push(l); }
 		}
-		el = xml.getElementsByTagName('GroundOverlay');
-		for (var k = 0; k < el.length; k++) {
-			if (!this._check_folder(el[k], xml)) { continue; }
-			l = this.parseGroundOverlay(el[k]);
-			if (l) { layers.push(l); }
-		}
+//		el = xml.getElementsByTagName('GroundOverlay');
+//		for (var k = 0; k < el.length; k++) {
+//			if (!this._check_folder(el[k], xml)) { continue; }
+//			l = this.parseGroundOverlay(el[k]);
+//			if (l) { layers.push(l); }
+//		}
 		if (!layers.length) { return; }
 		if (layers.length === 1) { return layers[0]; }
 		return new L.FeatureGroup(layers);
@@ -228,7 +230,7 @@ L.Util.extend(L.KML, {
 
 	parsePlacemark: function (place, xml, style, options) {
 		var h, i, j, k, el, il, opts = options || {};
-		console.log("KML.js: L.KML: parsePlacemark...");
+		//console.log("KML_LSR.js: parsePlacemark...");
 
 		el = place.getElementsByTagName('styleUrl');
 		for (i = 0; i < el.length; i++) {
@@ -258,7 +260,8 @@ L.Util.extend(L.KML, {
 		
 		var layers = [];
 
-		var parse = ['LineString', 'Polygon', 'Point', 'Track', 'gx:Track'];
+		//var parse = ['LineString', 'Polygon', 'Point', 'Track', 'gx:Track'];
+		var parse = ['Point'];
 		for (j in parse) {
 			var tag = parse[j];
 			el = place.getElementsByTagName(tag);
@@ -290,17 +293,34 @@ L.Util.extend(L.KML, {
 		}
 		
 		//addd by Chip April 2024
-		//var data = place.getElementsByTagName("SimpleData"); 
-		//if (data.length > 0) {
-		//	if (descr.length > 0) {	descr = descr + '<br>'; }
-		//	for(var i=0; i<data.length; i++) { 
-		//		if (data[i].getAttribute("name")) {
-		//			var dataname = data[i].getAttribute("name"); 
-		//			var value = data[i].firstChild.data; 
-		//			descr = descr + dataname + ": " + value + "<br>"
-		//		}
-		//	}			
-		//}
+		var data = place.getElementsByTagName("SimpleData"); 
+		if (data.length > 0) {
+			if (descr.length > 0) {	descr = descr + '<br>'; }
+			for(var i=0; i<data.length; i++) { 
+				if (data[i].getAttribute("name")) {
+					var dataname = data[i].getAttribute("name"); 
+					var value = data[i].firstChild.data; 
+					
+					//look for special fields
+					if (dataname === "Report Time (UTC Timezone)") {
+						this.datetime_UTC_str = value;
+					}
+					if (dataname === "Event Type") {
+						this.event_type = value;
+						name = this.event_type + ": " + name
+					}
+					
+					//ignore certain fields when expanding the description
+					var exclude_names = ['Office', 'County', 'Location', 'Event Type','ST', 'Lat', 'Lon' ,'ugc', 'ugcname'];
+					var include_in_descr = !(exclude_names.includes(dataname))
+					
+					//update the description text for this point
+					if (include_in_descr) {
+						descr = descr + dataname + ": " + value + "<br>"
+					}
+				}
+			}			
+		}
 		
 
 		if (name) {
@@ -317,22 +337,22 @@ L.Util.extend(L.KML, {
 		return this._read_coords(el[0]);
 	},
 
-	parseLineString: function (line, xml, options) {
-		var coords = this.parseCoords(line);
-		if (!coords.length) { return; }
-		return new L.Polyline(coords, options);
-	},
+//	parseLineString: function (line, xml, options) {
+//		var coords = this.parseCoords(line);
+//		if (!coords.length) { return; }
+//		return new L.Polyline(coords, options);
+//	},
 
-	parseTrack: function (line, xml, options) {
-		var el = xml.getElementsByTagName('gx:coord');
-		if (el.length === 0) { el = xml.getElementsByTagName('coord'); }
-		var coords = [];
-		for (var j = 0; j < el.length; j++) {
-			coords = coords.concat(this._read_gxcoords(el[j]));
-		}
-		if (!coords.length) { return; }
-		return new L.Polyline(coords, options);
-	},
+//	parseTrack: function (line, xml, options) {
+//		var el = xml.getElementsByTagName('gx:coord');
+//		if (el.length === 0) { el = xml.getElementsByTagName('coord'); }
+//		var coords = [];
+//		for (var j = 0; j < el.length; j++) {
+//			coords = coords.concat(this._read_gxcoords(el[j]));
+//		}
+//		if (!coords.length) { return; }
+//		return new L.Polyline(coords, options);
+//	},
 
 	parsePoint: function (line, xml, options) {
 		var el = line.getElementsByTagName('coordinates');
@@ -340,9 +360,10 @@ L.Util.extend(L.KML, {
 			return;
 		}
 		var ll = el[0].childNodes[0].nodeValue.split(',');
-		return new L.KMLMarker(new L.LatLng(ll[1], ll[0]), options);
+		return new L.KML_LSR_Marker(new L.LatLng(ll[1], ll[0]), options);
 	},
 
+	/*
 	parsePolygon: function (line, xml, options) {
 		var el, polys = [], inner = [], i, coords;
 		el = line.getElementsByTagName('outerBoundaryIs');
@@ -370,6 +391,7 @@ L.Util.extend(L.KML, {
 		}
 		return new L.MultiPolygon(polys, options);
 	},
+	*/
 
 	getLatLngs: function (xml) {
 		var el = xml.getElementsByTagName('coordinates');
@@ -397,13 +419,16 @@ L.Util.extend(L.KML, {
 		return coords;
 	},
 
+/*
 	_read_gxcoords: function (el) {
 		var text = '', coords = [];
 		text = el.firstChild.nodeValue.split(' ');
 		coords.push(new L.LatLng(text[1], text[0]));
 		return coords;
 	},
+	*/
 
+/*
 	parseGroundOverlay: function (xml) {
 		var latlonbox = xml.getElementsByTagName('LatLonBox')[0];
 		var bounds = new L.LatLngBounds(
@@ -444,10 +469,11 @@ L.Util.extend(L.KML, {
 		}
 		return new L.RotatedImageOverlay(options.href, bounds, {opacity: options.opacity, angle: options.rotation});
 	}
+	*/
 
 });
 
-L.KMLIcon = L.Icon.extend({
+L.KML_LSR_Icon = L.Icon.extend({
 	_setIconStyles: function (img, name) {
 		L.Icon.prototype._setIconStyles.apply(this, [img, name]);
 		var options = this.options;
@@ -464,39 +490,8 @@ L.KMLIcon = L.Icon.extend({
 });
 
 
-L.KMLMarker = L.Marker.extend({
+L.KML_LSR_Marker = L.Marker.extend({
 	options: {
-		icon: new L.KMLIcon.Default()
-	}
-});
-
-// Inspired by https://github.com/bbecquet/Leaflet.PolylineDecorator/tree/master/src
-L.RotatedImageOverlay = L.ImageOverlay.extend({
-	options: {
-		angle: 0
-	},
-	_reset: function () {
-		L.ImageOverlay.prototype._reset.call(this);
-		this._rotate();
-	},
-	_animateZoom: function (e) {
-		L.ImageOverlay.prototype._animateZoom.call(this, e);
-		this._rotate();
-	},
-	_rotate: function () {
-        if (L.DomUtil.TRANSFORM) {
-            // use the CSS transform rule if available
-            this._image.style[L.DomUtil.TRANSFORM] += ' rotate(' + this.options.angle + 'deg)';
-        } else if (L.Browser.ie) {
-            // fallback for IE6, IE7, IE8
-            var rad = this.options.angle * (Math.PI / 180),
-                costheta = Math.cos(rad),
-                sintheta = Math.sin(rad);
-            this._image.style.filter += ' progid:DXImageTransform.Microsoft.Matrix(sizingMethod=\'auto expand\', M11=' + 
-                costheta + ', M12=' + (-sintheta) + ', M21=' + sintheta + ', M22=' + costheta + ')';                
-        }
-	},
-	getBounds: function () {
-		return this._bounds;
+		icon: new L.KML_LSR_Icon.Default()
 	}
 });

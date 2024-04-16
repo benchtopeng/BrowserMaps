@@ -790,6 +790,10 @@ function refreshMaps(dateChanger, maps) {
         dasspTimeLayers[i].mapLayer.redraw();
       };
     };
+	
+	//added by Chip
+	var dasspTimeMarks = maps[j].options.dasspTimeMarks;
+	
   };
 }
 
@@ -1110,7 +1114,7 @@ function createGeoWatchWMSHillShadeOverlayLayer(main_geowatch_layer_info, hillsh
 };
 */
 // create list of available non-overlay layers for display
-function createAvailableLayersForMap(main_geowatch_layer_info, dasspTimeLayers, 
+function createAvailableLayersForMap(main_geowatch_layer_info, dasspTimeLayers, dasspTimeMarks,
                   initial_utc_date_and_time_string, include_advanced_layers) {
 	var layers = [];
 	var overlay_layers = [];
@@ -1245,12 +1249,12 @@ function createAvailableOverlaysForMap(overlayLayers, main_geowatch_layer_info) 
 //
 //////////////////////////////////////////////////////////////////////////////
 
-function addDasspLayerPickerControl(map, idx_map, main_geowatch_layer_info, dasspTimeLayers, initial_utc_date_and_time_string) {
+function addDasspLayerPickerControl(map, idx_map, main_geowatch_layer_info, dasspTimeLayers, dasspTimeMarks, initial_utc_date_and_time_string) {
   //console.log("maps.js: addDasspLayerPickerControl: starting function.");
   
   var layers
   var overlays
-  [layers,overlays] = createAvailableLayersForMap( main_geowatch_layer_info, dasspTimeLayers, initial_utc_date_and_time_string, DEFAULT_SHOW_ADVANCED_LAYERS);
+  [layers,overlays] = createAvailableLayersForMap( main_geowatch_layer_info, dasspTimeLayers, dasspTimeMarks, initial_utc_date_and_time_string, DEFAULT_SHOW_ADVANCED_LAYERS);
   overlays = createAvailableOverlaysForMap(overlays, main_geowatch_layer_info, initial_utc_date_and_time_string);
   // specify active layers based on which map it is
   var targetedLayerName = getActiveLayerNameForMap(main_geowatch_layer_info, idx_map)
@@ -1491,9 +1495,11 @@ function createOptionsSidebar(map, container, maps, main_geowatch_layer_info) {
         mp = maps[i];
         if (!map.layerChanger) continue;
         var dasspTimeLayers = [];
-        var layers = createAvailableLayersForMap( main_geowatch_layer_info, dasspTimeLayers, utc_date_and_time_string, this.checked);
+		var dasspTimeMarks = [];
+        var layers = createAvailableLayersForMap( main_geowatch_layer_info, dasspTimeLayers, dasspTimeMarks, utc_date_and_time_string, this.checked);
         mp.layerChanger.updateLayersInMenu(layers, keepPreviousSelection);
         mp.options.dasspTimeLayers = dasspTimeLayers;
+		mp.options.dasspTimeMarks = dasspTimeMarks;
       };
     });
   };
@@ -1936,7 +1942,7 @@ function getSlowLoadingLayerPrefixesToWarnAbout() {
 }
 
 // function to create a customized Leaflet map
-function createMap(main_geowatch_layer_info, idx_map, maps, dasspTimeLayers, leftSide) {
+function createMap(main_geowatch_layer_info, idx_map, maps, dasspTimeLayers, dasspTimeMarks, leftSide) {
   //console.log("map.js: createMap: starting...");
 
   // certain controls only added to first map
@@ -1963,6 +1969,7 @@ function createMap(main_geowatch_layer_info, idx_map, maps, dasspTimeLayers, lef
     //this._main_dassp_layer_info = main_dassp_layer_info;
     this._main_geowatch_layer_info = main_geowatch_layer_info;
     this._dasspTimeLayers = dasspTimeLayers;
+	this._dasspTimeMarks = dasspTimeMarks;
   }
 
   // get map div, set CSS params, and add to parent container
@@ -2000,6 +2007,7 @@ function createMap(main_geowatch_layer_info, idx_map, maps, dasspTimeLayers, lef
     // list of maps and dasspTimeLayers
     maps: maps,
     dasspTimeLayers: dasspTimeLayers,
+	dasspTimeMarks: dasspTimeMarks,
   });
 
   //map.attributionControl.setPrefix('&copy Creare') 
@@ -2034,10 +2042,10 @@ function createMap(main_geowatch_layer_info, idx_map, maps, dasspTimeLayers, lef
       maps: maps,
     });
     map.dateChanger = dateChanger;
-    //dateChanger.options.dayUpFn = function(e) {adjustDasspLayerDateCallback(dateChanger, dasspTimeLayers, maps, 1, 0, 0);};
-    //dateChanger.options.dayDownFn = function(e) {adjustDasspLayerDateCallback(dateChanger, dasspTimeLayers, maps, -1, 0, 0);};
-    //dateChanger.options.monthUpFn = function(e) {adjustDasspLayerDateCallback(dateChanger, dasspTimeLayers, maps, 0, 1, 0);};
-    //dateChanger.options.monthDownFn = function (e) {adjustDasspLayerDateCallback(dateChanger, dasspTimeLayers, maps, 0, -1, 0);};
+    //dateChanger.options.dayUpFn = function(e) {adjustDasspLayerDateCallback(dateChanger, dasspTimeLayers, dasspTimeMarks, maps, 1, 0, 0);};
+    //dateChanger.options.dayDownFn = function(e) {adjustDasspLayerDateCallback(dateChanger, dasspTimeLayers, dasspTimeMarks, maps, -1, 0, 0);};
+    //dateChanger.options.monthUpFn = function(e) {adjustDasspLayerDateCallback(dateChanger, dasspTimeLayers, dasspTimeMarks, maps, 0, 1, 0);};
+    //dateChanger.options.monthDownFn = function (e) {adjustDasspLayerDateCallback(dateChanger, dasspTimeLayers,dasspTimeMarks,  maps, 0, -1, 0);};
     dateChanger.options.dayUpFn = function(e) {
       adjustDasspLayerDateCallback(dateChanger, maps, !e.shiftKey ? 1 : 1 * 8 * 7);
     };
@@ -2193,19 +2201,20 @@ function createMap(main_geowatch_layer_info, idx_map, maps, dasspTimeLayers, lef
   // add control that allows user to select displayed layer (must occur after map.setView called!)
   //if (/*idx_map==0*/true) addSimpleLayerControl(map, idx_map, main_dassp_layer_info, dasspTimeLayers, initial_utc_date_and_time_string);
   //else addLayerControl(map, idx_map, main_dassp_layer_info, dasspTimeLayers);
-  addDasspLayerPickerControl(map, idx_map, main_geowatch_layer_info, dasspTimeLayers, initial_utc_date_and_time_string);
+  addDasspLayerPickerControl(map, idx_map, main_geowatch_layer_info, dasspTimeLayers, dasspTimeMarks, initial_utc_date_and_time_string);
 
 
-	  // Add KML Marks (by Chip)
-	  //console.log("layerChanger: DEFAULT_KML_FNAME.length = " + DEFAULT_KML_FNAME.length)
-	  if (DEFAULT_KML_FNAME.length > 0) {
-		  //let kml_fname = "./data/tornados_lsr_201803190000_201803192359.kml
-		  let kml_fname = "./data/" + DEFAULT_KML_FNAME
-		  console.log("layerChanger: onAdd: adding KML file: " + kml_fname)
-		  var tornados = new L.KML(kml_fname, {async: true});
-		  //tornados.on("loaded", function(e) { map.fitBounds(e.target.getBounds()); });
-		  map.addLayer(tornados);
-	  }
+  // Add LSR KML Marks (by Chip)
+  //console.log("layerChanger: DEFAULT_KML_FNAME.length = " + DEFAULT_KML_FNAME.length)
+  if (DEFAULT_KML_FNAME.length > 0) {
+	  //let kml_fname = "./data/tornados_lsr_201803190000_201803192359.kml
+	  let kml_fname = "./data/" + DEFAULT_KML_FNAME
+	  console.log("layerChanger: onAdd: adding KML_LSR file: " + kml_fname)
+	  var tornados = new L.KML_LSR(kml_fname, {async: true});
+	  //tornados.on("loaded", function(e) { map.fitBounds(e.target.getBounds()); });
+	  map.addLayer(tornados);
+	  dasspTimeMarks.push(tornados)
+  }
 
 	  
   // set initial map position and zoom level
@@ -2267,11 +2276,12 @@ GEOWATCH_JSON_MAP_DATA_CREATED = $.getJSON(main_map_json_file)
       var maps = [];
       // keep track of GeoWATCH time-dependent layers for updating!
       var dasspTimeLayers = [];
+	  var dasspTimeMarks = [];
       // alternate addition of maps to left and right columns
       var leftSide = true;
 
       // initialUtcDatetime = new Date().toISOString();
-      // var layerPickerLayers = createAvailableLayersForMap( MAIN_GEOWATCH_LAYER_INFO, dasspTimeLayers, initialUtcDatetime, DEFAULT_SHOW_ADVANCED_LAYERS);
+      // var layerPickerLayers = createAvailableLayersForMap( MAIN_GEOWATCH_LAYER_INFO, dasspTimeLayers, dasspTimeMarks, initialUtcDatetime, DEFAULT_SHOW_ADVANCED_LAYERS);
 
       // set default date time from JSON (if not already set by permalink in index.html)
 	  console.log("maps.js: DEFAULT_DATETIME = " + DEFAULT_DATETIME);
@@ -2280,7 +2290,7 @@ GEOWATCH_JSON_MAP_DATA_CREATED = $.getJSON(main_map_json_file)
       // GEOWATCH_NUM_MAPS_MAX defined in parent html file
       for (var imap = 0; imap < GEOWATCH_NUM_MAPS_MAX; ++imap) {
         // create the i-th map
-        maps[maps.length] = createMap(MAIN_GEOWATCH_LAYER_INFO, imap, maps, dasspTimeLayers, leftSide);
+        maps[maps.length] = createMap(MAIN_GEOWATCH_LAYER_INFO, imap, maps, dasspTimeLayers, dasspTimeMarks, leftSide);
         leftSide = !leftSide;
       };
 
@@ -2308,6 +2318,7 @@ GEOWATCH_JSON_MAP_DATA_CREATED = $.getJSON(main_map_json_file)
       var maps = [];
       // keep track of GeoWATCH time-dependent layers for updating!
       var dasspTimeLayers = [];
+	  var dasspTimeMarks = [];
       // alternate addition of maps to left and right columns
       var leftSide = true;
 
@@ -2318,8 +2329,8 @@ GEOWATCH_JSON_MAP_DATA_CREATED = $.getJSON(main_map_json_file)
 	//console.log("maps.js: GEOWATCH_NUM_MAPS_MAX = " + GEOWATCH_NUM_MAPS_MAX)
 	for (var imap = 0; imap < GEOWATCH_NUM_MAPS_MAX; ++imap) {
 		// create the i-th map
-		maps[maps.length] = createMap(MAIN_GEOWATCH_LAYER_INFO, imap, maps, dasspTimeLayers, leftSide);
-		//maps[maps.length] = createMap([], imap, maps, dasspTimeLayers, leftSide);
+		maps[maps.length] = createMap(MAIN_GEOWATCH_LAYER_INFO, imap, maps, dasspTimeLayers, dasspTimeMarks, leftSide);
+		//maps[maps.length] = createMap([], imap, maps, dasspTimeLayers, dasspTimeMarks, leftSide);
 		leftSide = !leftSide;
 	};
 

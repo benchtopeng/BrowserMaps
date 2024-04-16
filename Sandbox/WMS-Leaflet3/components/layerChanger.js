@@ -272,7 +272,7 @@ L.Control.LayerChanger = L.Control.extend({
 
   onAdd: function(map) {
 
-	//console.log("layerChanger: onAdd: starting...");
+	console.log("layerChanger: onAdd: starting...");
 
     // create the control.
     // use native HTML select element, but need special handling to get it to work on
@@ -390,7 +390,7 @@ L.Control.LayerChanger = L.Control.extend({
 	
 	  // if this was a change in baselayer, add back overlays (need to be on top so visible!)
 	  if (newLayer.overlay == false) {
-		  //console.log("layerChanger: change: adding overlays back in...");
+		  console.log("layerChanger: change: adding overlays back in...");
 		  //console.log(overlays)
 		  for (var i in overlays) self._map.addLayer(overlays[i]);
 		  
@@ -407,10 +407,25 @@ L.Control.LayerChanger = L.Control.extend({
 			//console.log("layerChanger: updateLayersInMenu: marker = ");
 			//console.log(marker);
 		  }
+		  
+		  //add the KML_LSR markers back in
+		  // Add LSR KML Marks (by Chip)
+		  //console.log("layerChanger: DEFAULT_KML_FNAME.length = " + DEFAULT_KML_FNAME.length)
+		  if (DEFAULT_KML_FNAME.length > 0) {
+			  //let kml_fname = "./data/tornados_lsr_201803190000_201803192359.kml
+			  let kml_fname = "./data/" + DEFAULT_KML_FNAME
+			  console.log("layerChanger: onAdd: adding KML_LSR file: " + kml_fname)
+			  var tornados = new L.KML_LSR(kml_fname, {async: true});
+			  //tornados.on("loaded", function(e) { map.fitBounds(e.target.getBounds()); });
+			  map.addLayer(tornados);
+		  }
+		  
 		  // Add Storm Track
 //        var polyline1 = L.polyline(track1, {color: 'red'}).addTo(map);
 //        var polyline2 = L.polyline(track2, {color: 'red'}).addTo(map);
 //	      var polyline3 = L.polyline(track3, {color: 'red'}).addTo(map);   
+	  } else {
+		  console.log("layerChanger: change: NOT adding overlays back in...");
 	  }
 
 	  /* Commented by Chip
