@@ -1,19 +1,62 @@
 
+
+var KmlLsrIconBig = L.Icon.extend({
+    options: {
+        shadowUrl: 'assets/diam_black.png',
+        iconSize:     [24,28],
+        shadowSize:   [0,0],
+        iconAnchor:   [12,14],
+        shadowAnchor: [12,14],
+        popupAnchor:  [0,-14]
+    }
+});
+var KmlLsrIconSmall = L.Icon.extend({
+    options: {
+        shadowUrl: 'assets/diam_black.png',
+        iconSize:     [18,22],
+        shadowSize:   [0,0],
+        iconAnchor:   [9,11],
+        shadowAnchor: [9,11],
+        popupAnchor:  [0,-11]
+    }
+});
+
+var iconsDiam = [new KmlLsrIconSmall({iconUrl: 'assets/diam_red.png'}),
+				  new KmlLsrIconSmall({iconUrl: 'assets/diam_lightOrange.png'}),
+				  new KmlLsrIconSmall({iconUrl: 'assets/diam_gray4.png'}),
+				  new KmlLsrIconSmall({iconUrl: 'assets/diam_gray2.png'})]
+var iconsDiamT = [new KmlLsrIconBig({iconUrl: 'assets/diamT_red.png'}),
+				  new KmlLsrIconBig({iconUrl: 'assets/diamT_lightOrange.png'}),
+				  new KmlLsrIconBig({iconUrl: 'assets/diamT_gray4.png'}),
+				  new KmlLsrIconBig({iconUrl: 'assets/diamT_gray2.png'})]
+var iconsDiamH = [new KmlLsrIconSmall({iconUrl: 'assets/diamH_red.png'}),
+				  new KmlLsrIconSmall({iconUrl: 'assets/diamH_lightOrange.png'}),
+				  new KmlLsrIconSmall({iconUrl: 'assets/diamH_gray4.png'}),
+				  new KmlLsrIconSmall({iconUrl: 'assets/diamH_gray2.png'})]
+
 L.KML_LSR = L.FeatureGroup.extend({
 	options: {
 		async: true
 	},
-	datetime_UTC_str:'',
-	event_type:'',
+	
+	kml_params: {},
+	
+	latLngs: [],
 
 	initialize: function (kml, options) {
 		L.Util.setOptions(this, options);
 		this._kml = kml;
 		this._layers = {};
+		this.datetime_UTC_str = '';
+		this.event_type = '';
+		//this.overlay = KML_LSR_overlay_val;
+		this.icons = iconsDiam;
+		
 
 		if (kml) {
 			this.addKML(kml, options, this.options.async);
 		}
+
 	},
 
 	loadXML: function (url, cb, options, async) {
@@ -58,19 +101,37 @@ L.KML_LSR = L.FeatureGroup.extend({
 	},
 
 	_addKML: function (xml) {
+		layer_type = "KML_LSR"
+		
 		var layers = L.KML_LSR.parseKML(xml);
 		if (!layers || !layers.length) return;
 		for (var i = 0; i < layers.length; i++) {
+			if (!layers[i].hasOwnProperty("layer_type")) {
+				layers[i].layer_type = layer_type
+			}
 			this.fire('addlayer', {
 				layer: layers[i]
 			});
 			this.addLayer(layers[i]);
 		}
 		this.latLngs = L.KML_LSR.getLatLngs(xml);
+		if (!this.hasOwnProperty("layer_type")) {
+			this.layer_type = layer_type
+		}
 		this.fire('loaded');
 	},
+	
+	setParams: function (params, noRedraw) {
 
-	latLngs: []
+		//L.extend(this.wmsParams, params);
+		L.extend(this.kml_params, params);
+
+		//if (!noRedraw) {
+		//	this.redraw();
+		//}
+
+		return this;
+	}
 });
 
 L.Util.extend(L.KML_LSR, {
@@ -82,12 +143,14 @@ L.Util.extend(L.KML_LSR, {
 		var layers = [], l;
 		for (var i = 0; i < el.length; i++) {
 			if (!this._check_folder(el[i])) { continue; }
+			//console.log("KML_LSR: parseKML: reading folder...");
 			l = this.parseFolder(el[i], style);
 			if (l) { layers.push(l); }
 		}
 		el = xml.getElementsByTagName('Placemark');
 		for (var j = 0; j < el.length; j++) {
 			if (!this._check_folder(el[j])) { continue; }
+			//console.log("KML_LSR: parseKML: reading placemarks directly...");
 			l = this.parsePlacemark(el[j], xml, style);
 			if (l) { layers.push(l); }
 		}
@@ -96,6 +159,11 @@ L.Util.extend(L.KML_LSR, {
 //			l = this.parseGroundOverlay(el[k]);
 //			if (l) { layers.push(l); }
 //		}
+
+		if (!layers.hasOwnProperty("layer_type")) { 
+			layers.layer_type = "KML_LSR"
+		}
+		//console.log(layers)
 		return layers;
 	},
 
@@ -205,13 +273,14 @@ L.Util.extend(L.KML_LSR, {
 
 	parseFolder: function (xml, style) {
 		var el, layers = [], l;
-		el = xml.getElementsByTagName('Folder');
-		for (var i = 0; i < el.length; i++) {
-			if (!this._check_folder(el[i], xml)) { continue; }
-			l = this.parseFolder(el[i], style);
-			if (l) { layers.push(l); }
-		}
+//		el = xml.getElementsByTagName('Folder');
+//		for (var i = 0; i < el.length; i++) {
+//			if (!this._check_folder(el[i], xml)) { continue; }
+//			l = this.parseFolder(el[i], style);
+//			if (l) { layers.push(l); }
+//		}
 		el = xml.getElementsByTagName('Placemark');
+		//if (el) { console.log("KML_LSR: parseFolder: about to parsePlacemarks for " + el.length + " items..."); }
 		for (var j = 0; j < el.length; j++) {
 			if (!this._check_folder(el[j], xml)) { continue; }
 			l = this.parsePlacemark(el[j], xml, style);
@@ -225,12 +294,44 @@ L.Util.extend(L.KML_LSR, {
 //		}
 		if (!layers.length) { return; }
 		if (layers.length === 1) { return layers[0]; }
-		return new L.FeatureGroup(layers);
+		var layerGroup = new L.FeatureGroup(layers);
+		layerGroup.layer_type = 'KML_LSR'
+		return layerGroup
+	},
+
+	parseExtendedData: function(data) {
+		var descr='';
+		var datetime_UTC_str='';
+		var event_type='';
+		for(var i=0; i<data.length; i++) { 
+			if (data[i].getAttribute("name")) {
+				var dataname = data[i].getAttribute("name"); 
+				var value = data[i].firstChild.data; 
+				
+				//look for special fields
+				if (dataname === "Report Time (UTC Timezone)") {
+					datetime_UTC_str = value;
+				}
+				if (dataname === "Event Type") {
+					event_type = value;
+					//name = this.event_type + ": " + name
+				}
+				
+				//ignore certain fields when expanding the description
+				var exclude_names = ['Office', 'County', 'Location', 'Event Type','ST', 'Lat', 'Lon' ,'ugc', 'ugcname'];
+				var include_in_descr = !(exclude_names.includes(dataname))
+				
+				//update the description text for this point
+				if (include_in_descr) {
+					descr = descr + dataname + ": " + value + "<br>"
+				}
+			}
+		}
+		return [descr, datetime_UTC_str, event_type];
 	},
 
 	parsePlacemark: function (place, xml, style, options) {
 		var h, i, j, k, el, il, opts = options || {};
-		//console.log("KML_LSR.js: parsePlacemark...");
 
 		el = place.getElementsByTagName('styleUrl');
 		for (i = 0; i < el.length; i++) {
@@ -249,83 +350,60 @@ L.Util.extend(L.KML_LSR, {
 				}
 			}
 		}
-
-		var multi = ['MultiGeometry', 'MultiTrack', 'gx:MultiTrack'];
-		for (h in multi) {
-			el = place.getElementsByTagName(multi[h]);
-			for (i = 0; i < el.length; i++) {
-				return this.parsePlacemark(el[i], xml, style, opts);
-			}
-		}
 		
-		var layers = [];
-
-		//var parse = ['LineString', 'Polygon', 'Point', 'Track', 'gx:Track'];
-		var parse = ['Point'];
-		for (j in parse) {
-			var tag = parse[j];
-			el = place.getElementsByTagName(tag);
-			for (i = 0; i < el.length; i++) {
-				var l = this['parse' + tag.replace(/gx:/, '')](el[i], xml, opts);
-				if (l) { layers.push(l); }
-			}
-		}
-
-		if (!layers.length) {
-			return;
-		}
-		var layer = layers[0];
-		if (layers.length > 1) {
-			layer = new L.FeatureGroup(layers);
-		}
-
-		var name, descr = '';
+		// get the name for this placemark
+		var name='';
 		el = place.getElementsByTagName('name');
 		if (el.length && el[0].childNodes.length) {
 			name = el[0].childNodes[0].nodeValue;
 		}
 		
-		el = place.getElementsByTagName('description');
+		//get any description based on the extended data
+		var data = place.getElementsByTagName("SimpleData");
+		var descr, datetime_UTC_str, event_type;
+		[descr, datetime_UTC_str, event_type] = this.parseExtendedData(data);
+
+		
+		// ////////////// Create a marker for each event
+			
+		//parse out the lat/lon for the place
+		var layers = [];
+		el = place.getElementsByTagName('Point');
 		for (i = 0; i < el.length; i++) {
-			for (j = 0; j < el[i].childNodes.length; j++) {
-				descr = descr + el[i].childNodes[j].nodeValue;
+			var l = this.parsePoint(el[i], xml, opts);
+			
+			//add to list
+			if (l) { 
+				//add in the extra data
+				l.name = name;
+				l.descr = descr;
+				l.datetime_UTC_str = datetime_UTC_str;
+				l.event_type = event_type;
+				l.icons = iconsDiam;
+				l.icons_tornado = iconsDiamT;
+				l.icons_hail = iconsDiamH;
+					
+				//l.overlay = KML_LSR_overlay_val;
+				
+				//push it onto the list
+				layers.push(l);
 			}
 		}
-		
-		//addd by Chip April 2024
-		var data = place.getElementsByTagName("SimpleData"); 
-		if (data.length > 0) {
-			if (descr.length > 0) {	descr = descr + '<br>'; }
-			for(var i=0; i<data.length; i++) { 
-				if (data[i].getAttribute("name")) {
-					var dataname = data[i].getAttribute("name"); 
-					var value = data[i].firstChild.data; 
-					
-					//look for special fields
-					if (dataname === "Report Time (UTC Timezone)") {
-						this.datetime_UTC_str = value;
-					}
-					if (dataname === "Event Type") {
-						this.event_type = value;
-						name = this.event_type + ": " + name
-					}
-					
-					//ignore certain fields when expanding the description
-					var exclude_names = ['Office', 'County', 'Location', 'Event Type','ST', 'Lat', 'Lon' ,'ugc', 'ugcname'];
-					var include_in_descr = !(exclude_names.includes(dataname))
-					
-					//update the description text for this point
-					if (include_in_descr) {
-						descr = descr + dataname + ": " + value + "<br>"
-					}
-				}
-			}			
+
+		if (!layers.length) { return; }	
+		var layer = layers[0];
+		if (layers.length > 1) { 
+			layer = new L.FeatureGroup(layers);
+			layer.layer_type = 'KML_LSR'
 		}
 		
+		//console.log("KML_LSR: parsePlacemark: layer group")
+		//console.log(layer);
 
+		// /////////////// Create the pop-up tag (and text) associated with the marker
 		if (name) {
 			layer.on('add', function () {
-				layer.bindPopup('<b>' + name + '</b>' + '<br>' + descr);
+				layer.bindPopup('<b>' + layer.name + '</b>' + '<br>' + layer.descr);
 			});
 		}
 
@@ -354,13 +432,14 @@ L.Util.extend(L.KML_LSR, {
 //		return new L.Polyline(coords, options);
 //	},
 
-	parsePoint: function (line, xml, options) {
-		var el = line.getElementsByTagName('coordinates');
-		if (!el.length) {
-			return;
-		}
+	parsePoint: function (place, xml, options) {
+		var el = place.getElementsByTagName('coordinates');
+		if (!el.length) { return; }
 		var ll = el[0].childNodes[0].nodeValue.split(',');
-		return new L.KML_LSR_Marker(new L.LatLng(ll[1], ll[0]), options);
+		var marker = new L.KML_LSR_Marker(new L.LatLng(ll[1], ll[0]), options);
+	
+		//return the new marker
+		return marker;
 	},
 
 	/*
@@ -402,7 +481,7 @@ L.Util.extend(L.KML_LSR, {
 		}
 		return coords;
 	},
-
+	
 	_read_coords: function (el) {
 		var text = '', coords = [], i;
 		for (i = 0; i < el.childNodes.length; i++) {
@@ -471,6 +550,10 @@ L.Util.extend(L.KML_LSR, {
 	}
 	*/
 
+	redraw: function() {
+	},
+	
+
 });
 
 L.KML_LSR_Icon = L.Icon.extend({
@@ -492,6 +575,7 @@ L.KML_LSR_Icon = L.Icon.extend({
 
 L.KML_LSR_Marker = L.Marker.extend({
 	options: {
-		icon: new L.KML_LSR_Icon.Default()
+		//icon: new L.KML_LSR_Icon.Default()
+		icon: iconsDiamT[0]
 	}
 });

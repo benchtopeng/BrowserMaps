@@ -222,7 +222,7 @@
 		var GEOWATCH_NUM_MAPS_INITIAL = 1;  //Changed from 2 by Chip
 		//if (isSmallScreen()) GEOWATCH_NUM_MAPS_INITIAL = 1;
 
-		var GEOWATCH_NUM_MAPS_MAX = 4;
+		var GEOWATCH_NUM_MAPS_MAX = 1;  //was 4, changed to 1 by chip
 		var GEOWATCH_PUBLIC_MODE = true;
 		var DEFAULT_MAP_CENTER = [34.75, -86.75];
 		var DEFAULT_MAP_ZOOM = 8;
@@ -232,11 +232,11 @@
 		var DEFAULT_SHOW_ADVANCED_LAYERS = false;
 		var DEFAULT_SHOW_LEGENDS = GEOWATCH_NUM_MAPS_INITIAL > 1;
 		var DEFAULT_LAYERS = [
-			"Streets and Borders (MapBox)"];
+			"CONUS NEXRAD Base Reflectivity (N0Q)"];
 			
 		var DEFAULT_PUBLIC_LAYERS = [
-			"Streets and Borders (MapBox)",
-			"NEXRAD Radar (nexrad-n0r-wmst)"];
+			"CONUS NEXRAD Base Reflectivity (N0Q)",
+			"CONUS NEXRAD Base Reflectivity (N0Q)"];
 
 		//if (!IGNORE_MAPBOX_LAYERS) {
 		//	DEFAULT_LAYERS[0] = ['Streets and Borders (MapBox)']
@@ -325,7 +325,6 @@
 	<!-- <script type="text/javascript" src="./components/sidebars/addLayerSidebar/spatialConvolution.js"></script> -->
 	<script type="text/javascript" src="./components/sidebars/addLayerSidebar/colormap.js"></script>
 	<!-- <script type="text/javascript" src="./components/cui_page/cui.js"></script> -->
-
 
 
 </body>

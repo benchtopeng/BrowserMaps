@@ -3075,18 +3075,18 @@ L.TileLayer.WMS = L.TileLayer.extend({
 	getTileUrl: function (tilePoint) { // (Point, Number) -> String
 
 		var map = this._map,
-		    tileSize = this.options.tileSize,
+		tileSize = this.options.tileSize,
 
-		    nwPoint = tilePoint.multiplyBy(tileSize),
-		    sePoint = nwPoint.add([tileSize, tileSize]),
+		nwPoint = tilePoint.multiplyBy(tileSize),
+		sePoint = nwPoint.add([tileSize, tileSize]),
 
-		    nw = this._crs.project(map.unproject(nwPoint, tilePoint.z)),
-		    se = this._crs.project(map.unproject(sePoint, tilePoint.z)),
-		    bbox = this._wmsVersion >= 1.3 && this._crs === L.CRS.EPSG4326 ?
-		        [se.y, nw.x, nw.y, se.x].join(',') :
-		        [nw.x, se.y, se.x, nw.y].join(','),
+		nw = this._crs.project(map.unproject(nwPoint, tilePoint.z)),
+		se = this._crs.project(map.unproject(sePoint, tilePoint.z)),
+		bbox = this._wmsVersion >= 1.3 && this._crs === L.CRS.EPSG4326 ?
+				[se.y, nw.x, nw.y, se.x].join(',') :
+				[nw.x, se.y, se.x, nw.y].join(','),
 
-		    url = L.Util.template(this._url, {s: this._getSubdomain(tilePoint)});
+		url = L.Util.template(this._url, {s: this._getSubdomain(tilePoint)});
     var retVal = url + L.Util.getParamString(this.wmsParams, url, true) + '&BBOX=' + bbox;
     if (this.options.additionalParams) {
       retVal += '&PARAMS=' + this.options.additionalParams;

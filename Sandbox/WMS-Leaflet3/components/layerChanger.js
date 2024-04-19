@@ -12,6 +12,8 @@
  * L.Control.LayerChanger is used for to change the displayed layer in a map.
  * by JYB
  */
+ 
+
 
 // This GeoJSON contains features that include an "icon"
 // property. The value of the "icon" property corresponds
@@ -47,6 +49,7 @@ const arrayLocations = {
 
 	]
 };
+
 var ArrayIcon = L.Icon.extend({
     options: {
         shadowUrl: 'assets/circleX_black.png',
@@ -81,33 +84,13 @@ var markerIcon = L.icon({
     popupAnchor:  [0, -20] // point from which the popup should open relative to the iconAnchor
 });
 */
-var track1 = [[	34.957	,	-87.138	]	,
-			[	34.955	,	-87.057	]	,
-			[	34.97	,	-87.097	]	,
-			[	34.968	,	-87.016	]	,
-			[	34.928	,	-86.915	]	,
-			[	34.963	,	-86.874	]	,
-			[	34.965	,	-86.955	]	,
-			[	34.917	,	-86.854	]	,
-			[	34.974	,	-86.873	]	,
-			[	35	,	-86.911	]	,
-			[	34.971	,	-86.812	]	,
-			[	34.97	,	-86.65	]	,
-			[	34.966	,	-86.589	]]
-var track2 = [[	34.8	,	-86.817	],[	34.8	,	-86.817	]]
-//var track2 = [[	34.957	,	-87.138	],[	34.957	,	-87.138	]]
-var track3 = [[	34.327	,	-86.81	]	,
-			[	34.348	,	-86.862	]	,
-			[	34.341	,	-86.769	]	,
-			[	34.32	,	-86.679	]]
 
 var STREETS_AND_BORDERS_OVERLAY_INDEX = 0;
 var HILLSHADE_OVERLAY_INDEX = 1;
 
 
 L.Control.LayerChanger = L.Control.extend({
-
-
+	
   options: {
     position: 'topleft',
     layers: null,
@@ -130,149 +113,155 @@ L.Control.LayerChanger = L.Control.extend({
   },
 
 
+	//this appears to be called only once...at startup when the layerPicker is added to the map
   updateLayersInMenu: function(layers, keepPreviousSelection) {
     var menu = this._menu;
     var map = this._map;
 
-    // remove all old layers, but save list of overlay layers so can add back
-	//console.log("layerChanger: updateLayersInMenu: starting...keepPreviousSelection=" + keepPreviousSelection);
-
+		// remove all old layers, but save list of overlay layers so can add back
+		//console.log("layerChanger: updateLayersInMenu: starting. keepPreviousSelection = " + keepPreviousSelection);
     var self = this;
     var overlays = [];
-    var maplayers = self._map._layers;
-    var previouslySelectedLayerName = null;
+    var maplayers = self._map._layers; //this will be empty the first time this is called
+		let was_empty_map = true    
+		var previouslySelectedLayerName = null;
     if (keepPreviousSelection) {
       previouslySelectedLayerName = self.options.layers[self.options.mostRecentSelectedIndex].displayName;
       console.log(previouslySelectedLayerName);
     };
     for (var i in maplayers) {
-		//console.log("layerChanger.js: updateLayersInMenu: mplayers = ");
-		//console.log(maplayers[i]);
-		
-      try {
-        if (maplayers[i].overlay) overlays[overlays.length] = maplayers[i];
-        self._map.removeLayer(maplayers[i]);
-      }
-      catch(e){
-   	    console.log("layerChanger.js: updateLayersInMenu: fail.");
-        if (e instanceof TypeError){
-          console.log("Skip removing non-displayed map layer.");
-        }
-        else {
-          throw(e);
-        }
-      }
-    };
-
+			//console.log("layerChanger.js: updateLayersInMenu: mplayers = "); console.log(maplayers[i]);
+			was_empty_map = false; //this map had layers!
+			
+			try {
+				if (maplayers[i].overlay) {
+					overlays[overlays.length] = maplayers[i];
+				}
+				self._map.removeLayer(maplayers[i]);
+			} catch(e){
+				console.log("layerChanger.js: updateLayersInMenu: fail.");
+				if (e instanceof TypeError){
+					console.log("layerChanger: updateLayersInMenu: Skip removing non-displayed map layer.");
+				}
+				else {
+					throw(e);
+				}
+			}
+		};
 
     // remove all previously added items from menu
     while (menu.firstChild) menu.removeChild(menu.firstChild);
 
-	//choose defaults if none were selected
-	if (!keepPreviousSelection && (previouslySelectedLayerName == null)) {
-		//add a base map...the first layer
-		map.addLayer(layers[0].mapLayer);
-		this.checkVisibilityofMapboxLogo(map, layers[0].mapLayer);
-		this.options.mostRecentSelectedIndex = 0;
+		//choose defaults if none were selected
+		if (!keepPreviousSelection && (previouslySelectedLayerName == null)) {
+			//console.log("layerChanger: updateLayersInMenu: using default for previous selected layer");
+			
+			//add a base map...assume that first layer is our base map
+			map.addLayer(layers[0].mapLayer);  //add it to the map
+			this.checkVisibilityofMapboxLogo(map, layers[0].mapLayer);
+			this.options.mostRecentSelectedIndex = 0;
+			keepPreviousSelection = true;
+			
+			//now assign a default weather layer
+			previouslySelectedLayerName = this.options.initialLayerToDisplay;
+		}
+		//console.log("layerChanger: updateLayersInMenu: previouslySelectedLayerName = " + previouslySelectedLayerName);
 		
-		//prepare it to add a radar layer as the default
-		keepPreviousSelection = true;
-		previouslySelectedLayerName = "CONUS NEXRAD Base Reflectivity (N0Q)";
-	}
-		
-
     // add the (grouped) layers to the layer selection list
     this.options.layers = layers;
     var previousGroup = null;
     var defaultLayerHasBeenSet = false;
-    for (var i in layers) {
+    for (var i in layers) {  //loop over each layer
+			let this_layer_already_active = false;
+		
+			//is this the start of a new group within the menu?
       if (previousGroup == null || layers[i].groupName != previousGroup.label) {
+				//create a new group within the menu
         if (previousGroup) menu.appendChild(previousGroup);
         previousGroup = document.createElement('OPTGROUP');
         previousGroup.label = layers[i].groupName;
         //console.log('created ' + previousGroup.label)
       }
-      var opt = document.createElement('option', 'leaflet-control' + ' leaflet-bar');
+  
+			//now, create the menu item itself
+			var opt = document.createElement('option', 'leaflet-control' + ' leaflet-bar');
       opt.innerHTML = layers[i].displayName;
       opt.value = i;
       previousGroup.appendChild(opt);
 	  
+			//look to see if this layer is the selected layer (and make it active)
       if (keepPreviousSelection && previouslySelectedLayerName != null) {
+				//is this the layer that matches our initial selection?
         if (previouslySelectedLayerName == layers[i].displayName && !defaultLayerHasBeenSet) {
+					//yes, it is our selected layer
+          //console.log("layerChanger.js: updateLayersInMenu A: layers[i].displayName = " + layers[i].displayName)
           opt.selected = true;
-		  //console.log("layerChanger.js: updateLayersInMenu A: layers[i].displayName = " + layers[i].displayName)
-          map.addLayer(layers[i].mapLayer);
+					map.addLayer(layers[i].mapLayer);  //add this layer to the map
           this.options.mostRecentSelectedIndex = i;
           defaultLayerHasBeenSet = true;
+					this_layer_already_active = true;
         };
       } else if (layers[i].displayName && layers[i].displayName.indexOf(this.options.initialLayerToDisplay) != -1 && !defaultLayerHasBeenSet) {
-        //console.log("layerChanger.js: updateLayersInMenu B: layers[i].displayName = " + layers[i].displayName)
-		opt.selected = true;
-        map.addLayer(layers[i].mapLayer);
+				//an alaterntive way of finding the layer to make active
+				//console.log("layerChanger.js: updateLayersInMenu B: layers[i].displayName = " + layers[i].displayName)
+				opt.selected = true;
+        map.addLayer(layers[i].mapLayer); //add this layer to the map
         this.options.mostRecentSelectedIndex = i;
         defaultLayerHasBeenSet = true;
+				this_layer_already_active = true;
         this.checkVisibilityofMapboxLogo(map, layers[i].mapLayer);
       };
-
-    }
+			
+			//add this if forced to be the active layer by the original layer_specs (if it's not already activated)
+			//console.log("layerChanger: updateLayersInMenu: here A");
+			if (was_empty_map && (!this_layer_already_active)) {
+				//console.log("layerChanger: updateLayersInMenu: here B: layers[i].mapLayer...");
+				//console.log(layers[i].mapLayer);
+				if (layers[i].mapLayer.hasOwnProperty("default_active")) {
+					//console.log("layerChanger: updateLayersInMenu: here C");
+					if (layers[i].mapLayer.default_active == true) {
+						//console.log("layerChanger: updateLayersInMenu: here D");
+						map.addLayer(layers[i].mapLayer);  //add this layer to the map
+					}
+				}
+			}
+			
+    } //end loop over layers
     
 	/*
-	// if default layer wasn't found, select the first one
+		// if default layer wasn't found, select the first one
     if (!defaultLayerHasBeenSet) {
 	  //console.log("layerChanger.js: updateLayersInMenu C: layers[0].displayName = " + layers[0].displayName)
       map.addLayer(layers[0].mapLayer);
       this.checkVisibilityofMapboxLogo(map, layers[0].mapLayer);
       this.options.mostRecentSelectedIndex = 0;
-	  
-	  if (0) {
-		previouslySelectedLayerName = "CONUS NEXRAD Base Reflectivity (N0R)"
-		for (var i in layers) {  //find this layer
-			if (previouslySelectedLayerName == layers[i].displayName && !defaultLayerHasBeenSet) { //is this our layer?
-				//set the selection menu to this item
-				var opt = document.createElement('option', 'leaflet-control' + ' leaflet-bar');
-				opt.innerHTML = layers[i].displayName;
-				opt.value = i;
-				//previousGroup.appendChild(opt);
-				
-				//put this layer on the map itself
-				opt.selected = true;  //this makes
-				map.addLayer(layers[i].mapLayer);
-				this.options.mostRecentSelectedIndex = i;
-				defaultLayerHasBeenSet = true;
-				this.checkVisibilityofMapboxLogo(map, layers[i].mapLayer)
-			};
-		}
-	  }
+
     }
 	*/
-    if (previousGroup) menu.appendChild(previousGroup);
-
+    if (previousGroup) menu.appendChild(previousGroup); //what is this?  To ensure that we added the last group?
 
     // add back overlays (need to be on top so visible!)
-	//console.log("layerChanger.js: upCdateLayersInMenu (D): overlays.length = " + overlays.length);
+		//console.log("layerChanger.js: upCdateLayersInMenu (D): overlays.length = " + overlays.length);
     for (var i = 0; i < overlays.length; i++) self._map.addLayer(overlays[i]);
 	
-	// Added markers by chip
-	for (var i in arrayLocations.features) {
-		var lon = arrayLocations.features[i].geometry.coordinates[0];
-		var lat = arrayLocations.features[i].geometry.coordinates[1];
-		//console.log("layerChanger: updateLayersInMenu: lat = " + lat + ", lon = " + lon)
-		var marker = L.marker([lat, lon], {icon: arrayIcons[i]}).addTo(map)
-			.bindPopup(arrayLocations.features[i].properties.description);		
-		//	.bindPopup('A pretty CSS popup.<br> Easily customizable.');
-		//	.openPopup();
-		//console.log("layerChanger: updateLayersInMenu: marker = ");
-		//console.log(marker);
-	}
-	// Add Storm Track
-//    var polyline1 = L.polyline(track1, {color: 'red'}).addTo(map);
-//    var polyline2 = L.polyline(track2, {color: 'red'}).addTo(map);
-//	var polyline3 = L.polyline(track3, {color: 'red'}).addTo(map);
+		// Added array location markers by chip
+		for (var i in arrayLocations.features) {
+			var lon = arrayLocations.features[i].geometry.coordinates[0];
+			var lat = arrayLocations.features[i].geometry.coordinates[1];
+			//console.log("layerChanger: updateLayersInMenu: lat = " + lat + ", lon = " + lon)
+			var marker = L.marker([lat, lon], {icon: arrayIcons[i]}).addTo(map)
+				.bindPopup(arrayLocations.features[i].properties.description);		
+			//	.bindPopup('A pretty CSS popup.<br> Easily customizable.');
+			//	.openPopup();
+			//console.log("layerChanger: updateLayersInMenu: marker = ");
+			//console.log(marker);
+		}
+
   },
 
   onAdd: function(map) {
 
-	console.log("layerChanger: onAdd: starting...");
+		//console.log("layerChanger: onAdd: starting...");
 
     // create the control.
     // use native HTML select element, but need special handling to get it to work on
@@ -288,153 +277,88 @@ L.Control.LayerChanger = L.Control.extend({
     menu.style.fontWeight = 'bold';
     menu.setAttribute('id', 'layer-changer-' + map.idx);
 
-    this.updateLayersInMenu(this.options.layers);
+    this.updateLayersInMenu(this.options.layers); //this draws the layers? but only when the layer selector is added to the map
     this._removeLayerButton = L.easyButton('fa-trash-o', function() { /* do nothing*/ }, 'Remove layer', '');
     this._removeLayerButton.options.position = 'topleft';
 
     // ***************************************************
-    // event handler for when user changes selected layer
+    // event handler for when user changes selected layer (and only when the user selects a layer, not at startup)
     // ***************************************************
     var self = this;
-    menu.addEventListener('change', function(evt) {
-	  //console.log("layerChanger: onAdd: addEventListener 'change': starting...");
+    menu.addEventListener('change', 
+			function(evt) {
+				//console.log("layerChanger: onAdd: addEventListener 'change': starting...");
 
-      var previousSelectionStr = this.options[self.options.mostRecentSelectedIndex].text;
-      var pendingSelectionStr = this.options[this.selectedIndex].text;
+				var previousSelectionStr = this.options[self.options.mostRecentSelectedIndex].text;
+				var pendingSelectionStr = this.options[this.selectedIndex].text;
 
-      for (var idx in self.options.slowLoadingLayerPrefixesToWarnAbout) {
-        slowLoadingLayerPrefix = self.options.slowLoadingLayerPrefixesToWarnAbout[idx]
-        if (pendingSelectionStr.substring(0, slowLoadingLayerPrefix.length) == slowLoadingLayerPrefix) {
-          var msg = "WARNING!\n" +
-            "   Computationally Expensive Layer Selected:\n" +
-            "   \"" + pendingSelectionStr + "\"\n\n" +
-            "To prevent overload of GeoWATCH server:\n" +
-            "   1) FIRST zoom/pan to region of interest prior to selection.\n" +
-            "   2) DO NOT zoom/pan map with layer selected.\n\n" +
-            "Proceed with layer display?";
-          if (!window.confirm(msg)) {
-            this.selectedIndex = self.options.mostRecentSelectedIndex;
-            return;
-          };
-        }
-      }
+				for (var idx in self.options.slowLoadingLayerPrefixesToWarnAbout) {
+					slowLoadingLayerPrefix = self.options.slowLoadingLayerPrefixesToWarnAbout[idx]
+					if (pendingSelectionStr.substring(0, slowLoadingLayerPrefix.length) == slowLoadingLayerPrefix) {
+						var msg = "WARNING!\n" +
+							"   Computationally Expensive Layer Selected:\n" +
+							"   \"" + pendingSelectionStr + "\"\n\n" +
+							"To prevent overload of GeoWATCH server:\n" +
+							"   1) FIRST zoom/pan to region of interest prior to selection.\n" +
+							"   2) DO NOT zoom/pan map with layer selected.\n\n" +
+							"Proceed with layer display?";
+						if (!window.confirm(msg)) {
+							this.selectedIndex = self.options.mostRecentSelectedIndex;
+							return;
+						};
+					}
+				}
 
-      // remove all old layers, but save list of overlay layers so can add back
-      var overlays = [];
-	  var baselayers= []
-      var maplayers = self._map._layers;
-	  //console.log("layerChanger: change: removing all maplayers...");
-	  //console.log(maplayers);
-      for (var i in maplayers) {
-        if (maplayers[i].overlay) {
-			overlays[overlays.length] = maplayers[i];
-		} else {
-			baselayers[baselayers.length] = maplayers[i];
-		}
-        self._map.removeLayer(maplayers[i]);
-      };
+				// remove all old layers, but save list of overlay layers so can add back
+				var overlays = [];
+				var baselayers= []
+				var maplayers = self._map._layers;
+				for (var i in maplayers) {
+					if (maplayers[i].overlay) {
+						overlays[overlays.length] = maplayers[i];
+					} else {
+						baselayers[baselayers.length] = maplayers[i];
+					}
+					self._map.removeLayer(maplayers[i]);
+				};
 
-	  // if the new layer is a base layer, add it
+				// get the new layer
+				self.options.mostRecentSelectedIndex = this.selectedIndex;
+				var value = this.options[this.selectedIndex].value;
+				var str = this.options[this.selectedIndex].text;
+				var newLayer = self.options.layers[value].mapLayer;
+				if (newLayer == undefined) newLayer = self.options.layers[value] //added by Chip to handle KML_LSR layers
+				
+				
+				//loop over all layer types and add them.
+				//Note: we are only (currently) allowing one layer for each type of layer (layerID).
+				//You can display multiple layerIDs simulatneously, but only one representative of each
+				//layerID.  This is an arbitrary choice...it's may way of keeping the maps sane.
+				//You might choose to change this to allow multiple layers for each layerID.  Your call.
+				for (var layerID = 0; layerID < 100; layerID++) {   //let's assume 100 is big enough to cover all layerIDs
+					if (newLayer.overlay == layerID) {  //if the current layerID is the same as the new layer, only add the new new layer
+						self._map.addLayer(newLayer);
+						self.checkVisibilityofMapboxLogo(self._map, newLayer); 
+					} else {
+						if (layerID==0) { // zero means that it's a base layer
+							//add in the base layer(s)
+							for (var i in baselayers) self._map.addLayer(baselayers[i]);
+						} else {
+							///add in the overlay layers, but only those on if a different ID than the current newLayer
+							for (var i in overlays) {
+								if (newLayer.overlay != overlays[i].overlay) self._map.addLayer(overlays[i]);
+							}
+						}
+					}
+				}
 
-      // add new layer
-      self.options.mostRecentSelectedIndex = this.selectedIndex;
-      var value = this.options[this.selectedIndex].value;
-      var str = this.options[this.selectedIndex].text;
-      var newLayer = self.options.layers[value].mapLayer;
-	  //console.log("layerChanger: change: new layer = ");
-	  //console.log(newLayer);
-	  if (newLayer.overlay == true) {
-		  //add the old base layers first
-		  //console.log("layerChanger: change: adding base layers");
-		  for (var i in baselayers) self._map.addLayer(baselayers[i]);
-	  }
-	  //console.log("layerChanger: change: adding new layer");
-      self._map.addLayer(newLayer);
-      self.checkVisibilityofMapboxLogo(self._map, newLayer);
-
-      //if (ENABLE_CUSTOM_LAYER_FEATURE) {
-      //  if (newLayer.isCustomLayer) {
-      //
-      //    self._removeLayerButton.intendedFunction = function() {
-      //      removeCookieLayer(self.options.layers[value].displayName, function(item) {
-      //        refreshLayers();
-      //        self.selectOption(self.options.layers[0].displayName);
-      //      });
-      //    };
-      //    if (!self._removeLayerButton._map) {
-      //      self._map.addControl(self._removeLayerButton);
-      //    }
-      //    getCookieLayer(self.options.layers[value].displayName, function(item) {
-      //      if (!item) item = newLayer.isCustomLayer;
-      //      setJSONFromString(JSON.stringify(item.definition));
-      //    });
-      //  } else {
-      //    if (self._removeLayerButton._map) {
-      //      self._map.removeControl(self._removeLayerButton);
-      //    }
-      //  }
-      //}
-
-/*      
-	  // Add KML Marks (by Chip)
-	  //console.log("layerChanger: DEFAULT_KML_FNAME.length = " + DEFAULT_KML_FNAME.length)
-	  if (DEFAULT_KML_FNAME.length > 0) {
-		  //let kml_fname = "./data/tornados_lsr_201803190000_201803192359.kml
-		  let kml_fname = "./data/" + DEFAULT_KML_FNAME
-		  console.log("layerChanger: onAdd: adding KML file: " + kml_fname)
-		  var tornados = new L.KML(kml_fname, {async: true});
-		  tornados.on("loaded", function(e) { map.fitBounds(e.target.getBounds()); });
-		  map.addLayer(tornados);
-	  }
-*/	
-	
-	  // if this was a change in baselayer, add back overlays (need to be on top so visible!)
-	  if (newLayer.overlay == false) {
-		  console.log("layerChanger: change: adding overlays back in...");
-		  //console.log(overlays)
-		  for (var i in overlays) self._map.addLayer(overlays[i]);
-		  
-		    
-		  // Added markers and storm tracks by chip
-		  for (var i in arrayLocations.features) {
-			var lon = arrayLocations.features[i].geometry.coordinates[0];
-			var lat = arrayLocations.features[i].geometry.coordinates[1];
-			//console.log("layerChanger: updateLayersInMenu: lat = " + lat + ", lon = " + lon)
-			var marker = L.marker([lat, lon], {icon: arrayIcons[i]}).addTo(map)
-				.bindPopup(arrayLocations.features[i].properties.description);		
-			//	.bindPopup('A pretty CSS popup.<br> Easily customizable.');
-			//	.openPopup();
-			//console.log("layerChanger: updateLayersInMenu: marker = ");
-			//console.log(marker);
-		  }
-		  
-		  //add the KML_LSR markers back in
-		  // Add LSR KML Marks (by Chip)
-		  //console.log("layerChanger: DEFAULT_KML_FNAME.length = " + DEFAULT_KML_FNAME.length)
-		  if (DEFAULT_KML_FNAME.length > 0) {
-			  //let kml_fname = "./data/tornados_lsr_201803190000_201803192359.kml
-			  let kml_fname = "./data/" + DEFAULT_KML_FNAME
-			  console.log("layerChanger: onAdd: adding KML_LSR file: " + kml_fname)
-			  var tornados = new L.KML_LSR(kml_fname, {async: true});
-			  //tornados.on("loaded", function(e) { map.fitBounds(e.target.getBounds()); });
-			  map.addLayer(tornados);
-		  }
-		  
-		  // Add Storm Track
-//        var polyline1 = L.polyline(track1, {color: 'red'}).addTo(map);
-//        var polyline2 = L.polyline(track2, {color: 'red'}).addTo(map);
-//	      var polyline3 = L.polyline(track3, {color: 'red'}).addTo(map);   
-	  } else {
-		  console.log("layerChanger: change: NOT adding overlays back in...");
-	  }
-
-	  /* Commented by Chip
-	  // restore overlay grid if option selected
-      var sidebar = self._map.options.maps[0].sidebar
-      if (sidebar.showGridCheckBox && sidebar.showGridCheckBox.checked) self._map.grid.addTo(self._map)
-	  */
-  
-    });
+				/* Commented by Chip
+				// restore overlay grid if option selected
+					var sidebar = self._map.options.maps[0].sidebar
+					if (sidebar.showGridCheckBox && sidebar.showGridCheckBox.checked) self._map.grid.addTo(self._map)
+				*/
+			} 
+		);  // end menu.addEventListener('change'
 
     // special handling for touch interfaces
     if (L.Browser.touch) {
@@ -476,23 +400,6 @@ L.Control.LayerChanger = L.Control.extend({
       L.DomEvent.disableScrollPropagation(container); // this fixes issues with scrolwheel fall-through in dropdown menu for Firefox/IE
 
     };
-
-//commented out by Chip
-    // also prepare for available overlay layers (e.g., streets)
-//    if (this.options.overlays) {
-//      var overlays = this.options.overlays;
-//      map.streetsAndBordersOverlayLayer = overlays[STREETS_AND_BORDERS_OVERLAY_INDEX].mapLayer;
-//      //map.hillshadeOverlayLayer = overlays[HILLSHADE_OVERLAY_INDEX].mapLayer;  //Commented by Chip
-//      for (var j = 0; j < overlays.length; ++j) {
-//        var layerIsActive = false;
-//        if (j == HILLSHADE_OVERLAY_INDEX) layerIsActive = DEFAULT_SHOW_HILLSHADING;
-//        else if (j == STREETS_AND_BORDERS_OVERLAY_INDEX) layerIsActive = DEFAULT_SHOW_STREETS;
-//        else layerIsActive = true;
-//        if (layerIsActive) map.addLayer(overlays[j].mapLayer);
-//      };
-//    };
-
-
 
     return container;
   },
