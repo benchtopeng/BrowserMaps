@@ -8,7 +8,8 @@ var KmlLsrIconBig = L.Icon.extend({
         iconAnchor:   [12,14],
         shadowAnchor: [12,14],
         popupAnchor:  [0,-14]
-    }
+    },
+			
 });
 var KmlLsrIconSmall = L.Icon.extend({
     options: {
@@ -18,7 +19,8 @@ var KmlLsrIconSmall = L.Icon.extend({
         iconAnchor:   [9,11],
         shadowAnchor: [9,11],
         popupAnchor:  [0,-11]
-    }
+    },
+
 });
 
 var iconsDiam = [new KmlLsrIconSmall({iconUrl: 'assets/diam_red.png'}),
@@ -50,7 +52,7 @@ L.KML_LSR = L.FeatureGroup.extend({
 		this.datetime_UTC_str = '';
 		this.event_type = '';
 		//this.overlay = KML_LSR_overlay_val;
-		this.icons = iconsDiam;
+		this.icons = structuredClone(iconsDiam);
 		
 
 		if (kml) {
@@ -101,7 +103,7 @@ L.KML_LSR = L.FeatureGroup.extend({
 	},
 
 	_addKML: function (xml) {
-		layer_type = "KML_LSR"
+		let layer_type = "KML_LSR"
 		
 		var layers = L.KML_LSR.parseKML(xml);
 		if (!layers || !layers.length) return;
@@ -131,7 +133,9 @@ L.KML_LSR = L.FeatureGroup.extend({
 		//}
 
 		return this;
-	}
+	},
+
+	
 });
 
 L.Util.extend(L.KML_LSR, {
@@ -370,7 +374,7 @@ L.Util.extend(L.KML_LSR, {
 		var layers = [];
 		el = place.getElementsByTagName('Point');
 		for (i = 0; i < el.length; i++) {
-			var l = this.parsePoint(el[i], xml, opts);
+			var l = this.parsePoint(el[i], xml, opts); //returns a marker
 			
 			//add to list
 			if (l) { 
@@ -379,9 +383,9 @@ L.Util.extend(L.KML_LSR, {
 				l.descr = descr;
 				l.datetime_UTC_str = datetime_UTC_str;
 				l.event_type = event_type;
-				l.icons = iconsDiam;
-				l.icons_tornado = iconsDiamT;
-				l.icons_hail = iconsDiamH;
+				l.icons = structuredClone(iconsDiam);
+				l.icons_tornado = structuredClone(iconsDiamT);
+				l.icons_hail = structuredClone(iconsDiamH);
 					
 				//l.overlay = KML_LSR_overlay_val;
 				
@@ -577,5 +581,18 @@ L.KML_LSR_Marker = L.Marker.extend({
 	options: {
 		//icon: new L.KML_LSR_Icon.Default()
 		icon: iconsDiamT[0]
-	}
+	},
+	
+	/*	
+	update: function () {
+		if (this._icon) {
+			console.log("KML_LSR: update()...");
+			var pos = this._map.latLngToLayerPoint(this._latlng).round();
+			this._setPos(pos);
+		}
+
+		return this;
+	},
+	*/
+
 });

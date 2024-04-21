@@ -870,7 +870,7 @@ function removeTimeMarks(map) {
 function downSelectAndAddTimeMarks(map, newUTCDateAndTime, dasspTimeMarks) {
 	//console.log("maps: downSelectAndAddTimeMarks: newUTCDateAndTime.toISOString = " + newUTCDateAndTime.toISOString());
 	//console.log("maps: downSelectAndAddTimeMarks: dasspTimeMarks.length = " + dasspTimeMarks.length);
-	let layerGroup;
+	let layerGroups = [];
 	for (var i = 0; i < dasspTimeMarks.length; i++) {
 		//console.log("maps: downSelectAndAddTimeMarks: getAllFuncs(dasspTimeMarks[i])..."); console.log(getAllFuncs(dasspTimeMarks[i]));
 		//console.log("maps: downSelectAndAddTimeMarks: dasspTimeMarks[" + i + "]...");console.log(dasspTimeMarks[i]);
@@ -880,80 +880,85 @@ function downSelectAndAddTimeMarks(map, newUTCDateAndTime, dasspTimeMarks) {
 		var source_layers = mapLayers.getLayers();
 		//console.log("maps: downSelectAndAddTimeMarks: source_layers.length = " + source_layers.length);
 		//console.log("maps: downSelectAndAddTimeMarks: source_layers..."); console.log(source_layers);
-		/*
-		if (source_layers.length == 0) {
-			// debugging...
-			var foo = Object.getOwnPropertyNames(dasspTimeMarks[i]);
-			console.log("maps: downSelectAndAddTimeMarks: Object.getOwnPropertyNames(dasspTimeMarks[i]) = " + foo);
-			console.log("maps: downSelectAndAddTimeMarks: dassptTimeMarks[i]._layers..."); console.log(dasspTimeMarks[i]._layers);
-
-			var foo2 = Object.getOwnPropertyNames(dasspTimeMarks[i]._layers);
-			console.log("maps: downSelectAndAddTimeMarks: Object.getOwnPropertyNames(dasspTimeMarks[i]._layers) = " + foo2);
-			console.log("maps: downSelectAndAddTimeMarks: dasspTimeMarks[i]._layers.foo2[0]..."); console.log(dasspTimeMarks[i]._layers.foo2[0]);
-		}
-		*/
+		
 		let new_layers=[]; //this will hold the layers to draw
 		for (var j=0; j<source_layers.length; j++) {
 			var layer1 = source_layers[j];
 			//console.log("maps: downSelectAndAddTimeMarks: source_layers[" + j + "] => layer1 = ...");console.log(layer1);
 			var layers2 = layer1.getLayers();
-			for (var k=0; k<layers2.length; k++) {
-				layer2 = layers2[k];
-				console.log("maps: downSelectAndAddTimeMarks: layer2...");console.log(layer2);
-				if (layer2.hasOwnProperty("datetime_UTC_str")) {
-					datetime_str = layer2.datetime_UTC_str;
-					eventTimeUTC = new Date(datetime_str + ' UTC');
-					var msec = Math.abs( newUTCDateAndTime - eventTimeUTC );
-					var minutes = Math.floor((msec/1000)/60);				
-					//console.log("maps: downSelectAndAddTimeMarks: found layer2 with date " + datetime_str + ", diff from target = " + minutes);
-					//console.log("maps: downSelectAndAddTimeMarks: event " + eventTimeUTC.toISOString());
-					//console.log("maps: layer2..."); console.log(layer2);
+			
+			if (layers2.length >= 0) {
+				let markerTypes = ['TORNADO', 'HAIL']
+				for (let ImarkerType=0; ImarkerType<markerTypes.length; ImarkerType++) {
+					//console.log("maps: dowSelect: processing markers for " + markerTypes[ImarkerType])
 					
+					//get which set of icons we'll be chosing from
+					let icons = structuredClone(layers2[0].icons); //default  
+					//let dt_bounds_minutes = [-99, 7, 15, 30, 60];
+					let dt_bounds_minutes = [-99, 30];
+					if (markerTypes[ImarkerType]=='TORNADO') {
+						icons = structuredClone(layers2[0].icons_tornado);
+					} else if (markerTypes[ImarkerType] == 'HAIL') {
+						icons = structuredClone(layers2[0].icons_hail)
+					}
+					//console.log("maps: downSelect: icons...");console.log(icons);
+					if (icons.length < dt_bounds_minutes.length-1) {
+						dt_bounds_minutes = dt_bounds_minutes.slice(0,icons.length+1)
+					}
 					
-					//set the icon
-					let icons = layer2.icons;
-					if (layer2.event_type == 'TORNADO') {
-						icons = layer2.icons_tornado;
-					} else if (layer2.event_type == 'HAIL') {
-						icons = layer2.icons_hail
-					}
-					let max_ind = icons.length -1;
-					let new_ind = 99;	
+					//loop over each dt range
+					for (var I_dt=0; I_dt < dt_bounds_minutes.length-1; I_dt++) {
+						//console.log("maps: dowSelect: processing times up to " + dt_bounds_minutes[I_dt+1])
+						let new_layers=[];
+						
+						//loop over each marker
+						for (var k=0; k<layers2.length; k++) {
+							let layer2 = layers2[k];
+							//console.log("maps: downSelectAndAddTimeMarks: layer2...");console.log(layer2);
+							
+							//only consider those maker's for the event type that we're currently processing
+							if (layer2.event_type == markerTypes[ImarkerType]) {
+
+								if (layer2.hasOwnProperty("datetime_UTC_str")) {
+									datetime_str = layer2.datetime_UTC_str;
+									eventTimeUTC = new Date(datetime_str + ' UTC');
+									var msec = Math.abs( newUTCDateAndTime - eventTimeUTC );
+									var minutes = Math.floor((msec/1000)/60);				
+									//console.log("maps: downSelectAndAddTimeMarks: found layer2 with date " + datetime_str + ", diff from target = " + minutes);
+									//console.log("maps: downSelectAndAddTimeMarks: event " + eventTimeUTC.toISOString());
+									//console.log("maps: layer2..."); console.log(layer2);
+									
+									//if this marker's time fits within the current dt_bounds, update the icon and add!
+									if ((minutes > dt_bounds_minutes[I_dt]) && (minutes <= dt_bounds_minutes[I_dt+1])) {
+										//console.log("maps: downSelect: I_dt = " + I_dt + ", icons[I_dt]..."); console.log(icons[I_dt]);
+										//console.log("maps: downSelect:  marker = " + k + ", I_dt = " + I_dt + ", minutes = " + minutes + ", icons[I_dt].options.iconUrl = " + icons[I_dt].options.iconUrl); 
+										layer2.options.icon.options = structuredClone(icons[I_dt].options);
+										//layer2.setIcon(icons[I_dt]);
+										layer2.overlay = layerID_KML_LSR;
+										layer2.layerType = layerType_KML_LSR;
+										layer2.timeDependent = true;
+										new_layers.push(layer2);
+									}
+								}
+							}
+						} //close loop over each marker.  we've now processed all markers for this dtime and for this event_type
+						
+						if (new_layers.length > 0) {
+							//console.log("maps: downSelectAndAddTimeMarks: adding " + new_layers.length + " KML_LSR items to map for dt > " + dt_bounds_minutes[I_dt] + " and dt <= " + dt_bounds_minutes[I_dt+1] + " minutes")
+							let layerGroup = new L.FeatureGroup(new_layers);
+							layerGroup.group_type = new_layers[0].group_type;
+							layerGroup.overlay = layerID_KML_LSR;
+							layerGroup.layerType = layerType_KML_LSR;
+							layerGroup.TIME = newUTCDateAndTime.toISOString();
+							layerGroups.push(layerGroup);
+						}						
+					} // close the loop over time bounds.  We've now process all time bounds
 					
-					if (1) {
-						//just use one icon
-						if (minutes <= 30) new_ind = 0;
-					} else {
-						//change icon based on the time
-						if (minutes <= 60) new_ind = 3;
-						if (minutes <= 30) new_ind = 2;
-						if (minutes <= 15) new_ind = 1;
-						if (minutes <= 7) new_ind = 0;
-					}
-					console.log("maps: downSelect: minutes = " + minutes + ", new_ind = " + new_ind + ", max_ind = " + (icons.length-1));
-					if (new_ind <= max_ind) {
-						console.log("maps: downSelect: icons[new_ind]..."); console.log(icons[new_ind]);
-						layer2.options.icon.options = icons[new_ind].options;
-						layer2.overlay = layerID_KML_LSR;
-						layer2.layerType = layerType_KML_LSR;
-						layer2.timeDependent = true;
-						new_layers.push(layer2);
-					}
 				}
 			}
 		}
-		
-
-		if (new_layers.length > 0) {
-			console.log("maps: downSelectAndAddTimeMarks: adding " + new_layers.length + " KML_LSR items to map")
-			layerGroup = new L.FeatureGroup(new_layers);
-			layerGroup.group_type = new_layers[0].group_type;
-			layerGroup.overlay = layerID_KML_LSR;
-			layerGroup.layerType = layerType_KML_LSR;
-			layerGroup.TIME = newUTCDateAndTime.toISOString();
-		}
 	}
-	return layerGroup
+	return layerGroups
 }
 
 function refreshTimeDependentLayersOfType(map,targ_layerType) {
@@ -1014,15 +1019,17 @@ function refreshMaps(dateChanger, maps) {
 			
 		//iterate through all layers in the map and redraw thw WMS layers that are time-dependent
 		refreshTimeDependentLayersOfType(maps[j], layerType_WMS);
+		//refreshTimeDependentLayersOfType(maps[j], layerType_KML_LSR);
 
 		//iterate through all layers in the map and remove the KML_LSR layers
 		removeTimeDependentKmlLsrLayers(maps[j],layerType_KML_LSR);
 		
 		//add active KML_LSR layers
 		var dasspTimeMarks = maps[j].options.dasspTimeMarks
-		layerGroup = downSelectAndAddTimeMarks(maps[j], newUTCDateAndTime, dasspTimeMarks)
-		if (layerGroup != undefined) maps[j].addLayer(layerGroup);
-		
+		layerGroups = downSelectAndAddTimeMarks(maps[j], newUTCDateAndTime, dasspTimeMarks)
+		if (layerGroups.length > 0) {
+				for (Igroup in layerGroups) maps[j].addLayer(layerGroups[Igroup]);
+		}
 		
 /*
 				
