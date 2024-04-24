@@ -231,9 +231,12 @@
 		var DEFAULT_SHOW_HILLSHADING = true;
 		var DEFAULT_SHOW_ADVANCED_LAYERS = false;
 		var DEFAULT_SHOW_LEGENDS = GEOWATCH_NUM_MAPS_INITIAL > 1;
+		//var DEFAULT_LAYERS = [
+		//	"CONUS NEXRAD Base Reflectivity (N0Q)"];
 		var DEFAULT_LAYERS = [
-			"CONUS NEXRAD Base Reflectivity (N0Q)"];
-			
+			"Chunky, MUSIC 4.0Hz"];
+				
+		
 		var DEFAULT_PUBLIC_LAYERS = [
 			"CONUS NEXRAD Base Reflectivity (N0Q)",
 			"CONUS NEXRAD Base Reflectivity (N0Q)"];
@@ -245,6 +248,7 @@
 		var DEFAULT_DATETIME = '2018-03-19T23:00:00Z';
 		var URLLayers = [];
 		var DEFAULT_KML_FNAME = ""
+		var DEFAULT_AZIMUTH_FNAME =""
 
 		// check if URL contains parameters, e.g., go.html?N=3&DUMMY=23
 		console.log("WMS_Leaflet3.html: Option string from URL = " + location.search);
@@ -277,8 +281,11 @@
 					} else if (param === 'datetime') {
 						DEFAULT_DATETIME = value;
 					} else if (param === 'kml_fname') {
-					    DEFAULT_KML_FNAME = value;
+					  DEFAULT_KML_FNAME = value;
 						//console.log("WMS_Leaflet3: default kml fname = " + DEFAULT_KML_FNAME)
+					} else if (param === 'az_fname') {
+						DEFAULT_AZIMUTH_FNAME = value;		
+						//console.log("WMS_Leaflet3: default azimuth fname = " + DEFAULT_AZIMUTH_FNAME)						
 					} else if (param === 'maps') {
 						var layers = value.split('%20').join(' ').split(";"); // replaces '%20' with ' ' then splits at ';'
 						for (var i in layers) {
@@ -313,6 +320,7 @@
 	<script type="text/javascript" src="./components/dateChanger.js"></script>
 	<script type="text/javascript" src="./components/layerChanger.js"></script>
 	<script type="text/javascript" src="./components/KML_LSR.js"></script>
+	<script type="text/javascript" src="./components/ArrayAzimuthLayer.js"></script>
 	<script type="text/javascript" src="./components/maps.js"></script>
 	
 	<!-- <script type="text/javascript" src="./components/popups.js"></script> -->

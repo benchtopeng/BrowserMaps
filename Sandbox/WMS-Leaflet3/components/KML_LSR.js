@@ -42,7 +42,6 @@ L.KML_LSR = L.FeatureGroup.extend({
 	},
 	
 	kml_params: {},
-	
 	latLngs: [],
 
 	initialize: function (kml, options) {
