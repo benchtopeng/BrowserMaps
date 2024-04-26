@@ -103,7 +103,7 @@ L.Control.DateChanger = L.Control.extend({
     if (changed) {
       $('#datetimepicker').data('DateTimePicker').date(this._availableDates[this._selectedDateIndex]);
       this.options.refreshMaps(this, this.options.maps);
-      var bkcolor = (this.getDateAndTime() > (new Date("2024-02-20T09:00:00Z"))) ? "rgb(0, 255, 255)" : 'white';
+      var bkcolor = (this.getDateAndTime() > (new Date("2028-01-01T00:00:00Z"))) ? "rgb(0, 255, 255)" : 'white'; //choose a different color based on date
       this.container.style.backgroundColor = bkcolor;
       this.selectedHour = $('#datetimepicker').data('DateTimePicker').date().hour();
 	  this.selectedMinute = $('#datetimepicker').data('DateTimePicker').date().minute();

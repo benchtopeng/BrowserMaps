@@ -251,10 +251,7 @@ L.Control.LayerChanger = L.Control.extend({
 			//console.log("layerChanger: updateLayersInMenu: lat = " + lat + ", lon = " + lon)
 			var marker = L.marker([lat, lon], {icon: arrayIcons[i]}).addTo(map)
 				.bindPopup(arrayLocations.features[i].properties.description);		
-			//	.bindPopup('A pretty CSS popup.<br> Easily customizable.');
-			//	.openPopup();
-			//console.log("layerChanger: updateLayersInMenu: marker = ");
-			//console.log(marker);
+
 		}
 
   },
@@ -357,7 +354,18 @@ L.Control.LayerChanger = L.Control.extend({
 					var sidebar = self._map.options.maps[0].sidebar
 					if (sidebar.showGridCheckBox && sidebar.showGridCheckBox.checked) self._map.grid.addTo(self._map)
 				*/
+						
+				//update all time dependent layers
+				//console.log("layerChanger: change: self..."); console.log(self)
+				dateChanger = self._map.dateChanger
+				//console.log("layerChanger: change: dateChanger..."); console.log(dateChanger)
+				maps = dateChanger.options.maps
+				//console.log("layerChanger: change: maps..."); console.log(maps)
+				dateChanger.options.refreshMaps(dateChanger, maps);
+
 			} 
+
+			
 		);  // end menu.addEventListener('change'
 
     // special handling for touch interfaces

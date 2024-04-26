@@ -11,12 +11,14 @@
 const layerID_base = 0;
 const layerID_weather = 1;
 const layerID_KML_LSR = 2;
-const layerID_Azimuth = 3;
+const layerID_KML_LSR_hail = 3;
+const layerID_Azimuth = 4;
 
 const layerType_other = 0;
 const layerType_WMS = 1;
 const layerType_KML_LSR = 2;
-const layerType_Azimuth = 3;
+const layerType_KML_LSR_hail = 3;
+const layerType_Azimuth = 4;
 
 DEFAULT_MAIN_GEOWATCH_LAYER_INFO = {
   "default_time": "2018-03-19T18:00:00Z",
@@ -528,7 +530,7 @@ DEFAULT_MAIN_GEOWATCH_LAYER_INFO = {
       }
     },
 					*/
-      {
+    {
       "name": "Tornados (LSR)",
 	    "url": "data/KML_LSR/",
       "restrictions": [       
@@ -553,33 +555,33 @@ DEFAULT_MAIN_GEOWATCH_LAYER_INFO = {
       }
     },
     {
-      "name": "Chunky, MUSIC 2.0Hz",
-	    "url": "data/Azimuth/",
+      "name": "Tornados (LSR)",
+	    "url": "data/KML_LSR/",
       "restrictions": [       
       ],
       "params": {
-        "layers": "psdVsAz",
+        "layers": "hail_lsr_",
         "sphericalMercator": true,
         "transparent": false,
         "format": "",
         "isDynamic": true,
-        "inMenuByDefault": true,
-				"site":"Chunky",
-				"band_Hz":2.0
+        "inMenuByDefault": true
       },
       "options": {
         "isBaseLayer": false,
         "visibility": true,
         "wrapDateLine": false,
-        "group": "Array: Chunky, Back-Azimuth",
+        "group": "NOAA LSR Events",
         "transitionEffect": "resize",
-				"overlay": layerID_Azimuth,
-				"default_active": false,
-				"layer_type": layerType_Azimuth
+				"overlay": layerID_KML_LSR_hail,
+				"default_active": true,
+				"layer_type": layerType_KML_LSR_hail
       }
     },
-		{
-      "name": "Chunky, MUSIC 3.0Hz",
+		
+		
+	  {
+      "name": "Chunky, MUSIC 4.0Hz, Smoothed",
 	    "url": "data/Azimuth/",
       "restrictions": [       
       ],
@@ -591,33 +593,8 @@ DEFAULT_MAIN_GEOWATCH_LAYER_INFO = {
         "isDynamic": true,
         "inMenuByDefault": true,
 				"site":"Chunky",
-				"band_Hz":3.0
-      },
-      "options": {
-        "isBaseLayer": false,
-        "visibility": true,
-        "wrapDateLine": false,
-        "group": "Array: Chunky, Back-Azimuth",
-        "transitionEffect": "resize",
-				"overlay": layerID_Azimuth,
-				"default_active": false,
-				"layer_type": layerType_Azimuth
-      }
-    },
-    {
-      "name": "Chunky, MUSIC 4.0Hz",
-	    "url": "data/Azimuth/",
-      "restrictions": [       
-      ],
-      "params": {
-        "layers": "psdVsAz",
-        "sphericalMercator": true,
-        "transparent": false,
-        "format": "",
-        "isDynamic": true,
-        "inMenuByDefault": true,
-				"site":"Chunky",
-				"band_Hz":4.0
+				"band_Hz":4.0,
+				"smoothing":"4 min"
       },
       "options": {
         "isBaseLayer": false,
@@ -631,7 +608,7 @@ DEFAULT_MAIN_GEOWATCH_LAYER_INFO = {
       }
     },
     {
-      "name": "Chunky, MUSIC 5.0Hz",
+      "name": "Chunky, MUSIC 6.0Hz, Smoothed",
 	    "url": "data/Azimuth/",
       "restrictions": [       
       ],
@@ -643,7 +620,36 @@ DEFAULT_MAIN_GEOWATCH_LAYER_INFO = {
         "isDynamic": true,
         "inMenuByDefault": true,
 				"site":"Chunky",
-				"band_Hz":5.0
+				"band_Hz":6.0,
+				"smoothing":"4 min"
+      },
+      "options": {
+        "isBaseLayer": false,
+        "visibility": true,
+        "wrapDateLine": false,
+        "group": "Array: Chunky, Back-Azimuth",
+        "transitionEffect": "resize",
+				"overlay": layerID_Azimuth,
+				"default_active": false,
+				"layer_type": layerType_Azimuth
+      }
+    },			
+		
+    {
+      "name": "Chunky, MUSIC 2.0Hz, No Smoothing",
+	    "url": "data/Azimuth/",
+      "restrictions": [       
+      ],
+      "params": {
+        "layers": "psdVsAz",
+        "sphericalMercator": true,
+        "transparent": false,
+        "format": "",
+        "isDynamic": true,
+        "inMenuByDefault": true,
+				"site":"Chunky",
+				"band_Hz":2.0,
+				"smoothing":"none"
       },
       "options": {
         "isBaseLayer": false,
@@ -657,7 +663,7 @@ DEFAULT_MAIN_GEOWATCH_LAYER_INFO = {
       }
     },
     {
-      "name": "Chunky, MUSIC 6.0Hz",
+      "name": "Chunky, MUSIC 4.0Hz, No Smoothing",
 	    "url": "data/Azimuth/",
       "restrictions": [       
       ],
@@ -669,7 +675,35 @@ DEFAULT_MAIN_GEOWATCH_LAYER_INFO = {
         "isDynamic": true,
         "inMenuByDefault": true,
 				"site":"Chunky",
-				"band_Hz":6.0
+				"band_Hz":4.0,
+				"smoothing":"none"
+      },
+      "options": {
+        "isBaseLayer": false,
+        "visibility": true,
+        "wrapDateLine": false,
+        "group": "Array: Chunky, Back-Azimuth",
+        "transitionEffect": "resize",
+				"overlay": layerID_Azimuth,
+				"default_active": false,
+				"layer_type": layerType_Azimuth
+      }
+    },
+    {
+      "name": "Chunky, MUSIC 6.0Hz, No Smoothing",
+	    "url": "data/Azimuth/",
+      "restrictions": [       
+      ],
+      "params": {
+        "layers": "psdVsAz",
+        "sphericalMercator": true,
+        "transparent": false,
+        "format": "",
+        "isDynamic": true,
+        "inMenuByDefault": true,
+				"site":"Chunky",
+				"band_Hz":6.0,
+				"smoothing":"none"
       },
       "options": {
         "isBaseLayer": false,
@@ -1010,7 +1044,7 @@ function removeTimeMarks(map) {
 	);
 }	
 
-function downSelectAndAddTimeMarks(map, newUTCDateAndTime, dasspTimeMarks) {
+function downSelectAndAddTimeMarks(map, newUTCDateAndTime, dasspTimeMarks, layerID_val, layerType_val) {
 	//console.log("maps: downSelectAndAddTimeMarks: newUTCDateAndTime.toISOString = " + newUTCDateAndTime.toISOString());
 	//console.log("maps: downSelectAndAddTimeMarks: dasspTimeMarks.length = " + dasspTimeMarks.length);
 	let layerGroups = [];
@@ -1078,8 +1112,8 @@ function downSelectAndAddTimeMarks(map, newUTCDateAndTime, dasspTimeMarks) {
 										//console.log("maps: downSelect:  marker = " + k + ", I_dt = " + I_dt + ", minutes = " + minutes + ", icons[I_dt].options.iconUrl = " + icons[I_dt].options.iconUrl); 
 										layer2.options.icon.options = structuredClone(icons[I_dt].options);
 										//layer2.setIcon(icons[I_dt]);
-										layer2.overlay = layerID_KML_LSR;
-										layer2.layerType = layerType_KML_LSR;
+										layer2.overlay = layerID_val;
+										layer2.layerType = layerType_val;
 										layer2.timeDependent = true;
 										new_layers.push(layer2);
 									}
@@ -1091,8 +1125,8 @@ function downSelectAndAddTimeMarks(map, newUTCDateAndTime, dasspTimeMarks) {
 							//console.log("maps: downSelectAndAddTimeMarks: adding " + new_layers.length + " KML_LSR items to map for dt > " + dt_bounds_minutes[I_dt] + " and dt <= " + dt_bounds_minutes[I_dt+1] + " minutes")
 							let layerGroup = new L.FeatureGroup(new_layers);
 							layerGroup.group_type = new_layers[0].group_type;
-							layerGroup.overlay = layerID_KML_LSR;
-							layerGroup.layerType = layerType_KML_LSR;
+							layerGroup.overlay = layerID_val;
+							layerGroup.layerType = layerType_val;
 							layerGroup.TIME = newUTCDateAndTime.toISOString();
 							layerGroups.push(layerGroup);
 						}						
@@ -1176,11 +1210,14 @@ function refreshMaps(dateChanger, maps) {
 		removeTimeDependentKmlLsrLayers(maps[j],layerType_KML_LSR);
 		
 		//add active KML_LSR layers
-		var dasspTimeMarks = maps[j].options.dasspTimeMarks
-		layerGroups = downSelectAndAddTimeMarks(maps[j], newUTCDateAndTime, dasspTimeMarks)
-		if (layerGroups.length > 0) {
-				for (Igroup in layerGroups) maps[j].addLayer(layerGroups[Igroup]);
-		}	
+		let dasspTimeMarks = maps[j].options.dasspTimeMarks
+		//console.log("maps: refreshMaps: dasspTimeMarks.length = " + dasspTimeMarks.length);
+		//console.log("maps: refreshMaps: dasspTimeMarks..."); console.log(dasspTimeMarks);
+		for (var Imarks in dasspTimeMarks) {
+			let marks = dasspTimeMarks[Imarks]
+			layerGroups = downSelectAndAddTimeMarks(maps[j], newUTCDateAndTime, marks, marks.overlay, marks.layer_type)
+			if (layerGroups.length > 0) {	for (Igroup in layerGroups) maps[j].addLayer(layerGroups[Igroup]) };
+		}
   };
 }
 
@@ -1490,7 +1527,7 @@ function createWMSLayer(layerURL, layerName, displayName, groupName,
 // function to create a WMS layer of given type
 function createKmlLsrLayer(layerURL, layerName, displayName, groupName,
   initial_utc_date_and_time_string, timeDependent, inMenuByDefault,
-  additionalParams, is_udp, layerID) {
+  additionalParams, is_udp, layerID, layerType) {
 
 	var layer;
 	
@@ -1499,14 +1536,19 @@ function createKmlLsrLayer(layerURL, layerName, displayName, groupName,
 		//let kml_fname = "./data/" + DEFAULT_KML_FNAME
 		let kml_fname = layerURL + DEFAULT_KML_FNAME
 		
+		let target_event_type = 'TORNADO'
+		if (layerType == layerType_KML_LSR_hail) target_event_type = 'HAIL'
+		
 		//console.log("maps: createKmlLsrLayer: adding KML_LSR file: " + kml_fname)
-		var maplayer = new L.KML_LSR(kml_fname, {async: true});
+		var maplayer = new L.KML_LSR(kml_fname, {async: true, 'target_event_type':target_event_type});
+		
+		console.log("maps: createKmlLsrLayer: maplayer...");console.log(maplayer)
 		
 		//add more fields
 		maplayer.isGeoWATCHLayer = false; 
 		maplayer.timeDependent = timeDependent;
 		maplayer.overlay = layerID;
-		maplayer.layerType = layerType_KML_LSR;
+		maplayer.layerType = layerType;
 		
 		//turn into a layer
 		var layer = {
@@ -1517,7 +1559,7 @@ function createKmlLsrLayer(layerURL, layerName, displayName, groupName,
 			groupName: groupName,
 			timeDependent: timeDependent,
 			inMenuByDefault: inMenuByDefault,
-			layerType: layerType_KML_LSR
+			layerType: layerType
 		};
 		//map.addLayer(layer);
 
@@ -1535,7 +1577,7 @@ function createKmlLsrLayer(layerURL, layerName, displayName, groupName,
 function createArrayAzimuthLayer(layerURL, layerName, displayName, groupName,
   initial_utc_date_and_time_string, timeDependent, inMenuByDefault,
   additionalParams, is_udp, layerID,
-	site, band_Hz) {
+	site, band_Hz, smoothing) {
 
 	//console.log("maps: createArrayAzimuthLayer: starting...");
 	var layer;
@@ -1548,7 +1590,7 @@ function createArrayAzimuthLayer(layerURL, layerName, displayName, groupName,
 		let all_array_lngLat = array_locations
 		//let array_loc_latLng = [array_loc_lngLat[1], array_loc_lngLat[0]]
 		var maplayer = new L.ArrayAzimuthLayer(fname, initial_utc_date_and_time_string, 
-			{async: true, weight:1.0, fillOpacity:0.5, 'all_array_lngLat': all_array_lngLat, 'site':site, 'band_Hz':band_Hz});
+			{async: true, weight:1.0, fillOpacity:0.5, 'all_array_lngLat': all_array_lngLat, 'site':site, 'band_Hz':band_Hz, 'smoothing':smoothing});
 		
 		//add more fields
 		maplayer.isGeoWATCHLayer = false; 
@@ -1668,16 +1710,21 @@ function createAvailableLayersForMap(main_geowatch_layer_info, dasspTimeLayers, 
 						initial_utc_date_and_time_string, timeDependent, inMenuByDefault,
 						addlParams, false, layerID);
 					break;
-				case layerType_KML_LSR:
+				case layerType_KML_LSR: //tornado
 					layer = createKmlLsrLayer(layerURL, layerName, displayName, groupName,
 						initial_utc_date_and_time_string, timeDependent, inMenuByDefault,
-						addlParams, false, layerID);
+						addlParams, false, layerID, layerType);
 					break;
+				//case layerType_KML_LSR_hail:
+				//	layer = createKmlLsrLayer(layerURL, layerName, displayName, groupName,
+				//		initial_utc_date_and_time_string, timeDependent, inMenuByDefault,
+				//		addlParams, false, layerID, layerType);
+				//	break;
 				case layerType_Azimuth:
 					layer = createArrayAzimuthLayer(layerURL, layerName, displayName, groupName,
 						initial_utc_date_and_time_string, timeDependent, inMenuByDefault,
 						addlParams, false, layerID, 
-						layer_specs[idx].params.site, layer_specs[idx].params.band_Hz);
+						layer_specs[idx].params.site, layer_specs[idx].params.band_Hz, layer_specs[idx].params.smoothing);
 					break;				
 			}
 			
