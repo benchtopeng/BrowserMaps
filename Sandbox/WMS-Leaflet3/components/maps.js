@@ -554,6 +554,7 @@ DEFAULT_MAIN_GEOWATCH_LAYER_INFO = {
 				"layer_type": layerType_KML_LSR
       }
     },
+		/*
     {
       "name": "Tornados (LSR)",
 	    "url": "data/KML_LSR/",
@@ -578,6 +579,7 @@ DEFAULT_MAIN_GEOWATCH_LAYER_INFO = {
 				"layer_type": layerType_KML_LSR_hail
       }
     },
+		*/
 		
 		
 	  {
@@ -633,7 +635,34 @@ DEFAULT_MAIN_GEOWATCH_LAYER_INFO = {
 				"default_active": false,
 				"layer_type": layerType_Azimuth
       }
-    },			
+    },
+    {
+      "name": "Chunky, MUSIC 7.0Hz, Smoothed",
+	    "url": "data/Azimuth/",
+      "restrictions": [       
+      ],
+      "params": {
+        "layers": "psdVsAz",
+        "sphericalMercator": true,
+        "transparent": false,
+        "format": "",
+        "isDynamic": true,
+        "inMenuByDefault": true,
+				"site":"Chunky",
+				"band_Hz":7.0,
+				"smoothing":"4 min"
+      },
+      "options": {
+        "isBaseLayer": false,
+        "visibility": true,
+        "wrapDateLine": false,
+        "group": "Array: Chunky, Back-Azimuth",
+        "transitionEffect": "resize",
+				"overlay": layerID_Azimuth,
+				"default_active": false,
+				"layer_type": layerType_Azimuth
+      }
+    },		
 		
     {
       "name": "Chunky, MUSIC 2.0Hz, No Smoothing",
@@ -1046,6 +1075,7 @@ function removeTimeMarks(map) {
 
 function downSelectAndAddTimeMarks(map, newUTCDateAndTime, dasspTimeMarks, layerID_val, layerType_val) {
 	//console.log("maps: downSelectAndAddTimeMarks: newUTCDateAndTime.toISOString = " + newUTCDateAndTime.toISOString());
+	if (dasspTimeMarks.length == undefined) dasspTimeMarks = [dasspTimeMarks]
 	//console.log("maps: downSelectAndAddTimeMarks: dasspTimeMarks.length = " + dasspTimeMarks.length);
 	let layerGroups = [];
 	for (var i = 0; i < dasspTimeMarks.length; i++) {
@@ -1211,6 +1241,7 @@ function refreshMaps(dateChanger, maps) {
 		
 		//add active KML_LSR layers
 		let dasspTimeMarks = maps[j].options.dasspTimeMarks
+		//if (dasspTimeMarks.length == undefined) dasspTimeMarks = [dasspTimeMarks]
 		//console.log("maps: refreshMaps: dasspTimeMarks.length = " + dasspTimeMarks.length);
 		//console.log("maps: refreshMaps: dasspTimeMarks..."); console.log(dasspTimeMarks);
 		for (var Imarks in dasspTimeMarks) {
