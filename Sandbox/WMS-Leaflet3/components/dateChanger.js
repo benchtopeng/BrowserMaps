@@ -17,6 +17,7 @@
 L.Control.DateChanger = L.Control.extend({
 
   selectedHour: undefined,
+	selectedMinute: undefined,
 
   options: {
     position: 'topleft',
@@ -72,45 +73,70 @@ L.Control.DateChanger = L.Control.extend({
 
   // set displayed date (if in the available list)
   setDateAndTime: function(newDateStr) {
-    //console.log('dateChanger: setDateAndTime called for ' + newDateStr);
+    //console.log('dateChanger: setDateAndTime: newDateStr = ' + newDateStr);
     var newDate = moment(newDateStr);
+		//console.log('dateChanger: setDateAndTime: newDate = ' + newDate + ", " + newDate.toISOString() );
     var changed = false;
+		
+		//loop over all indices
     for (var idx_date = 0; idx_date < this._availableDates.length; ++idx_date) {
-      if (this._availableDates[idx_date].isSame(newDate, 'year') &&
-      this._availableDates[idx_date].isSame(newDate, 'month') &&
-      this._availableDates[idx_date].isSame(newDate, 'day') &&
-      this._availableDates[idx_date].isSame(newDate, 'hour') &&
-	  this._availableDates[idx_date].isSame(newDate, 'minute')) { //added minute by Chip
-        // There is surely a better way, but this hacks around the issue when
-        // setting to a time for which there is LIS and GALWEM data - future data
-        // is given with a 1 second offset, which doesn't play nicely with hour
-        // intervals in the picker.
-        if (this._availableDates[idx_date + 1] && this._availableDates[idx_date + 1].isSame(newDate)) {
-          this._selectedDateIndex = idx_date + 1;
-        } else {
-          this._selectedDateIndex = idx_date;
-        }
+			      if (this._availableDates[idx_date].isSame(newDate, 'year') &&
+					this._availableDates[idx_date].isSame(newDate, 'month') &&
+					this._availableDates[idx_date].isSame(newDate, 'day') &&
+					this._availableDates[idx_date].isSame(newDate, 'hour') &&
+					this._availableDates[idx_date].isSame(newDate, 'minutes')) {
+
+				this._selectedDateIndex = idx_date;
         changed = true;
         break;
-      } else if (this._availableDates[idx_date].isSame(newDate, 'year') &&
-        this._availableDates[idx_date].isSame(newDate, 'month') &&
-        this._availableDates[idx_date].isSame(newDate, 'day')) {
-        this._selectedDateIndex = idx_date;
-        changed = true;
-      }
-
+			}
+		}
+		
+		//couldn't find exact match, so try just for the same hour
+		if (!changed) {
+			//loop over all indices
+			for (var idx_date = 0; idx_date < this._availableDates.length; ++idx_date) {
+				if (this._availableDates[idx_date].isSame(newDate, 'year') &&
+						this._availableDates[idx_date].isSame(newDate, 'month') &&
+						this._availableDates[idx_date].isSame(newDate, 'day') &&
+						this._availableDates[idx_date].isSame(newDate, 'hour')) {
+					//console.log("dateChanger: setDateAndTime: hour match!");
+					this._selectedDateIndex = idx_date;
+					changed = true;
+					break;
+				}
+			}	
     }
+		
+		//couldn't find exact match, so try just for the same day
+		if (!changed) {
+			//loop over all indices
+			for (var idx_date = 0; idx_date < this._availableDates.length; ++idx_date) {
+				if (this._availableDates[idx_date].isSame(newDate, 'year') &&
+						this._availableDates[idx_date].isSame(newDate, 'month') &&
+						this._availableDates[idx_date].isSame(newDate, 'day') ) {
+					//console.log("dateChanger: setDateAndTime: day match!");
+					this._selectedDateIndex = idx_date;
+					changed = true;
+					break;
+				}
+			}	
+    }
+		
+		//now act 
     if (changed) {
+			//console.log("dateChanger: this._availableDates[this._selectedDateIndex] = " + (this._availableDates[this._selectedDateIndex]).toISOString())
       $('#datetimepicker').data('DateTimePicker').date(this._availableDates[this._selectedDateIndex]);
-      this.options.refreshMaps(this, this.options.maps);
       var bkcolor = (this.getDateAndTime() > (new Date("2028-01-01T00:00:00Z"))) ? "rgb(0, 255, 255)" : 'white'; //choose a different color based on date
       this.container.style.backgroundColor = bkcolor;
       this.selectedHour = $('#datetimepicker').data('DateTimePicker').date().hour();
-	  this.selectedMinute = $('#datetimepicker').data('DateTimePicker').date().minute();
-      this.updateSelectedHour();
-	  this.updateSelectedMinute(); //added Chip
+			this.updateSelectedHour();
+			this.selectedMinute = $('#datetimepicker').data('DateTimePicker').date().minute();
+			this.updateSelectedMinute(); //added Chip
       //console.log('dateChanger: refreshed maps, set to valid date = ' + this._availableDates[this._selectedDateIndex].format());
-    }
+      this.options.refreshMaps(this, this.options.maps);
+
+		}
     return changed;
   },
   // increment date by specified number of dates
@@ -248,13 +274,12 @@ L.Control.DateChanger = L.Control.extend({
       } else {
         day = e;
       }
-      if (
-	  !day.isSame(self._availableDates[self._selectedDateIndex], 'minute') || //added by Chip
-	  !day.isSame(self._availableDates[self._selectedDateIndex], 'hour') ||
-      !day.isSame(self._availableDates[self._selectedDateIndex], 'day') ||
-      !day.isSame(self._availableDates[self._selectedDateIndex], 'month') ||
-      !day.isSame(self._availableDates[self._selectedDateIndex], 'year')) {
-        if (!self.setDateAndTime(day)) {
+      if (!day.isSame(self._availableDates[self._selectedDateIndex], 'minute') || //added by Chip
+					!day.isSame(self._availableDates[self._selectedDateIndex], 'hour') ||
+					!day.isSame(self._availableDates[self._selectedDateIndex], 'day') ||
+					!day.isSame(self._availableDates[self._selectedDateIndex], 'month') ||
+					!day.isSame(self._availableDates[self._selectedDateIndex], 'year')) {
+				if (!self.setDateAndTime(day)) {
           if (!toggle) {
             day = day.isAfter(self._availableDates[self._selectedDateIndex]) ? day.clone().add(1, 'd') : day.clone().subtract(1, 'd');
             $('#datetimepicker').data('DateTimePicker').actions.selectDay(day);
@@ -275,12 +300,12 @@ L.Control.DateChanger = L.Control.extend({
         var seltime = L.DomUtil.get('selectTime')
         seltime.style.width = 'auto';
         seltime.style.height = 'auto';
-		//$('#datetimepicker').data('DateTimePicker').actions.showMinutes(); //added by Chip
+				//$('#datetimepicker').data('DateTimePicker').actions.showMinutes(); //added by Chip
         $('#datetimepicker').data('DateTimePicker').actions.showHours();
         e.target = $('#selectTime');
         $('#datetimepicker').data('DateTimePicker').actions.togglePicker(e);
         self.updateSelectedHour();
-		self.updateSelectedMinute(); //added Chip
+				self.updateSelectedMinute(); //added Chip
       }
     };
 
@@ -289,50 +314,52 @@ L.Control.DateChanger = L.Control.extend({
     // This mimics the functionality when propagating through the times in
     // bootstrap-datetimepicker.js's datePickerModes (i.e. day, month, year, decade)
     $('#datetimepicker').data('DateTimePicker').actions.selectHour = function(e) {
-        var hour = parseInt($(e.target).text(), 10);
-        var date = $('#datetimepicker').data("DateTimePicker").date().clone();
+			var hour = parseInt($(e.target).text(), 10);
+			var date = $('#datetimepicker').data("DateTimePicker").date().clone();
 
-        if (!$('#datetimepicker').data('DateTimePicker').use24Hours()) {
-            if (date.hours() >= 12) {
-                if (hour !== 12) {
-                    hour += 12;
-                }
-            } else {
-                if (hour === 12) {
-                    hour = 0;
-                }
-            }
-        }
-
-        if (date.hours() !== hour) {
-          self.setDateAndTime(date.clone().hours(hour));
-        }
-		
+			if (!$('#datetimepicker').data('DateTimePicker').use24Hours()) {
+					if (date.hours() >= 12) {
+							if (hour !== 12) {
+									hour += 12;
+							}
+					} else {
+							if (hour === 12) {
+									hour = 0;
+							}
+					}
+			}
+			if (date.hours() !== hour) {
+				self.setDateAndTime(date.clone().hours(hour));
+			}
     };
 
-    $('#datetimepicker').on('dp.change', function(e) {  
-      //console.log('dateChanger: change event = ' + JSON.stringify(e));
-      if (
-	  !e.date.isSame(self._availableDates[self._selectedDateIndex], 'minute') || //added by Chip
-      !e.date.isSame(self._availableDates[self._selectedDateIndex], 'hour') ||
-      !e.date.isSame(self._availableDates[self._selectedDateIndex], 'day') ||
-      !e.date.isSame(self._availableDates[self._selectedDateIndex], 'month') ||
-      !e.date.isSame(self._availableDates[self._selectedDateIndex], 'year')) {
-        self.setDateAndTime(e.date);
-      }
-    });
+    $('#datetimepicker').on('dp.change', 
+			function(e) {  
+				//console.log('dateChanger: change event = ' + JSON.stringify(e));
+				if (
+						!e.date.isSame(self._availableDates[self._selectedDateIndex], 'minute') || //added by Chip
+						!e.date.isSame(self._availableDates[self._selectedDateIndex], 'hour') ||
+						!e.date.isSame(self._availableDates[self._selectedDateIndex], 'day') ||
+						!e.date.isSame(self._availableDates[self._selectedDateIndex], 'month') ||
+						!e.date.isSame(self._availableDates[self._selectedDateIndex], 'year')) {
+							self.setDateAndTime(e.date);
+						}
+			}
+		);
 
-    $('#datetimepicker').on('dp.update', function(e) {
-        //console.log('dateChanger: update event = ' + JSON.stringify(e));
-        if (
-		!e.viewDate.isSame(self._availableDates[self._selectedDateIndex], 'minute') ||  //added by Chip
-		!e.viewDate.isSame(self._availableDates[self._selectedDateIndex], 'hour') ||
-        !e.viewDate.isSame(self._availableDates[self._selectedDateIndex], 'day') ||
-        !e.viewDate.isSame(self._availableDates[self._selectedDateIndex], 'month') ||
-        !e.viewDate.isSame(self._availableDates[self._selectedDateIndex], 'year')) {
-            self.setDateAndTime(e.viewDate);
-        }
-    })
+    $('#datetimepicker').on('dp.update', 
+			function(e) {
+				//console.log('dateChanger: update event = ' + JSON.stringify(e));
+				if (!e.viewDate.isSame(self._availableDates[self._selectedDateIndex], 'minute') ||  //added by Chip
+						!e.viewDate.isSame(self._availableDates[self._selectedDateIndex], 'hour') ||
+						!e.viewDate.isSame(self._availableDates[self._selectedDateIndex], 'day') ||
+						!e.viewDate.isSame(self._availableDates[self._selectedDateIndex], 'month') ||
+						!e.viewDate.isSame(self._availableDates[self._selectedDateIndex], 'year')) {
+					
+					self.setDateAndTime(e.viewDate);
+				}
+			}
+		);
 
     var stop = L.DomEvent.stopPropagation
     L.DomEvent
@@ -374,17 +401,17 @@ L.Control.DateChanger = L.Control.extend({
 
     L.DomUtil.removeClass(this._dayUpButton, className);
     L.DomUtil.removeClass(this._dayDownButton, className);
-
   },
 
   // set available dates and times, and select most recent one for display
   setAvailableDateAndTimes: function(available_times) {
+		
     for (var idx_date = 0; idx_date < available_times.length; idx_date++) {
-      var datestr = available_times[idx_date];
-	  var currentMoment = moment(datestr).utc();
+			var datestr = available_times[idx_date];
+      var currentMoment = moment(datestr).utc();
       var roundedMoment = currentMoment.clone().minutes(0).seconds(0);
       this._availableDates[this._availableDates.length] = currentMoment;
-	  //console.log("dateChanger.js: setAvailableDateAndTimes: idx_date = " + idx_date + ", moment = " + currentMoment.format());
+			//console.log("dateChanger.js: setAvailableDateAndTimes: idx_date = " + idx_date + ", moment = " + currentMoment.format());
       if (idx_date === 0) {
         this._disableIntervals[this._disableIntervals.length] = [moment(-8640000000000000), roundedMoment];
       }
@@ -393,6 +420,7 @@ L.Control.DateChanger = L.Control.extend({
       } else {
         this._disableIntervals[this._disableIntervals.length] = [roundedMoment, moment(available_times[idx_date + 1]).minutes(0).seconds(0)];
       }
+			//console.log("dateChanger.js: setAvailableDateAndTimes: idx_date = " + idx_date + ", moment = " + currentMoment.format());
     };
 	
 	/*
@@ -409,7 +437,7 @@ L.Control.DateChanger = L.Control.extend({
     */
 	
 	$('#datetimepicker').data("DateTimePicker").enabledDates(this._availableDates);
-    $('#datetimepicker').data("DateTimePicker").disabledTimeIntervals(this._disableIntervals);
+  $('#datetimepicker').data("DateTimePicker").disabledTimeIntervals(this._disableIntervals);
 	
 	/*
 	console.log("dateChanger.js: this._availableDates.length = " + this._availableDates.length);

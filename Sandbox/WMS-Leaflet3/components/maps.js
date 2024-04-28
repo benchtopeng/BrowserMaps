@@ -1946,12 +1946,14 @@ function createMap(main_geowatch_layer_info, idx_map, maps, dasspTimeLayers, das
   
   // add date changer control
   if (addDateChangerControl) {
+		//console.log("maps: createMap: DEFAULT_DATETIME = " + DEFAULT_DATETIME);
     // add a custom control to navigate dates
     var dateChanger = L.control.dateChanger({
       position: 'bottomleft',
       refreshMaps: refreshMaps,
       maps: maps,
     });
+		
     map.dateChanger = dateChanger;
     //dateChanger.options.dayUpFn = function(e) {adjustDasspLayerDateCallback(dateChanger, dasspTimeLayers, dasspTimeMarks, maps, 1, 0, 0);};
     //dateChanger.options.dayDownFn = function(e) {adjustDasspLayerDateCallback(dateChanger, dasspTimeLayers, dasspTimeMarks, maps, -1, 0, 0);};
@@ -1971,19 +1973,17 @@ function createMap(main_geowatch_layer_info, idx_map, maps, dasspTimeLayers, das
       //adjustDasspLayerDateCallback(dateChanger, maps, !e.shiftKey ? (!e.altKey ? -8 : -8 * 365) : -8 * 30);
 	  adjustDasspLayerDateCallback(dateChanger, maps, !e.shiftKey ? (!e.altKey ? -12 : -12 * 365) : -12 * 30); //new by Chip
     };
+
     dateChanger.addTo(map);
-    //console.log(main_dassp_layer_info);
-    //dateChanger.setDateAndTime(INITIAL_UTC_DATE_AND_TIME); // must be after addTo(map)
-    //dateChanger.setAvailableDateAndTimes(main_dassp_layer_info.available_times); // must be after addTo(map)
-		//console.log("maps.js: main_geowatch_layer_info.available_times = " + main_geowatch_layer_info.available_times);
 		dateChanger.setAvailableDateAndTimes(main_geowatch_layer_info.available_times); // must be after addTo(map)
-			
+
 		//const available_times = ["2018-03-19T10:30:00Z","2018-03-19T11:00:00Z","2018-03-19T11:30:00Z","2018-03-19T12:00:00Z","2018-03-19T12:30:00Z"]
 		//dateChanger.setAvailableDateAndTimes(available_times); // must be after addTo(map)
 
     //var date = dateChanger.getDateAndTime();
-    //console.log(date)
-    if (DEFAULT_DATETIME !== null) dateChanger.setDateAndTime(DEFAULT_DATETIME);
+    if (DEFAULT_DATETIME !== null) {
+			dateChanger.setDateAndTime(DEFAULT_DATETIME);
+		}
     this.initial_utc_date_and_time_string = dateChanger.getDateAndTime().toISOString();
   };
 
@@ -2215,7 +2215,10 @@ GEOWATCH_JSON_MAP_DATA_CREATED = $.getJSON(main_map_json_file)
 	var leftSide = true;
 
 	//console.log("maps.js: DEFAULT_DATETIME = " + DEFAULT_DATETIME);
-	if (DEFAULT_DATETIME === null) DEFAULT_DATETIME = new Date(MAIN_GEOWATCH_LAYER_INFO.default_time).toISOString();
+	if (DEFAULT_DATETIME === null) {
+		DEFAULT_DATETIME = new Date(MAIN_GEOWATCH_LAYER_INFO.default_time).toISOString();
+		//console.log("maps.js: DEFAULT_DATETIME is null?  using new default = " + DEFAULT_DATETIME);
+	}		
 
 	// GEOWATCH_NUM_MAPS_MAX defined in parent html file
 	//console.log("maps.js: GEOWATCH_NUM_MAPS_MAX = " + GEOWATCH_NUM_MAPS_MAX)
