@@ -95,15 +95,15 @@ L.ArrayAzimuthLayer = L.Polygon.extend({
 	
 	
 	_addJson: function (json) {
-		let layer_type = "ArrayAzimuth"
+		let layerType = "ArrayAzimuth"
 		
 		//var layers = L.ArrayAzimuthLayer.parseJson(json);
 		var layers = this.parseJson(json);
 		if (!layers || !layers.length) return;
 		
 		for (var i = 0; i < layers.length; i++) {
-			if (!layers[i].hasOwnProperty("layer_type")) {
-				layers[i].layer_type = layer_type
+			if (!layers[i].hasOwnProperty("layerType")) {
+				layers[i].layerType = layerType
 			}
 			this.fire('addlayer', {
 				layer: layers[i]
@@ -111,8 +111,8 @@ L.ArrayAzimuthLayer = L.Polygon.extend({
 			this.addLayer(layers[i]);
 		}
 		//this.latLngs = L.arrayAzimuthLayer.getLatLngs(json);
-		if (!this.hasOwnProperty("layer_type")) {
-			this.layer_type = layer_type
+		if (!this.hasOwnProperty("layerType")) {
+			this.layerType = layerType
 		}
 		this.fire('loaded');
 	},
@@ -350,8 +350,8 @@ L.ArrayAzimuthLayer = L.Polygon.extend({
 		
 		var layers = this
 
-		if (!layers.hasOwnProperty("layer_type")) { 
-			layers.layer_type = "ArrayAzimuth"
+		if (!layers.hasOwnProperty("layerType")) { 
+			layers.layerType = "ArrayAzimuth"
 		}
 		//console.log(layers)
 		return layers;

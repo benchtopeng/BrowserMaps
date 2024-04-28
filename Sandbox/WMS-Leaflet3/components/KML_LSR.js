@@ -50,6 +50,7 @@ L.KML_LSR = L.FeatureGroup.extend({
 		this._layers = {};
 		this.datetime_UTC_str = '';
 		this.event_type = '';
+		this.keyword = options['keyword']
 		//this.overlay = KML_LSR_overlay_val;
 		this.icons = structuredClone(iconsDiam);
 		
@@ -102,13 +103,13 @@ L.KML_LSR = L.FeatureGroup.extend({
 	},
 
 	_addKML: function (xml) {
-		let layer_type = "KML_LSR"
+		let layerType = "KML_LSR"
 		
 		var layers = L.KML_LSR.parseKML(xml);
 		if (!layers || !layers.length) return;
 		for (var i = 0; i < layers.length; i++) {
-			if (!layers[i].hasOwnProperty("layer_type")) {
-				layers[i].layer_type = layer_type
+			if (!layers[i].hasOwnProperty("layerType")) {
+				layers[i].layerType = layerType
 			}
 			this.fire('addlayer', {
 				layer: layers[i]
@@ -116,8 +117,8 @@ L.KML_LSR = L.FeatureGroup.extend({
 			this.addLayer(layers[i]);
 		}
 		this.latLngs = L.KML_LSR.getLatLngs(xml);
-		if (!this.hasOwnProperty("layer_type")) {
-			this.layer_type = layer_type
+		if (!this.hasOwnProperty("layerType")) {
+			this.layerType = layerType
 		}
 		this.fire('loaded');
 	},
@@ -163,8 +164,8 @@ L.Util.extend(L.KML_LSR, {
 //			if (l) { layers.push(l); }
 //		}
 
-		if (!layers.hasOwnProperty("layer_type")) { 
-			layers.layer_type = "KML_LSR"
+		if (!layers.hasOwnProperty("layerType")) { 
+			layers.layerType = "KML_LSR"
 		}
 		//console.log(layers)
 		return layers;
@@ -298,7 +299,7 @@ L.Util.extend(L.KML_LSR, {
 		if (!layers.length) { return; }
 		if (layers.length === 1) { return layers[0]; }
 		var layerGroup = new L.FeatureGroup(layers);
-		layerGroup.layer_type = 'KML_LSR'
+		layerGroup.layerType = 'KML_LSR'
 		return layerGroup
 	},
 
@@ -397,7 +398,7 @@ L.Util.extend(L.KML_LSR, {
 		var layer = layers[0];
 		if (layers.length > 1) { 
 			layer = new L.FeatureGroup(layers);
-			layer.layer_type = 'KML_LSR'
+			layer.layerType = 'KML_LSR'
 		}
 		
 		//console.log("KML_LSR: parsePlacemark: layer group")

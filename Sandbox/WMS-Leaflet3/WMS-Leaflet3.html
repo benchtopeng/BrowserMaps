@@ -217,7 +217,8 @@
 		</div>
 	</div>
 	
-	
+	<script type="text/javascript" src="./components/layerSpecs.js"></script>
+		
 	<script type="text/javascript">
 		var GEOWATCH_NUM_MAPS_INITIAL = 1;  //Changed from 2 by Chip
 		//if (isSmallScreen()) GEOWATCH_NUM_MAPS_INITIAL = 1;
@@ -233,13 +234,16 @@
 		var DEFAULT_SHOW_LEGENDS = GEOWATCH_NUM_MAPS_INITIAL > 1;
 		//var DEFAULT_LAYERS = [
 		//	"CONUS NEXRAD Base Reflectivity (N0Q)"];
-		var DEFAULT_LAYERS = [
-			"Chunky, MUSIC 6.0Hz, Smoothed"];
-				
+
+		var DEFAULT_LAYERS = DEFAULT_LAYERS_CHUNKY; //see layerSpecs.js
+		
 		
 		var DEFAULT_PUBLIC_LAYERS = [
 			"CONUS NEXRAD Base Reflectivity (N0Q)",
 			"CONUS NEXRAD Base Reflectivity (N0Q)"];
+			
+		//console.log("WMS-Leaflet3: DEFAULT_MAIN_GEOWATCH_LAYER_INFO...");console.log(DEFAULT_MAIN_GEOWATCH_LAYER_INFO)
+		
 
 		//if (!IGNORE_MAPBOX_LAYERS) {
 		//	DEFAULT_LAYERS[0] = ['Streets and Borders (MapBox)']
@@ -285,7 +289,20 @@
 						//console.log("WMS_Leaflet3: default kml fname = " + DEFAULT_KML_FNAME)
 					} else if (param === 'az_fname') {
 						DEFAULT_AZIMUTH_FNAME = value;		
-						//console.log("WMS_Leaflet3: default azimuth fname = " + DEFAULT_AZIMUTH_FNAME)						
+						//console.log("WMS_Leaflet3: default azimuth fname = " + DEFAULT_AZIMUTH_FNAME)
+						if (DEFAULT_AZIMUTH_FNAME.toLowerCase().includes( ("WLT").toLowerCase())) {
+							console.log("WMS-Leaflet3: defaulting to WLT based on Azimuth file.");
+							DEFAULT_LAYERS = DEFAULT_LAYERS_WLT;
+							addToLayerSpecs(DEFAULT_MAIN_GEOWATCH_LAYER_INFO, layer_specs_wlt);
+						} else if (DEFAULT_AZIMUTH_FNAME.toLowerCase().includes( ("WLB").toLowerCase())) {
+							console.log("WMS-Leaflet3: defaulting to WLB based on Azimuth file.");
+						  DEFAULT_LAYERS = DEFAULT_LAYERS_WLB;
+							addToLayerSpecs(DEFAULT_MAIN_GEOWATCH_LAYER_INFO, layer_specs_wlb);
+						} else if (DEFAULT_AZIMUTH_FNAME.toLowerCase().includes( ("Chunky").toLowerCase())) {
+							console.log("WMS-Leaflet3: defaulting to Chunky based on Azimuth file.");
+						  DEFAULT_LAYERS = DEFAULT_LAYERS_CHUNKY;
+							addToLayerSpecs(DEFAULT_MAIN_GEOWATCH_LAYER_INFO, layer_specs_chunky);
+						}
 					} else if (param === 'maps') {
 						var layers = value.split('%20').join(' ').split(";"); // replaces '%20' with ' ' then splits at ';'
 						for (var i in layers) {
