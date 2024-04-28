@@ -141,18 +141,38 @@ L.ArrayAzimuthLayer = L.Polygon.extend({
 	},
 	
 	findBestMatchingEntry: function () {
+		let best_site_ind=-1, best_entry_ind=-1; //inialize
 		
 		//What do we want to plot (how is this layer defined?)
 		let targ_Hz = this.options.band_Hz
 		let targ_smooth_str = this.options.smoothing
 		
-		//extract the overall info from the JSON data file
-		json = this.json
-		//console.log("ArrayAzimuthLayer: drawNewPolygon: json..."); console.log(json);
-		site = json['site']
-		//console.log("ArrayAzimuthLayer: drawNewPolygon: site = " + site)
+		//figure out which subset of the json array to use
+		let all_json = this.json
+		//console.log("ArrayAzimuthLayer: findBestMatchingEntry: all_json...");console.log(all_json);
+		let targ_site = (this.options.site).toLowerCase();
+		if (all_json.length > 0) {
+			for (var i in all_json) {
+				if ((all_json[i].site).toLowerCase() === targ_site)
+					best_site_ind = i;
+			}
+		}
+		
+		//return early if no match
+		if (best_site_ind < 0) {
+			console.log("ArrayAzimuthLayer: findBestMatchingEntry: *** ERROR ***: cannot match target_site =" + target_site + " to any sites in the JSON.")
+			best_site_ind = 0;
+			best_entry_ind = -1;  //this will cause the system to NOT plot anything.  Good.
+			return [best_sitE_ind, best_entry_ind]
+		}
+
+		//for this site, extract the overall info from the JSON data file
+		let json = all_json[best_site_ind]
+		//console.log("ArrayAzimuthLayer: findBestMatchingEntry: json..."); console.log(json);
+		let site = json['site']
+		//console.log("ArrayAzimuthLayer: findBestMatchingEntry: site = " + site)
 		let n_entries= json['n_entries']
-		//console.log("ArrayAzimuthLayer: drawNewPolygon: n_entries = " + n_entries)
+		//console.log("ArrayAzimuthLayer: findBestMatchingEntry: n_entries = " + n_entries)
 		let all_given_bands_Hz = json.band_center_Hz
 
 		let test_for_smoothing = false
@@ -166,21 +186,20 @@ L.ArrayAzimuthLayer = L.Polygon.extend({
 		//console.log("ArrayAzimuthLayer: findBestMatchingEntry: all_given_bands_Hz = " + all_given_bands_Hz);
 		//console.log("ArrayAzimuthLayer: findBestMatchingEntry: all_smoothing_str = " + all_smoothing_str);
 		
-
 		//find the entry that we want by looping over all entries
-		//console.log("ArrayAzimuthLayer: drawNewPolygon: all_given_bands_Hz = " + all_given_bands_Hz)
-		let best_entry_ind = 0;
+		//console.log("ArrayAzimuthLayer: findBestMatchingEntry: all_given_bands_Hz = " + all_given_bands_Hz)
+		best_entry_ind = -1;
 		let best_diff = 99999999
 		if (n_entries > 1) {
 			for (var ind = 0; ind < n_entries; ind++) {
-				//console.log("ArrayAzimuthLayer: drawNewPolygon: targ_smooth_str = " + targ_smooth_str + ", all_smoothing_str[ind] = " + all_smoothing_str[ind])
-				//console.log("ArrayAzimuthLayer: drawNewPolygon: test_for_smoothing = " + test_for_smoothing)
+				//console.log("ArrayAzimuthLayer: findBestMatchingEntry: targ_smooth_str = " + targ_smooth_str + ", all_smoothing_str[ind] = " + all_smoothing_str[ind])
+				//console.log("ArrayAzimuthLayer: findBestMatchingEntry: test_for_smoothing = " + test_for_smoothing)
 
 				let smooth_option_is_good = true
-				//console.log("ArrayAzimuthLayer: drawNewPolygon: ind " + ind + ", smooth_option_is_good = " + smooth_option_is_good + ", targ_smooth_str === all_smoothing_str[ind] = " + (targ_smooth_str === all_smoothing_str[ind]))
+				//console.log("ArrayAzimuthLayer: findBestMatchingEntry: ind " + ind + ", smooth_option_is_good = " + smooth_option_is_good + ", targ_smooth_str === all_smoothing_str[ind] = " + (targ_smooth_str === all_smoothing_str[ind]))
 				if (test_for_smoothing) {
 					if (targ_smooth_str === all_smoothing_str[ind]) {
-						//console.log("ArrayAzimuthLayer: drawNewPolygon: smoothing matches!  targ_smooth_str = " + targ_smooth_str + ", all_smoothing_str[ind] = " + all_smoothing_str[ind])
+						//console.log("ArrayAzimuthLayer: findBestMatchingEntry: smoothing matches!  targ_smooth_str = " + targ_smooth_str + ", all_smoothing_str[ind] = " + all_smoothing_str[ind])
 						smooth_option_is_good = true
 					} else {
 						smooth_option_is_good = false
@@ -189,7 +208,7 @@ L.ArrayAzimuthLayer = L.Polygon.extend({
 
 				//calclulate the difference in this entry's frequency versus the target frequency
 				let diff = Math.abs(targ_Hz - all_given_bands_Hz[ind])
-				//console.log("ArrayAzimuthLayer: drawNewPolygon: ind " + ind + ", try_this_one = " + try_this_one + ", targ_smooth_str === all_smoothing_str[ind] = " + (targ_smooth_str === all_smoothing_str[ind]) + ", diff Hz = " + diff)
+				//console.log("ArrayAzimuthLayer: findBestMatchingEntry: ind " + ind + ", try_this_one = " + try_this_one + ", targ_smooth_str === all_smoothing_str[ind] = " + (targ_smooth_str === all_smoothing_str[ind]) + ", diff Hz = " + diff)
 
 				//now, finally, see if this entry is a better fit
 				if ((smooth_option_is_good) && (diff < best_diff)) {
@@ -199,7 +218,7 @@ L.ArrayAzimuthLayer = L.Polygon.extend({
 			}
 		};
 		
-		return best_entry_ind
+		return [best_site_ind, best_entry_ind]
 	},
 	
 	getDataClosestInTime: function (entry_data, targ_time_UTC_str) {
@@ -235,45 +254,57 @@ L.ArrayAzimuthLayer = L.Polygon.extend({
 	},
 	
 	drawNewPolygon: function (targ_time_UTC_str) {
+		//init some variables
+		let beyond_time_bounds = true
+		let data
+		let n_az = 360/5
+		var all_latLng = [];
 
 		//get the JSON data
-		json = this.json;
+		json = this.json[this.best_site_ind];
+		let site = json['site']
+	
+		//get the lat/long of site from options
+		//console.log("ArrayAzimuthLayer: drawNewPolygon: this.options..."); console.log(this.options);
+		let array_lngLat =  this.options.all_array_lngLat[site];
+		let array_latLng = [array_lngLat[1], array_lngLat[0]];
 	
 		//get the specific subset of data that we want
 		//console.log("ArrayAzimuthLayer: drawNewPolygon: using band " + best_entry_ind)
 		//let best_entry_ind = this.findBestMatchingEntry();
 		//let entry_data = json['data' + best_entry_ind];
 		let best_entry_ind = this.best_entry_ind
-		let entry_data = json['data' + best_entry_ind];
-		
-		//get the data at target time (the closest available) 
-		let [data, beyond_time_bounds] = this.getDataClosestInTime(entry_data, targ_time_UTC_str);
+		if (best_entry_ind < 0) {
+			//draw empty beam pattern centered on the array location
+			for (var Iaz=0; Iaz<n_az; Iaz++) all_latLng.push([array_latLng,array_lngLat]);
+			beyond_time_bounds = true
+		} else {
+			//draw the beam pattern based on the given data
+			let entry_data = json['data' + best_entry_ind];
+			
+			//get the data at target time (the closest available) 
+			[data, beyond_time_bounds] = this.getDataClosestInTime(entry_data, targ_time_UTC_str);
 
-	  //get the lat/long of site from options
-		//console.log("ArrayAzimuthLayer: drawNewPolygon: this.options..."); console.log(this.options);
-		let array_lngLat =  this.options.all_array_lngLat[site];
-		let array_latLng = [array_lngLat[1], array_lngLat[0]];
+			//define the scaling for the graphics  (assume data is in decibels)
+			//const meanDataVal = -85.0
+			//console.log("ArrayAzimuthLayer: drawNewPolygon: data mean = " + this.mean_data_value + ", assumed data mean = " + meanDataVal)
+			const meanDataVal = this.mean_data_value
+			const minDataVal = meanDataVal;
+			const maxDataVal = minDataVal+30.0;
+			const maxRadialValue = 0.5 ; //degrees of lattitude
 
-		//define the scaling for the graphics  (assume data is in decibels)
-		//const meanDataVal = -85.0
-		//console.log("ArrayAzimuthLayer: drawNewPolygon: data mean = " + this.mean_data_value + ", assumed data mean = " + meanDataVal)
-		const meanDataVal = this.mean_data_value
-		const minDataVal = meanDataVal;
-		const maxDataVal = minDataVal+30.0;
-		const maxRadialValue = 0.5 ; //degrees of lattitude
-
-		//build up a polygon for this data
-		let n_az = entry_data['n_az'];
-		let d_az = 360.0 / n_az;
-		var all_latLng = [];
-		let longitutde_scale = 1.0 / (Math.cos(array_latLng[0] * (Math.PI / 180.0)));
-		for (var Iaz = 0; Iaz < n_az; Iaz++) {
-			let az_deg = Iaz * d_az;
-			let ang_rad = (90.0 - az_deg)*(Math.PI / 180.0);
-			let value = this.mapNumRange(data[Iaz], minDataVal, maxDataVal, 0.0, maxRadialValue);
-			let polygon_lon = array_latLng[1] + (Math.cos(ang_rad) * value * longitutde_scale);
-			let polygon_lat = array_latLng[0] + (Math.sin(ang_rad) * value);
-			all_latLng.push([polygon_lat, polygon_lon]);
+			//build up a polygon for this data
+			n_az = entry_data['n_az'];
+			let d_az = 360.0 / n_az;
+			let longitutde_scale = 1.0 / (Math.cos(array_latLng[0] * (Math.PI / 180.0)));
+			for (var Iaz = 0; Iaz < n_az; Iaz++) {
+				let az_deg = Iaz * d_az;
+				let ang_rad = (90.0 - az_deg)*(Math.PI / 180.0);
+				let value = this.mapNumRange(data[Iaz], minDataVal, maxDataVal, 0.0, maxRadialValue);
+				let polygon_lon = array_latLng[1] + (Math.cos(ang_rad) * value * longitutde_scale);
+				let polygon_lat = array_latLng[0] + (Math.sin(ang_rad) * value);
+				all_latLng.push([polygon_lat, polygon_lon]);
+			}
 		}
 		
 		//draw the new polygon
@@ -332,15 +363,27 @@ L.ArrayAzimuthLayer = L.Polygon.extend({
 
 	parseJson: function (json) {
 				
+		//make sure that json is an array of objects
+		if (json.length === undefined) {
+			console.log("ArrayAzimuthLayer: parseJson: forcing JSON to be an array");
+			json = [json]
+		}
+				
 		//save the json to this layer
 		this.json = json
 		//console.log("ArrayAzimuthLayer: parseJson: json..."); console.log(json)
 		
 		//find best matching entry given all the entries in the JSON data
-		this.best_entry_ind = this.findBestMatchingEntry();
+		let foo = this.findBestMatchingEntry();
+		this.best_site_ind = foo[0]; this.best_entry_ind = foo[1];
+		//console.log("ArrayAzimuthLayer: parseJson: this.best_site_ind = " + this.best_site_ind + ", this.best_entry_ind = " + this.best_entry_ind);
 		
 		//get the mean data value for use in autoscaling the graphics later
-		this.mean_data_value = this.findMeanDataValue(json['data' + this.best_entry_ind]);
+		if (this.best_entry_ind < 0) {
+			this.mean_data_value = 0.0
+		} else {
+			this.mean_data_value = this.findMeanDataValue(json[this.best_site_ind]['data' + this.best_entry_ind]);
+		}
 	
 		//console.log("ArrayAzimuthLayer: parseJson: this..."); console.log(this)
 		targ_datetime_utc_str = this.TIME

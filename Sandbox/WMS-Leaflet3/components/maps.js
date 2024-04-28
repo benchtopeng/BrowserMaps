@@ -447,15 +447,15 @@ function removeTimeDependentKmlLsrLayers(map, targ_layerType) {
 	//iterate through each layer of the map
 	map.eachLayer(
 		function(layer) {
-			//console.log("maps: refreshTimeDependentLayerOfType: layer..."); console.log(layer);
+			//console.log("maps: removeTimeDependentKmlLsrLayers: layer..."); console.log(layer);
 			if (layer.hasOwnProperty("timeDependent")) {
 				if (layer.timeDependent) {
 					if (layer.hasOwnProperty("layerType")) {
 						if (layer.layerType == targ_layerType) {
-							//console.log("maps: removeTimeMarks: removing layer...");console.log(layer);
+							//console.log("maps: removeTimeDependentKmlLsrLayers: removing layer...");console.log(layer);
 							map.removeLayer(layer);
 						} else {
-							//console.log("maps: removeTimeMarks: NOT removing layer due to no layerType...");	console.log(layer);
+							//console.log("maps: removeTimeDependentKmlLsrLayers: NOT removing layer due to no layerType...");	console.log(layer);
 						}
 					}
 				}
@@ -478,9 +478,7 @@ function refreshMaps(dateChanger, maps) {
 				//check to see what type of layer it is and se the time 
 				if (dasspTimeLayers[i].layerType == layerType_WMS) {  // look for WMS layers
 					dasspTimeLayers[i].mapLayer.wmsParams['TIME'] = newTimeStr; //set the time (no actual action yet, though)
-				} else if (dasspTimeLayers[i].layerType == layerType_KML_LSR) {  //for KML_LSR layers
-					dasspTimeLayers[i].mapLayer.TIME = newTimeStr;  //set the time (no actual action yet, though)
-				} else if (dasspTimeLayers[i].layerType == layerType_Azimuth) { 
+				} else {
 					dasspTimeLayers[i].mapLayer.TIME = newTimeStr;  //set the time (no actual action yet, though)
 				}
 			}
@@ -489,7 +487,7 @@ function refreshMaps(dateChanger, maps) {
 		//iterate through all layers in the map and redraw thw WMS layers that are time-dependent
 		refreshTimeDependentLayersOfType(maps[j], layerType_WMS);
 		//refreshTimeDependentLayersOfType(maps[j], layerType_KML_LSR);
-		refreshTimeDependentLayersOfType(maps[j], layerType_Azimuth);
+		for (var Itype in layerType_Azimuth) refreshTimeDependentLayersOfType(maps[j], layerType_Azimuth[Itype]);
 
 		//iterate through all layers in the map and remove the KML_LSR layers
 		//removeTimeMarks(maps[j]);
@@ -863,7 +861,7 @@ function createKmlLsrLayer(layerURL, layerName, displayName, groupName,
 // function to create a WMS layer of given type
 function createArrayAzimuthLayer(layerURL, layerName, displayName, groupName,
   initial_utc_date_and_time_string, timeDependent, inMenuByDefault,
-  additionalParams, is_udp, layerID,
+  additionalParams, is_udp, layerID, layerType,
 	site, band_Hz, smoothing) {
 
 	//console.log("maps: createArrayAzimuthLayer: starting...");
@@ -883,7 +881,7 @@ function createArrayAzimuthLayer(layerURL, layerName, displayName, groupName,
 		maplayer.isGeoWATCHLayer = false; 
 		maplayer.timeDependent = timeDependent;
 		maplayer.overlay = layerID;
-		maplayer.layerType = layerType_Azimuth;
+		maplayer.layerType = layerType;
 		
 		//console.log("maps: createArrayAzimuthLayer: maplayer..."); console.log(maplayer)
 		
@@ -896,7 +894,7 @@ function createArrayAzimuthLayer(layerURL, layerName, displayName, groupName,
 			groupName: groupName,
 			timeDependent: timeDependent,
 			inMenuByDefault: inMenuByDefault,
-			layerType: layerType_Azimuth
+			layerType: layerType
 		};
 		//map.addLayer(layer);
 
@@ -1007,11 +1005,15 @@ function createAvailableLayersForMap(main_geowatch_layer_info, dasspTimeLayers, 
 				//		initial_utc_date_and_time_string, timeDependent, inMenuByDefault,
 				//		addlParams, false, layerID, layerType);
 				//	break;
-				case layerType_Azimuth:
-					layer = createArrayAzimuthLayer(layerURL, layerName, displayName, groupName,
-						initial_utc_date_and_time_string, timeDependent, inMenuByDefault,
-						addlParams, false, layerID, 
-						layer_specs[idx].params.site, layer_specs[idx].params.band_Hz, layer_specs[idx].params.smoothing);
+				default:
+					for (var Itype in layerType_Azimuth) {
+						if (layerType == layerType_Azimuth[Itype]) {
+							layer = createArrayAzimuthLayer(layerURL, layerName, displayName, groupName,
+								initial_utc_date_and_time_string, timeDependent, inMenuByDefault,
+								addlParams, false, layerID, layerType,
+								layer_specs[idx].params.site, layer_specs[idx].params.band_Hz, layer_specs[idx].params.smoothing);
+						}
+					}
 					break;				
 			}
 			
@@ -2148,7 +2150,7 @@ function createMap(main_geowatch_layer_info, idx_map, maps, dasspTimeLayers, das
 
 
 //  invoke json request to load GeoWATCH map data
-var GEOWATCH_JSON_MAP_DATA_CREATED, MAIN_GEOWATCH_LAYER_INFO;
+var GEOWATCH_JSON_MAP_DATA_CREATED; // MAIN_GEOWATCH_LAYER_INFO;
 var main_map_json_file = './main_map.json'
 
 /*
@@ -2197,7 +2199,7 @@ GEOWATCH_JSON_MAP_DATA_CREATED = $.getJSON(main_map_json_file)
 	
 	//console.log(data)
 
-	MAIN_GEOWATCH_LAYER_INFO = DEFAULT_MAIN_GEOWATCH_LAYER_INFO;
+	//MAIN_GEOWATCH_LAYER_INFO = DEFAULT_MAIN_GEOWATCH_LAYER_INFO;
 	var data = MAIN_GEOWATCH_LAYER_INFO;
 	//console.log("maps.js: new json = " + MAIN_GEOWATCH_LAYER_INFO);
 	//console.log("maps.js: MAIN_GEOWATCH_LAYER_INFO.default_time = " + MAIN_GEOWATCH_LAYER_INFO.default_time);

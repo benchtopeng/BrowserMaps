@@ -4,15 +4,30 @@ const layerID_base = 0;
 const layerID_weather = 1;
 const layerID_KML_LSR = 2;
 const layerID_KML_LSR_hail = 3;
-const layerID_Azimuth = 4;
+const layerID_Azimuth_WLT = 11;
+const layerID_Azimuth_WLB = 12;
+const layerID_Azimuth_ALAM = 13;
+const layerID_Azimuth_SO = 14;
+const layerID_Azimuth_Chunky = 15;
+
+const layerID_Azimuth = [layerID_Azimuth_WLT, layerID_Azimuth_WLB, layerID_Azimuth_ALAM, layerID_Azimuth_SO, layerID_Azimuth_Chunky]
 
 const layerType_other = 0;
 const layerType_WMS = 1;
 const layerType_KML_LSR = 2;
 const layerType_KML_LSR_hail = 3;
-const layerType_Azimuth = 4;
+const layerType_Azimuth_WLT = 11;
+const layerType_Azimuth_WLB = 12;
+const layerType_Azimuth_ALAM = 13;
+const layerType_Azimuth_SO = 14;
+const layerType_Azimuth_Chunky = 15;
 
-DEFAULT_MAIN_GEOWATCH_LAYER_INFO = {
+const layerType_Azimuth = [layerType_Azimuth_WLT, layerType_Azimuth_WLB, layerType_Azimuth_ALAM, layerType_Azimuth_SO, layerType_Azimuth_Chunky]
+
+
+
+
+var DEFAULT_MAIN_GEOWATCH_LAYER_INFO = {
   "default_time": "2018-03-19T18:00:00Z",
   "available_times": [
     "2018-03-17T00:00:00Z",		"2018-03-17T00:15:00Z",		"2018-03-17T00:30:00Z",		"2018-03-17T00:45:00Z",
@@ -581,7 +596,7 @@ DEFAULT_MAIN_GEOWATCH_LAYER_INFO = {
 var DEFAULT_LAYERS_WLT = ["WLT, MUSIC 5.0Hz, Smoothed"];
 var layer_specs_wlt = [
 	{
-		"name": "WLT, MUSIC 1.0Hz, Smoothed",
+		"name": "WLT, Off",
 		"url": "data/Azimuth/",
 		"restrictions": [       
 		],
@@ -594,7 +609,7 @@ var layer_specs_wlt = [
 			"inMenuByDefault": true,
 			"site":"WLT",
 			"band_Hz":1.0,
-			"smoothing":"5 min"
+			"smoothing":"(data off)"
 		},
 		"options": {
 			"isBaseLayer": false,
@@ -602,9 +617,9 @@ var layer_specs_wlt = [
 			"wrapDateLine": false,
 			"group": "Array: WLT, Back-Azimuth",
 			"transitionEffect": "resize",
-			"overlay": layerID_Azimuth,
+			"overlay": layerID_Azimuth_WLT,
 			"default_active": false,
-			"layer_type": layerType_Azimuth
+			"layer_type": layerType_Azimuth_WLT
 		}
 	},
 	{
@@ -629,9 +644,9 @@ var layer_specs_wlt = [
 			"wrapDateLine": false,
 			"group": "Array: WLT, Back-Azimuth",
 			"transitionEffect": "resize",
-			"overlay": layerID_Azimuth,
+			"overlay": layerID_Azimuth_WLT,
 			"default_active": false,
-			"layer_type": layerType_Azimuth
+			"layer_type": layerType_Azimuth_WLT
 		}
 	},
 	{
@@ -656,9 +671,9 @@ var layer_specs_wlt = [
 			"wrapDateLine": false,
 			"group": "Array: WLT, Back-Azimuth",
 			"transitionEffect": "resize",
-			"overlay": layerID_Azimuth,
+			"overlay": layerID_Azimuth_WLT,
 			"default_active": false,
-			"layer_type": layerType_Azimuth
+			"layer_type": layerType_Azimuth_WLT
 		}
 	},
 	{
@@ -683,9 +698,9 @@ var layer_specs_wlt = [
 			"wrapDateLine": false,
 			"group": "Array: WLT, Back-Azimuth",
 			"transitionEffect": "resize",
-			"overlay": layerID_Azimuth,
+			"overlay": layerID_Azimuth_WLT,
 			"default_active": false,
-			"layer_type": layerType_Azimuth
+			"layer_type": layerType_Azimuth_WLT
 		}
 	},
 ]
@@ -693,7 +708,7 @@ var layer_specs_wlt = [
 var DEFAULT_LAYERS_WLB = ["WLB, MUSIC 5.0Hz, Smoothed"];
 var layer_specs_wlb = [
 	{
-		"name": "WLB, MUSIC 1.0Hz, Smoothed",
+		"name": "WLB, Off",
 		"url": "data/Azimuth/",
 		"restrictions": [       
 		],
@@ -706,7 +721,7 @@ var layer_specs_wlb = [
 			"inMenuByDefault": true,
 			"site":"WLB",
 			"band_Hz":1.0,
-			"smoothing":"5 min"
+			"smoothing":"(data off)"
 		},
 		"options": {
 			"isBaseLayer": false,
@@ -714,9 +729,9 @@ var layer_specs_wlb = [
 			"wrapDateLine": false,
 			"group": "Array: WLB, Back-Azimuth",
 			"transitionEffect": "resize",
-			"overlay": layerID_Azimuth,
+			"overlay": layerID_Azimuth_WLB,
 			"default_active": false,
-			"layer_type": layerType_Azimuth
+			"layer_type": layerType_Azimuth_WLB
 		}
 	},
 	{
@@ -741,9 +756,9 @@ var layer_specs_wlb = [
 			"wrapDateLine": false,
 			"group": "Array: WLB, Back-Azimuth",
 			"transitionEffect": "resize",
-			"overlay": layerID_Azimuth,
+			"overlay": layerID_Azimuth_WLB,
 			"default_active": false,
-			"layer_type": layerType_Azimuth
+			"layer_type": layerType_Azimuth_WLB
 		}
 	},
 	{
@@ -768,9 +783,9 @@ var layer_specs_wlb = [
 			"wrapDateLine": false,
 			"group": "Array: WLB, Back-Azimuth",
 			"transitionEffect": "resize",
-			"overlay": layerID_Azimuth,
+			"overlay": layerID_Azimuth_WLB,
 			"default_active": false,
-			"layer_type": layerType_Azimuth
+			"layer_type": layerType_Azimuth_WLB
 		}
 	},
 	{
@@ -795,13 +810,236 @@ var layer_specs_wlb = [
 			"wrapDateLine": false,
 			"group": "Array: WLB, Back-Azimuth",
 			"transitionEffect": "resize",
-			"overlay": layerID_Azimuth,
+			"overlay": layerID_Azimuth_WLB,
 			"default_active": false,
-			"layer_type": layerType_Azimuth
+			"layer_type": layerType_Azimuth_WLB
 		}
 	},
 ]
 
+var DEFAULT_LAYERS_ALAM = ["ALAM, MUSIC 5.0Hz, Smoothed"];
+var layer_specs_alam = [
+	{
+		"name": "ALAM, Off",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"ALAM",
+			"band_Hz":1.0,
+			"smoothing":"(data off)"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: ALAM, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_ALAM,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_ALAM
+		}
+	},
+	{
+		"name": "ALAM, MUSIC 2.5Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"ALAM",
+			"band_Hz":2.5,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: ALAM, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_ALAM,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_ALAM
+		}
+	},
+	{
+		"name": "ALAM, MUSIC 5.0Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"ALAM",
+			"band_Hz":5.0,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: ALAM, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_ALAM,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_ALAM
+		}
+	},
+	{
+		"name": "ALAM, MUSIC 10Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"ALAM",
+			"band_Hz":10.0,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: ALAM, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_ALAM,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_ALAM
+		}
+	},
+]
+
+var DEFAULT_LAYERS_SCOTTORCHARD = ["Scott Orchard, MUSIC 5.0Hz, Smoothed"];
+var layer_specs_scottorchard = [
+	{
+		"name": "Scott Orchard, Off",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"ScottOrchard",
+			"band_Hz":1.0,
+			"smoothing":"(data off)"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: SO, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_SO,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_SO
+		}
+	},
+	{
+		"name": "Scott Orchard, MUSIC 2.5Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"ScottOrchard",
+			"band_Hz":2.5,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: SO, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_SO,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_SO
+		}
+	},
+	{
+		"name": "Scott Orchard, MUSIC 5.0Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"ScottOrchard",
+			"band_Hz":5.0,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: SO, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_SO,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_SO
+		}
+	},
+	{
+		"name": "Scott Orchard, MUSIC 10Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"ScottOrchard",
+			"band_Hz":10.0,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: SO, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_SO,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_SO
+		}
+	},
+]
 var DEFAULT_LAYERS_CHUNKY = ["Chunky, MUSIC 6.0Hz, Smoothed"];
 var layer_specs_chunky = [	
 	  {
@@ -826,9 +1064,9 @@ var layer_specs_chunky = [
         "wrapDateLine": false,
         "group": "Array: Chunky, Back-Azimuth",
         "transitionEffect": "resize",
-				"overlay": layerID_Azimuth,
+				"overlay": layerID_Azimuth_Chunky,
 				"default_active": false,
-				"layer_type": layerType_Azimuth
+				"layer_type": layerType_Azimuth_Chunky
       }
     },
     {
@@ -853,9 +1091,9 @@ var layer_specs_chunky = [
         "wrapDateLine": false,
         "group": "Array: Chunky, Back-Azimuth",
         "transitionEffect": "resize",
-				"overlay": layerID_Azimuth,
+				"overlay": layerID_Azimuth_Chunky,
 				"default_active": false,
-				"layer_type": layerType_Azimuth
+				"layer_type": layerType_Azimuth_Chunky
       }
     },
     {
@@ -880,9 +1118,9 @@ var layer_specs_chunky = [
         "wrapDateLine": false,
         "group": "Array: Chunky, Back-Azimuth",
         "transitionEffect": "resize",
-				"overlay": layerID_Azimuth,
+				"overlay": layerID_Azimuth_Chunky,
 				"default_active": false,
-				"layer_type": layerType_Azimuth
+				"layer_type": layerType_Azimuth_Chunky
       }
     },		
 		
@@ -908,9 +1146,9 @@ var layer_specs_chunky = [
         "wrapDateLine": false,
         "group": "Array: Chunky, Back-Azimuth",
         "transitionEffect": "resize",
-				"overlay": layerID_Azimuth,
+				"overlay": layerID_Azimuth_Chunky,
 				"default_active": false,
-				"layer_type": layerType_Azimuth
+				"layer_type": layerType_Azimuth_Chunky
       }
     },
     {
@@ -935,9 +1173,9 @@ var layer_specs_chunky = [
         "wrapDateLine": false,
         "group": "Array: Chunky, Back-Azimuth",
         "transitionEffect": "resize",
-				"overlay": layerID_Azimuth,
+				"overlay": layerID_Azimuth_Chunky,
 				"default_active": false,
-				"layer_type": layerType_Azimuth
+				"layer_type": layerType_Azimuth_Chunky
       }
     },
     {
@@ -962,9 +1200,9 @@ var layer_specs_chunky = [
         "wrapDateLine": false,
         "group": "Array: Chunky, Back-Azimuth",
         "transitionEffect": "resize",
-				"overlay": layerID_Azimuth,
+				"overlay": layerID_Azimuth_Chunky,
 				"default_active": false,
-				"layer_type": layerType_Azimuth
+				"layer_type": layerType_Azimuth_Chunky
       }
     },
 	]
@@ -984,4 +1222,40 @@ function addToLayerSpecs(all_layer_info, new_layer_specs) {
 	}
 	
 	return all_layer_info;
+}
+
+function updateLayerSpecsGivenAzimuthFile(azimuth_fname, main_layer_info, default_layer) {
+	az_name_lower = azimuth_fname.toLowerCase();
+	
+	if (az_name_lower.includes( ("WLT_WLB_ALAM_SO").toLowerCase())) {
+		console.log("WMS-Leaflet3: defaulting to WLT_WLB_ALAM_SO based on Azimuth file.");
+		default_layer = DEFAULT_LAYERS_WLT;
+		addToLayerSpecs(main_layer_info, layer_specs_wlt);
+		addToLayerSpecs(main_layer_info, layer_specs_wlb);
+		addToLayerSpecs(main_layer_info, layer_specs_alam);
+		addToLayerSpecs(main_layer_info, layer_specs_scottorchard);
+		
+	} else if (az_name_lower.includes( ("WLT_WLB").toLowerCase())) {
+		console.log("WMS-Leaflet3: defaulting to WLT_WLB based on Azimuth file.");
+		default_layer = DEFAULT_LAYERS_WLT;
+		addToLayerSpecs(main_layer_info, layer_specs_wlt);
+		addToLayerSpecs(main_layer_info, layer_specs_wlb);
+		
+	} else if (az_name_lower.includes( ("WLT").toLowerCase())) {
+		console.log("WMS-Leaflet3: defaulting to WLT based on Azimuth file.");
+		default_layer = DEFAULT_LAYERS_WLT;		
+		addToLayerSpecs(main_layer_info, layer_specs_wlt);
+		
+	} else if (az_name_lower.includes( ("WLB").toLowerCase())) {
+		console.log("WMS-Leaflet3: defaulting to WLB based on Azimuth file.");
+		default_layer = DEFAULT_LAYERS_WLB;
+		addToLayerSpecs(main_layer_info, layer_specs_wlb);
+		
+	} else if (az_name_loweraz_name_lower.includes( ("Chunky").toLowerCase())) {
+		console.log("WMS-Leaflet3: defaulting to Chunky based on Azimuth file.");
+		default_layer = DEFAULT_LAYERS_CHUNKY;
+		addToLayerSpecs(main_layer_info, layer_specs_chunky);
+	}	
+	//console.log("layerSpecs: updateLayerSpecsGivenAzimuthFile: default_layer = " + default_layer);
+	return [main_layer_info, default_layer]
 }

@@ -236,6 +236,7 @@
 		//	"CONUS NEXRAD Base Reflectivity (N0Q)"];
 
 		var DEFAULT_LAYERS = DEFAULT_LAYERS_CHUNKY; //see layerSpecs.js
+		var MAIN_GEOWATCH_LAYER_INFO = DEFAULT_MAIN_GEOWATCH_LAYER_INFO //see layerSpecs.js
 		
 		
 		var DEFAULT_PUBLIC_LAYERS = [
@@ -290,19 +291,8 @@
 					} else if (param === 'az_fname') {
 						DEFAULT_AZIMUTH_FNAME = value;		
 						//console.log("WMS_Leaflet3: default azimuth fname = " + DEFAULT_AZIMUTH_FNAME)
-						if (DEFAULT_AZIMUTH_FNAME.toLowerCase().includes( ("WLT").toLowerCase())) {
-							console.log("WMS-Leaflet3: defaulting to WLT based on Azimuth file.");
-							DEFAULT_LAYERS = DEFAULT_LAYERS_WLT;
-							addToLayerSpecs(DEFAULT_MAIN_GEOWATCH_LAYER_INFO, layer_specs_wlt);
-						} else if (DEFAULT_AZIMUTH_FNAME.toLowerCase().includes( ("WLB").toLowerCase())) {
-							console.log("WMS-Leaflet3: defaulting to WLB based on Azimuth file.");
-						  DEFAULT_LAYERS = DEFAULT_LAYERS_WLB;
-							addToLayerSpecs(DEFAULT_MAIN_GEOWATCH_LAYER_INFO, layer_specs_wlb);
-						} else if (DEFAULT_AZIMUTH_FNAME.toLowerCase().includes( ("Chunky").toLowerCase())) {
-							console.log("WMS-Leaflet3: defaulting to Chunky based on Azimuth file.");
-						  DEFAULT_LAYERS = DEFAULT_LAYERS_CHUNKY;
-							addToLayerSpecs(DEFAULT_MAIN_GEOWATCH_LAYER_INFO, layer_specs_chunky);
-						}
+						[MAIN_GEOWATCH_LAYER_INFO,DEFAULT_LAYERS]=updateLayerSpecsGivenAzimuthFile(DEFAULT_AZIMUTH_FNAME, MAIN_GEOWATCH_LAYER_INFO); // see layerSpecs.js
+						console.log("WMS_Leaflet3: DEFAULT_LAYERS = " + DEFAULT_LAYERS);
 					} else if (param === 'maps') {
 						var layers = value.split('%20').join(' ').split(";"); // replaces '%20' with ' ' then splits at ';'
 						for (var i in layers) {
