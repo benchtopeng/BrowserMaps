@@ -66,13 +66,13 @@ var DEFAULT_MAIN_GEOWATCH_LAYER_INFO = {
     "2018-03-18T09:00:00Z",		"2018-03-18T09:15:00Z",		"2018-03-18T09:30:00Z",		"2018-03-18T09:45:00Z",
     "2018-03-18T10:00:00Z",		"2018-03-18T10:15:00Z",		"2018-03-18T10:30:00Z",		"2018-03-18T10:45:00Z",
     "2018-03-18T11:00:00Z",		"2018-03-18T11:15:00Z",		"2018-03-18T11:30:00Z",		"2018-03-18T11:45:00Z",
-    "2018-03-18T12:00:00Z",		"2018-03-18T12:15:00Z",		"2018-03-18T12:30:00Z",		"2018-03-18T12:45:00Z",
-    "2018-03-18T13:00:00Z",		"2018-03-18T13:15:00Z",		"2018-03-18T13:30:00Z",		"2018-03-18T13:45:00Z",
-    "2018-03-18T14:00:00Z",		"2018-03-18T14:15:00Z",		"2018-03-18T14:30:00Z",		"2018-03-18T14:45:00Z",
-	"2018-03-18T15:00:00Z",		"2018-03-18T15:15:00Z",		"2018-03-18T15:30:00Z",		"2018-03-18T15:45:00Z",
-	"2018-03-18T16:00:00Z",		"2018-03-18T16:15:00Z",		"2018-03-18T16:30:00Z",		"2018-03-18T16:45:00Z",
-	"2018-03-18T17:00:00Z",		"2018-03-18T17:15:00Z",		"2018-03-18T17:30:00Z",		"2018-03-18T17:45:00Z",
-    "2018-03-18T18:00:00Z",		"2018-03-18T18:05:00Z",		"2018-03-18T18:10:00Z",		"2018-03-18T18:15:00Z",		"2018-03-18T18:20:00Z",		"2018-03-18T18:25:00Z",		"2018-03-18T18:30:00Z",		"2018-03-18T18:35:00Z",		"2018-03-18T18:40:00Z",		"2018-03-18T18:45:00Z",		"2018-03-18T18:50:00Z",		"2018-03-18T18:55:00Z",
+  "2018-03-18T12:00:00Z",		"2018-03-18T12:05:00Z",		"2018-03-18T12:10:00Z",		"2018-03-18T12:15:00Z",		"2018-03-18T12:20:00Z",		"2018-03-18T12:25:00Z",		"2018-03-18T12:30:00Z",		"2018-03-18T12:35:00Z",		"2018-03-18T12:40:00Z",		"2018-03-18T12:45:00Z",		"2018-03-18T12:50:00Z",		"2018-03-18T12:55:00Z",
+	"2018-03-18T13:00:00Z",		"2018-03-18T13:05:00Z",		"2018-03-18T13:10:00Z",		"2018-03-18T13:15:00Z",		"2018-03-18T13:20:00Z",		"2018-03-18T13:25:00Z",		"2018-03-18T13:30:00Z",		"2018-03-18T13:35:00Z",		"2018-03-18T13:40:00Z",		"2018-03-18T13:45:00Z",		"2018-03-18T13:50:00Z",		"2018-03-18T13:55:00Z",
+	"2018-03-18T14:00:00Z",		"2018-03-18T14:05:00Z",		"2018-03-18T14:10:00Z",		"2018-03-18T14:15:00Z",		"2018-03-18T14:20:00Z",		"2018-03-18T14:25:00Z",		"2018-03-18T14:30:00Z",		"2018-03-18T14:35:00Z",		"2018-03-18T14:40:00Z",		"2018-03-18T14:45:00Z",		"2018-03-18T14:50:00Z",		"2018-03-18T14:55:00Z",
+	"2018-03-18T15:00:00Z",		"2018-03-18T15:05:00Z",		"2018-03-18T15:10:00Z",		"2018-03-18T15:15:00Z",		"2018-03-18T15:20:00Z",		"2018-03-18T15:25:00Z",		"2018-03-18T15:30:00Z",		"2018-03-18T15:35:00Z",		"2018-03-18T15:40:00Z",		"2018-03-18T15:45:00Z",		"2018-03-18T15:50:00Z",		"2018-03-18T15:55:00Z",
+	"2018-03-18T16:00:00Z",		"2018-03-18T16:05:00Z",		"2018-03-18T16:10:00Z",		"2018-03-18T16:15:00Z",		"2018-03-18T16:20:00Z",		"2018-03-18T16:25:00Z",		"2018-03-18T16:30:00Z",		"2018-03-18T16:35:00Z",		"2018-03-18T16:40:00Z",		"2018-03-18T16:45:00Z",		"2018-03-18T16:50:00Z",		"2018-03-18T16:55:00Z",
+	"2018-03-18T17:00:00Z",		"2018-03-18T17:05:00Z",		"2018-03-18T17:10:00Z",		"2018-03-18T17:15:00Z",		"2018-03-18T17:20:00Z",		"2018-03-18T17:25:00Z",		"2018-03-18T17:30:00Z",		"2018-03-18T17:35:00Z",		"2018-03-18T17:40:00Z",		"2018-03-18T17:45:00Z",		"2018-03-18T17:50:00Z",		"2018-03-18T17:55:00Z",
+	"2018-03-18T18:00:00Z",		"2018-03-18T18:05:00Z",		"2018-03-18T18:10:00Z",		"2018-03-18T18:15:00Z",		"2018-03-18T18:20:00Z",		"2018-03-18T18:25:00Z",		"2018-03-18T18:30:00Z",		"2018-03-18T18:35:00Z",		"2018-03-18T18:40:00Z",		"2018-03-18T18:45:00Z",		"2018-03-18T18:50:00Z",		"2018-03-18T18:55:00Z",
 	"2018-03-18T19:00:00Z",		"2018-03-18T19:05:00Z",		"2018-03-18T19:10:00Z",		"2018-03-18T19:15:00Z",		"2018-03-18T19:20:00Z",		"2018-03-18T19:25:00Z",		"2018-03-18T19:30:00Z",		"2018-03-18T19:35:00Z",		"2018-03-18T19:40:00Z",		"2018-03-18T19:45:00Z",		"2018-03-18T19:50:00Z",		"2018-03-18T19:55:00Z",
 	"2018-03-18T20:00:00Z",		"2018-03-18T20:05:00Z",		"2018-03-18T20:10:00Z",		"2018-03-18T20:15:00Z",		"2018-03-18T20:20:00Z",		"2018-03-18T20:25:00Z",		"2018-03-18T20:30:00Z",		"2018-03-18T20:35:00Z",		"2018-03-18T20:40:00Z",		"2018-03-18T20:45:00Z",		"2018-03-18T20:50:00Z",		"2018-03-18T20:55:00Z",
 	"2018-03-18T21:00:00Z",		"2018-03-18T21:05:00Z",		"2018-03-18T21:10:00Z",		"2018-03-18T21:15:00Z",		"2018-03-18T21:20:00Z",		"2018-03-18T21:25:00Z",		"2018-03-18T21:30:00Z",		"2018-03-18T21:35:00Z",		"2018-03-18T21:40:00Z",		"2018-03-18T21:45:00Z",		"2018-03-18T21:50:00Z",		"2018-03-18T21:55:00Z",
@@ -90,19 +90,19 @@ var DEFAULT_MAIN_GEOWATCH_LAYER_INFO = {
     "2018-03-19T09:00:00Z",		"2018-03-19T09:15:00Z",		"2018-03-19T09:30:00Z",		"2018-03-19T09:45:00Z",
     "2018-03-19T10:00:00Z",		"2018-03-19T10:15:00Z",		"2018-03-19T10:30:00Z",		"2018-03-19T10:45:00Z",
     "2018-03-19T11:00:00Z",		"2018-03-19T11:15:00Z",		"2018-03-19T11:30:00Z",		"2018-03-19T11:45:00Z",
-    "2018-03-19T12:00:00Z",		"2018-03-19T12:15:00Z",		"2018-03-19T12:30:00Z",		"2018-03-19T12:45:00Z",
-    "2018-03-19T13:00:00Z",		"2018-03-19T13:15:00Z",		"2018-03-19T13:30:00Z",		"2018-03-19T13:45:00Z",
-    "2018-03-19T14:00:00Z",		"2018-03-19T14:15:00Z",		"2018-03-19T14:30:00Z",		"2018-03-19T14:45:00Z",
-	"2018-03-19T15:00:00Z",		"2018-03-19T15:15:00Z",		"2018-03-19T15:30:00Z",		"2018-03-19T15:45:00Z",
-	"2018-03-19T16:00:00Z",		"2018-03-19T16:15:00Z",		"2018-03-19T16:30:00Z",		"2018-03-19T16:45:00Z",
-	"2018-03-19T17:00:00Z",		"2018-03-19T17:15:00Z",		"2018-03-19T17:30:00Z",		"2018-03-19T17:45:00Z",
-    "2018-03-19T18:00:00Z",		"2018-03-19T18:05:00Z",		"2018-03-19T18:10:00Z",		"2018-03-19T18:15:00Z",		"2018-03-19T18:20:00Z",		"2018-03-19T18:25:00Z",		"2018-03-19T18:30:00Z",		"2018-03-19T18:35:00Z",		"2018-03-19T18:40:00Z",		"2018-03-19T18:45:00Z",		"2018-03-19T18:50:00Z",		"2018-03-19T18:55:00Z",
+ "2018-03-19T12:00:00Z",		"2018-03-19T12:05:00Z",		"2018-03-19T12:10:00Z",		"2018-03-19T12:15:00Z",		"2018-03-19T12:20:00Z",		"2018-03-19T12:25:00Z",		"2018-03-19T12:30:00Z",		"2018-03-19T12:35:00Z",		"2018-03-19T12:40:00Z",		"2018-03-19T12:45:00Z",		"2018-03-19T12:50:00Z",		"2018-03-19T12:55:00Z",
+	"2018-03-19T13:00:00Z",		"2018-03-19T13:05:00Z",		"2018-03-19T13:10:00Z",		"2018-03-19T13:15:00Z",		"2018-03-19T13:20:00Z",		"2018-03-19T13:25:00Z",		"2018-03-19T13:30:00Z",		"2018-03-19T13:35:00Z",		"2018-03-19T13:40:00Z",		"2018-03-19T13:45:00Z",		"2018-03-19T13:50:00Z",		"2018-03-19T13:55:00Z",
+	"2018-03-19T14:00:00Z",		"2018-03-19T14:05:00Z",		"2018-03-19T14:10:00Z",		"2018-03-19T14:15:00Z",		"2018-03-19T14:20:00Z",		"2018-03-19T14:25:00Z",		"2018-03-19T14:30:00Z",		"2018-03-19T14:35:00Z",		"2018-03-19T14:40:00Z",		"2018-03-19T14:45:00Z",		"2018-03-19T14:50:00Z",		"2018-03-19T14:55:00Z",
+	"2018-03-19T15:00:00Z",		"2018-03-19T15:05:00Z",		"2018-03-19T15:10:00Z",		"2018-03-19T15:15:00Z",		"2018-03-19T15:20:00Z",		"2018-03-19T15:25:00Z",		"2018-03-19T15:30:00Z",		"2018-03-19T15:35:00Z",		"2018-03-19T15:40:00Z",		"2018-03-19T15:45:00Z",		"2018-03-19T15:50:00Z",		"2018-03-19T15:55:00Z",
+	"2018-03-19T16:00:00Z",		"2018-03-19T16:05:00Z",		"2018-03-19T16:10:00Z",		"2018-03-19T16:15:00Z",		"2018-03-19T16:20:00Z",		"2018-03-19T16:25:00Z",		"2018-03-19T16:30:00Z",		"2018-03-19T16:35:00Z",		"2018-03-19T16:40:00Z",		"2018-03-19T16:45:00Z",		"2018-03-19T16:50:00Z",		"2018-03-19T16:55:00Z",
+	"2018-03-19T17:00:00Z",		"2018-03-19T17:05:00Z",		"2018-03-19T17:10:00Z",		"2018-03-19T17:15:00Z",		"2018-03-19T17:20:00Z",		"2018-03-19T17:25:00Z",		"2018-03-19T17:30:00Z",		"2018-03-19T17:35:00Z",		"2018-03-19T17:40:00Z",		"2018-03-19T17:45:00Z",		"2018-03-19T17:50:00Z",		"2018-03-19T17:55:00Z",
+	"2018-03-19T18:00:00Z",		"2018-03-19T18:05:00Z",		"2018-03-19T18:10:00Z",		"2018-03-19T18:15:00Z",		"2018-03-19T18:20:00Z",		"2018-03-19T18:25:00Z",		"2018-03-19T18:30:00Z",		"2018-03-19T18:35:00Z",		"2018-03-19T18:40:00Z",		"2018-03-19T18:45:00Z",		"2018-03-19T18:50:00Z",		"2018-03-19T18:55:00Z",
 	"2018-03-19T19:00:00Z",		"2018-03-19T19:05:00Z",		"2018-03-19T19:10:00Z",		"2018-03-19T19:15:00Z",		"2018-03-19T19:20:00Z",		"2018-03-19T19:25:00Z",		"2018-03-19T19:30:00Z",		"2018-03-19T19:35:00Z",		"2018-03-19T19:40:00Z",		"2018-03-19T19:45:00Z",		"2018-03-19T19:50:00Z",		"2018-03-19T19:55:00Z",
 	"2018-03-19T20:00:00Z",		"2018-03-19T20:05:00Z",		"2018-03-19T20:10:00Z",		"2018-03-19T20:15:00Z",		"2018-03-19T20:20:00Z",		"2018-03-19T20:25:00Z",		"2018-03-19T20:30:00Z",		"2018-03-19T20:35:00Z",		"2018-03-19T20:40:00Z",		"2018-03-19T20:45:00Z",		"2018-03-19T20:50:00Z",		"2018-03-19T20:55:00Z",
 	"2018-03-19T21:00:00Z",		"2018-03-19T21:05:00Z",		"2018-03-19T21:10:00Z",		"2018-03-19T21:15:00Z",		"2018-03-19T21:20:00Z",		"2018-03-19T21:25:00Z",		"2018-03-19T21:30:00Z",		"2018-03-19T21:35:00Z",		"2018-03-19T21:40:00Z",		"2018-03-19T21:45:00Z",		"2018-03-19T21:50:00Z",		"2018-03-19T21:55:00Z",
 	"2018-03-19T22:00:00Z",		"2018-03-19T22:05:00Z",		"2018-03-19T22:10:00Z",		"2018-03-19T22:15:00Z",		"2018-03-19T22:20:00Z",		"2018-03-19T22:25:00Z",		"2018-03-19T22:30:00Z",		"2018-03-19T22:35:00Z",		"2018-03-19T22:40:00Z",		"2018-03-19T22:45:00Z",		"2018-03-19T22:50:00Z",		"2018-03-19T22:55:00Z",
 	"2018-03-19T23:00:00Z",		"2018-03-19T23:05:00Z",		"2018-03-19T23:10:00Z",		"2018-03-19T23:15:00Z",		"2018-03-19T23:20:00Z",		"2018-03-19T23:25:00Z",		"2018-03-19T23:30:00Z",		"2018-03-19T23:35:00Z",		"2018-03-19T23:40:00Z",		"2018-03-19T23:45:00Z",		"2018-03-19T23:50:00Z",		"2018-03-19T23:55:00Z",
-	"2018-03-20T00:00:00Z",		"2018-03-20T00:05:00Z",		"2018-03-20T00:10:00Z",		"2018-03-20T00:15:00Z",		"2018-03-20T00:20:00Z",		"2018-03-20T00:25:00Z",		"2018-03-20T00:30:00Z",		"2018-03-20T00:35:00Z",		"2018-03-20T00:40:00Z",		"2018-03-20T00:45:00Z",		"2018-03-20T00:50:00Z",		"2018-03-20T00:55:00Z",
+"2018-03-20T00:00:00Z",		"2018-03-20T00:05:00Z",		"2018-03-20T00:10:00Z",		"2018-03-20T00:15:00Z",		"2018-03-20T00:20:00Z",		"2018-03-20T00:25:00Z",		"2018-03-20T00:30:00Z",		"2018-03-20T00:35:00Z",		"2018-03-20T00:40:00Z",		"2018-03-20T00:45:00Z",		"2018-03-20T00:50:00Z",		"2018-03-20T00:55:00Z",
 	"2018-03-20T01:00:00Z",		"2018-03-20T01:05:00Z",		"2018-03-20T01:10:00Z",		"2018-03-20T01:15:00Z",		"2018-03-20T01:20:00Z",		"2018-03-20T01:25:00Z",		"2018-03-20T01:30:00Z",		"2018-03-20T01:35:00Z",		"2018-03-20T01:40:00Z",		"2018-03-20T01:45:00Z",		"2018-03-20T01:50:00Z",		"2018-03-20T01:55:00Z",  
 	"2018-03-20T02:00:00Z",	 	"2018-03-20T02:15:00Z",		"2018-03-20T02:30:00Z",		"2018-03-20T02:45:00Z",
 	"2018-03-20T03:00:00Z",
@@ -593,6 +593,8 @@ var DEFAULT_MAIN_GEOWATCH_LAYER_INFO = {
   "version": "TODO"
 }
 
+// /////////////////////////////////////////// MUSIC Layers
+
 var DEFAULT_LAYERS_WLT = ["WLT, MUSIC 5.0Hz, Smoothed"];
 var layer_specs_wlt = [
 	{
@@ -1042,170 +1044,1075 @@ var layer_specs_scottorchard = [
 ]
 var DEFAULT_LAYERS_CHUNKY = ["Chunky, MUSIC 6.0Hz, Smoothed"];
 var layer_specs_chunky = [	
-	  {
-      "name": "Chunky, MUSIC 4.0Hz, Smoothed",
-	    "url": "data/Azimuth/",
-      "restrictions": [       
-      ],
-      "params": {
-        "layers": "psdVsAz",
-        "sphericalMercator": true,
-        "transparent": false,
-        "format": "",
-        "isDynamic": true,
-        "inMenuByDefault": true,
-				"site":"Chunky",
-				"band_Hz":4.0,
-				"smoothing":"4 min"
-      },
-      "options": {
-        "isBaseLayer": false,
-        "visibility": true,
-        "wrapDateLine": false,
-        "group": "Array: Chunky, Back-Azimuth",
-        "transitionEffect": "resize",
-				"overlay": layerID_Azimuth_Chunky,
-				"default_active": false,
-				"layer_type": layerType_Azimuth_Chunky
-      }
-    },
-    {
-      "name": "Chunky, MUSIC 6.0Hz, Smoothed",
-	    "url": "data/Azimuth/",
-      "restrictions": [       
-      ],
-      "params": {
-        "layers": "psdVsAz",
-        "sphericalMercator": true,
-        "transparent": false,
-        "format": "",
-        "isDynamic": true,
-        "inMenuByDefault": true,
-				"site":"Chunky",
-				"band_Hz":6.0,
-				"smoothing":"4 min"
-      },
-      "options": {
-        "isBaseLayer": false,
-        "visibility": true,
-        "wrapDateLine": false,
-        "group": "Array: Chunky, Back-Azimuth",
-        "transitionEffect": "resize",
-				"overlay": layerID_Azimuth_Chunky,
-				"default_active": false,
-				"layer_type": layerType_Azimuth_Chunky
-      }
-    },
-    {
-      "name": "Chunky, MUSIC 7.0Hz, Smoothed",
-	    "url": "data/Azimuth/",
-      "restrictions": [       
-      ],
-      "params": {
-        "layers": "psdVsAz",
-        "sphericalMercator": true,
-        "transparent": false,
-        "format": "",
-        "isDynamic": true,
-        "inMenuByDefault": true,
-				"site":"Chunky",
-				"band_Hz":7.0,
-				"smoothing":"4 min"
-      },
-      "options": {
-        "isBaseLayer": false,
-        "visibility": true,
-        "wrapDateLine": false,
-        "group": "Array: Chunky, Back-Azimuth",
-        "transitionEffect": "resize",
-				"overlay": layerID_Azimuth_Chunky,
-				"default_active": false,
-				"layer_type": layerType_Azimuth_Chunky
-      }
-    },		
-		
-    {
-      "name": "Chunky, MUSIC 2.0Hz, No Smoothing",
-	    "url": "data/Azimuth/",
-      "restrictions": [       
-      ],
-      "params": {
-        "layers": "psdVsAz",
-        "sphericalMercator": true,
-        "transparent": false,
-        "format": "",
-        "isDynamic": true,
-        "inMenuByDefault": true,
-				"site":"Chunky",
-				"band_Hz":2.0,
-				"smoothing":"none"
-      },
-      "options": {
-        "isBaseLayer": false,
-        "visibility": true,
-        "wrapDateLine": false,
-        "group": "Array: Chunky, Back-Azimuth",
-        "transitionEffect": "resize",
-				"overlay": layerID_Azimuth_Chunky,
-				"default_active": false,
-				"layer_type": layerType_Azimuth_Chunky
-      }
-    },
-    {
-      "name": "Chunky, MUSIC 4.0Hz, No Smoothing",
-	    "url": "data/Azimuth/",
-      "restrictions": [       
-      ],
-      "params": {
-        "layers": "psdVsAz",
-        "sphericalMercator": true,
-        "transparent": false,
-        "format": "",
-        "isDynamic": true,
-        "inMenuByDefault": true,
-				"site":"Chunky",
-				"band_Hz":4.0,
-				"smoothing":"none"
-      },
-      "options": {
-        "isBaseLayer": false,
-        "visibility": true,
-        "wrapDateLine": false,
-        "group": "Array: Chunky, Back-Azimuth",
-        "transitionEffect": "resize",
-				"overlay": layerID_Azimuth_Chunky,
-				"default_active": false,
-				"layer_type": layerType_Azimuth_Chunky
-      }
-    },
-    {
-      "name": "Chunky, MUSIC 6.0Hz, No Smoothing",
-	    "url": "data/Azimuth/",
-      "restrictions": [       
-      ],
-      "params": {
-        "layers": "psdVsAz",
-        "sphericalMercator": true,
-        "transparent": false,
-        "format": "",
-        "isDynamic": true,
-        "inMenuByDefault": true,
-				"site":"Chunky",
-				"band_Hz":6.0,
-				"smoothing":"none"
-      },
-      "options": {
-        "isBaseLayer": false,
-        "visibility": true,
-        "wrapDateLine": false,
-        "group": "Array: Chunky, Back-Azimuth",
-        "transitionEffect": "resize",
-				"overlay": layerID_Azimuth_Chunky,
-				"default_active": false,
-				"layer_type": layerType_Azimuth_Chunky
-      }
-    },
-	]
+	{
+		"name": "Chunky, MUSIC 4.0Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"Chunky",
+			"band_Hz":4.0,
+			"smoothing":"4 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: Chunky, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_Chunky,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_Chunky
+		}
+	},
+	{
+		"name": "Chunky, MUSIC 6.0Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"Chunky",
+			"band_Hz":6.0,
+			"smoothing":"4 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: Chunky, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_Chunky,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_Chunky
+		}
+	},
+	{
+		"name": "Chunky, MUSIC 7.0Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"Chunky",
+			"band_Hz":7.0,
+			"smoothing":"4 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: Chunky, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_Chunky,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_Chunky
+		}
+	},		
+	
+	{
+		"name": "Chunky, MUSIC 2.0Hz, No Smoothing",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"Chunky",
+			"band_Hz":2.0,
+			"smoothing":"none"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: Chunky, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_Chunky,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_Chunky
+		}
+	},
+	{
+		"name": "Chunky, MUSIC 4.0Hz, No Smoothing",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"Chunky",
+			"band_Hz":4.0,
+			"smoothing":"none"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: Chunky, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_Chunky,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_Chunky
+		}
+	},
+	{
+		"name": "Chunky, MUSIC 6.0Hz, No Smoothing",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"Chunky",
+			"band_Hz":6.0,
+			"smoothing":"none"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: Chunky, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_Chunky,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_Chunky
+		}
+	},
+]
+	
+// /////////////////////////////////////////////////////////////// Delay+Sum Layers (Bartlett)
+
+var DEFAULT_LAYERS_WLT_BARTLETT = ["WLT, Bartlett 5.0Hz, Smoothed"];
+var layer_specs_wlt_bartlett = [
+	{
+		"name": "WLT, Off",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"WLT",
+			"band_Hz":1.0,
+			"smoothing":"(data off)"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: WLT, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_WLT,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_WLT
+		}
+	},
+	{
+		"name": "WLT, Bartlett 2.5Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"WLT",
+			"band_Hz":2.5,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: WLT, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_WLT,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_WLT
+		}
+	},
+	{
+		"name": "WLT, Bartlett 5.0Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"WLT",
+			"band_Hz":5.0,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: WLT, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_WLT,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_WLT
+		}
+	},
+	{
+		"name": "WLT, Bartlett 10Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"WLT",
+			"band_Hz":10.0,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: WLT, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_WLT,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_WLT
+		}
+	},
+]
+
+var DEFAULT_LAYERS_WLB_BARTLETT = ["WLB, Bartlett 5.0Hz, Smoothed"];
+var layer_specs_wlb_bartlett = [
+	{
+		"name": "WLB, Off",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"WLB",
+			"band_Hz":1.0,
+			"smoothing":"(data off)"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: WLB, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_WLB,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_WLB
+		}
+	},
+	{
+		"name": "WLB, Bartlett 2.5Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"WLB",
+			"band_Hz":2.5,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: WLB, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_WLB,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_WLB
+		}
+	},
+	{
+		"name": "WLB, Bartlett 5.0Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"WLB",
+			"band_Hz":5.0,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: WLB, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_WLB,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_WLB
+		}
+	},
+	{
+		"name": "WLB, Bartlett 10Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"WLB",
+			"band_Hz":10.0,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: WLB, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_WLB,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_WLB
+		}
+	},
+]
+
+
+var DEFAULT_LAYERS_ALAM_BARTLETT = ["ALAM, Bartlett 5.0Hz, Smoothed"];
+var layer_specs_alam_bartlett = [
+	{
+		"name": "ALAM, Off",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"ALAM",
+			"band_Hz":1.0,
+			"smoothing":"(data off)"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: ALAM, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_ALAM,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_ALAM
+		}
+	},
+	{
+		"name": "ALAM, Bartlett 2.5Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"ALAM",
+			"band_Hz":2.5,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: ALAM, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_ALAM,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_ALAM
+		}
+	},
+	{
+		"name": "ALAM, Bartlett 5.0Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"ALAM",
+			"band_Hz":5.0,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: ALAM, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_ALAM,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_ALAM
+		}
+	},
+	{
+		"name": "ALAM, Bartlett 10Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"ALAM",
+			"band_Hz":10.0,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: ALAM, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_ALAM,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_ALAM
+		}
+	},
+]
+
+var DEFAULT_LAYERS_SCOTTORCHARD_BARTLETT = ["Scott Orchard, Bartlett 5.0Hz, Smoothed"];
+var layer_specs_scottorchard_bartlett = [
+	{
+		"name": "Scott Orchard, Off",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"ScottOrchard",
+			"band_Hz":1.0,
+			"smoothing":"(data off)"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: SO, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_SO,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_SO
+		}
+	},
+	{
+		"name": "Scott Orchard, Bartlett 2.5Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"ScottOrchard",
+			"band_Hz":2.5,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: SO, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_SO,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_SO
+		}
+	},
+	{
+		"name": "Scott Orchard, Bartlett 5.0Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"ScottOrchard",
+			"band_Hz":5.0,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: SO, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_SO,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_SO
+		}
+	},
+	{
+		"name": "Scott Orchard, Bartlett 10Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"ScottOrchard",
+			"band_Hz":10.0,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: SO, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_SO,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_SO
+		}
+	},
+]
+
+// ///////////////////////////////////////////////////// MVDR (Capon) layerSpecs
+
+var DEFAULT_LAYERS_WLT_MVDR = ["WLT, MVDR 5.0Hz, Smoothed"];
+var layer_specs_wlt_MVDR = [
+	{
+		"name": "WLT, Off",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"WLT",
+			"band_Hz":1.0,
+			"smoothing":"(data off)"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: WLT, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_WLT,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_WLT
+		}
+	},
+	{
+		"name": "WLT, MVDR 2.5Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"WLT",
+			"band_Hz":2.5,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: WLT, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_WLT,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_WLT
+		}
+	},
+	{
+		"name": "WLT, MVDR 5.0Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"WLT",
+			"band_Hz":5.0,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: WLT, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_WLT,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_WLT
+		}
+	},
+	{
+		"name": "WLT, MVDR 10Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"WLT",
+			"band_Hz":10.0,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: WLT, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_WLT,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_WLT
+		}
+	},
+]
+
+var DEFAULT_LAYERS_WLB_MVDR = ["WLB, MVDR 5.0Hz, Smoothed"];
+var layer_specs_wlb_MVDR = [
+	{
+		"name": "WLB, Off",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"WLB",
+			"band_Hz":1.0,
+			"smoothing":"(data off)"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: WLB, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_WLB,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_WLB
+		}
+	},
+	{
+		"name": "WLB, MVDR 2.5Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"WLB",
+			"band_Hz":2.5,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: WLB, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_WLB,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_WLB
+		}
+	},
+	{
+		"name": "WLB, MVDR 5.0Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"WLB",
+			"band_Hz":5.0,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: WLB, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_WLB,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_WLB
+		}
+	},
+	{
+		"name": "WLB, MVDR 10Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"WLB",
+			"band_Hz":10.0,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: WLB, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_WLB,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_WLB
+		}
+	},
+]
+
+
+var DEFAULT_LAYERS_ALAM_MVDR = ["ALAM, MVDR 5.0Hz, Smoothed"];
+var layer_specs_alam_MVDR = [
+	{
+		"name": "ALAM, Off",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"ALAM",
+			"band_Hz":1.0,
+			"smoothing":"(data off)"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: ALAM, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_ALAM,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_ALAM
+		}
+	},
+	{
+		"name": "ALAM, MVDR 2.5Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"ALAM",
+			"band_Hz":2.5,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: ALAM, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_ALAM,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_ALAM
+		}
+	},
+	{
+		"name": "ALAM, MVDR 5.0Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"ALAM",
+			"band_Hz":5.0,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: ALAM, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_ALAM,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_ALAM
+		}
+	},
+	{
+		"name": "ALAM, MVDR 10Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"ALAM",
+			"band_Hz":10.0,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: ALAM, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_ALAM,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_ALAM
+		}
+	},
+]
+
+var DEFAULT_LAYERS_SCOTTORCHARD_MVDR = ["Scott Orchard, MVDR 5.0Hz, Smoothed"];
+var layer_specs_scottorchard_MVDR = [
+	{
+		"name": "Scott Orchard, Off",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"ScottOrchard",
+			"band_Hz":1.0,
+			"smoothing":"(data off)"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: SO, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_SO,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_SO
+		}
+	},
+	{
+		"name": "Scott Orchard, MVDR 2.5Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"ScottOrchard",
+			"band_Hz":2.5,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: SO, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_SO,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_SO
+		}
+	},
+	{
+		"name": "Scott Orchard, MVDR 5.0Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"ScottOrchard",
+			"band_Hz":5.0,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: SO, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_SO,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_SO
+		}
+	},
+	{
+		"name": "Scott Orchard, MVDR 10Hz, Smoothed",
+		"url": "data/Azimuth/",
+		"restrictions": [       
+		],
+		"params": {
+			"layers": "psdVsAz",
+			"sphericalMercator": true,
+			"transparent": false,
+			"format": "",
+			"isDynamic": true,
+			"inMenuByDefault": true,
+			"site":"ScottOrchard",
+			"band_Hz":10.0,
+			"smoothing":"5 min"
+		},
+		"options": {
+			"isBaseLayer": false,
+			"visibility": true,
+			"wrapDateLine": false,
+			"group": "Array: SO, Back-Azimuth",
+			"transitionEffect": "resize",
+			"overlay": layerID_Azimuth_SO,
+			"default_active": false,
+			"layer_type": layerType_Azimuth_SO
+		}
+	},
+]
+
+
+
 
 var array_locations = {
 	'names':['ALAM', 'ScottOrchard', 'WLT', 'WLB', 'Chunky'],
@@ -1228,19 +2135,40 @@ function updateLayerSpecsGivenAzimuthFile(azimuth_fname, main_layer_info, defaul
 	az_name_lower = azimuth_fname.toLowerCase();
 	
 	if (az_name_lower.includes( ("WLT_WLB_ALAM_SO").toLowerCase())) {
-		console.log("WMS-Leaflet3: defaulting to WLT_WLB_ALAM_SO based on Azimuth file.");
-		default_layer = DEFAULT_LAYERS_WLT;
-		addToLayerSpecs(main_layer_info, layer_specs_wlt);
-		addToLayerSpecs(main_layer_info, layer_specs_wlb);
-		addToLayerSpecs(main_layer_info, layer_specs_alam);
-		addToLayerSpecs(main_layer_info, layer_specs_scottorchard);
-		
+		if (az_name_lower.includes( ("Delay").toLowerCase())) {
+			console.log("WMS-Leaflet3: defaulting to WLT_WLB_ALAM_SO Barlett, based on Azimuth file.");
+			default_layer = DEFAULT_LAYERS_WLT_BARTLETT;
+			addToLayerSpecs(main_layer_info, layer_specs_wlt_bartlett);
+			addToLayerSpecs(main_layer_info, layer_specs_wlb_bartlett);
+			addToLayerSpecs(main_layer_info, layer_specs_alam_bartlett);
+			addToLayerSpecs(main_layer_info, layer_specs_scottorchard_bartlett);
+		} else if (az_name_lower.includes( ("MVDR").toLowerCase())) {
+			console.log("WMS-Leaflet3: defaulting to WLT_WLB_ALAM_SO MVDR, based on Azimuth file.");
+			default_layer = DEFAULT_LAYERS_WLT_MVDR;
+			addToLayerSpecs(main_layer_info, layer_specs_wlt_MVDR);
+			addToLayerSpecs(main_layer_info, layer_specs_wlb_MVDR);
+			addToLayerSpecs(main_layer_info, layer_specs_alam_MVDR);
+			addToLayerSpecs(main_layer_info, layer_specs_scottorchard_MVDR);
+		} else {
+			console.log("WMS-Leaflet3: defaulting to WLT_WLB_ALAM_SO based on Azimuth file.");
+			default_layer = DEFAULT_LAYERS_WLT;
+			addToLayerSpecs(main_layer_info, layer_specs_wlt);
+			addToLayerSpecs(main_layer_info, layer_specs_wlb);
+			addToLayerSpecs(main_layer_info, layer_specs_alam);
+			addToLayerSpecs(main_layer_info, layer_specs_scottorchard);
+		}		
 	} else if (az_name_lower.includes( ("WLT_WLB").toLowerCase())) {
-		console.log("WMS-Leaflet3: defaulting to WLT_WLB based on Azimuth file.");
-		default_layer = DEFAULT_LAYERS_WLT;
-		addToLayerSpecs(main_layer_info, layer_specs_wlt);
-		addToLayerSpecs(main_layer_info, layer_specs_wlb);
-		
+		if (az_name_lower.includes( ("Delay").toLowerCase())) {
+			console.log("WMS-Leaflet3: defaulting to WLT_WLB Barlett, based on Azimuth file.");
+			default_layer = DEFAULT_LAYERS_WLT_BARTLETT;
+			addToLayerSpecs(main_layer_info, layer_specs_wlt_bartlett);
+			addToLayerSpecs(main_layer_info, layer_specs_wlb_bartlett);
+		}	else {		
+			console.log("WMS-Leaflet3: defaulting to WLT_WLB, based on Azimuth file.");
+			default_layer = DEFAULT_LAYERS_WLT;
+			addToLayerSpecs(main_layer_info, layer_specs_wlt);
+			addToLayerSpecs(main_layer_info, layer_specs_wlb);
+		}		
 	} else if (az_name_lower.includes( ("WLT").toLowerCase())) {
 		console.log("WMS-Leaflet3: defaulting to WLT based on Azimuth file.");
 		default_layer = DEFAULT_LAYERS_WLT;		
@@ -1251,7 +2179,7 @@ function updateLayerSpecsGivenAzimuthFile(azimuth_fname, main_layer_info, defaul
 		default_layer = DEFAULT_LAYERS_WLB;
 		addToLayerSpecs(main_layer_info, layer_specs_wlb);
 		
-	} else if (az_name_loweraz_name_lower.includes( ("Chunky").toLowerCase())) {
+	} else if (az_name_lower.includes( ("Chunky").toLowerCase())) {
 		console.log("WMS-Leaflet3: defaulting to Chunky based on Azimuth file.");
 		default_layer = DEFAULT_LAYERS_CHUNKY;
 		addToLayerSpecs(main_layer_info, layer_specs_chunky);
