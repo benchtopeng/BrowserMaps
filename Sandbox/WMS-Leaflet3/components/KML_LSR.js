@@ -310,24 +310,28 @@ L.Util.extend(L.KML_LSR, {
 		for(var i=0; i<data.length; i++) { 
 			if (data[i].getAttribute("name")) {
 				var dataname = data[i].getAttribute("name"); 
-				var value = data[i].firstChild.data; 
-				
-				//look for special fields
-				if (dataname === "Report Time (UTC Timezone)") {
-					datetime_UTC_str = value;
-				}
-				if (dataname === "Event Type") {
-					event_type = value;
-					//name = this.event_type + ": " + name
-				}
-				
-				//ignore certain fields when expanding the description
-				var exclude_names = ['Office', 'County', 'Location', 'Event Type','ST', 'Lat', 'Lon' ,'ugc', 'ugcname'];
-				var include_in_descr = !(exclude_names.includes(dataname))
-				
-				//update the description text for this point
-				if (include_in_descr) {
-					descr = descr + dataname + ": " + value + "<br>"
+				//console.log("KML_LSR.: parseExtendedData: i = " + i + ", dataname = " + dataname);
+				//console.log("KML_LSR.: parseExtendedData: data[i].firstChild == null ..." + (data[i].firstChild == null));
+				if (data[i].firstChild != null) {
+					var value = data[i].firstChild.data; 
+					
+					//look for special fields
+					if (dataname === "Report Time (UTC Timezone)") {
+						datetime_UTC_str = value;
+					}
+					if (dataname === "Event Type") {
+						event_type = value;
+						//name = this.event_type + ": " + name
+					}
+					
+					//ignore certain fields when expanding the description
+					var exclude_names = ['Office', 'County', 'Location', 'Event Type','ST', 'Lat', 'Lon' ,'ugc', 'ugcname'];
+					var include_in_descr = !(exclude_names.includes(dataname))
+					
+					//update the description text for this point
+					if (include_in_descr) {
+						descr = descr + dataname + ": " + value + "<br>"
+					}
 				}
 			}
 		}

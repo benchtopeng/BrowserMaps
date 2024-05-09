@@ -218,6 +218,7 @@ L.ArrayAzimuthLayer = L.Polygon.extend({
 			}
 		};
 		
+		console.log("ArrayAzimuthLayer: findBestMatchingEntry: site_ind = " + best_site_ind + ", entry_ind = " + best_entry_ind)
 		return [best_site_ind, best_entry_ind]
 	},
 	
