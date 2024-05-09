@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="36e0691e1b6c45ffaedd8edcb1861ce9" id="36e0691e1b6c45ffaedd8edcb1861ce9">
+	<SimpleField name="Office" type="string"></SimpleField>
+	<SimpleField name="Report Time (Local WFO Timezone)" type="string"></SimpleField>
+	<SimpleField name="Report Time (UTC Timezone)" type="string"></SimpleField>
+	<SimpleField name="County" type="string"></SimpleField>
+	<SimpleField name="Location" type="string"></SimpleField>
+	<SimpleField name="ST" type="string"></SimpleField>
+	<SimpleField name="Event Type" type="string"></SimpleField>
+	<SimpleField name="Mag." type="string"></SimpleField>
+	<SimpleField name="Source" type="string"></SimpleField>
+	<SimpleField name="Lat" type="float"></SimpleField>
+	<SimpleField name="Lon" type="float"></SimpleField>
+	<SimpleField name="Remark" type="string"></SimpleField>
+	<SimpleField name="ugc" type="string"></SimpleField>
+	<SimpleField name="ugcname" type="string"></SimpleField>
+</Schema>
+<Folder><name>36e0691e1b6c45ffaedd8edcb1861ce9</name>
+  <Placemark>
+	<name>8 ENE Lebanon: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#36e0691e1b6c45ffaedd8edcb1861ce9">
+		<SimpleData name="Office">OHX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/05/06 14:55</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/05/06 19:55</SimpleData>
+		<SimpleData name="County">Wilson</SimpleData>
+		<SimpleData name="Location">8 ENE Lebanon</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">36.26</SimpleData>
+		<SimpleData name="Lon">-86.18</SimpleData>
+		<SimpleData name="Remark">A brief EF0 tornado touched down along Big Springs Road north of Old Rome Pike around 7 miles northeast of Lebanon. Several videos of the tornado were taken from nearby residents and firefighters. The only known damage was to trees.</SimpleData>
+		<SimpleData name="ugc">TNC189</SimpleData>
+		<SimpleData name="ugcname">Wilson</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.18,36.26</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>2 WNW Smithville: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#36e0691e1b6c45ffaedd8edcb1861ce9">
+		<SimpleData name="Office">OHX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/05/06 16:23</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/05/06 21:23</SimpleData>
+		<SimpleData name="County">De Kalb</SimpleData>
+		<SimpleData name="Location">2 WNW Smithville</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS Storm Survey</SimpleData>
+		<SimpleData name="Lat">35.97</SimpleData>
+		<SimpleData name="Lon">-85.86</SimpleData>
+		<SimpleData name="Remark">An EF1 tornado touched down east of Highway 70 in northwest Smithville then moved east paralleling Allen Ferry Rd. Numerous trees were broken, snapped and uprooted along the road and several farm buildings lost roofing. The tornado then curved southeast and caused the worst damage along Highway 56 north of Smith Road where dozens of trees were snapped and uprooted and a couple homes suffered significant roof, garage and exterior wall damage. The tornado then lifted east of the highway.</SimpleData>
+		<SimpleData name="ugc">TNC041</SimpleData>
+		<SimpleData name="ugcname">De Kalb</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-85.86,35.97</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 NNW Smithville: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#36e0691e1b6c45ffaedd8edcb1861ce9">
+		<SimpleData name="Office">OHX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/05/06 16:24</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/05/06 21:24</SimpleData>
+		<SimpleData name="County">De Kalb</SimpleData>
+		<SimpleData name="Location">1 NNW Smithville</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS Employee</SimpleData>
+		<SimpleData name="Lat">35.97</SimpleData>
+		<SimpleData name="Lon">-85.83</SimpleData>
+		<SimpleData name="Remark">Off-duty employee and emergency manager report tornado. Video from social media also confirms.</SimpleData>
+		<SimpleData name="ugc">TNC041</SimpleData>
+		<SimpleData name="ugcname">De Kalb</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-85.83,35.97</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>7 E Fredonia: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#36e0691e1b6c45ffaedd8edcb1861ce9">
+		<SimpleData name="Office">OHX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/05/08 14:47</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/05/08 19:47</SimpleData>
+		<SimpleData name="County">Robertson</SimpleData>
+		<SimpleData name="Location">7 E Fredonia</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">36.45</SimpleData>
+		<SimpleData name="Lon">-87.1</SimpleData>
+		<SimpleData name="Remark">Reported by spotter on mile marker 19 on I-24.</SimpleData>
+		<SimpleData name="ugc">TNC147</SimpleData>
+		<SimpleData name="ugcname">Robertson</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-87.1,36.45</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>4 NW Coopertown: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#36e0691e1b6c45ffaedd8edcb1861ce9">
+		<SimpleData name="Office">OHX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/05/08 14:54</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/05/08 19:54</SimpleData>
+		<SimpleData name="County">Robertson</SimpleData>
+		<SimpleData name="Location">4 NW Coopertown</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">Trained Spotter</SimpleData>
+		<SimpleData name="Lat">36.48</SimpleData>
+		<SimpleData name="Lon">-87.03</SimpleData>
+		<SimpleData name="Remark">Still ongoing northwest of Coopertown. Exact location estimated by radar.</SimpleData>
+		<SimpleData name="ugc">TNC147</SimpleData>
+		<SimpleData name="ugcname">Robertson</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-87.03,36.48</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>4 ENE Columbia: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#36e0691e1b6c45ffaedd8edcb1861ce9">
+		<SimpleData name="Office">OHX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/05/08 17:44</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/05/08 22:44</SimpleData>
+		<SimpleData name="County">Maury</SimpleData>
+		<SimpleData name="Location">4 ENE Columbia</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">Trained Spotter</SimpleData>
+		<SimpleData name="Lat">35.64</SimpleData>
+		<SimpleData name="Lon">-86.98</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC119</SimpleData>
+		<SimpleData name="ugcname">Maury</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.98,35.64</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>6 SSE Spring Hill: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#36e0691e1b6c45ffaedd8edcb1861ce9">
+		<SimpleData name="Office">OHX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/05/08 17:53</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/05/08 22:53</SimpleData>
+		<SimpleData name="County">Maury</SimpleData>
+		<SimpleData name="Location">6 SSE Spring Hill</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">Trained Spotter</SimpleData>
+		<SimpleData name="Lat">35.66</SimpleData>
+		<SimpleData name="Lon">-86.89</SimpleData>
+		<SimpleData name="Remark">Significant, large tornado reported.</SimpleData>
+		<SimpleData name="ugc">TNC119</SimpleData>
+		<SimpleData name="ugcname">Maury</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.89,35.66</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>
