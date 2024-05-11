@@ -686,7 +686,6 @@ var DEFAULT_MAIN_GEOWATCH_LAYER_INFO = {
 }
 
 // /////////////////////////////////////////// MUSIC Layers
-
 var DEFAULT_LAYERS_WLT = ["WLT, MUSIC 5.0Hz, Smoothed"];
 var layer_specs_wlt = [
 	{
@@ -2229,21 +2228,24 @@ function updateLayerSpecsGivenAzimuthFile(azimuth_fname, main_layer_info, defaul
 	if (az_name_lower.includes( ("WLT_WLB_ALAM_SO").toLowerCase())) {
 		if (az_name_lower.includes( ("Delay").toLowerCase())) {
 			console.log("WMS-Leaflet3: defaulting to WLT_WLB_ALAM_SO Barlett, based on Azimuth file.");
-			default_layer = DEFAULT_LAYERS_WLT_BARTLETT;
+			default_layer = DEFAULT_LAYERS_WLT_BARTLETT;   // Assuming that this is 5 HZ
+			layer_specs_wlb_bartlett[2].options.default_active = true  //hopefully the third entry is 5.0 Hz?
 			addToLayerSpecs(main_layer_info, layer_specs_wlt_bartlett);
 			addToLayerSpecs(main_layer_info, layer_specs_wlb_bartlett);
 			addToLayerSpecs(main_layer_info, layer_specs_alam_bartlett);
 			addToLayerSpecs(main_layer_info, layer_specs_scottorchard_bartlett);
 		} else if (az_name_lower.includes( ("MVDR").toLowerCase())) {
 			console.log("WMS-Leaflet3: defaulting to WLT_WLB_ALAM_SO MVDR, based on Azimuth file.");
-			default_layer = DEFAULT_LAYERS_WLT_MVDR;
+			default_layer = DEFAULT_LAYERS_WLT_MVDR;   // Assuming that this is 5 HZ
+			layer_specs_wlb_MVDR[2].options.default_active = true  //hopefully the third entry is 5.0 Hz?
 			addToLayerSpecs(main_layer_info, layer_specs_wlt_MVDR);
 			addToLayerSpecs(main_layer_info, layer_specs_wlb_MVDR);
 			addToLayerSpecs(main_layer_info, layer_specs_alam_MVDR);
 			addToLayerSpecs(main_layer_info, layer_specs_scottorchard_MVDR);
 		} else {
 			console.log("WMS-Leaflet3: defaulting to WLT_WLB_ALAM_SO based on Azimuth file.");
-			default_layer = DEFAULT_LAYERS_WLT;
+			default_layer = DEFAULT_LAYERS_WLT;  // Assuming that this is 5 HZ
+			layer_specs_wlb[2].options.default_active = true  //hopefully the third entry is 5.0 Hz?
 			addToLayerSpecs(main_layer_info, layer_specs_wlt);
 			addToLayerSpecs(main_layer_info, layer_specs_wlb);
 			addToLayerSpecs(main_layer_info, layer_specs_alam);
@@ -2252,12 +2254,20 @@ function updateLayerSpecsGivenAzimuthFile(azimuth_fname, main_layer_info, defaul
 	} else if (az_name_lower.includes( ("WLT_WLB").toLowerCase())) {
 		if (az_name_lower.includes( ("Delay").toLowerCase())) {
 			console.log("WMS-Leaflet3: defaulting to WLT_WLB Barlett, based on Azimuth file.");
-			default_layer = DEFAULT_LAYERS_WLT_BARTLETT;
+			default_layer = DEFAULT_LAYERS_WLT_BARTLETT;   // Assuming that this is 5 HZ
+			layer_specs_wlb_bartlett[2].options.default_active = true  //hopefully the third entry is 5.0 Hz?
 			addToLayerSpecs(main_layer_info, layer_specs_wlt_bartlett);
 			addToLayerSpecs(main_layer_info, layer_specs_wlb_bartlett);
-		}	else {		
-			console.log("WMS-Leaflet3: defaulting to WLT_WLB, based on Azimuth file.");
-			default_layer = DEFAULT_LAYERS_WLT;
+		}	else if (az_name_lower.includes( ("MVDR").toLowerCase())) {		
+			console.log("WMS-Leaflet3: defaulting to WLT_WLB MVDR, based on Azimuth file.");
+			default_layer = DEFAULT_LAYERS_WLT_MVDR;   // Assuming that this is 5 HZ
+			layer_specs_wlb_MVDR[2].options.default_active = true  //hopefully the third entry is 5.0 Hz?
+			addToLayerSpecs(main_layer_info, layer_specs_wlt_MVDR);
+			addToLayerSpecs(main_layer_info, layer_specs_wlb_MVDR);
+		} else {
+			console.log("WMS-Leaflet3: defaulting to WLT_WLB_ALAM_SO based on Azimuth file.");
+			default_layer = DEFAULT_LAYERS_WLT;  // Assuming that this is 5 HZ
+			layer_specs_wlb[2].options.default_active = true  //hopefully the third entry is 5.0 Hz?
 			addToLayerSpecs(main_layer_info, layer_specs_wlt);
 			addToLayerSpecs(main_layer_info, layer_specs_wlb);
 		}		
