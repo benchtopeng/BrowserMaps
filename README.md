@@ -8,6 +8,6 @@ Interactive Maps in a Web Browser
 
   1) On your computer, go to the root directory of this repo		
   2) Open a command prompt in that working directory		
-  3) At the command prompt, launch the Python web server via: `python -m http.server1`
+  3) At the command prompt, launch the Python web server via: `python -m http.server`
   4) Open a web browser and go http://localhost:8000
 
