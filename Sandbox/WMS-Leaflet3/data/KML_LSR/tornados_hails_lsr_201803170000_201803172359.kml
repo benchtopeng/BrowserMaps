@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="478fb148c7f94707a52fb2878f2c649e" id="478fb148c7f94707a52fb2878f2c649e">
+	<SimpleField name="Office" type="string"></SimpleField>
+	<SimpleField name="Report Time (Local WFO Timezone)" type="string"></SimpleField>
+	<SimpleField name="Report Time (UTC Timezone)" type="string"></SimpleField>
+	<SimpleField name="County" type="string"></SimpleField>
+	<SimpleField name="Location" type="string"></SimpleField>
+	<SimpleField name="ST" type="string"></SimpleField>
+	<SimpleField name="Event Type" type="string"></SimpleField>
+	<SimpleField name="Mag." type="float"></SimpleField>
+	<SimpleField name="Source" type="string"></SimpleField>
+	<SimpleField name="Lat" type="float"></SimpleField>
+	<SimpleField name="Lon" type="float"></SimpleField>
+	<SimpleField name="Remark" type="string"></SimpleField>
+	<SimpleField name="ugc" type="string"></SimpleField>
+	<SimpleField name="ugcname" type="string"></SimpleField>
+</Schema>
+<Folder><name>478fb148c7f94707a52fb2878f2c649e</name>
+  <Placemark>
+	<name>CLARKSVILLE: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">OHX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 02:35</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 07:35</SimpleData>
+		<SimpleData name="County">MONTGOMERY</SimpleData>
+		<SimpleData name="Location">CLARKSVILLE</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.7</SimpleData>
+		<SimpleData name="Source">TRAINED SPOTTER</SimpleData>
+		<SimpleData name="Lat">36.56</SimpleData>
+		<SimpleData name="Lon">-87.35</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC125</SimpleData>
+		<SimpleData name="ugcname">Montgomery</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-87.35,36.56</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>5 NE CLARKSVILLE: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">OHX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 02:37</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 07:37</SimpleData>
+		<SimpleData name="County">MONTGOMERY</SimpleData>
+		<SimpleData name="Location">5 NE CLARKSVILLE</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.7</SimpleData>
+		<SimpleData name="Source">TWITTER</SimpleData>
+		<SimpleData name="Lat">36.61</SimpleData>
+		<SimpleData name="Lon">-87.28</SimpleData>
+		<SimpleData name="Remark">TWITTER REPORT OF DIME SIZE HAIL AT MILE MARKER 5 ON INTERSTATE 24.</SimpleData>
+		<SimpleData name="ugc">TNC125</SimpleData>
+		<SimpleData name="ugcname">Montgomery</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-87.28,36.61</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>10 SE CLARKSVILLE: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">OHX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 03:00</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 08:00</SimpleData>
+		<SimpleData name="County">MONTGOMERY</SimpleData>
+		<SimpleData name="Location">10 SE CLARKSVILLE</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.88</SimpleData>
+		<SimpleData name="Source">NWS OFFICE</SimpleData>
+		<SimpleData name="Lat">36.46</SimpleData>
+		<SimpleData name="Lon">-87.22</SimpleData>
+		<SimpleData name="Remark">NWS FORECAST OFFICE IN PADUCH...KY RELAYED A REPORT OF AT LEAST NICKEL SIZE HAIL NEAR MILE MARKER 19 ON INTERSTATE 24.</SimpleData>
+		<SimpleData name="ugc">TNC125</SimpleData>
+		<SimpleData name="ugcname">Montgomery</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-87.22,36.46</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>OLD HICKORY: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">OHX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 04:05</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 09:05</SimpleData>
+		<SimpleData name="County">DAVIDSON</SimpleData>
+		<SimpleData name="Location">OLD HICKORY</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.7</SimpleData>
+		<SimpleData name="Source">TRAINED SPOTTER</SimpleData>
+		<SimpleData name="Lat">36.26</SimpleData>
+		<SimpleData name="Lon">-86.65</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC037</SimpleData>
+		<SimpleData name="ugcname">Davidson</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.65,36.26</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>BRENTWOOD: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">OHX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 04:10</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 09:10</SimpleData>
+		<SimpleData name="County">WILLIAMSON</SimpleData>
+		<SimpleData name="Location">BRENTWOOD</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.7</SimpleData>
+		<SimpleData name="Source">TWITTER</SimpleData>
+		<SimpleData name="Lat">36</SimpleData>
+		<SimpleData name="Lon">-86.79</SimpleData>
+		<SimpleData name="Remark">DIME SIZE HAIL WAS REPORTED IN BRENTWOOD.</SimpleData>
+		<SimpleData name="ugc">TNC187</SimpleData>
+		<SimpleData name="ugcname">Williamson</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.79,36.0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Citronelle: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">MOB</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 16:20</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 21:20</SimpleData>
+		<SimpleData name="County">MOBILE</SimpleData>
+		<SimpleData name="Location">Citronelle</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.88</SimpleData>
+		<SimpleData name="Source">NWS EMPLOYEE</SimpleData>
+		<SimpleData name="Lat">31.09</SimpleData>
+		<SimpleData name="Lon">-88.23</SimpleData>
+		<SimpleData name="Remark">OFF DUTY NWS EMPLOYEE REPORTED NICKEL SIZE HAIL IN THE CITRONELLE COMMUNITY IN NORTHERN MOBILE COUNTY</SimpleData>
+		<SimpleData name="ugc">ALC097</SimpleData>
+		<SimpleData name="ugcname">Mobile</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.23,31.09</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>10 SSE SPENCER: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">OHX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 17:07</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 22:07</SimpleData>
+		<SimpleData name="County">VAN BUREN</SimpleData>
+		<SimpleData name="Location">10 SSE SPENCER</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">PUBLIC</SimpleData>
+		<SimpleData name="Lat">35.61</SimpleData>
+		<SimpleData name="Lon">-85.39</SimpleData>
+		<SimpleData name="Remark">FALL CREEK FALLS GOLF COURSE COVERED WITH QUARTERS AND NICKELS.</SimpleData>
+		<SimpleData name="ugc">TNC175</SimpleData>
+		<SimpleData name="ugcname">Van Buren</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-85.39,35.61</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>13 WNW LUMBERTON: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 17:17</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 22:17</SimpleData>
+		<SimpleData name="County">MARION</SimpleData>
+		<SimpleData name="Location">13 WNW LUMBERTON</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">PUBLIC</SimpleData>
+		<SimpleData name="Lat">31.06</SimpleData>
+		<SimpleData name="Lon">-89.66</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">MSC091</SimpleData>
+		<SimpleData name="ugcname">Marion</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.66,31.06</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>12 WNW LUMBERTON: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 17:21</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 22:21</SimpleData>
+		<SimpleData name="County">LAMAR</SimpleData>
+		<SimpleData name="Location">12 WNW LUMBERTON</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">PUBLIC</SimpleData>
+		<SimpleData name="Lat">31.06</SimpleData>
+		<SimpleData name="Lon">-89.64</SimpleData>
+		<SimpleData name="Remark">MINOR SHINGLE DAMAGE TO HOME.</SimpleData>
+		<SimpleData name="ugc">MSC073</SimpleData>
+		<SimpleData name="ugcname">Lamar</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.64,31.06</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>PIKEVILLE: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">MRX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 18:25</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 22:25</SimpleData>
+		<SimpleData name="County">BLEDSOE</SimpleData>
+		<SimpleData name="Location">PIKEVILLE</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1.25</SimpleData>
+		<SimpleData name="Source">LAW ENFORCEMENT</SimpleData>
+		<SimpleData name="Lat">35.61</SimpleData>
+		<SimpleData name="Lon">-85.2</SimpleData>
+		<SimpleData name="Remark">QUARTER TO HALF DOLLAR SIZE HAIL JUST SOUTH OF PIKEVILLE, TN.</SimpleData>
+		<SimpleData name="ugc">TNC007</SimpleData>
+		<SimpleData name="ugcname">Bledsoe</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-85.2,35.61</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>10 NW LUMBERTON: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 17:36</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 22:36</SimpleData>
+		<SimpleData name="County">LAMAR</SimpleData>
+		<SimpleData name="Location">10 NW LUMBERTON</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.88</SimpleData>
+		<SimpleData name="Source">BROADCAST MEDIA</SimpleData>
+		<SimpleData name="Lat">31.08</SimpleData>
+		<SimpleData name="Lon">-89.59</SimpleData>
+		<SimpleData name="Remark">NICKEL SIZE HAIL IN BAXTERVILLE.</SimpleData>
+		<SimpleData name="ugc">MSC073</SimpleData>
+		<SimpleData name="ugcname">Lamar</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.59,31.08</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 WSW ROCKWOOD: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">MRX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 18:45</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 22:45</SimpleData>
+		<SimpleData name="County">ROANE</SimpleData>
+		<SimpleData name="Location">1 WSW ROCKWOOD</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.75</SimpleData>
+		<SimpleData name="Source">PUBLIC</SimpleData>
+		<SimpleData name="Lat">35.87</SimpleData>
+		<SimpleData name="Lon">-84.68</SimpleData>
+		<SimpleData name="Remark">REPORTED AT 325 NORTH FRONT STREET ROCKWOOD TN.</SimpleData>
+		<SimpleData name="ugc">TNC145</SimpleData>
+		<SimpleData name="ugcname">Roane</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-84.68,35.87</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>3 N DUNLAP: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">MRX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 18:45</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 22:45</SimpleData>
+		<SimpleData name="County">SEQUATCHIE</SimpleData>
+		<SimpleData name="Location">3 N DUNLAP</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.5</SimpleData>
+		<SimpleData name="Source">TRAINED SPOTTER</SimpleData>
+		<SimpleData name="Lat">35.41</SimpleData>
+		<SimpleData name="Lon">-85.38</SimpleData>
+		<SimpleData name="Remark">REPORTED AT 804 OLD UNION ROAD DUNLAP TN.</SimpleData>
+		<SimpleData name="ugc">TNC153</SimpleData>
+		<SimpleData name="ugcname">Sequatchie</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-85.38,35.41</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>3 N DUNLAP: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">MRX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 18:45</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 22:45</SimpleData>
+		<SimpleData name="County">SEQUATCHIE</SimpleData>
+		<SimpleData name="Location">3 N DUNLAP</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.5</SimpleData>
+		<SimpleData name="Source">TRAINED SPOTTER</SimpleData>
+		<SimpleData name="Lat">35.41</SimpleData>
+		<SimpleData name="Lon">-85.38</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC153</SimpleData>
+		<SimpleData name="ugcname">Sequatchie</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-85.38,35.41</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>DUNLAP: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">MRX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 18:55</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 22:55</SimpleData>
+		<SimpleData name="County">SEQUATCHIE</SimpleData>
+		<SimpleData name="Location">DUNLAP</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1.25</SimpleData>
+		<SimpleData name="Source">TRAINED SPOTTER</SimpleData>
+		<SimpleData name="Lat">35.37</SimpleData>
+		<SimpleData name="Lon">-85.39</SimpleData>
+		<SimpleData name="Remark">QUARTER TO HALF DOLLAR SIZE HAIL NORTHWEST OF DUNLAP, TN.</SimpleData>
+		<SimpleData name="ugc">TNC153</SimpleData>
+		<SimpleData name="ugcname">Sequatchie</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-85.39,35.37</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 E ROCKWOOD: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">MRX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 18:59</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 22:59</SimpleData>
+		<SimpleData name="County">ROANE</SimpleData>
+		<SimpleData name="Location">1 E ROCKWOOD</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.5</SimpleData>
+		<SimpleData name="Source">TRAINED SPOTTER</SimpleData>
+		<SimpleData name="Lat">35.87</SimpleData>
+		<SimpleData name="Lon">-84.66</SimpleData>
+		<SimpleData name="Remark">REPORTED AT 174 COUNTRY CLUB ROAD ROCKWOOD TN.</SimpleData>
+		<SimpleData name="ugc">TNC145</SimpleData>
+		<SimpleData name="ugcname">Roane</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-84.66,35.87</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 E ROCKWOOD: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">MRX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 18:59</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 22:59</SimpleData>
+		<SimpleData name="County">ROANE</SimpleData>
+		<SimpleData name="Location">1 E ROCKWOOD</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.5</SimpleData>
+		<SimpleData name="Source">TRAINED SPOTTER</SimpleData>
+		<SimpleData name="Lat">35.87</SimpleData>
+		<SimpleData name="Lon">-84.66</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC145</SimpleData>
+		<SimpleData name="ugcname">Roane</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-84.66,35.87</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>2 S DECATUR: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">MRX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 19:05</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 23:05</SimpleData>
+		<SimpleData name="County">MEIGS</SimpleData>
+		<SimpleData name="Location">2 S DECATUR</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1.75</SimpleData>
+		<SimpleData name="Source">PUBLIC</SimpleData>
+		<SimpleData name="Lat">35.5</SimpleData>
+		<SimpleData name="Lon">-84.79</SimpleData>
+		<SimpleData name="Remark">REPORTED BY PUBLIC. HAIL OCCURRED FOR 10 MINUTES.</SimpleData>
+		<SimpleData name="ugc">TNC121</SimpleData>
+		<SimpleData name="ugcname">Meigs</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-84.79,35.5</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>5 SSW CLEAR WATER: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">MRX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 19:11</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 23:11</SimpleData>
+		<SimpleData name="County">MCMINN</SimpleData>
+		<SimpleData name="Location">5 SSW CLEAR WATER</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.88</SimpleData>
+		<SimpleData name="Source">PUBLIC</SimpleData>
+		<SimpleData name="Lat">35.45</SimpleData>
+		<SimpleData name="Lon">-84.7</SimpleData>
+		<SimpleData name="Remark">REPORTED AT COUNTY ROAD 112 WEST OF ATHENS TN. ALSO ESTIMATED 50 MPH WINDS.</SimpleData>
+		<SimpleData name="ugc">TNC107</SimpleData>
+		<SimpleData name="ugcname">McMinn</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-84.7,35.45</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>LENOIR CITY: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">MRX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 19:15</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 23:15</SimpleData>
+		<SimpleData name="County">LOUDON</SimpleData>
+		<SimpleData name="Location">LENOIR CITY</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">911 CALL CENTER</SimpleData>
+		<SimpleData name="Lat">35.8</SimpleData>
+		<SimpleData name="Lon">-84.27</SimpleData>
+		<SimpleData name="Remark">QUARTER SIZE HAIL NEAR LENIOR CITY.</SimpleData>
+		<SimpleData name="ugc">TNC105</SimpleData>
+		<SimpleData name="ugcname">Loudon</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-84.27,35.8</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>2 ENE EVANSTON: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">MRX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 19:30</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 23:30</SimpleData>
+		<SimpleData name="County">HANCOCK</SimpleData>
+		<SimpleData name="Location">2 ENE EVANSTON</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1.25</SimpleData>
+		<SimpleData name="Source">PUBLIC</SimpleData>
+		<SimpleData name="Lat">36.52</SimpleData>
+		<SimpleData name="Lon">-83.25</SimpleData>
+		<SimpleData name="Remark">REPORTED AT 170 MILL DAM ROAD. ALSO REPORTED 50 MPH WINDS.</SimpleData>
+		<SimpleData name="ugc">TNC067</SimpleData>
+		<SimpleData name="ugcname">Hancock</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-83.25,36.52</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ATHENS: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">MRX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 19:30</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 23:30</SimpleData>
+		<SimpleData name="County">MCMINN</SimpleData>
+		<SimpleData name="Location">ATHENS</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">PUBLIC</SimpleData>
+		<SimpleData name="Lat">35.45</SimpleData>
+		<SimpleData name="Lon">-84.6</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC107</SimpleData>
+		<SimpleData name="ugcname">McMinn</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-84.6,35.45</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>2 SE BIRCHWOOD: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">MRX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 19:35</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 23:35</SimpleData>
+		<SimpleData name="County">MEIGS</SimpleData>
+		<SimpleData name="Location">2 SE BIRCHWOOD</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">TRAINED SPOTTER</SimpleData>
+		<SimpleData name="Lat">35.34</SimpleData>
+		<SimpleData name="Lon">-84.96</SimpleData>
+		<SimpleData name="Remark">REPORTED AT 787 RILEY LANE BIRCHWOOD TN.</SimpleData>
+		<SimpleData name="ugc">TNC121</SimpleData>
+		<SimpleData name="ugcname">Meigs</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-84.96,35.34</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>3 N MOUNT VERNON: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">MRX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 19:35</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 23:35</SimpleData>
+		<SimpleData name="County">MONROE</SimpleData>
+		<SimpleData name="Location">3 N MOUNT VERNON</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1.5</SimpleData>
+		<SimpleData name="Source">TRAINED SPOTTER</SimpleData>
+		<SimpleData name="Lat">35.45</SimpleData>
+		<SimpleData name="Lon">-84.36</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC123</SimpleData>
+		<SimpleData name="ugcname">Monroe</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-84.36,35.45</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>SNEEDVILLE: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">MRX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 19:45</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 23:45</SimpleData>
+		<SimpleData name="County">HANCOCK</SimpleData>
+		<SimpleData name="Location">SNEEDVILLE</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">PUBLIC</SimpleData>
+		<SimpleData name="Lat">36.54</SimpleData>
+		<SimpleData name="Lon">-83.21</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC067</SimpleData>
+		<SimpleData name="ugcname">Hancock</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-83.21,36.54</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>2 N TASSO: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">MRX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 19:48</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 23:48</SimpleData>
+		<SimpleData name="County">BRADLEY</SimpleData>
+		<SimpleData name="Location">2 N TASSO</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1.75</SimpleData>
+		<SimpleData name="Source">TRAINED SPOTTER</SimpleData>
+		<SimpleData name="Lat">35.23</SimpleData>
+		<SimpleData name="Lon">-84.8</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC011</SimpleData>
+		<SimpleData name="ugcname">Bradley</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-84.8,35.23</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>2 NW TAZEWELL: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">MRX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 19:48</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 23:48</SimpleData>
+		<SimpleData name="County">CLAIBORNE</SimpleData>
+		<SimpleData name="Location">2 NW TAZEWELL</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.75</SimpleData>
+		<SimpleData name="Source">PUBLIC</SimpleData>
+		<SimpleData name="Lat">36.49</SimpleData>
+		<SimpleData name="Lon">-83.6</SimpleData>
+		<SimpleData name="Remark">REPORTED AT 235 NORRIS DRIVE TAZEWELL.</SimpleData>
+		<SimpleData name="ugc">TNC025</SimpleData>
+		<SimpleData name="ugcname">Claiborne</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-83.6,36.49</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>CHARLESTON: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#478fb148c7f94707a52fb2878f2c649e">
+		<SimpleData name="Office">MRX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/17 19:50</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/17 23:50</SimpleData>
+		<SimpleData name="County">BRADLEY</SimpleData>
+		<SimpleData name="Location">CHARLESTON</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.75</SimpleData>
+		<SimpleData name="Source">TRAINED SPOTTER</SimpleData>
+		<SimpleData name="Lat">35.29</SimpleData>
+		<SimpleData name="Lon">-84.76</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC011</SimpleData>
+		<SimpleData name="ugcname">Bradley</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-84.76,35.29</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>
