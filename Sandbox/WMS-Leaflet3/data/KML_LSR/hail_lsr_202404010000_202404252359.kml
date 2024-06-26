@@ -1,0 +1,2397 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="fbc579fd92a9410bbf87cfe8cc9e8f24" id="fbc579fd92a9410bbf87cfe8cc9e8f24">
+	<SimpleField name="Office" type="string"></SimpleField>
+	<SimpleField name="Report Time (Local WFO Timezone)" type="string"></SimpleField>
+	<SimpleField name="Report Time (UTC Timezone)" type="string"></SimpleField>
+	<SimpleField name="County" type="string"></SimpleField>
+	<SimpleField name="Location" type="string"></SimpleField>
+	<SimpleField name="ST" type="string"></SimpleField>
+	<SimpleField name="Event Type" type="string"></SimpleField>
+	<SimpleField name="Mag." type="float"></SimpleField>
+	<SimpleField name="Source" type="string"></SimpleField>
+	<SimpleField name="Lat" type="float"></SimpleField>
+	<SimpleField name="Lon" type="float"></SimpleField>
+	<SimpleField name="Remark" type="string"></SimpleField>
+	<SimpleField name="ugc" type="string"></SimpleField>
+	<SimpleField name="ugcname" type="string"></SimpleField>
+</Schema>
+<Folder><name>fbc579fd92a9410bbf87cfe8cc9e8f24</name>
+  <Placemark>
+	<name>2 SE Southaven: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 07:46</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/02 12:46</SimpleData>
+		<SimpleData name="County">DeSoto</SimpleData>
+		<SimpleData name="Location">2 SE Southaven</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Broadcast Media</SimpleData>
+		<SimpleData name="Lat">34.96</SimpleData>
+		<SimpleData name="Lon">-89.97</SimpleData>
+		<SimpleData name="Remark">Hail up to the size of quarters south of the intersection of Goodman Rd and Swinnea Rd.</SimpleData>
+		<SimpleData name="ugc">MSC033</SimpleData>
+		<SimpleData name="ugcname">DeSoto</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.97,34.96</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>2 WSW Bartlett: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 08:05</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/02 13:05</SimpleData>
+		<SimpleData name="County">Shelby</SimpleData>
+		<SimpleData name="Location">2 WSW Bartlett</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Local Official</SimpleData>
+		<SimpleData name="Lat">35.2</SimpleData>
+		<SimpleData name="Lon">-89.87</SimpleData>
+		<SimpleData name="Remark">Tree down across road at Sycamore View Rd and Main St.</SimpleData>
+		<SimpleData name="ugc">TNC157</SimpleData>
+		<SimpleData name="ugcname">Shelby</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.87,35.2</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Finger: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 09:33</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/02 14:33</SimpleData>
+		<SimpleData name="County">McNairy</SimpleData>
+		<SimpleData name="Location">Finger</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.75</SimpleData>
+		<SimpleData name="Source">Trained Spotter</SimpleData>
+		<SimpleData name="Lat">35.36</SimpleData>
+		<SimpleData name="Lon">-88.61</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC109</SimpleData>
+		<SimpleData name="ugcname">McNairy</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.61,35.36</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>4 ENE Decaturville: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 10:06</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/02 15:06</SimpleData>
+		<SimpleData name="County">Decatur</SimpleData>
+		<SimpleData name="Location">4 ENE Decaturville</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">35.6</SimpleData>
+		<SimpleData name="Lon">-88.05</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC039</SimpleData>
+		<SimpleData name="ugcname">Decatur</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.05,35.6</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>5 ESE Lobelville: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">OHX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 10:25</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/02 15:25</SimpleData>
+		<SimpleData name="County">Perry</SimpleData>
+		<SimpleData name="Location">5 ESE Lobelville</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.5</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">35.71</SimpleData>
+		<SimpleData name="Lon">-87.72</SimpleData>
+		<SimpleData name="Remark">From Facebook.</SimpleData>
+		<SimpleData name="ugc">TNC135</SimpleData>
+		<SimpleData name="ugcname">Perry</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-87.72,35.71</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Fairview: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">OHX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 11:15</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/02 16:15</SimpleData>
+		<SimpleData name="County">Williamson</SimpleData>
+		<SimpleData name="Location">Fairview</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.25</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">35.98</SimpleData>
+		<SimpleData name="Lon">-87.12</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC187</SimpleData>
+		<SimpleData name="ugcname">Williamson</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-87.12,35.98</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>5 NNE Carthage: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">OHX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 12:13</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/02 17:13</SimpleData>
+		<SimpleData name="County">Smith</SimpleData>
+		<SimpleData name="Location">5 NNE Carthage</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.88</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">36.33</SimpleData>
+		<SimpleData name="Lon">-85.91</SimpleData>
+		<SimpleData name="Remark">Nickel size hail reported in the Defeated area in Smith County.</SimpleData>
+		<SimpleData name="ugc">TNC159</SimpleData>
+		<SimpleData name="ugcname">Smith</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-85.91,36.33</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 SW Cannonsburg: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 13:20</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/02 18:20</SimpleData>
+		<SimpleData name="County">Adams</SimpleData>
+		<SimpleData name="Location">1 SW Cannonsburg</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">31.63</SimpleData>
+		<SimpleData name="Lon">-91.22</SimpleData>
+		<SimpleData name="Remark">A few stones up to quarter size.</SimpleData>
+		<SimpleData name="ugc">MSC001</SimpleData>
+		<SimpleData name="ugcname">Adams</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-91.22,31.63</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 NW Natchez: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 14:25</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/02 19:25</SimpleData>
+		<SimpleData name="County">Adams</SimpleData>
+		<SimpleData name="Location">1 NW Natchez</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1.25</SimpleData>
+		<SimpleData name="Source">Broadcast Media</SimpleData>
+		<SimpleData name="Lat">31.56</SimpleData>
+		<SimpleData name="Lon">-91.4</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">MSC001</SimpleData>
+		<SimpleData name="ugcname">Adams</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-91.4,31.56</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>4 NE Sibley: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 15:06</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/02 20:06</SimpleData>
+		<SimpleData name="County">Adams</SimpleData>
+		<SimpleData name="Location">4 NE Sibley</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Law Enforcement</SimpleData>
+		<SimpleData name="Lat">31.43</SimpleData>
+		<SimpleData name="Lon">-91.36</SimpleData>
+		<SimpleData name="Remark">Local law enforcement reported hail up to quarter size near Kingston Rd in Adams County.</SimpleData>
+		<SimpleData name="ugc">MSC001</SimpleData>
+		<SimpleData name="ugcname">Adams</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-91.36,31.43</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>4 NE Sibley: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 15:09</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/02 20:09</SimpleData>
+		<SimpleData name="County">Adams</SimpleData>
+		<SimpleData name="Location">4 NE Sibley</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Law Enforcement</SimpleData>
+		<SimpleData name="Lat">31.43</SimpleData>
+		<SimpleData name="Lon">-91.36</SimpleData>
+		<SimpleData name="Remark">Corrects previous hail report from 4 NE Sibley. Local law enforcement reported hail up to quarter size near Kingston Rd in Adams County.</SimpleData>
+		<SimpleData name="ugc">MSC001</SimpleData>
+		<SimpleData name="ugcname">Adams</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-91.36,31.43</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>3 ESE Cloverdale: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 15:09</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/02 20:09</SimpleData>
+		<SimpleData name="County">Adams</SimpleData>
+		<SimpleData name="Location">3 ESE Cloverdale</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Law Enforcement</SimpleData>
+		<SimpleData name="Lat">31.48</SimpleData>
+		<SimpleData name="Lon">-91.37</SimpleData>
+		<SimpleData name="Remark">Law enforcement reported quarter size hail near Kingston Rd in Adams County.</SimpleData>
+		<SimpleData name="ugc">MSC001</SimpleData>
+		<SimpleData name="ugcname">Adams</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-91.37,31.48</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>4 WSW Duffee: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 15:18</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/02 20:18</SimpleData>
+		<SimpleData name="County">Newton</SimpleData>
+		<SimpleData name="Location">4 WSW Duffee</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.88</SimpleData>
+		<SimpleData name="Source">Broadcast Media</SimpleData>
+		<SimpleData name="Lat">32.47</SimpleData>
+		<SimpleData name="Lon">-88.98</SimpleData>
+		<SimpleData name="Remark">Fell in the Little Rock area.</SimpleData>
+		<SimpleData name="ugc">MSC101</SimpleData>
+		<SimpleData name="ugcname">Newton</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.98,32.47</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Stampley: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 15:25</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/02 20:25</SimpleData>
+		<SimpleData name="County">Jefferson</SimpleData>
+		<SimpleData name="Location">Stampley</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.7</SimpleData>
+		<SimpleData name="Source">Law Enforcement</SimpleData>
+		<SimpleData name="Lat">31.64</SimpleData>
+		<SimpleData name="Lon">-91.13</SimpleData>
+		<SimpleData name="Remark">Law enforcement reported dime size hail across Jefferson County.</SimpleData>
+		<SimpleData name="ugc">MSC063</SimpleData>
+		<SimpleData name="ugcname">Jefferson</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-91.13,31.64</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>5 ENE McNair: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 15:27</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/02 20:27</SimpleData>
+		<SimpleData name="County">Jefferson</SimpleData>
+		<SimpleData name="Location">5 ENE McNair</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">31.66</SimpleData>
+		<SimpleData name="Lon">-90.96</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">MSC063</SimpleData>
+		<SimpleData name="ugcname">Jefferson</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-90.96,31.66</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 NE Crystal Springs: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 15:28</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/02 20:28</SimpleData>
+		<SimpleData name="County">Copiah</SimpleData>
+		<SimpleData name="Location">1 NE Crystal Springs</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Broadcast Media</SimpleData>
+		<SimpleData name="Lat">32</SimpleData>
+		<SimpleData name="Lon">-90.33</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">MSC029</SimpleData>
+		<SimpleData name="ugcname">Copiah</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-90.33,32.0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Pleasant Hill: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 15:40</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/02 20:40</SimpleData>
+		<SimpleData name="County">Copiah</SimpleData>
+		<SimpleData name="Location">Pleasant Hill</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">31.72</SimpleData>
+		<SimpleData name="Lon">-90.73</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">MSC029</SimpleData>
+		<SimpleData name="ugcname">Copiah</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-90.73,31.72</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 NW Martinsville: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 15:54</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/02 20:54</SimpleData>
+		<SimpleData name="County">Copiah</SimpleData>
+		<SimpleData name="Location">1 NW Martinsville</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">31.81</SimpleData>
+		<SimpleData name="Lon">-90.42</SimpleData>
+		<SimpleData name="Remark">penny to quarter hail, lasted for 4 min with little to no rain.</SimpleData>
+		<SimpleData name="ugc">MSC029</SimpleData>
+		<SimpleData name="ugcname">Copiah</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-90.42,31.81</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 NNE Martinsville: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 15:54</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/02 20:54</SimpleData>
+		<SimpleData name="County">Copiah</SimpleData>
+		<SimpleData name="Location">1 NNE Martinsville</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1.5</SimpleData>
+		<SimpleData name="Source">NWS Employee</SimpleData>
+		<SimpleData name="Lat">31.8</SimpleData>
+		<SimpleData name="Lon">-90.4</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">MSC029</SimpleData>
+		<SimpleData name="ugcname">Copiah</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-90.4,31.8</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Sunbright: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MRX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 17:20</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/02 21:20</SimpleData>
+		<SimpleData name="County">Morgan</SimpleData>
+		<SimpleData name="Location">Sunbright</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">36.24</SimpleData>
+		<SimpleData name="Lon">-84.67</SimpleData>
+		<SimpleData name="Remark">Heavy damage reported to Schuberts Funeral Home.</SimpleData>
+		<SimpleData name="ugc">TNC129</SimpleData>
+		<SimpleData name="ugcname">Morgan</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-84.67,36.24</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>4 WSW Huntsville: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MRX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 17:30</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/02 21:30</SimpleData>
+		<SimpleData name="County">Scott</SimpleData>
+		<SimpleData name="Location">4 WSW Huntsville</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">Trained Spotter</SimpleData>
+		<SimpleData name="Lat">36.38</SimpleData>
+		<SimpleData name="Lon">-84.55</SimpleData>
+		<SimpleData name="Remark">Tornado spotted along Hwy 27.</SimpleData>
+		<SimpleData name="ugc">TNC151</SimpleData>
+		<SimpleData name="ugcname">Scott</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-84.55,36.38</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 NNW Leighton: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">HUN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 16:58</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/02 21:58</SimpleData>
+		<SimpleData name="County">Colbert</SimpleData>
+		<SimpleData name="Location">1 NNW Leighton</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS Storm Survey</SimpleData>
+		<SimpleData name="Lat">34.71</SimpleData>
+		<SimpleData name="Lon">-87.54</SimpleData>
+		<SimpleData name="Remark">Storm survey by NWS personnel concluded that an EF-1 tornado occurred just north of Leighton, Alabama.</SimpleData>
+		<SimpleData name="ugc">ALC033</SimpleData>
+		<SimpleData name="ugcname">Colbert</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-87.54,34.71</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>5 NE Athens: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">HUN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 18:01</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/02 23:01</SimpleData>
+		<SimpleData name="County">Limestone</SimpleData>
+		<SimpleData name="Location">5 NE Athens</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS Storm Survey</SimpleData>
+		<SimpleData name="Lat">34.83</SimpleData>
+		<SimpleData name="Lon">-86.89</SimpleData>
+		<SimpleData name="Remark">An NWS Storm Survey concluded an EF0 occurred between Hall Road and Mooresville Road east of Athens, AL.</SimpleData>
+		<SimpleData name="ugc">ALC083</SimpleData>
+		<SimpleData name="ugcname">Limestone</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.89,34.83</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>3 SE Ardmore: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">HUN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 18:13</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/02 23:13</SimpleData>
+		<SimpleData name="County">Limestone</SimpleData>
+		<SimpleData name="Location">3 SE Ardmore</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.5</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">34.95</SimpleData>
+		<SimpleData name="Lon">-86.8</SimpleData>
+		<SimpleData name="Remark">Report from mPING: Half-inch (0.50 in.).</SimpleData>
+		<SimpleData name="ugc">ALC083</SimpleData>
+		<SimpleData name="ugcname">Limestone</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.8,34.95</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Cross Plains: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">OHX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 18:25</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/02 23:25</SimpleData>
+		<SimpleData name="County">Robertson</SimpleData>
+		<SimpleData name="Location">Cross Plains</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.7</SimpleData>
+		<SimpleData name="Source">Emergency Mngr</SimpleData>
+		<SimpleData name="Lat">36.54</SimpleData>
+		<SimpleData name="Lon">-86.68</SimpleData>
+		<SimpleData name="Remark">Estimated dime size hail in Cross Plains.</SimpleData>
+		<SimpleData name="ugc">TNC147</SimpleData>
+		<SimpleData name="ugcname">Robertson</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.68,36.54</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>4 NW Paul Grist State P: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">BMX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 22:28</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/03 03:28</SimpleData>
+		<SimpleData name="County">Dallas</SimpleData>
+		<SimpleData name="Location">4 NW Paul Grist State P</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS Storm Survey</SimpleData>
+		<SimpleData name="Lat">32.64</SimpleData>
+		<SimpleData name="Lon">-87.04</SimpleData>
+		<SimpleData name="Remark">The EF1 tornado began in a wooded area just west of the Perry/Dallas County line. It quickly reached its peak intensity as it crossed County Road 272 where dozens of trees were snapped or uprooted. Additional trees were downed along County Roads 290 and 305. The tornado crossed into Chilton County and downed some more trees near a residence on County Road 16 before quickly dissipating as it crossed County Road 16.</SimpleData>
+		<SimpleData name="ugc">ALC047</SimpleData>
+		<SimpleData name="ugcname">Dallas</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-87.04,32.64</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 W Plantersville: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">BMX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 22:35</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/03 03:35</SimpleData>
+		<SimpleData name="County">Dallas</SimpleData>
+		<SimpleData name="Location">1 W Plantersville</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">Emergency Mngr</SimpleData>
+		<SimpleData name="Lat">32.66</SimpleData>
+		<SimpleData name="Lon">-86.94</SimpleData>
+		<SimpleData name="Remark">Trees reported down near Dallas County High School. TDS observed via KBMX radar.</SimpleData>
+		<SimpleData name="ugc">ALC047</SimpleData>
+		<SimpleData name="ugcname">Dallas</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.94,32.66</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 WSW Plecher: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">BMX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 22:45</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/03 03:45</SimpleData>
+		<SimpleData name="County">Chilton</SimpleData>
+		<SimpleData name="Location">1 WSW Plecher</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">32.7</SimpleData>
+		<SimpleData name="Lon">-86.8</SimpleData>
+		<SimpleData name="Remark">Social media report of trees down on CR 15. TDS on KBMX radar.</SimpleData>
+		<SimpleData name="ugc">ALC021</SimpleData>
+		<SimpleData name="ugcname">Chilton</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.8,32.7</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 NNE Plecher: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">BMX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 22:49</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/03 03:49</SimpleData>
+		<SimpleData name="County">Chilton</SimpleData>
+		<SimpleData name="Location">1 NNE Plecher</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS Storm Survey</SimpleData>
+		<SimpleData name="Lat">32.71</SimpleData>
+		<SimpleData name="Lon">-86.78</SimpleData>
+		<SimpleData name="Remark">The EF1 tornado formed near County Road 359 where a couple trees were downed and minor roof damage occurred to the residence. Damage remained sporadic until it reached some residences along County Road 36. There portions of a porch overhang were blown off a residence, and two barns were damaged. One of these was destroyed though minimal damage was observed to nearby trees. A racecar trailer was blown 100 yards downstream and flattened. The tornado dissipated as it crossed County Road 480.</SimpleData>
+		<SimpleData name="ugc">ALC021</SimpleData>
+		<SimpleData name="ugcname">Chilton</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.78,32.71</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>2 E Pooles Crossroads: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">BMX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 22:54</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/03 03:54</SimpleData>
+		<SimpleData name="County">Chilton</SimpleData>
+		<SimpleData name="Location">2 E Pooles Crossroads</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">Broadcast Media</SimpleData>
+		<SimpleData name="Lat">32.75</SimpleData>
+		<SimpleData name="Lon">-86.69</SimpleData>
+		<SimpleData name="Remark">Multiple structures damaged along CR 16 near Pools Crossroads.</SimpleData>
+		<SimpleData name="ugc">ALC021</SimpleData>
+		<SimpleData name="ugcname">Chilton</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.69,32.75</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>3 WNW Cooper: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">BMX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 23:03</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/03 04:03</SimpleData>
+		<SimpleData name="County">Chilton</SimpleData>
+		<SimpleData name="Location">3 WNW Cooper</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">Emergency Mngr</SimpleData>
+		<SimpleData name="Lat">32.79</SimpleData>
+		<SimpleData name="Lon">-86.59</SimpleData>
+		<SimpleData name="Remark">Multiple trees and power lines down on CR 424. TDS observed on KBMX radar.</SimpleData>
+		<SimpleData name="ugc">ALC021</SimpleData>
+		<SimpleData name="ugcname">Chilton</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.59,32.79</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>2 NW Cooper: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">BMX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 23:04</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/03 04:04</SimpleData>
+		<SimpleData name="County">Chilton</SimpleData>
+		<SimpleData name="Location">2 NW Cooper</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">32.8</SimpleData>
+		<SimpleData name="Lon">-86.57</SimpleData>
+		<SimpleData name="Remark">Trees reported down on CR 41. TDS on KBMX radar.</SimpleData>
+		<SimpleData name="ugc">ALC021</SimpleData>
+		<SimpleData name="ugcname">Chilton</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.57,32.8</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>3 NW Rockford: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">BMX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 23:28</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/03 04:28</SimpleData>
+		<SimpleData name="County">Coosa</SimpleData>
+		<SimpleData name="Location">3 NW Rockford</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS Storm Survey</SimpleData>
+		<SimpleData name="Lat">32.92</SimpleData>
+		<SimpleData name="Lon">-86.25</SimpleData>
+		<SimpleData name="Remark">A brief EF1 tornado touched down northwest of Rockford near Kings Bridge Rd causing minor timber damage. The tornado continued northeast causing additional timber damage near County Rd 47 and US Hwy 231, dissipating shortly thereafter.</SimpleData>
+		<SimpleData name="ugc">ALC037</SimpleData>
+		<SimpleData name="ugcname">Coosa</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.25,32.92</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>2 SSE Bradford: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">BMX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/02 23:40</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/03 04:40</SimpleData>
+		<SimpleData name="County">Coosa</SimpleData>
+		<SimpleData name="Location">2 SSE Bradford</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS Storm Survey</SimpleData>
+		<SimpleData name="Lat">32.97</SimpleData>
+		<SimpleData name="Lon">-86.08</SimpleData>
+		<SimpleData name="Remark">A brief EF0 tornado touched down near Kellyton along County Rd 62 causing a corridor of timber damage that was most notable near the intersection with AL Hwy 9. The tornado continued northeast crossing US Hwy 280 where additional timber damage occurred. The tornado dissipated after causing additional timber damage on County Rd 50.</SimpleData>
+		<SimpleData name="ugc">ALC037</SimpleData>
+		<SimpleData name="ugcname">Coosa</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.08,32.97</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Martin: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/07 17:10</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/07 22:10</SimpleData>
+		<SimpleData name="County">Weakley</SimpleData>
+		<SimpleData name="Location">Martin</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">36.34</SimpleData>
+		<SimpleData name="Lon">-88.86</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC183</SimpleData>
+		<SimpleData name="ugcname">Weakley</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.86,36.34</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Puryear: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/07 17:57</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/07 22:57</SimpleData>
+		<SimpleData name="County">Henry</SimpleData>
+		<SimpleData name="Location">Puryear</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.75</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">36.44</SimpleData>
+		<SimpleData name="Lon">-88.33</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC079</SimpleData>
+		<SimpleData name="ugcname">Henry</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.33,36.44</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>5 SSW Puryear: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/07 17:57</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/07 22:57</SimpleData>
+		<SimpleData name="County">Henry</SimpleData>
+		<SimpleData name="Location">5 SSW Puryear</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.75</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">36.39</SimpleData>
+		<SimpleData name="Lon">-88.38</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC079</SimpleData>
+		<SimpleData name="ugcname">Henry</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.38,36.39</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>3 W Dresden: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/07 18:07</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/07 23:07</SimpleData>
+		<SimpleData name="County">Weakley</SimpleData>
+		<SimpleData name="Location">3 W Dresden</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.75</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">36.3</SimpleData>
+		<SimpleData name="Lon">-88.75</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC183</SimpleData>
+		<SimpleData name="ugcname">Weakley</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.75,36.3</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>3 W Halls: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/07 18:10</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/07 23:10</SimpleData>
+		<SimpleData name="County">Lauderdale</SimpleData>
+		<SimpleData name="Location">3 W Halls</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">35.87</SimpleData>
+		<SimpleData name="Lon">-89.45</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC097</SimpleData>
+		<SimpleData name="ugcname">Lauderdale</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.45,35.87</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Trenton: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/07 18:52</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/07 23:52</SimpleData>
+		<SimpleData name="County">Gibson</SimpleData>
+		<SimpleData name="Location">Trenton</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.75</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">35.98</SimpleData>
+		<SimpleData name="Lon">-88.94</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC053</SimpleData>
+		<SimpleData name="ugcname">Gibson</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.94,35.98</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>2 S Bradford: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/07 19:10</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/08 00:10</SimpleData>
+		<SimpleData name="County">Gibson</SimpleData>
+		<SimpleData name="Location">2 S Bradford</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.75</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">36.04</SimpleData>
+		<SimpleData name="Lon">-88.82</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC053</SimpleData>
+		<SimpleData name="ugcname">Gibson</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.82,36.04</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>2 N Gilt Edge: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/07 19:16</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/08 00:16</SimpleData>
+		<SimpleData name="County">Tipton</SimpleData>
+		<SimpleData name="Location">2 N Gilt Edge</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">35.56</SimpleData>
+		<SimpleData name="Lon">-89.83</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC167</SimpleData>
+		<SimpleData name="ugcname">Tipton</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.83,35.56</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>3 NW Olive Branch: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/07 20:27</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/08 01:27</SimpleData>
+		<SimpleData name="County">DeSoto</SimpleData>
+		<SimpleData name="Location">3 NW Olive Branch</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.75</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">34.98</SimpleData>
+		<SimpleData name="Lon">-89.86</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">MSC033</SimpleData>
+		<SimpleData name="ugcname">DeSoto</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.86,34.98</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 NW Olive Branch: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/07 20:30</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/08 01:30</SimpleData>
+		<SimpleData name="County">DeSoto</SimpleData>
+		<SimpleData name="Location">1 NW Olive Branch</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.75</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">34.96</SimpleData>
+		<SimpleData name="Lon">-89.85</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">MSC033</SimpleData>
+		<SimpleData name="ugcname">DeSoto</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.85,34.96</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 E Olive Branch: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/07 20:32</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/08 01:32</SimpleData>
+		<SimpleData name="County">DeSoto</SimpleData>
+		<SimpleData name="Location">1 E Olive Branch</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.75</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">34.96</SimpleData>
+		<SimpleData name="Lon">-89.81</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">MSC033</SimpleData>
+		<SimpleData name="ugcname">DeSoto</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.81,34.96</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>2 S Bradford: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/07 23:00</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/08 04:00</SimpleData>
+		<SimpleData name="County">Gibson</SimpleData>
+		<SimpleData name="Location">2 S Bradford</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.88</SimpleData>
+		<SimpleData name="Source">Trained Spotter</SimpleData>
+		<SimpleData name="Lat">36.04</SimpleData>
+		<SimpleData name="Lon">-88.82</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC053</SimpleData>
+		<SimpleData name="ugcname">Gibson</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.82,36.04</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 WSW Mckenzie: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/07 23:17</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/08 04:17</SimpleData>
+		<SimpleData name="County">Carroll</SimpleData>
+		<SimpleData name="Location">1 WSW Mckenzie</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.88</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">36.14</SimpleData>
+		<SimpleData name="Lon">-88.52</SimpleData>
+		<SimpleData name="Remark">Time radar estimated.</SimpleData>
+		<SimpleData name="ugc">TNC017</SimpleData>
+		<SimpleData name="ugcname">Carroll</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.52,36.14</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 WSW Paris: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/07 23:30</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/08 04:30</SimpleData>
+		<SimpleData name="County">Henry</SimpleData>
+		<SimpleData name="Location">1 WSW Paris</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.88</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">36.29</SimpleData>
+		<SimpleData name="Lon">-88.33</SimpleData>
+		<SimpleData name="Remark">Nickle sized hail reported at Grove Apartments in Paris, TN. Time radar estimated.</SimpleData>
+		<SimpleData name="ugc">TNC079</SimpleData>
+		<SimpleData name="ugcname">Henry</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.33,36.29</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Minter City: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/08 11:45</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/08 16:45</SimpleData>
+		<SimpleData name="County">Leflore</SimpleData>
+		<SimpleData name="Location">Minter City</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.88</SimpleData>
+		<SimpleData name="Source">Emergency Mngr</SimpleData>
+		<SimpleData name="Lat">33.75</SimpleData>
+		<SimpleData name="Lon">-90.29</SimpleData>
+		<SimpleData name="Remark">Report of marble-sized hail between 11:45-12:15.</SimpleData>
+		<SimpleData name="ugc">MSC083</SimpleData>
+		<SimpleData name="ugcname">Leflore</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-90.29,33.75</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>2 NNW Bolivar: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/08 16:23</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/08 21:23</SimpleData>
+		<SimpleData name="County">Hardeman</SimpleData>
+		<SimpleData name="Location">2 NNW Bolivar</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1.75</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">35.29</SimpleData>
+		<SimpleData name="Lon">-89.01</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC069</SimpleData>
+		<SimpleData name="ugcname">Hardeman</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.01,35.29</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 WNW Toone: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/08 16:33</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/08 21:33</SimpleData>
+		<SimpleData name="County">Hardeman</SimpleData>
+		<SimpleData name="Location">1 WNW Toone</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1.75</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">35.36</SimpleData>
+		<SimpleData name="Lon">-88.97</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC069</SimpleData>
+		<SimpleData name="ugcname">Hardeman</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.97,35.36</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>2 WSW Williston: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/08 16:46</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/08 21:46</SimpleData>
+		<SimpleData name="County">Fayette</SimpleData>
+		<SimpleData name="Location">2 WSW Williston</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1.5</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">35.15</SimpleData>
+		<SimpleData name="Lon">-89.41</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC047</SimpleData>
+		<SimpleData name="ugcname">Fayette</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.41,35.15</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Medon: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/08 16:49</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/08 21:49</SimpleData>
+		<SimpleData name="County">Madison</SimpleData>
+		<SimpleData name="Location">Medon</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1.25</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">35.46</SimpleData>
+		<SimpleData name="Lon">-88.87</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC113</SimpleData>
+		<SimpleData name="ugcname">Madison</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.87,35.46</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>3 SE Bemis: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/08 16:57</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/08 21:57</SimpleData>
+		<SimpleData name="County">Madison</SimpleData>
+		<SimpleData name="Location">3 SE Bemis</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">35.54</SimpleData>
+		<SimpleData name="Lon">-88.8</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC113</SimpleData>
+		<SimpleData name="ugcname">Madison</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.8,35.54</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Somerville: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/08 17:00</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/08 22:00</SimpleData>
+		<SimpleData name="County">Fayette</SimpleData>
+		<SimpleData name="Location">Somerville</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1.75</SimpleData>
+		<SimpleData name="Source">Emergency Mngr</SimpleData>
+		<SimpleData name="Lat">35.24</SimpleData>
+		<SimpleData name="Lon">-89.35</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC047</SimpleData>
+		<SimpleData name="ugcname">Fayette</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.35,35.24</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>4 ESE Bemis: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/08 17:01</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/08 22:01</SimpleData>
+		<SimpleData name="County">Madison</SimpleData>
+		<SimpleData name="Location">4 ESE Bemis</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">35.56</SimpleData>
+		<SimpleData name="Lon">-88.77</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC113</SimpleData>
+		<SimpleData name="ugcname">Madison</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.77,35.56</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>6 E Bemis: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/08 17:03</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/08 22:03</SimpleData>
+		<SimpleData name="County">Madison</SimpleData>
+		<SimpleData name="Location">6 E Bemis</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">35.58</SimpleData>
+		<SimpleData name="Lon">-88.73</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC113</SimpleData>
+		<SimpleData name="ugcname">Madison</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.73,35.58</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>5 W Whiteville: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/08 17:10</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/08 22:10</SimpleData>
+		<SimpleData name="County">Fayette</SimpleData>
+		<SimpleData name="Location">5 W Whiteville</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1.25</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">35.33</SimpleData>
+		<SimpleData name="Lon">-89.25</SimpleData>
+		<SimpleData name="Remark">Hail fell at Ferge Dr and Old Jackson Rd. Time is radar estimated.</SimpleData>
+		<SimpleData name="ugc">TNC047</SimpleData>
+		<SimpleData name="ugcname">Fayette</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.25,35.33</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>7 E Wildersville: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/08 17:42</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/08 22:42</SimpleData>
+		<SimpleData name="County">Henderson</SimpleData>
+		<SimpleData name="Location">7 E Wildersville</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.75</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">35.82</SimpleData>
+		<SimpleData name="Lon">-88.25</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC077</SimpleData>
+		<SimpleData name="ugcname">Henderson</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.25,35.82</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>5 S Camden: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/08 18:04</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/08 23:04</SimpleData>
+		<SimpleData name="County">Benton</SimpleData>
+		<SimpleData name="Location">5 S Camden</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1.25</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">36</SimpleData>
+		<SimpleData name="Lon">-88.11</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC005</SimpleData>
+		<SimpleData name="ugcname">Benton</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.11,36.0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Hollow Rock: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/08 18:07</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/08 23:07</SimpleData>
+		<SimpleData name="County">Carroll</SimpleData>
+		<SimpleData name="Location">Hollow Rock</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">36.04</SimpleData>
+		<SimpleData name="Lon">-88.27</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC017</SimpleData>
+		<SimpleData name="ugcname">Carroll</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.27,36.04</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Bruceton: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/08 18:08</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/08 23:08</SimpleData>
+		<SimpleData name="County">Carroll</SimpleData>
+		<SimpleData name="Location">Bruceton</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">36.04</SimpleData>
+		<SimpleData name="Lon">-88.25</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC017</SimpleData>
+		<SimpleData name="ugcname">Carroll</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.25,36.04</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>8 S Camden: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/08 18:11</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/08 23:11</SimpleData>
+		<SimpleData name="County">Benton</SimpleData>
+		<SimpleData name="Location">8 S Camden</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">35.95</SimpleData>
+		<SimpleData name="Lon">-88.1</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC005</SimpleData>
+		<SimpleData name="ugcname">Benton</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.1,35.95</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Hollow Rock: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/08 18:12</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/08 23:12</SimpleData>
+		<SimpleData name="County">Carroll</SimpleData>
+		<SimpleData name="Location">Hollow Rock</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.75</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">36.04</SimpleData>
+		<SimpleData name="Lon">-88.27</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC017</SimpleData>
+		<SimpleData name="ugcname">Carroll</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.27,36.04</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>2 NE Camden: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/08 18:23</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/08 23:23</SimpleData>
+		<SimpleData name="County">Benton</SimpleData>
+		<SimpleData name="Location">2 NE Camden</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">36.09</SimpleData>
+		<SimpleData name="Lon">-88.09</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC005</SimpleData>
+		<SimpleData name="ugcname">Benton</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.09,36.09</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>6 E Camden: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/08 18:24</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/08 23:24</SimpleData>
+		<SimpleData name="County">Benton</SimpleData>
+		<SimpleData name="Location">6 E Camden</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1.75</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">36.07</SimpleData>
+		<SimpleData name="Lon">-88</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC005</SimpleData>
+		<SimpleData name="ugcname">Benton</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88,36.07</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>4 W Tennessee Ridge: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">OHX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/08 18:50</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/08 23:50</SimpleData>
+		<SimpleData name="County">Houston</SimpleData>
+		<SimpleData name="Location">4 W Tennessee Ridge</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1.25</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">36.32</SimpleData>
+		<SimpleData name="Lon">-87.84</SimpleData>
+		<SimpleData name="Remark">Received a phone call of marble size hail, that was not quite ping pong size. Strong winds as well.</SimpleData>
+		<SimpleData name="ugc">TNC083</SimpleData>
+		<SimpleData name="ugcname">Houston</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-87.84,36.32</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Cumberland City: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">OHX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/08 19:10</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/09 00:10</SimpleData>
+		<SimpleData name="County">Stewart</SimpleData>
+		<SimpleData name="Location">Cumberland City</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1.5</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">36.38</SimpleData>
+		<SimpleData name="Lon">-87.64</SimpleData>
+		<SimpleData name="Remark">Facebook photos showed ping pong ball size hail fell in Cumberland City.</SimpleData>
+		<SimpleData name="ugc">TNC161</SimpleData>
+		<SimpleData name="ugcname">Stewart</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-87.64,36.38</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 N Cumberland City: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">OHX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/08 19:14</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/09 00:14</SimpleData>
+		<SimpleData name="County">Stewart</SimpleData>
+		<SimpleData name="Location">1 N Cumberland City</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">36.4</SimpleData>
+		<SimpleData name="Lon">-87.64</SimpleData>
+		<SimpleData name="Remark">Facebook report of approximately quarter sized hail in Cumberland City.</SimpleData>
+		<SimpleData name="ugc">TNC161</SimpleData>
+		<SimpleData name="ugcname">Stewart</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-87.64,36.4</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>9 E Dover: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">OHX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/08 19:20</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/09 00:20</SimpleData>
+		<SimpleData name="County">Stewart</SimpleData>
+		<SimpleData name="Location">9 E Dover</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1.5</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">36.51</SimpleData>
+		<SimpleData name="Lon">-87.69</SimpleData>
+		<SimpleData name="Remark">Facebook video of approximately ping pong size hail falling in Indian Mound.</SimpleData>
+		<SimpleData name="ugc">TNC161</SimpleData>
+		<SimpleData name="ugcname">Stewart</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-87.69,36.51</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>5 NNW Routon: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/08 19:22</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/09 00:22</SimpleData>
+		<SimpleData name="County">Henry</SimpleData>
+		<SimpleData name="Location">5 NNW Routon</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">36.29</SimpleData>
+		<SimpleData name="Lon">-88.42</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC079</SimpleData>
+		<SimpleData name="ugcname">Henry</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.42,36.29</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>2 S Puryear: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/08 19:36</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/09 00:36</SimpleData>
+		<SimpleData name="County">Henry</SimpleData>
+		<SimpleData name="Location">2 S Puryear</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1.25</SimpleData>
+		<SimpleData name="Source">Emergency Mngr</SimpleData>
+		<SimpleData name="Lat">36.41</SimpleData>
+		<SimpleData name="Lon">-88.33</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC079</SimpleData>
+		<SimpleData name="ugcname">Henry</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.33,36.41</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>4 NE Clarksville: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">OHX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/08 19:51</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/09 00:51</SimpleData>
+		<SimpleData name="County">Montgomery</SimpleData>
+		<SimpleData name="Location">4 NE Clarksville</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.75</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">36.6</SimpleData>
+		<SimpleData name="Lon">-87.28</SimpleData>
+		<SimpleData name="Remark">Report from mPING: Dime (0.75 in.).</SimpleData>
+		<SimpleData name="ugc">TNC125</SimpleData>
+		<SimpleData name="ugcname">Montgomery</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-87.28,36.6</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>5 NNW Redwood: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/09 19:55</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 00:55</SimpleData>
+		<SimpleData name="County">Warren</SimpleData>
+		<SimpleData name="Location">5 NNW Redwood</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Law Enforcement</SimpleData>
+		<SimpleData name="Lat">32.54</SimpleData>
+		<SimpleData name="Lon">-90.85</SimpleData>
+		<SimpleData name="Remark">Report of quarter sized hail.</SimpleData>
+		<SimpleData name="ugc">MSC149</SimpleData>
+		<SimpleData name="ugcname">Warren</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-90.85,32.54</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>2 NNW Oak Ridge: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/09 20:00</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 01:00</SimpleData>
+		<SimpleData name="County">Warren</SimpleData>
+		<SimpleData name="Location">2 NNW Oak Ridge</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS Storm Survey</SimpleData>
+		<SimpleData name="Lat">32.5</SimpleData>
+		<SimpleData name="Lon">-90.72</SimpleData>
+		<SimpleData name="Remark">A brief, weak EF0 tornado touched down near the intersection of Ballground Road and Possum Hollow Road. The tornado downed a tree onto a church at the start of the path. The tornado tracked northeast along Possum Hollow Road downing intermittent trees and large branches. The tornado dissipated in the vicinity of Oak Ridge Road. Maximum estimated winds were 75 mph with the maximum width of 150 yards.</SimpleData>
+		<SimpleData name="ugc">MSC149</SimpleData>
+		<SimpleData name="ugcname">Warren</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-90.72,32.5</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Eden: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/09 20:16</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 01:16</SimpleData>
+		<SimpleData name="County">Yazoo</SimpleData>
+		<SimpleData name="Location">Eden</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Broadcast Media</SimpleData>
+		<SimpleData name="Lat">32.98</SimpleData>
+		<SimpleData name="Lon">-90.32</SimpleData>
+		<SimpleData name="Remark">Quarter size hail reported near Eden.</SimpleData>
+		<SimpleData name="ugc">MSC163</SimpleData>
+		<SimpleData name="ugcname">Yazoo</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-90.32,32.98</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Eden: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/09 20:17</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 01:17</SimpleData>
+		<SimpleData name="County">Yazoo</SimpleData>
+		<SimpleData name="Location">Eden</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.88</SimpleData>
+		<SimpleData name="Source">Broadcast Media</SimpleData>
+		<SimpleData name="Lat">32.99</SimpleData>
+		<SimpleData name="Lon">-90.32</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">MSC163</SimpleData>
+		<SimpleData name="ugcname">Yazoo</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-90.32,32.99</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>3 NW Learned: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/09 20:23</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 01:23</SimpleData>
+		<SimpleData name="County">Hinds</SimpleData>
+		<SimpleData name="Location">3 NW Learned</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS Storm Survey</SimpleData>
+		<SimpleData name="Lat">32.23</SimpleData>
+		<SimpleData name="Lon">-90.58</SimpleData>
+		<SimpleData name="Remark">A brief tornado touched down late in the evening on April 9th near Bush Bottom Road. The tornado initially caused scattered damage to branches in open farmland but quickly strengthened to its maximum intensity, estimated at EF-1 with 100 mph maximum winds, as it destroyed two outbuildings near Bush Bottom Road. The tornado continued generally east where it crossed the Natchez Trace and Bill Downing Road. Damage in these areas was mostly tree and vegetation but some generally minor damage was noted to roofs in the area. Falling trees contributed to additional damage including downing power lines and fencing. A few homes were more heavily damaged due to trees falling onto them. The tornado weakened and subsequently dissipated as it neared Dupree Road. Path length was 4.57 miles and maximum width was 75 yards wide.</SimpleData>
+		<SimpleData name="ugc">MSC049</SimpleData>
+		<SimpleData name="ugcname">Hinds</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-90.58,32.23</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>2 NNE Kearney Park: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/09 20:41</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 01:41</SimpleData>
+		<SimpleData name="County">Madison</SimpleData>
+		<SimpleData name="Location">2 NNE Kearney Park</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">32.6</SimpleData>
+		<SimpleData name="Lon">-90.3</SimpleData>
+		<SimpleData name="Remark">Quarter size hail reported.</SimpleData>
+		<SimpleData name="ugc">MSC089</SimpleData>
+		<SimpleData name="ugcname">Madison</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-90.3,32.6</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Pocahontas: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/09 20:46</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 01:46</SimpleData>
+		<SimpleData name="County">Hinds</SimpleData>
+		<SimpleData name="Location">Pocahontas</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Emergency Mngr</SimpleData>
+		<SimpleData name="Lat">32.48</SimpleData>
+		<SimpleData name="Lon">-90.29</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">MSC049</SimpleData>
+		<SimpleData name="ugcname">Hinds</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-90.29,32.48</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 N Tougaloo: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/09 20:59</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 01:59</SimpleData>
+		<SimpleData name="County">Madison</SimpleData>
+		<SimpleData name="Location">1 N Tougaloo</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.75</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">32.42</SimpleData>
+		<SimpleData name="Lon">-90.16</SimpleData>
+		<SimpleData name="Remark">Report from mPING of hail up to the size of pennies.</SimpleData>
+		<SimpleData name="ugc">MSC089</SimpleData>
+		<SimpleData name="ugcname">Madison</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-90.16,32.42</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 E Ridgeland: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/09 21:02</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 02:02</SimpleData>
+		<SimpleData name="County">Madison</SimpleData>
+		<SimpleData name="Location">1 E Ridgeland</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Storm Chaser</SimpleData>
+		<SimpleData name="Lat">32.43</SimpleData>
+		<SimpleData name="Lon">-90.12</SimpleData>
+		<SimpleData name="Remark">Hail up to the size of quarters fell in Ridgeland. Report relayed via Spotter Network.</SimpleData>
+		<SimpleData name="ugc">MSC089</SimpleData>
+		<SimpleData name="ugcname">Madison</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-90.12,32.43</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 SE Madison: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/09 21:02</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 02:02</SimpleData>
+		<SimpleData name="County">Madison</SimpleData>
+		<SimpleData name="Location">1 SE Madison</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">32.45</SimpleData>
+		<SimpleData name="Lon">-90.1</SimpleData>
+		<SimpleData name="Remark">Report from mPING of hail up to the size of quarters.</SimpleData>
+		<SimpleData name="ugc">MSC089</SimpleData>
+		<SimpleData name="ugcname">Madison</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-90.1,32.45</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Ludlow: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/09 21:51</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 02:51</SimpleData>
+		<SimpleData name="County">Scott</SimpleData>
+		<SimpleData name="Location">Ludlow</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">32.57</SimpleData>
+		<SimpleData name="Lon">-89.71</SimpleData>
+		<SimpleData name="Remark">Dime to quarter size hail reported near the Ludlow Fire Station.</SimpleData>
+		<SimpleData name="ugc">MSC123</SimpleData>
+		<SimpleData name="ugcname">Scott</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.71,32.57</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 SW Lena: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/09 22:00</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 03:00</SimpleData>
+		<SimpleData name="County">Leake</SimpleData>
+		<SimpleData name="Location">1 SW Lena</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Emergency Mngr</SimpleData>
+		<SimpleData name="Lat">32.59</SimpleData>
+		<SimpleData name="Lon">-89.6</SimpleData>
+		<SimpleData name="Remark">Quarter-sized hail was reported in Lena, Ms.</SimpleData>
+		<SimpleData name="ugc">MSC079</SimpleData>
+		<SimpleData name="ugcname">Leake</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.6,32.59</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 SE Livingston: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/10 04:35</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 09:35</SimpleData>
+		<SimpleData name="County">Madison</SimpleData>
+		<SimpleData name="Location">1 SE Livingston</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS Storm Survey</SimpleData>
+		<SimpleData name="Lat">32.54</SimpleData>
+		<SimpleData name="Lon">-90.2</SimpleData>
+		<SimpleData name="Remark">A brief EF0 tornado touched down near the northwestern side of the Mannsdale Upper Elementary campus in the predawn hours of April 10th. The tornado moved northeast producing intermittent, mostly tree damage in a path that crossed MS-463, Mannsdale Road, and then across residential areas along Livingston Drive. The maximum estimated winds were estimated to be about 85 mph. The tornado dissipated near Bidon Drive. Path length was 0.70 miles and maximum width was 150 yards wide.</SimpleData>
+		<SimpleData name="ugc">MSC089</SimpleData>
+		<SimpleData name="ugcname">Madison</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-90.2,32.54</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>10 N Pearlington: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">LIX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/10 10:17</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 15:17</SimpleData>
+		<SimpleData name="County">Hancock</SimpleData>
+		<SimpleData name="Location">10 N Pearlington</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS Storm Survey</SimpleData>
+		<SimpleData name="Lat">30.39</SimpleData>
+		<SimpleData name="Lon">-89.6</SimpleData>
+		<SimpleData name="Remark">This EF0 tornado with max wind speeds of 85mph that tracked for 5.33 miles started fairly large from the start with a swath extending from Leonard Kimble Road and further north along Mainline Road. High resolution satellite imagery indicated the damage path continued eastward where it crossed Texas Flat Road. Branches were broken and a few snapped trees were observed in a generally confluent pattern. The end point for this tornado is estimated based off high resolution satellite NDVI differencing as it interactive with the parent mesovortex and appeared to dissipate.</SimpleData>
+		<SimpleData name="ugc">MSC045</SimpleData>
+		<SimpleData name="ugcname">Hancock</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.6,30.39</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>6 W Kiln: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">LIX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/10 10:23</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 15:23</SimpleData>
+		<SimpleData name="County">Hancock</SimpleData>
+		<SimpleData name="Location">6 W Kiln</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS Storm Survey</SimpleData>
+		<SimpleData name="Lat">30.41</SimpleData>
+		<SimpleData name="Lon">-89.53</SimpleData>
+		<SimpleData name="Remark">A short-tracked tornado was identified using high resolution satellite imagery NDVI differencing. This tornado tracked over inaccessible rural lands north of Texas Flat Road along Catahoula Creek and Jourdan River before eventually dissipating as it interacted with the parent mesovortex to its east. No damage could be identified and thus the rating for this tornado is unknown.</SimpleData>
+		<SimpleData name="ugc">MSC045</SimpleData>
+		<SimpleData name="ugcname">Hancock</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.53,30.41</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>3 NW Kiln: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">LIX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/10 10:28</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 15:28</SimpleData>
+		<SimpleData name="County">Hancock</SimpleData>
+		<SimpleData name="Location">3 NW Kiln</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS Storm Survey</SimpleData>
+		<SimpleData name="Lat">30.45</SimpleData>
+		<SimpleData name="Lon">-89.46</SimpleData>
+		<SimpleData name="Remark">An embedded EF1 tornado with max wind speeds of 100mph that tracked for 3.72 miles following along the backside of the mesovortex was identified using high resolution satellite imagery NDVI differencing where more localized damage to trees and structures were identified via ground survey. This tornado tracked primarily along MS Highway 43 with the most widespread damage being located along the curve in Cuevas Road where a swath of trees appeared to be damaged on satellite imagery in addition to observed damage with ground survey. This is where the tornado appeared to be at its strongest. Thereafter, the damage path in NDVI differencing gradually weakens and the tornado is estimated to have dissipated as it crossed the Silver Creek Acres neighborhood where tree damage was found near Violet Street and Gardenia Street in Kiln.</SimpleData>
+		<SimpleData name="ugc">MSC045</SimpleData>
+		<SimpleData name="ugcname">Hancock</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.46,30.45</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>8 NNE Diamondhead: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">LIX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/10 10:30</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 15:30</SimpleData>
+		<SimpleData name="County">Harrison</SimpleData>
+		<SimpleData name="Location">8 NNE Diamondhead</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS Storm Survey</SimpleData>
+		<SimpleData name="Lat">30.48</SimpleData>
+		<SimpleData name="Lon">-89.31</SimpleData>
+		<SimpleData name="Remark">NWS Storm Survey confirms damage in Harrison County, MS consistent with an EF-1 tornado. The tornado touched down on Cleveland Ladner Rd and River Rd, where it tore off metal roofing material on several mobile homes in the area. It also snapped trees. It crossed the Wolf River, snapping trees and tearing off the metal roofing on a mobile home on Cemetery Rd. It then moved northeastward and crossed Moran Rd, where it rolled a mobile home and separated the undercarriage from the rest of the unit. This mobile home had hurricane straps and bolts attached to the ground. The tornado then snapped some trees across the street from the home before lifting just after Moran Road.</SimpleData>
+		<SimpleData name="ugc">MSC047</SimpleData>
+		<SimpleData name="ugcname">Harrison</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.31,30.48</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>2 NNW Kiln: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">LIX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/10 10:31</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 15:31</SimpleData>
+		<SimpleData name="County">Hancock</SimpleData>
+		<SimpleData name="Location">2 NNW Kiln</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS Storm Survey</SimpleData>
+		<SimpleData name="Lat">30.45</SimpleData>
+		<SimpleData name="Lon">-89.44</SimpleData>
+		<SimpleData name="Remark">High resolution satellite imagery aided in identifying an embedded EF0 tornado with max wind speeds of 85mph that trailed the parent mesovortex that tracked for 2.79 miles through the area. More localized tree damage in addition to an evident damage path on NDVI differencing helped to confirm the existence of this tornado which tracked from Firetower Road east-southeastward to Old Joe Moran Road. The end point is estimated per satellite imagery which occurred over inaccessible rural lands.</SimpleData>
+		<SimpleData name="ugc">MSC045</SimpleData>
+		<SimpleData name="ugcname">Hancock</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.44,30.45</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>6 SW Kiln: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">LIX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/10 10:32</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 15:32</SimpleData>
+		<SimpleData name="County">Hancock</SimpleData>
+		<SimpleData name="Location">6 SW Kiln</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">30.34</SimpleData>
+		<SimpleData name="Lon">-89.49</SimpleData>
+		<SimpleData name="Remark">Report from mPING: Quarter (1.00 in.).</SimpleData>
+		<SimpleData name="ugc">MSC045</SimpleData>
+		<SimpleData name="ugcname">Hancock</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.49,30.34</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 SW Diamondhead: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">LIX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/10 10:39</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 15:39</SimpleData>
+		<SimpleData name="County">Hancock</SimpleData>
+		<SimpleData name="Location">1 SW Diamondhead</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">30.37</SimpleData>
+		<SimpleData name="Lon">-89.39</SimpleData>
+		<SimpleData name="Remark">Report from mPING: Quarter (1.00 in.).</SimpleData>
+		<SimpleData name="ugc">MSC045</SimpleData>
+		<SimpleData name="ugcname">Hancock</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.39,30.37</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>9 NNE Diamondhead: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">LIX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/10 10:40</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 15:40</SimpleData>
+		<SimpleData name="County">Harrison</SimpleData>
+		<SimpleData name="Location">9 NNE Diamondhead</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS Storm Survey</SimpleData>
+		<SimpleData name="Lat">30.5</SimpleData>
+		<SimpleData name="Lon">-89.32</SimpleData>
+		<SimpleData name="Remark">An EF0 tornado tracked east-southeast near the Wolf River causing tree damage and causing a mobile home to slide off its blocks.</SimpleData>
+		<SimpleData name="ugc">MSC047</SimpleData>
+		<SimpleData name="ugcname">Harrison</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.32,30.5</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>8 W Lyman: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">LIX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/10 10:44</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 15:44</SimpleData>
+		<SimpleData name="County">Harrison</SimpleData>
+		<SimpleData name="Location">8 W Lyman</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS Storm Survey</SimpleData>
+		<SimpleData name="Lat">30.52</SimpleData>
+		<SimpleData name="Lon">-89.27</SimpleData>
+		<SimpleData name="Remark">A brief EF1 tornado caused tree damage on Northrop Cuevas Road and rolled a mobile home on Moran Road.</SimpleData>
+		<SimpleData name="ugc">MSC047</SimpleData>
+		<SimpleData name="ugcname">Harrison</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.27,30.52</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>8 W Saint Martin: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">LIX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/10 10:48</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 15:48</SimpleData>
+		<SimpleData name="County">Harrison</SimpleData>
+		<SimpleData name="Location">8 W Saint Martin</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1.25</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">30.48</SimpleData>
+		<SimpleData name="Lon">-88.99</SimpleData>
+		<SimpleData name="Remark">Report from mPING: Half Dollar (1.25 in.).</SimpleData>
+		<SimpleData name="ugc">MSC047</SimpleData>
+		<SimpleData name="ugcname">Harrison</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.99,30.48</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 NNW Biloxi: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">LIX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/10 10:50</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 15:50</SimpleData>
+		<SimpleData name="County">Harrison</SimpleData>
+		<SimpleData name="Location">1 NNW Biloxi</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1.25</SimpleData>
+		<SimpleData name="Source">Emergency Mngr</SimpleData>
+		<SimpleData name="Lat">30.4</SimpleData>
+		<SimpleData name="Lon">-88.89</SimpleData>
+		<SimpleData name="Remark">Half dollar size hail reported in Biloxi.</SimpleData>
+		<SimpleData name="ugc">MSC047</SimpleData>
+		<SimpleData name="ugcname">Harrison</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.89,30.4</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>7 WNW Saint Martin: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">LIX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/10 10:50</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 15:50</SimpleData>
+		<SimpleData name="County">Harrison</SimpleData>
+		<SimpleData name="Location">7 WNW Saint Martin</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1.75</SimpleData>
+		<SimpleData name="Source">Broadcast Media</SimpleData>
+		<SimpleData name="Lat">30.47</SimpleData>
+		<SimpleData name="Lon">-88.98</SimpleData>
+		<SimpleData name="Remark">picture of estimated golf ball sized hail in Woolmarket.</SimpleData>
+		<SimpleData name="ugc">MSC047</SimpleData>
+		<SimpleData name="ugcname">Harrison</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.98,30.47</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>10 WNW Vancleave: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">LIX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/10 11:14</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 16:14</SimpleData>
+		<SimpleData name="County">Jackson</SimpleData>
+		<SimpleData name="Location">10 WNW Vancleave</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS Storm Survey</SimpleData>
+		<SimpleData name="Lat">30.59</SimpleData>
+		<SimpleData name="Lon">-88.83</SimpleData>
+		<SimpleData name="Remark">An EF-Unknown tornado damage path was identified using satellite imagery which was collocated with a brief tornado debris signature on KMOB imagery.</SimpleData>
+		<SimpleData name="ugc">MSC059</SimpleData>
+		<SimpleData name="ugcname">Jackson</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.83,30.59</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>4 E Saucier: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">LIX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/10 11:16</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 16:16</SimpleData>
+		<SimpleData name="County">Harrison</SimpleData>
+		<SimpleData name="Location">4 E Saucier</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">30.64</SimpleData>
+		<SimpleData name="Lon">-89.07</SimpleData>
+		<SimpleData name="Remark">Report from mPING: Quarter (1.00 in.).</SimpleData>
+		<SimpleData name="ugc">MSC047</SimpleData>
+		<SimpleData name="ugcname">Harrison</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.07,30.64</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>2 E Fort Morgan: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MOB</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/10 11:38</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 16:38</SimpleData>
+		<SimpleData name="County">Baldwin</SimpleData>
+		<SimpleData name="Location">2 E Fort Morgan</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Broadcast Media</SimpleData>
+		<SimpleData name="Lat">30.23</SimpleData>
+		<SimpleData name="Lon">-87.99</SimpleData>
+		<SimpleData name="Remark">Video relayed on social media of quarter size hail in Fort Morgan, AL.</SimpleData>
+		<SimpleData name="ugc">ALC003</SimpleData>
+		<SimpleData name="ugcname">Baldwin</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-87.99,30.23</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>4 WSW Gasque: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MOB</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/10 11:38</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 16:38</SimpleData>
+		<SimpleData name="County">Baldwin</SimpleData>
+		<SimpleData name="Location">4 WSW Gasque</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Broadcast Media</SimpleData>
+		<SimpleData name="Lat">30.23</SimpleData>
+		<SimpleData name="Lon">-87.88</SimpleData>
+		<SimpleData name="Remark">Corrects previous hail report from 2 E Fort Morgan. Video relayed on social media of quarter size hail in Fort Morgan, AL.</SimpleData>
+		<SimpleData name="ugc">ALC003</SimpleData>
+		<SimpleData name="ugcname">Baldwin</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-87.88,30.23</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Magnolia Springs: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MOB</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/10 11:50</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 16:50</SimpleData>
+		<SimpleData name="County">Baldwin</SimpleData>
+		<SimpleData name="Location">Magnolia Springs</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Broadcast Media</SimpleData>
+		<SimpleData name="Lat">30.4</SimpleData>
+		<SimpleData name="Lon">-87.78</SimpleData>
+		<SimpleData name="Remark">Photo relayed on social media of multiple hail stones ranging from quarter size and smaller.</SimpleData>
+		<SimpleData name="ugc">ALC003</SimpleData>
+		<SimpleData name="ugcname">Baldwin</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-87.78,30.4</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 NNE Georgetown: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MOB</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/10 12:20</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/10 17:20</SimpleData>
+		<SimpleData name="County">Mobile</SimpleData>
+		<SimpleData name="Location">1 NNE Georgetown</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS Storm Survey</SimpleData>
+		<SimpleData name="Lat">30.92</SimpleData>
+		<SimpleData name="Lon">-88.27</SimpleData>
+		<SimpleData name="Remark">Brief EF-1 tornado began on Brighton Court removing the roof of a home. It appears that the roof was removed due to a garage door failure. An exterior wall in the garage was bowed out. The tornado then crossed northwest across Brighton Dr and dissipated near Brandy Ct while snapping some large hardwood branches.</SimpleData>
+		<SimpleData name="ugc">ALC097</SimpleData>
+		<SimpleData name="ugcname">Mobile</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.27,30.92</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 NE Clover Hill: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MRX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/11 16:25</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/11 20:25</SimpleData>
+		<SimpleData name="County">Blount</SimpleData>
+		<SimpleData name="Location">1 NE Clover Hill</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">35.71</SimpleData>
+		<SimpleData name="Lon">-84.06</SimpleData>
+		<SimpleData name="Remark">Report from mPING: Quarter (1.00 in.).</SimpleData>
+		<SimpleData name="ugc">TNC009</SimpleData>
+		<SimpleData name="ugcname">Blount</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-84.06,35.71</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>6 SW Good Hope: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">HUN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/18 15:30</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/18 20:30</SimpleData>
+		<SimpleData name="County">Cullman</SimpleData>
+		<SimpleData name="Location">6 SW Good Hope</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.88</SimpleData>
+		<SimpleData name="Source">Emergency Mngr</SimpleData>
+		<SimpleData name="Lat">34.05</SimpleData>
+		<SimpleData name="Lon">-86.94</SimpleData>
+		<SimpleData name="Remark">Nickel size hail in Dodge City.</SimpleData>
+		<SimpleData name="ugc">ALC043</SimpleData>
+		<SimpleData name="ugcname">Cullman</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.94,34.05</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>2 NW Hanceville: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">HUN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/18 15:55</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/18 20:55</SimpleData>
+		<SimpleData name="County">Cullman</SimpleData>
+		<SimpleData name="Location">2 NW Hanceville</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.75</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">34.08</SimpleData>
+		<SimpleData name="Lon">-86.78</SimpleData>
+		<SimpleData name="Remark">Report from mPING: Dime (0.75 in.).</SimpleData>
+		<SimpleData name="ugc">ALC043</SimpleData>
+		<SimpleData name="ugcname">Cullman</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.78,34.08</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Hanceville: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">HUN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/18 15:55</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/18 20:55</SimpleData>
+		<SimpleData name="County">Cullman</SimpleData>
+		<SimpleData name="Location">Hanceville</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.5</SimpleData>
+		<SimpleData name="Source">Emergency Mngr</SimpleData>
+		<SimpleData name="Lat">34.06</SimpleData>
+		<SimpleData name="Lon">-86.76</SimpleData>
+		<SimpleData name="Remark">Dime size hail in Hanceville, AL.</SimpleData>
+		<SimpleData name="ugc">ALC043</SimpleData>
+		<SimpleData name="ugcname">Cullman</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.76,34.06</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>3 NE Hanceville: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">HUN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/18 16:02</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/18 21:02</SimpleData>
+		<SimpleData name="County">Cullman</SimpleData>
+		<SimpleData name="Location">3 NE Hanceville</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Broadcast Media</SimpleData>
+		<SimpleData name="Lat">34.09</SimpleData>
+		<SimpleData name="Lon">-86.72</SimpleData>
+		<SimpleData name="Remark">Quarter size hail in Center Hill.</SimpleData>
+		<SimpleData name="ugc">ALC043</SimpleData>
+		<SimpleData name="ugcname">Cullman</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.72,34.09</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>2 NNE Moores Mill: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">HUN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/18 16:38</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/18 21:38</SimpleData>
+		<SimpleData name="County">Madison</SimpleData>
+		<SimpleData name="Location">2 NNE Moores Mill</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.25</SimpleData>
+		<SimpleData name="Source">Trained Spotter</SimpleData>
+		<SimpleData name="Lat">34.88</SimpleData>
+		<SimpleData name="Lon">-86.52</SimpleData>
+		<SimpleData name="Remark">pea size hail near intersection of Moores Mill Rd and Oscar Patterson Rd.</SimpleData>
+		<SimpleData name="ugc">ALC089</SimpleData>
+		<SimpleData name="ugcname">Madison</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.52,34.88</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>2 E Coopertown: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">OHX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/18 18:56</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/18 23:56</SimpleData>
+		<SimpleData name="County">Robertson</SimpleData>
+		<SimpleData name="Location">2 E Coopertown</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">36.44</SimpleData>
+		<SimpleData name="Lon">-86.93</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC147</SimpleData>
+		<SimpleData name="ugcname">Robertson</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.93,36.44</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>4 W Gluckstadt: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/18 19:00</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/19 00:00</SimpleData>
+		<SimpleData name="County">Madison</SimpleData>
+		<SimpleData name="Location">4 W Gluckstadt</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.7</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">32.52</SimpleData>
+		<SimpleData name="Lon">-90.16</SimpleData>
+		<SimpleData name="Remark">Dime size hail reported west of Gluckstad.</SimpleData>
+		<SimpleData name="ugc">MSC089</SimpleData>
+		<SimpleData name="ugcname">Madison</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-90.16,32.52</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>4 SSE Livingston: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/18 19:00</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/19 00:00</SimpleData>
+		<SimpleData name="County">Madison</SimpleData>
+		<SimpleData name="Location">4 SSE Livingston</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1.5</SimpleData>
+		<SimpleData name="Source">NWS Employee</SimpleData>
+		<SimpleData name="Lat">32.5</SimpleData>
+		<SimpleData name="Lon">-90.19</SimpleData>
+		<SimpleData name="Remark">Ping Pong size hail reported near Whisper Lake.</SimpleData>
+		<SimpleData name="ugc">MSC089</SimpleData>
+		<SimpleData name="ugcname">Madison</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-90.19,32.5</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>3 E Coopertown: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">OHX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/18 19:02</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/19 00:02</SimpleData>
+		<SimpleData name="County">Robertson</SimpleData>
+		<SimpleData name="Location">3 E Coopertown</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.75</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">36.42</SimpleData>
+		<SimpleData name="Lon">-86.91</SimpleData>
+		<SimpleData name="Remark">Report from mPING: Dime (0.75 in.).</SimpleData>
+		<SimpleData name="ugc">TNC147</SimpleData>
+		<SimpleData name="ugcname">Robertson</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.91,36.42</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>3 E Coopertown: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">OHX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/18 19:02</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/19 00:02</SimpleData>
+		<SimpleData name="County">Robertson</SimpleData>
+		<SimpleData name="Location">3 E Coopertown</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.75</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">36.42</SimpleData>
+		<SimpleData name="Lon">-86.91</SimpleData>
+		<SimpleData name="Remark">Report from mPING: Penny (0.75 in.)</SimpleData>
+		<SimpleData name="ugc">TNC147</SimpleData>
+		<SimpleData name="ugcname">Robertson</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.91,36.42</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>3 SSE Springfield: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">OHX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/18 19:09</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/19 00:09</SimpleData>
+		<SimpleData name="County">Robertson</SimpleData>
+		<SimpleData name="Location">3 SSE Springfield</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Public</SimpleData>
+		<SimpleData name="Lat">36.46</SimpleData>
+		<SimpleData name="Lon">-86.85</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">TNC147</SimpleData>
+		<SimpleData name="ugcname">Robertson</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.85,36.46</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>2 N Russellville: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">HUN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/19 06:12</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/19 11:12</SimpleData>
+		<SimpleData name="County">Franklin</SimpleData>
+		<SimpleData name="Location">2 N Russellville</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">Emergency Mngr</SimpleData>
+		<SimpleData name="Lat">34.53</SimpleData>
+		<SimpleData name="Lon">-87.73</SimpleData>
+		<SimpleData name="Remark">Quarter size hail reported north of Russellville, AL. Time estimated based on radar.</SimpleData>
+		<SimpleData name="ugc">ALC059</SimpleData>
+		<SimpleData name="ugcname">Franklin</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-87.73,34.53</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Haleyville: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">BMX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/19 07:25</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/19 12:25</SimpleData>
+		<SimpleData name="County">Winston</SimpleData>
+		<SimpleData name="Location">Haleyville</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.5</SimpleData>
+		<SimpleData name="Source">Cocorahs</SimpleData>
+		<SimpleData name="Lat">34.23</SimpleData>
+		<SimpleData name="Lon">-87.62</SimpleData>
+		<SimpleData name="Remark">CoCoRAHS report of hail in Haleyville.</SimpleData>
+		<SimpleData name="ugc">ALC133</SimpleData>
+		<SimpleData name="ugcname">Winston</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-87.62,34.23</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>Crudup: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">BMX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/19 16:25</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/19 21:25</SimpleData>
+		<SimpleData name="County">Etowah</SimpleData>
+		<SimpleData name="Location">Crudup</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">0.75</SimpleData>
+		<SimpleData name="Source">Broadcast Media</SimpleData>
+		<SimpleData name="Lat">34.11</SimpleData>
+		<SimpleData name="Lon">-86.01</SimpleData>
+		<SimpleData name="Remark"></SimpleData>
+		<SimpleData name="ugc">ALC055</SimpleData>
+		<SimpleData name="ugcname">Etowah</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.01,34.11</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>1 N Appleton: HAIL</name>
+	<ExtendedData><SchemaData schemaUrl="#fbc579fd92a9410bbf87cfe8cc9e8f24">
+		<SimpleData name="Office">MOB</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2024/04/20 18:33</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2024/04/20 23:33</SimpleData>
+		<SimpleData name="County">Escambia</SimpleData>
+		<SimpleData name="Location">1 N Appleton</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">HAIL</SimpleData>
+		<SimpleData name="Mag.">1.25</SimpleData>
+		<SimpleData name="Source">Broadcast Media</SimpleData>
+		<SimpleData name="Lat">31.24</SimpleData>
+		<SimpleData name="Lon">-87.12</SimpleData>
+		<SimpleData name="Remark">quarter to golf ball sized hail reported by public to media.</SimpleData>
+		<SimpleData name="ugc">ALC053</SimpleData>
+		<SimpleData name="ugcname">Escambia</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-87.12,31.24</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>
