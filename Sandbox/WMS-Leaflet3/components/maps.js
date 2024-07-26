@@ -1857,6 +1857,9 @@ function getSlowLoadingLayerPrefixesToWarnAbout() {
   return slowLoadingLayerPrefixes;
 }
 
+//add
+
+//added for lat/lon popup
 L.CursorHandler = L.Handler.extend({
 
     addHooks: function () {
@@ -1888,8 +1891,8 @@ L.CursorHandler = L.Handler.extend({
 
     
 });
-
 L.Map.addInitHook('addHandler', 'cursor', L.CursorHandler);
+
 
 // function to create a customized Leaflet map
 function createMap(main_geowatch_layer_info, idx_map, maps, dasspTimeLayers, dasspTimeMarks, leftSide) {
@@ -2025,14 +2028,14 @@ function createMap(main_geowatch_layer_info, idx_map, maps, dasspTimeLayers, das
     this.initial_utc_date_and_time_string = dateChanger.getDateAndTime().toISOString();
   };
 
-	//  // add a lat/lon display control
-	//  if (addLatLonControl) {
-	//    L.control.mousePosition({
-	//      emptyString: '|', // override default "Unavailable"
-	//      separator: ', ', // override default " : "
-	//      position: 'bottomleft'
-	//    }).addTo(map);
-	//  };
+	  // add a lat/lon display control
+	  if (addLatLonControl) {
+	    L.control.mousePosition({
+	      emptyString: '|', // override default "Unavailable"
+	      separator: ', ', // override default " : "
+	      position: 'bottomleft'
+	    }).addTo(map);
+	  };
 
 		// add copyright info control (expandable)
 	//  if (addCreditsControl) {
