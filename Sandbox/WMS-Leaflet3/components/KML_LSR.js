@@ -45,6 +45,7 @@ L.KML_LSR = L.FeatureGroup.extend({
 	latLngs: [],
 
 	initialize: function (kml, options) {
+		console.log("KML_SLR: initialize...");
 		L.Util.setOptions(this, options);
 		this._kml = kml;
 		this._layers = {};
@@ -64,6 +65,8 @@ L.KML_LSR = L.FeatureGroup.extend({
 	loadXML: function (url, cb, options, async) {
 		if (async === undefined) async = this.options.async;
 		if (options === undefined) options = this.options;
+
+		console.log("KML_LSR: loadXML (start)");
 
 		var req = new window.XMLHttpRequest();
 		
@@ -99,12 +102,13 @@ L.KML_LSR = L.FeatureGroup.extend({
 	addKML: function (url, options, async) {
 		var _this = this;
 		var cb = function (kml) { _this._addKML(kml); };
+		console.log("KML_LSR: addKML: calling loadXML with callback");
 		this.loadXML(url, cb, options, async);
 	},
 
 	_addKML: function (xml) {
 		let layerType = "KML_LSR"
-		
+		console.log("KML_LSR: _addKML (start)");
 		var layers = L.KML_LSR.parseKML(xml);
 		if (!layers || !layers.length) return;
 		for (var i = 0; i < layers.length; i++) {
@@ -141,13 +145,14 @@ L.KML_LSR = L.FeatureGroup.extend({
 L.Util.extend(L.KML_LSR, {
 
 	parseKML: function (xml) {
+		console.log("KML_LSR: parseKML (start)");
 		var style = this.parseStyles(xml);
 		this.parseStyleMap(xml, style);
 		var el = xml.getElementsByTagName('Folder');
 		var layers = [], l;
 		for (var i = 0; i < el.length; i++) {
 			if (!this._check_folder(el[i])) { continue; }
-			//console.log("KML_LSR: parseKML: reading folder...");
+			console.log("KML_LSR: parseKML: reading folder...");
 			l = this.parseFolder(el[i], style);
 			if (l) { layers.push(l); }
 		}
@@ -288,6 +293,7 @@ L.Util.extend(L.KML_LSR, {
 		for (var j = 0; j < el.length; j++) {
 			if (!this._check_folder(el[j], xml)) { continue; }
 			l = this.parsePlacemark(el[j], xml, style);
+			//l.layerType = 'KML_LSR'
 			if (l) { layers.push(l); }
 		}
 //		el = xml.getElementsByTagName('GroundOverlay');
@@ -300,6 +306,7 @@ L.Util.extend(L.KML_LSR, {
 		if (layers.length === 1) { return layers[0]; }
 		var layerGroup = new L.FeatureGroup(layers);
 		layerGroup.layerType = 'KML_LSR'
+		//var layerGroup = layers;
 		return layerGroup
 	},
 
@@ -400,10 +407,10 @@ L.Util.extend(L.KML_LSR, {
 
 		if (!layers.length) { return; }	
 		var layer = layers[0];
-		if (layers.length > 1) { 
-			layer = new L.FeatureGroup(layers);
-			layer.layerType = 'KML_LSR'
-		}
+		//if (layers.length > 1) { 
+		//  layer = new L.FeatureGroup(layers);
+		//	layer.layerType = 'KML_LSR'
+		//}
 		
 		//console.log("KML_LSR: parsePlacemark: layer group")
 		//console.log(layer);

@@ -254,6 +254,7 @@
 		var URLLayers = [];
 		var DEFAULT_KML_FNAME = ""
 		var DEFAULT_AZIMUTH_FNAME =""
+		var CURSOR_LATLON_ENABLED = false
 
 		// check if URL contains parameters, e.g., go.html?N=3&DUMMY=23
 		console.log("WMS_Leaflet3.html: Option string from URL = " + location.search);
@@ -293,6 +294,10 @@
 						//console.log("WMS_Leaflet3: default azimuth fname = " + DEFAULT_AZIMUTH_FNAME)
 						[MAIN_GEOWATCH_LAYER_INFO,DEFAULT_LAYERS]=updateLayerSpecsGivenAzimuthFile(DEFAULT_AZIMUTH_FNAME, MAIN_GEOWATCH_LAYER_INFO); // see layerSpecs.js
 						console.log("WMS_Leaflet3: DEFAULT_LAYERS = " + DEFAULT_LAYERS);
+					} else if (param === 'cursor') {
+						if (value === 'latlon') {
+							CURSOR_LATLON_ENABLED = true
+						}
 					} else if (param === 'maps') {
 						var layers = value.split('%20').join(' ').split(";"); // replaces '%20' with ' ' then splits at ';'
 						for (var i in layers) {

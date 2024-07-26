@@ -820,11 +820,11 @@ function createKmlLsrLayer(layerURL, layerName, displayName, groupName,
 		//console.log("maps: createKmlLsrLayer: dasspTimeMarks.length = " + dasspTimeMarks.length);
 		//let kml_fname = "./data/" + DEFAULT_KML_FNAME
 		let kml_fname = layerURL + DEFAULT_KML_FNAME
+		console.log("maps: createKmlLsrLayer (start): adding KML_LSR file: " + kml_fname)
 		
 		let target_event_type = 'TORNADO'
 		if (layerType == layerType_KML_LSR_hail) target_event_type = 'HAIL'
 		
-		//console.log("maps: createKmlLsrLayer: adding KML_LSR file: " + kml_fname)
 		var maplayer = new L.KML_LSR(kml_fname, {async: true, 'target_event_type':target_event_type});
 		
 		//console.log("maps: createKmlLsrLayer: maplayer...");console.log(maplayer)
@@ -852,7 +852,7 @@ function createKmlLsrLayer(layerURL, layerName, displayName, groupName,
 			//layer.mapLayer.setParams({ 'TIME': initial_utc_date_and_time_string });
 			layer.mapLayer.TIME = initial_utc_date_and_time_string;
 		}
-		//console.log("maps: createKmlLsrLayer: layer.mapLayer..."); console.log(layer.mapLayer);
+		console.log("maps: createKmlLsrLayer (end): layer..."); console.log(layer);
 	}
   return layer;
 };
@@ -999,6 +999,8 @@ function createAvailableLayersForMap(main_geowatch_layer_info, dasspTimeLayers, 
 					layer = createKmlLsrLayer(layerURL, layerName, displayName, groupName,
 						initial_utc_date_and_time_string, timeDependent, inMenuByDefault,
 						addlParams, false, layerID, layerType);
+						console.log("maps: createAvailableLayersForMap: createKmlLsrLayer layer...");
+						console.log(layer)
 					break;
 				//case layerType_KML_LSR_hail:
 				//	layer = createKmlLsrLayer(layerURL, layerName, displayName, groupName,
@@ -1018,7 +1020,8 @@ function createAvailableLayersForMap(main_geowatch_layer_info, dasspTimeLayers, 
 			}
 			
 			//add extra flags to the layer and then accumulate
-			if (layer != undefined) {
+			if (layer != undefined) {	
+				console.log("maps: createAvailableLayersForMap: layerType = " + layerType + ", Array.isArray(layer) = " + Array.isArray(layer))
 				layer.mapLayer.overlay = layer_specs[idx].options.overlay; //added by chip: make all WMS layers be overlays
 				layer.mapLayer.default_active = default_active;
 				//console.log("maps: createAvailableLayersForMap: layer...");	console.log(layer);
@@ -1854,6 +1857,40 @@ function getSlowLoadingLayerPrefixesToWarnAbout() {
   return slowLoadingLayerPrefixes;
 }
 
+L.CursorHandler = L.Handler.extend({
+
+    addHooks: function () {
+        this._popup = new L.Popup();
+        this._map.on('mouseover', this._open, this);
+        this._map.on('mousemove', this._update, this);
+        this._map.on('mouseout', this._close, this);
+    },
+
+    removeHooks: function () {
+        this._map.off('mouseover', this._open, this);
+        this._map.off('mousemove', this._update, this);
+        this._map.off('mouseout', this._close, this);
+    },
+    
+    _open: function (e) {
+        this._update(e);
+        this._popup.openOn(this._map);
+    },
+
+    _close: function () {
+        this._map.closePopup(this._popup);
+    },
+
+    _update: function (e) {
+        this._popup.setLatLng(e.latlng)
+            .setContent(e.latlng.toString());
+    }
+
+    
+});
+
+L.Map.addInitHook('addHandler', 'cursor', L.CursorHandler);
+
 // function to create a customized Leaflet map
 function createMap(main_geowatch_layer_info, idx_map, maps, dasspTimeLayers, dasspTimeMarks, leftSide) {
   //console.log("map.js: createMap: starting...");
@@ -1920,6 +1957,7 @@ function createMap(main_geowatch_layer_info, idx_map, maps, dasspTimeLayers, das
 			maps: maps,
 			dasspTimeLayers: dasspTimeLayers,
 			dasspTimeMarks: dasspTimeMarks,
+			cursor: CURSOR_LATLON_ENABLED,   
 		}
 	);
 
@@ -2032,10 +2070,28 @@ function createMap(main_geowatch_layer_info, idx_map, maps, dasspTimeLayers, das
   if (addPermalinkButton) {
     var btn = L.easyButton('fa-link', function() {
       create_permalink(map);
-    }, 'Creare a link (URL) to current view', /*maps[imap]*/ ''); // prevent auto-addition to map so can set position first
+    }, 'Create a link (URL) to current view', /*maps[imap]*/ ''); // prevent auto-addition to map so can set position first
     btn.options.position = "topright";
     map.addControl(btn);
   }
+	
+	//add a button for mouse lat/lat
+	if (true) {
+    var btn = L.easyButton('fa-crosshairs', function() {
+			console.log("maps.js: cursor button pressed");
+			console.log(map.cursor)
+			if (map.cursor._enabled) {
+				console.log("maps.js: cursor button pressed: disabling");
+				map.cursor.disable();
+			} else {
+				console.log("maps.js: cursor button pressed: enabling");
+				map.cursor.enable();
+			}
+    }, 'Show Lat/Lon', /*\maps[imap]*/ ''); // prevent auto-addition to map so can set position first
+    btn.options.position = "topright";
+    map.addControl(btn);
+  }		
+		
 
   // add a zoom control
   if (addZoomControl) { L.control.zoom({ position: 'topright' }).addTo(map); }
