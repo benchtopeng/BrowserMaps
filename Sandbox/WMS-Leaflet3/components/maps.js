@@ -2033,7 +2033,7 @@ function createMap(main_geowatch_layer_info, idx_map, maps, dasspTimeLayers, das
 	    L.control.mousePosition({
 	      emptyString: '|', // override default "Unavailable"
 	      separator: ', ', // override default " : "
-	      position: 'bottomleft'
+	      position: 'bottomright'
 	    }).addTo(map);
 	  };
 
