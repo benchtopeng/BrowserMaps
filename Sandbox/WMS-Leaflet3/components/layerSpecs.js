@@ -2207,12 +2207,17 @@ var layer_specs_scottorchard_MVDR = [
 //this is only used for the azimuth plots, not for the icons showing the
 //locations of the sensors.  For those icons, go to layerChanger.js
 var azimuth_plotting_array_locations = {
-	'names':['ALAM', 'ScottOrchard', 'WLT', 'WLB', 'Chunky'],
+	'names':['ALAM', 'ScottOrchard', 'WLT', 'WLB', 'Chunky', 'FortPayne', 'MountainCove', 'NealCC', 'WFM', 'WarrenField'],
 	'ALAM': [-86.5659257,	34.8957513],     //corrected to remove sensor 1163
-	'ScottOrchard': [-86.62662163, 34.9962665],
+	'ScottOrchard': [-86.63522114, 35.01069043],
 	'WLT': [-86.83890086, 34.88339657],
 	'WLB': [-87.2405405, 34.60448088],   
-	'Chunky': [-88.96902047, 32.33351041]
+	'Chunky': [-88.96902047, 32.33351041],
+	'FortPayne': [-85.73010075, 34.45149738],
+	'MountainCove':[-85.44753829, 34.63696014],
+	'NealCC':[-85.91030575, 34.54832988],
+	'WFM':[-85.86349557, 34.77523871],
+	'WarrenField':[-85.438576,34.86890029]
 }
 
 function addToLayerSpecs(all_layer_info, new_layer_specs) {

@@ -46,6 +46,31 @@ const arrayLocations = {
 			'properties': {	'description': "Chunky",'icon': 'downTriangle'	},
 			'geometry': {'type': 'Point', 'coordinates': [-88.96902047, 32.33351041]}
 		},
+		{
+			'type': 'Feature',
+			'properties': {	'description': "FortPayne",'icon': 'downTriangle'	},
+			'geometry': {'type': 'Point', 'coordinates': [-85.73010075, 34.45149738]}
+		},
+		{
+			'type': 'Feature',
+			'properties': {	'description': "MountainCove",'icon': 'downTriangle'	},
+			'geometry': {'type': 'Point', 'coordinates': [-85.44753829, 34.63696014]}
+		},
+		{
+			'type': 'Feature',
+			'properties': {	'description': "NealCC",'icon': 'downTriangle'	},
+			'geometry': {'type': 'Point', 'coordinates': [-85.91030575, 34.54832988]}
+		},
+		{
+			'type': 'Feature',
+			'properties': {	'description': "WFM",'icon': 'downTriangle'	},
+			'geometry': {'type': 'Point', 'coordinates': [-85.86349557, 34.77523871]}
+		},
+		{
+			'type': 'WarrenField',
+			'properties': {	'description': "WFM",'icon': 'downTriangle'	},
+			'geometry': {'type': 'Point', 'coordinates': [-85.438576,34.86890029]}
+		},
 
 	]
 };
