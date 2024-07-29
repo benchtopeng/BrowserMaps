@@ -2204,8 +2204,9 @@ var layer_specs_scottorchard_MVDR = [
 
 
 
-
-var array_locations = {
+//this is only used for the azimuth plots, not for the icons showing the
+//locations of the sensors.  For those icons, go to layerChanger.js
+var azimuth_plotting_array_locations = {
 	'names':['ALAM', 'ScottOrchard', 'WLT', 'WLB', 'Chunky'],
 	'ALAM': [-86.5659257,	34.8957513],     //corrected to remove sensor 1163
 	'ScottOrchard': [-86.62662163, 34.9962665],

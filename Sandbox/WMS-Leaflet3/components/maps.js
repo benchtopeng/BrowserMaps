@@ -872,7 +872,8 @@ function createArrayAzimuthLayer(layerURL, layerName, displayName, groupName,
 		
 		//console.log("maps: createArrayAzimuthLayer: adding Azimuth file: " + fname)
 		//let array_name = 'WLT'  //assume that the array is for WLT
-		let all_array_lngLat = array_locations
+		let all_array_lngLat = azimuth_plotting_array_locations
+		console.log(array_locations)
 		//let array_loc_latLng = [array_loc_lngLat[1], array_loc_lngLat[0]]
 		var maplayer = new L.ArrayAzimuthLayer(fname, initial_utc_date_and_time_string, 
 			{async: true, weight:1.0, fillOpacity:0.5, 'all_array_lngLat': all_array_lngLat, 'site':site, 'band_Hz':band_Hz, 'smoothing':smoothing});

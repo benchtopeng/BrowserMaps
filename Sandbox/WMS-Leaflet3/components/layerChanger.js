@@ -24,7 +24,7 @@ const arrayLocations = {
 		{
 			'type': 'Feature',
 			'properties': {	'description': "ALAM",'icon': 'downTriangle'	},
-			'geometry': {'type': 'Point', 'coordinates': [-86.76433993,	34.86009693]}
+			'geometry': {'type': 'Point', 'coordinates': [-86.5659257,		34.8957513]}
 		},
 		{
 			'type': 'Feature',
