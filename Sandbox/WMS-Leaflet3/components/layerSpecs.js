@@ -2207,10 +2207,10 @@ var layer_specs_scottorchard_MVDR = [
 
 var array_locations = {
 	'names':['ALAM', 'ScottOrchard', 'WLT', 'WLB', 'Chunky'],
-	'ALAM': [-86.76433993,	34.86009693],
+	'ALAM': [-86.5659257,	34.8957513],     //corrected to remove sensor 1163
 	'ScottOrchard': [-86.62662163, 34.9962665],
 	'WLT': [-86.83890086, 34.88339657],
-	'WLB': [-87.2405405, 34.60448088],
+	'WLB': [-87.2405405, 34.60448088],   
 	'Chunky': [-88.96902047, 32.33351041]
 }
 
