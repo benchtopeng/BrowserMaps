@@ -354,7 +354,8 @@ function downSelectAndAddTimeMarks(map, newUTCDateAndTime, dasspTimeMarks, layer
 					//get which set of icons we'll be chosing from
 					let icons = structuredClone(layers2[0].icons); //default  
 					//let dt_bounds_minutes = [-99, 7, 15, 30, 60];
-					let dt_bounds_minutes = [-99, 30];
+					//let dt_bounds_minutes = [-99, 30];  //only show if within 30 minutes
+					let dt_bounds_minutes = [-99, 8];  //only show if within 8 minutes
 					if (markerTypes[ImarkerType]=='TORNADO') {
 						icons = structuredClone(layers2[0].icons_tornado);
 					} else if (markerTypes[ImarkerType] == 'HAIL') {
