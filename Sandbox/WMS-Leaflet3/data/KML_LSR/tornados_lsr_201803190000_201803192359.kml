@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document id="root_doc">
-<Schema name="2278263cf9624f6c9ddeb60d26efaae3" id="2278263cf9624f6c9ddeb60d26efaae3">
+<Schema name="cdf692abab3043438d8732993c74cc59" id="cdf692abab3043438d8732993c74cc59">
 	<SimpleField name="Office" type="string"></SimpleField>
 	<SimpleField name="Report Time (Local WFO Timezone)" type="string"></SimpleField>
 	<SimpleField name="Report Time (UTC Timezone)" type="string"></SimpleField>
@@ -16,68 +16,12 @@
 	<SimpleField name="Remark" type="string"></SimpleField>
 	<SimpleField name="ugc" type="string"></SimpleField>
 	<SimpleField name="ugcname" type="string"></SimpleField>
+	<SimpleField name="Qualifier" type="string"></SimpleField>
 </Schema>
-<Folder><name>2278263cf9624f6c9ddeb60d26efaae3</name>
-  <Placemark>
-	<name>5 S SPEARMAN: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
-		<SimpleData name="Office">AMA</SimpleData>
-		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/18 19:29</SimpleData>
-		<SimpleData name="Report Time (UTC Timezone)">2018/03/19 00:29</SimpleData>
-		<SimpleData name="County">HANSFORD</SimpleData>
-		<SimpleData name="Location">5 S SPEARMAN</SimpleData>
-		<SimpleData name="ST">TX</SimpleData>
-		<SimpleData name="Event Type">TORNADO</SimpleData>
-		<SimpleData name="Source">FIRE DEPT/RESCUE</SimpleData>
-		<SimpleData name="Lat">36.13</SimpleData>
-		<SimpleData name="Lon">-101.19</SimpleData>
-		<SimpleData name="Remark">LAND SPOUT TORNADO REPORTED WITH MULTIPLE PHOTOS. WAS ON GROUND FOR AROUND 5 MINUTES.</SimpleData>
-		<SimpleData name="ugc">TXC195</SimpleData>
-		<SimpleData name="ugcname">Hansford</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>-101.19,36.13</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<name>2 NW GLAZIER: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
-		<SimpleData name="Office">AMA</SimpleData>
-		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/18 21:14</SimpleData>
-		<SimpleData name="Report Time (UTC Timezone)">2018/03/19 02:14</SimpleData>
-		<SimpleData name="County">HEMPHILL</SimpleData>
-		<SimpleData name="Location">2 NW GLAZIER</SimpleData>
-		<SimpleData name="ST">TX</SimpleData>
-		<SimpleData name="Event Type">TORNADO</SimpleData>
-		<SimpleData name="Source">TRAINED SPOTTER</SimpleData>
-		<SimpleData name="Lat">36.03</SimpleData>
-		<SimpleData name="Lon">-100.29</SimpleData>
-		<SimpleData name="Remark">THIS TORNADO BEGAN AT 914 PM CDT ABOUT 2 MILES NORTHWEST OF GLAZIER, TEXAS IN HEMPHILL COUNTY AND ENDED AT 922 PM CDT APPROXIMATELY 2.9 MILES NORTH OF GLAZIER, TEXAS IN HEMPHILL COUNTY. THE TORNADO HAD A PATH LENGTH OF 2.8 MILES AND A MAXIMUM PATH WIDTH OF 70 YARDS. IT CAUSED DAMAGE TO TREES, POWER LINES, AND AN OUT BUILDING. THIS TORNADO WAS RATED EF-1 WITH AN ESTIMATED PEAK WIND SPEED OF 80 TO 90 MPH.</SimpleData>
-		<SimpleData name="ugc">TXC211</SimpleData>
-		<SimpleData name="ugcname">Hemphill</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>-100.29,36.03</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<name>2 NW GLAZIER: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
-		<SimpleData name="Office">AMA</SimpleData>
-		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/18 21:14</SimpleData>
-		<SimpleData name="Report Time (UTC Timezone)">2018/03/19 02:14</SimpleData>
-		<SimpleData name="County">HEMPHILL</SimpleData>
-		<SimpleData name="Location">2 NW GLAZIER</SimpleData>
-		<SimpleData name="ST">TX</SimpleData>
-		<SimpleData name="Event Type">TORNADO</SimpleData>
-		<SimpleData name="Source">TRAINED SPOTTER</SimpleData>
-		<SimpleData name="Lat">36.03</SimpleData>
-		<SimpleData name="Lon">-100.29</SimpleData>
-		<SimpleData name="Remark">POSSIBLE TORNADO DAMAGE REPORTED AT FARM WITH BARN DOOR BLOWN OUT AND MULTIPLE WINDOWS BLOWN OUT. PHOTO ALSO SHOWS POSSIBLE TORNADO. DAMAGE SURVEY PLANNED ON MONDAY MARCH 19TH.</SimpleData>
-		<SimpleData name="ugc">TXC211</SimpleData>
-		<SimpleData name="ugcname">Hemphill</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>-100.29,36.03</coordinates></Point>
-  </Placemark>
-  <Placemark>
+<Folder><name>cdf692abab3043438d8732993c74cc59</name>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.1">
 	<name>1 E BELMONT: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
 		<SimpleData name="Office">MEG</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 16:55</SimpleData>
 		<SimpleData name="Report Time (UTC Timezone)">2018/03/19 21:55</SimpleData>
@@ -94,9 +38,9 @@
 	</SchemaData></ExtendedData>
       <Point><coordinates>-88.19,34.51</coordinates></Point>
   </Placemark>
-  <Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.2">
 	<name>9 S CHEROKEE: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
 		<SimpleData name="Office">HUN</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 17:05</SimpleData>
 		<SimpleData name="Report Time (UTC Timezone)">2018/03/19 22:05</SimpleData>
@@ -113,9 +57,9 @@
 	</SchemaData></ExtendedData>
       <Point><coordinates>-87.97,34.63</coordinates></Point>
   </Placemark>
-  <Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.3">
 	<name>RUSSELLVILLE: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
 		<SimpleData name="Office">HUN</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 17:34</SimpleData>
 		<SimpleData name="Report Time (UTC Timezone)">2018/03/19 22:34</SimpleData>
@@ -132,9 +76,9 @@
 	</SchemaData></ExtendedData>
       <Point><coordinates>-87.72,34.5</coordinates></Point>
   </Placemark>
-  <Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.4">
 	<name>12 W MOULTON: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
 		<SimpleData name="Office">HUN</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 17:54</SimpleData>
 		<SimpleData name="Report Time (UTC Timezone)">2018/03/19 22:54</SimpleData>
@@ -151,9 +95,9 @@
 	</SchemaData></ExtendedData>
       <Point><coordinates>-87.5,34.45</coordinates></Point>
   </Placemark>
-  <Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.5">
 	<name>5 SSE MOULTON: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
 		<SimpleData name="Office">HUN</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 18:16</SimpleData>
 		<SimpleData name="Report Time (UTC Timezone)">2018/03/19 23:16</SimpleData>
@@ -170,9 +114,9 @@
 	</SchemaData></ExtendedData>
       <Point><coordinates>-87.25,34.42</coordinates></Point>
   </Placemark>
-  <Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.6">
 	<name>5 NNW WEST POINT: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
 		<SimpleData name="Office">HUN</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 18:38</SimpleData>
 		<SimpleData name="Report Time (UTC Timezone)">2018/03/19 23:38</SimpleData>
@@ -189,9 +133,9 @@
 	</SchemaData></ExtendedData>
       <Point><coordinates>-87,34.3</coordinates></Point>
   </Placemark>
-  <Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.7">
 	<name>2 SW ARDMORE: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
 		<SimpleData name="Office">HUN</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 18:42</SimpleData>
 		<SimpleData name="Report Time (UTC Timezone)">2018/03/19 23:42</SimpleData>
@@ -208,9 +152,9 @@
 	</SchemaData></ExtendedData>
       <Point><coordinates>-86.85,34.96</coordinates></Point>
   </Placemark>
-  <Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.8">
 	<name>3 S FALKVILLE: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
 		<SimpleData name="Office">HUN</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 18:47</SimpleData>
 		<SimpleData name="Report Time (UTC Timezone)">2018/03/19 23:47</SimpleData>
@@ -227,9 +171,9 @@
 	</SchemaData></ExtendedData>
       <Point><coordinates>-86.91,34.34</coordinates></Point>
   </Placemark>
-  <Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.9">
 	<name>1 NNW SOUTH VINEMONT: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
 		<SimpleData name="Office">HUN</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 18:55</SimpleData>
 		<SimpleData name="Report Time (UTC Timezone)">2018/03/19 23:55</SimpleData>
@@ -246,9 +190,9 @@
 	</SchemaData></ExtendedData>
       <Point><coordinates>-86.87,34.25</coordinates></Point>
   </Placemark>
-  <Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.10">
 	<name>1 S STRAWBERRY: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
 		<SimpleData name="Office">BMX</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 19:09</SimpleData>
 		<SimpleData name="Report Time (UTC Timezone)">2018/03/20 00:09</SimpleData>
@@ -265,9 +209,9 @@
 	</SchemaData></ExtendedData>
       <Point><coordinates>-86.49,34.23</coordinates></Point>
   </Placemark>
-  <Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.11">
 	<name>12 ENE NEW MARKET: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
 		<SimpleData name="Office">HUN</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 19:32</SimpleData>
 		<SimpleData name="Report Time (UTC Timezone)">2018/03/20 00:32</SimpleData>
@@ -284,9 +228,9 @@
 	</SchemaData></ExtendedData>
       <Point><coordinates>-86.23,34.97</coordinates></Point>
   </Placemark>
-  <Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.12">
 	<name>3 SW ALBERTVILLE: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
 		<SimpleData name="Office">HUN</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 19:32</SimpleData>
 		<SimpleData name="Report Time (UTC Timezone)">2018/03/20 00:32</SimpleData>
@@ -303,28 +247,9 @@
 	</SchemaData></ExtendedData>
       <Point><coordinates>-86.26,34.23</coordinates></Point>
   </Placemark>
-  <Placemark>
-	<name>4 NE DECHERD: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
-		<SimpleData name="Office">HUN</SimpleData>
-		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 19:50</SimpleData>
-		<SimpleData name="Report Time (UTC Timezone)">2018/03/20 00:50</SimpleData>
-		<SimpleData name="County">FRANKLIN</SimpleData>
-		<SimpleData name="Location">4 NE DECHERD</SimpleData>
-		<SimpleData name="ST">TN</SimpleData>
-		<SimpleData name="Event Type">TORNADO</SimpleData>
-		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
-		<SimpleData name="Lat">35.24</SimpleData>
-		<SimpleData name="Lon">-86.03</SimpleData>
-		<SimpleData name="Remark">A SMALL, WEAK TORNADO WAS SURVEYED NE OF DECHERD.</SimpleData>
-		<SimpleData name="ugc">TNC051</SimpleData>
-		<SimpleData name="ugcname">Franklin</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>-86.03,35.24</coordinates></Point>
-  </Placemark>
-  <Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.13">
 	<name>3 S HIGHLAND LAKE: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
 		<SimpleData name="Office">BMX</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 19:50</SimpleData>
 		<SimpleData name="Report Time (UTC Timezone)">2018/03/20 00:50</SimpleData>
@@ -341,9 +266,28 @@
 	</SchemaData></ExtendedData>
       <Point><coordinates>-86.42,33.85</coordinates></Point>
   </Placemark>
-  <Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.14">
+	<name>4 NE DECHERD: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">HUN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 19:50</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/20 00:50</SimpleData>
+		<SimpleData name="County">FRANKLIN</SimpleData>
+		<SimpleData name="Location">4 NE DECHERD</SimpleData>
+		<SimpleData name="ST">TN</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">35.24</SimpleData>
+		<SimpleData name="Lon">-86.03</SimpleData>
+		<SimpleData name="Remark">A SMALL, WEAK TORNADO WAS SURVEYED NE OF DECHERD.</SimpleData>
+		<SimpleData name="ugc">TNC051</SimpleData>
+		<SimpleData name="ugcname">Franklin</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.03,35.24</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.15">
 	<name>2 NE ASHVILLE: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
 		<SimpleData name="Office">BMX</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 20:02</SimpleData>
 		<SimpleData name="Report Time (UTC Timezone)">2018/03/20 01:02</SimpleData>
@@ -360,9 +304,9 @@
 	</SchemaData></ExtendedData>
       <Point><coordinates>-86.24,33.86</coordinates></Point>
   </Placemark>
-  <Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.16">
 	<name>6 NNW NEELY HENRY DAM: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
 		<SimpleData name="Office">BMX</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 20:12</SimpleData>
 		<SimpleData name="Report Time (UTC Timezone)">2018/03/20 01:12</SimpleData>
@@ -379,9 +323,9 @@
 	</SchemaData></ExtendedData>
       <Point><coordinates>-86.1,33.86</coordinates></Point>
   </Placemark>
-  <Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.17">
 	<name>5 SW SOUTHSIDE: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
 		<SimpleData name="Office">BMX</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 20:14</SimpleData>
 		<SimpleData name="Report Time (UTC Timezone)">2018/03/20 01:14</SimpleData>
@@ -398,9 +342,9 @@
 	</SchemaData></ExtendedData>
       <Point><coordinates>-86.09,33.88</coordinates></Point>
   </Placemark>
-  <Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.18">
 	<name>3 S SOUTHSIDE: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
 		<SimpleData name="Office">BMX</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 20:19</SimpleData>
 		<SimpleData name="Report Time (UTC Timezone)">2018/03/20 01:19</SimpleData>
@@ -417,9 +361,9 @@
 	</SchemaData></ExtendedData>
       <Point><coordinates>-86.03,33.88</coordinates></Point>
   </Placemark>
-  <Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.19">
 	<name>2 NE TENNALA: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
 		<SimpleData name="Office">BMX</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 20:20</SimpleData>
 		<SimpleData name="Report Time (UTC Timezone)">2018/03/20 01:20</SimpleData>
@@ -436,28 +380,9 @@
 	</SchemaData></ExtendedData>
       <Point><coordinates>-85.65,34.11</coordinates></Point>
   </Placemark>
-  <Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.20">
 	<name>3 SSW SILVER LAKES GOLF: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
-		<SimpleData name="Office">BMX</SimpleData>
-		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 20:23</SimpleData>
-		<SimpleData name="Report Time (UTC Timezone)">2018/03/20 01:23</SimpleData>
-		<SimpleData name="County">CALHOUN</SimpleData>
-		<SimpleData name="Location">3 SSW SILVER LAKES GOLF</SimpleData>
-		<SimpleData name="ST">AL</SimpleData>
-		<SimpleData name="Event Type">TORNADO</SimpleData>
-		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
-		<SimpleData name="Lat">33.85</SimpleData>
-		<SimpleData name="Lon">-85.95</SimpleData>
-		<SimpleData name="Remark">*** 4 INJ *** CORRECTS PREVIOUS TORNADO REPORT FROM 3 SSW SILVER LAKES GOLF COURSE. EF3 TORNADO WITH WINDS ESTIMATED AT 140 MPH. THE ENTIRE PATH HAS NOT BEEN SURVEYED YET. EXTENSIVE DAMAGE TO THE JACKSONVILLE STATE UNIVERSITY.</SimpleData>
-		<SimpleData name="ugc">ALC015</SimpleData>
-		<SimpleData name="ugcname">Calhoun</SimpleData>
-	</SchemaData></ExtendedData>
-      <Point><coordinates>-85.95,33.85</coordinates></Point>
-  </Placemark>
-  <Placemark>
-	<name>3 SSW SILVER LAKES GOLF: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
 		<SimpleData name="Office">BMX</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 20:23</SimpleData>
 		<SimpleData name="Report Time (UTC Timezone)">2018/03/20 01:23</SimpleData>
@@ -474,9 +399,28 @@
 	</SchemaData></ExtendedData>
       <Point><coordinates>-85.95,33.85</coordinates></Point>
   </Placemark>
-  <Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.21">
+	<name>3 SSW SILVER LAKES GOLF: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">BMX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 20:23</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/20 01:23</SimpleData>
+		<SimpleData name="County">CALHOUN</SimpleData>
+		<SimpleData name="Location">3 SSW SILVER LAKES GOLF</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">33.85</SimpleData>
+		<SimpleData name="Lon">-85.95</SimpleData>
+		<SimpleData name="Remark">*** 4 INJ *** CORRECTS PREVIOUS TORNADO REPORT FROM 3 SSW SILVER LAKES GOLF COURSE. EF3 TORNADO WITH WINDS ESTIMATED AT 140 MPH. THE ENTIRE PATH HAS NOT BEEN SURVEYED YET. EXTENSIVE DAMAGE TO THE JACKSONVILLE STATE UNIVERSITY.</SimpleData>
+		<SimpleData name="ugc">ALC015</SimpleData>
+		<SimpleData name="ugcname">Calhoun</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-85.95,33.85</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.22">
 	<name>SULPHUR SPRINGS: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
 		<SimpleData name="Office">BMX</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 20:28</SimpleData>
 		<SimpleData name="Report Time (UTC Timezone)">2018/03/20 01:28</SimpleData>
@@ -493,9 +437,9 @@
 	</SchemaData></ExtendedData>
       <Point><coordinates>-85.86,33.85</coordinates></Point>
   </Placemark>
-  <Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.23">
 	<name>2 WNW JACKSONVILLE STAT: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
 		<SimpleData name="Office">BMX</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 20:34</SimpleData>
 		<SimpleData name="Report Time (UTC Timezone)">2018/03/20 01:34</SimpleData>
@@ -512,9 +456,9 @@
 	</SchemaData></ExtendedData>
       <Point><coordinates>-85.81,33.83</coordinates></Point>
   </Placemark>
-  <Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.24">
 	<name>JACKSONVILLE STATE UNIV: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
 		<SimpleData name="Office">BMX</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 20:35</SimpleData>
 		<SimpleData name="Report Time (UTC Timezone)">2018/03/20 01:35</SimpleData>
@@ -531,9 +475,9 @@
 	</SchemaData></ExtendedData>
       <Point><coordinates>-85.77,33.83</coordinates></Point>
   </Placemark>
-  <Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.25">
 	<name>JACKSONVILLE STATE UNIV: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
 		<SimpleData name="Office">BMX</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 20:35</SimpleData>
 		<SimpleData name="Report Time (UTC Timezone)">2018/03/20 01:35</SimpleData>
@@ -550,9 +494,9 @@
 	</SchemaData></ExtendedData>
       <Point><coordinates>-85.77,33.83</coordinates></Point>
   </Placemark>
-  <Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.26">
 	<name>4 SW MARS HILL: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
 		<SimpleData name="Office">BMX</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 21:04</SimpleData>
 		<SimpleData name="Report Time (UTC Timezone)">2018/03/20 02:04</SimpleData>
@@ -569,9 +513,9 @@
 	</SchemaData></ExtendedData>
       <Point><coordinates>-85.44,33.8</coordinates></Point>
   </Placemark>
-  <Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.27">
 	<name>4 NNW MUSCADINE: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
 		<SimpleData name="Office">BMX</SimpleData>
 		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 21:09</SimpleData>
 		<SimpleData name="Report Time (UTC Timezone)">2018/03/20 02:09</SimpleData>
@@ -588,82 +532,675 @@
 	</SchemaData></ExtendedData>
       <Point><coordinates>-85.4,33.78</coordinates></Point>
   </Placemark>
-  <Placemark>
-	<name>4 WNW TALLAPOOSA: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
-		<SimpleData name="Office">FFC</SimpleData>
-		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 22:14</SimpleData>
-		<SimpleData name="Report Time (UTC Timezone)">2018/03/20 02:14</SimpleData>
-		<SimpleData name="County">HARALSON</SimpleData>
-		<SimpleData name="Location">4 WNW TALLAPOOSA</SimpleData>
-		<SimpleData name="ST">GA</SimpleData>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.28">
+	<name>1 ESE WEST: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/28 20:03</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/29 01:03</SimpleData>
+		<SimpleData name="County">ATTALA</SimpleData>
+		<SimpleData name="Location">1 ESE WEST</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
 		<SimpleData name="Event Type">TORNADO</SimpleData>
 		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
-		<SimpleData name="Lat">33.77</SimpleData>
-		<SimpleData name="Lon">-85.36</SimpleData>
-		<SimpleData name="Remark">NWS STORM SURVEY FOUND A TORNADO THAT WENT THROUGH JACKSONVILLE, AL CONTINUED INTO GA CAUSINGING EF1 DAMAGE WITH A MAXIMUM EXTIMATED WIND SPEED OF 95 MPH. THE TORNADO LASTED FOR ROUGHLY 1 MIN AND TRAVELED APPROX 1 MILE BEFORE DISSIPATING AFTER CROSSING THE STATE LINE.</SimpleData>
-		<SimpleData name="ugc">GAC143</SimpleData>
-		<SimpleData name="ugcname">Haralson</SimpleData>
+		<SimpleData name="Lat">33.19</SimpleData>
+		<SimpleData name="Lon">-89.76</SimpleData>
+		<SimpleData name="Remark">THIS TORNADO STARTED OUT NEAR HIGHWAY 19 BEFORE THE INTERSECTION WITH HIGHWAY 440 WHERE IT UPROOTED NUMEROUS HARDWOOD TREES. IT TRACKED EAST NORTHEAST ACROSS NORWOOD ROAD AND THEN ALONG HIGHWAY 3106 WHERE IT UPROOTED SEVERAL TREES BEFORE LIFTING.</SimpleData>
+		<SimpleData name="ugc">MSC007</SimpleData>
+		<SimpleData name="ugcname">Attala</SimpleData>
 	</SchemaData></ExtendedData>
-      <Point><coordinates>-85.36,33.77</coordinates></Point>
+      <Point><coordinates>-89.76,33.19</coordinates></Point>
   </Placemark>
-  <Placemark>
-	<name>4 WNW TALLAPOOSA: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
-		<SimpleData name="Office">FFC</SimpleData>
-		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 22:14</SimpleData>
-		<SimpleData name="Report Time (UTC Timezone)">2018/03/20 02:14</SimpleData>
-		<SimpleData name="County">HARALSON</SimpleData>
-		<SimpleData name="Location">4 WNW TALLAPOOSA</SimpleData>
-		<SimpleData name="ST">GA</SimpleData>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.29">
+	<name>2 NNW FRENCH CAMP: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/28 20:28</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/29 01:28</SimpleData>
+		<SimpleData name="County">CHOCTAW</SimpleData>
+		<SimpleData name="Location">2 NNW FRENCH CAMP</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
 		<SimpleData name="Event Type">TORNADO</SimpleData>
 		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
-		<SimpleData name="Lat">33.77</SimpleData>
-		<SimpleData name="Lon">-85.36</SimpleData>
-		<SimpleData name="Remark">NWS STORM SURVEY FOUND A TORNADO THAT WENT THROUGH JACKSONVILLE, AL CONTINUED INTO GA CAUSING EF1 DAMAGE WITH A MAXIMUM ESTIMATED WIND SPEED OF 95 MPH. THE TORNADO LASTED FOR ROUGHLY 1 MINUTE AFTER CROSSING THE STATE LINE AND TRAVELED APPROX 1 MILE BEFORE DISSIPATING.</SimpleData>
-		<SimpleData name="ugc">GAC143</SimpleData>
-		<SimpleData name="ugcname">Haralson</SimpleData>
+		<SimpleData name="Lat">33.32</SimpleData>
+		<SimpleData name="Lon">-89.41</SimpleData>
+		<SimpleData name="Remark">THIS TORNADO BEGAN NEAR THE INTERSECTION OF DENDY ROAD AND MS HIGHWAY 413 WHERE IT SNAPPED MULTIPLE LARGE TREE LIMBS. THE TORNADO PROCEEDED NORTHEAST TOWARD THE NATCHEZ TRACE WHERE IT FIRST CROSSED WHITES ROAD AND UPROOTED SEVERAL TREES. THE STRONGEST WINDS OCCURRED AS THE TORNADO PASSED OVER MILLER AND RABUN ROADS AND CONTINUED ALONG THE NATCHEZ TRACE PARKWAY NEAR STEWART WEIR ROAD AND HAMRICK ROAD. NUMEROUS LARGE SOFT AND HARDWOOD TREES WERE UPROOTED AND SNAPPED THROUGH THIS AREA WHERE WINDS WERE ESTIMATED AT 110MPH. THE TORNADO CONTINUED ALONG THE NATCHEZ TRACE TO NEAR REX ROAD CAUSING SPORADIC TREE DAMAGE WITH A FEW TREES SNAPPED AND UPROOTED. THE TORNADO QUICKLY WEAKENED AND DISSIPATED OVER A WOODED AREA SOUTH OF THE NATCHEZ TRACE PARKWAY BUT BEFORE REACHING CHESTER TOMNOLEN ROAD.</SimpleData>
+		<SimpleData name="ugc">MSC019</SimpleData>
+		<SimpleData name="ugcname">Choctaw</SimpleData>
 	</SchemaData></ExtendedData>
-      <Point><coordinates>-85.36,33.77</coordinates></Point>
+      <Point><coordinates>-89.41,33.32</coordinates></Point>
   </Placemark>
-  <Placemark>
-	<name>1 NNW BUCHANAN: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
-		<SimpleData name="Office">FFC</SimpleData>
-		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 22:25</SimpleData>
-		<SimpleData name="Report Time (UTC Timezone)">2018/03/20 02:25</SimpleData>
-		<SimpleData name="County">HARALSON</SimpleData>
-		<SimpleData name="Location">1 NNW BUCHANAN</SimpleData>
-		<SimpleData name="ST">GA</SimpleData>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.30">
+	<name>3 WNW FLOWOOD: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/28 20:58</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/29 01:58</SimpleData>
+		<SimpleData name="County">HINDS</SimpleData>
+		<SimpleData name="Location">3 WNW FLOWOOD</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
 		<SimpleData name="Event Type">TORNADO</SimpleData>
 		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
-		<SimpleData name="Lat">33.81</SimpleData>
-		<SimpleData name="Lon">-85.19</SimpleData>
-		<SimpleData name="Remark">*** 2 INJ *** AN EF-1 TORNADO WITH MAX WINDS OF 90 MPH TRACKED 1.4 MILES THROUGH HARALSON COUNTY IN THE CITY OF BUCHANAN WHERE IT SNAPPED AND UPROOTED NUMEROUS TREES. TWO PEOPLE WERE INJURED WHEN A TREE FELL ON A HOME IN THE PATH OF THE TORNADO.</SimpleData>
-		<SimpleData name="ugc">GAC143</SimpleData>
-		<SimpleData name="ugcname">Haralson</SimpleData>
+		<SimpleData name="Lat">32.33</SimpleData>
+		<SimpleData name="Lon">-90.15</SimpleData>
+		<SimpleData name="Remark">THIS BRIEF, WEAK EF-0 DEVELOPED ALONG LAKELAND DR ON THE NORTH END OF THE LEFLEURS BLUFF GOLF COURSE AND TRAVELED EAST ALONG LAKELAND DR, ENDING NEAR RIDGEWOOD RD. ALONG THE PATH, A FEW TREES WERE UPROOTED AND MULTIPLE TREES WERE TOPPED MAINLY ON THE NORTH END OF LAKELAND DR. THE WINDOW AWNING WAS DAMAGED AT A PROFESSIONAL BUILDING ON LELIA DR.</SimpleData>
+		<SimpleData name="ugc">MSC049</SimpleData>
+		<SimpleData name="ugcname">Hinds</SimpleData>
 	</SchemaData></ExtendedData>
-      <Point><coordinates>-85.19,33.81</coordinates></Point>
+      <Point><coordinates>-90.15,32.33</coordinates></Point>
   </Placemark>
-  <Placemark>
-	<name>3 SE CAMPBELLTON: TORNADO</name>
-	<ExtendedData><SchemaData schemaUrl="#2278263cf9624f6c9ddeb60d26efaae3">
-		<SimpleData name="Office">FFC</SimpleData>
-		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/19 23:11</SimpleData>
-		<SimpleData name="Report Time (UTC Timezone)">2018/03/20 03:11</SimpleData>
-		<SimpleData name="County">FULTON</SimpleData>
-		<SimpleData name="Location">3 SE CAMPBELLTON</SimpleData>
-		<SimpleData name="ST">GA</SimpleData>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.31">
+	<name>5 N BRANDON: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/03/28 21:12</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/03/29 02:12</SimpleData>
+		<SimpleData name="County">RANKIN</SimpleData>
+		<SimpleData name="Location">5 N BRANDON</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
 		<SimpleData name="Event Type">TORNADO</SimpleData>
 		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
-		<SimpleData name="Lat">33.62</SimpleData>
-		<SimpleData name="Lon">-84.63</SimpleData>
-		<SimpleData name="Remark">AN EF-2 TORNADO WITH MAX WINDS OF 120 MPH TRACKED .5 MILES THROUGH SOUTH FULTON BETWEEN THE CITIES OF FAIRBURN AND CAMPBELLTON, UPROOTING MANY TREES AND DAMAGING MORE THAN 50 HOMES IN THE CHESTNUT RIDGE NEIGHBORHOOD.</SimpleData>
-		<SimpleData name="ugc">GAC121</SimpleData>
-		<SimpleData name="ugcname">Fulton</SimpleData>
+		<SimpleData name="Lat">32.35</SimpleData>
+		<SimpleData name="Lon">-90</SimpleData>
+		<SimpleData name="Remark">THIS TORNADO BEGAN NEAR THE INTERSECTION OF BRANBURY CT AND RUSK RD IN THE CASTLEWOOD COMMUNITY, WHERE IT DOWNED A COUPLE OF SMALL TREES. THE TORNADO TRAVELED EAST ACROSS THE CASTLEWOOD GOLF COURSE WHERE IT SNAPPED A HARDWOOD TREE AND ALSO UPROOTED A TREE. THE TORNADO CONTINUED MOVING EAST JUST SOUTH OF CASTLEWOOD BLVD SNAPPING LIMBS ALONG THE WAY. THE TORNADO ENDED JUST PASS WILLOW GRAND CIR, WHERE IT SNAPPED SOME MORE LIMBS AND ALSO THROUGH TRAMPOLINE INTO THE TREES.</SimpleData>
+		<SimpleData name="ugc">MSC121</SimpleData>
+		<SimpleData name="ugcname">Rankin</SimpleData>
 	</SchemaData></ExtendedData>
-      <Point><coordinates>-84.63,33.62</coordinates></Point>
+      <Point><coordinates>-90,32.35</coordinates></Point>
   </Placemark>
-
+  <Placemark id="cdf692abab3043438d8732993c74cc59.32">
+	<name>7 NW PELAHATCHIE: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/06 20:03</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/07 01:03</SimpleData>
+		<SimpleData name="County">RANKIN</SimpleData>
+		<SimpleData name="Location">7 NW PELAHATCHIE</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">32.37</SimpleData>
+		<SimpleData name="Lon">-89.9</SimpleData>
+		<SimpleData name="Remark">THIS EF-0 TORNADO BEGAN IN A WOODED AREA ALONG PELAHATCHEE CREEK, THEN TRACKED EAST SOUTHEASTWARD NEAR HAYNES CHAPEL ROAD, ENDING NEAR LAKE RD. A FEW TREES WERE UPROOTED AND SEVERAL LARGE BRANCHES WERE SNAPPED ALONG THE PATH. POWER LINES WERE DOWNED ALONG HAYNES CHAPEL RD. ESTIMATED MAX WINDS 75 MPH, PATH LENGTH 2.75 MILES, PATH WIDTH 25 YARDS.</SimpleData>
+		<SimpleData name="ugc">MSC121</SimpleData>
+		<SimpleData name="ugcname">Rankin</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.9,32.37</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.33">
+	<name>6 NW PELAHATCHIE: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/06 20:05</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/07 01:05</SimpleData>
+		<SimpleData name="County">RANKIN</SimpleData>
+		<SimpleData name="Location">6 NW PELAHATCHIE</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">BROADCAST MEDIA</SimpleData>
+		<SimpleData name="Lat">32.37</SimpleData>
+		<SimpleData name="Lon">-89.88</SimpleData>
+		<SimpleData name="Remark">TREE DOWNED, POWER LINES DOWNED, AND LIMBS DOWNED ALONG HAYNES CHAPEL RD. TDS NOTED ON RADAR AT THE TIME.</SimpleData>
+		<SimpleData name="ugc">MSC121</SimpleData>
+		<SimpleData name="ugcname">Rankin</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.88,32.37</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.34">
+	<name>9 SW VICKSBURG: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/06 20:12</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/07 01:12</SimpleData>
+		<SimpleData name="County">WARREN</SimpleData>
+		<SimpleData name="Location">9 SW VICKSBURG</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">32.22</SimpleData>
+		<SimpleData name="Lon">-90.96</SimpleData>
+		<SimpleData name="Remark">THIS TORNADO BEGAN JUST WEST OF THE MISSISSIPPI RIVER OVER A HEAVILY WOODED AREA BEFORE MOVING OVER GLASS ROAD WHERE NUMEROUS LARGE BRANCHES AND A FEW SMALL TREES WERE SNAPPED. THE TORNADO REACHED PEAK INTENSITY RIGHT AS IT CROSSED HWY 61 WHERE MULTIPLE HARDWOOD TREES WERE SNAPPED. THE TORNADO DISSIPATED OVER A WOODED AREA JUST EAST OF HWY 61.</SimpleData>
+		<SimpleData name="ugc">MSC149</SimpleData>
+		<SimpleData name="ugcname">Warren</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-90.96,32.22</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.35">
+	<name>10 SE PORT GIBSON: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/06 21:27</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/07 02:27</SimpleData>
+		<SimpleData name="County">CLAIBORNE</SimpleData>
+		<SimpleData name="Location">10 SE PORT GIBSON</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">31.85</SimpleData>
+		<SimpleData name="Lon">-90.88</SimpleData>
+		<SimpleData name="Remark">THIS EF-1 TORNADO TOUCHED DOWN IN A WOODED AREA AROUND A MILE WEST OF TILLMAN ROAD AND FOREST GROVE ROAD. IT CAUSED SOME TREE DAMAGE WITH THE OUTER FRINGES OF THE CIRCULATION AS IT FIRST CROSSED PATTISON TILLMAN ROAD AND NORTHERN FORREST GROVE ROAD BUT MOST OF THE ACTUAL TORNADIC CIRCULATION TOUCHED DOWN NEAR THE INTERSECTION OF TILLMAN ROAD AND FOREST GROVE ROAD. THERE WIDESPREAD TREES AND LARGE LIMBS EITHER SNAPPED OR UPROOTED. THE TORNADO CONTINUED TO THE EAST-SOUTHEAST BEFORE CROSSING FOREST GROVE ROAD. THERE IT CONTINUED INTO THE WOODS AND CREEK BASIN, WHERE SURVEY TEAM WAS UNABLE TO REACH. CIRCULATION WEAKENED AND TORNADO LIKELY LIFTED AS IT MOVED IN THIS AREA.</SimpleData>
+		<SimpleData name="ugc">MSC021</SimpleData>
+		<SimpleData name="ugcname">Claiborne</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-90.88,31.85</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.36">
+	<name>12 SE PORT GIBSON: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/06 21:32</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/07 02:32</SimpleData>
+		<SimpleData name="County">CLAIBORNE</SimpleData>
+		<SimpleData name="Location">12 SE PORT GIBSON</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">31.84</SimpleData>
+		<SimpleData name="Lon">-90.82</SimpleData>
+		<SimpleData name="Remark">THIS EF-1 TORNADO TOUCHED DOWN ON MOSS DOWN LANE. IT CONTINUED ALONG AROUND A 3-4 MILE PORTION OF HIGHWAY 547. THIS TORNADO BEGAN TO WIDEN AND CAUSED WIDESPREAD TREE DAMAGE ALL ALONG THE PATH, ESPECIALLY ALONG HIGHWAY 547. HUNDREDS OF TREES WERE SNAPPED AND UPROOTED AND MANY POWERLINES WERE BROKEN OR SNAPPED NEAR MT. PLEASANT ROAD, COLEMAN ROAD AND NORTHEAST SMITH ROAD. IN ADDITION, SOME HOMES HAD TREES FALL ON THEM OR HAD TIN PEELED BACK OFF THE ROOF. ONE 18 WHEELER TRACTOR TRAILER WAS OVERTURNED AS WELL. THE TORNADO WAS THE WIDEST AT THIS POINT ALONG HIGHWAY 547 AND DAMAGE REACHED HIGH END EF1 LEVELS. IT CONTINUED PAST NORTHEAST SMITH ROAD INTO ANOTHER CREEK BASIN BEFORE CROSSING BARLAND ROAD, CAUSING MORE WIDESPREAD TREE DAMAGE. IT CONTINUED INTO COPIAH COUNTY AND CROSSED HENNEBERRY ROAD BEFORE LIFTING.</SimpleData>
+		<SimpleData name="ugc">MSC021</SimpleData>
+		<SimpleData name="ugcname">Claiborne</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-90.82,31.84</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.37">
+	<name>18 W HAZLEHURST: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/06 21:46</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/07 02:46</SimpleData>
+		<SimpleData name="County">COPIAH</SimpleData>
+		<SimpleData name="Location">18 W HAZLEHURST</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">31.83</SimpleData>
+		<SimpleData name="Lon">-90.7</SimpleData>
+		<SimpleData name="Remark">THIS EF-1 TORNADO TOUCHED DOWN ALONG JUST WEST OF BARLOW ROAD. IT CONTINUED NEAR THE INTERSECTION OF BARLOW AND HENNEBERRY ROAD BEFORE CROSSING HAWKINS ROAD. MANY LARGE LIMBS AND TREES WERE SNAPPED AND UPROOTED ALONG THE PATH. IT CONTINUED EAST-SOUTHEAST BEFORE CROSSING HAWKINS ROAD. HERE SOON AFTER CROSSING INTO ANOTHER CREEK BASIN, THE TORNADO WEAKENED AND LIFTED.</SimpleData>
+		<SimpleData name="ugc">MSC029</SimpleData>
+		<SimpleData name="ugcname">Copiah</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-90.7,31.83</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.38">
+	<name>3 ENE NEW HEBRON: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/06 23:01</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/07 04:01</SimpleData>
+		<SimpleData name="County">JEFFERSON DAVIS</SimpleData>
+		<SimpleData name="Location">3 ENE NEW HEBRON</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">31.74</SimpleData>
+		<SimpleData name="Lon">-89.94</SimpleData>
+		<SimpleData name="Remark">THIS TORNADO TOUCHED DOWN JUST EAST-NORTHEAST OF NEW HEBRON, ALONG OLD HEBRON GWINVILLE ROAD. SOME TREES WERE SNAPPED AND UPROOTED IN THIS AREA. IT CONTINUED EAST-SOUTHEAST TOWARDS SILVER SWAMP ROAD AND NEW HEBRON JANESVILLE ROAD. MORE TREES AND LIMBS WERE SNAPPED OR UPROOTED IN THIS AREA, ESPECIALLY ALONG NEW HEBRON JANESVILLE ROAD. THE TORNADO CONTINUED ACROSS HIGHWAY 13 AND DALE ROAD, WHERE A FEW LARGE TREES WERE UPROOTED IN THE FIELDS AND WOODS NEARBY. THE TORNADO LIFTED SOON AFTER BEFORE CROSSING SUGAR RIDGE ROAD. THIS TORNADO WAS RATED EF1, WITH WIND SPEEDS OF 95MPH. THE PATH LENGTH WAS 4.67 MILES AND WIDTH OF 350 YARDS.</SimpleData>
+		<SimpleData name="ugc">MSC065</SimpleData>
+		<SimpleData name="ugcname">Jefferson Davis</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.94,31.74</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.39">
+	<name>6 WSW MOUNT OLIVE: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/06 23:18</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/07 04:18</SimpleData>
+		<SimpleData name="County">JEFFERSON DAVIS</SimpleData>
+		<SimpleData name="Location">6 WSW MOUNT OLIVE</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">31.73</SimpleData>
+		<SimpleData name="Lon">-89.76</SimpleData>
+		<SimpleData name="Remark">THIS TORNADO TOUCHED DOWN NEAR THE JEFFERSON DAVIS-COVINGTON COUNTY LINE ALONG LUCAS HOLLOW ROAD. IT CONTINUED SOUTHEAST, CROSSING THE COVINGTON COUNTY LINE. SOME LARGE LIMBS AND TREES WERE SNAPPED AND UPROOTED AT THIS LOCATION. IT THEN CROSSED LUCAS HOLLOW ROAD AGAIN BEFORE CROSSING LEONARD ROAD. A TORNADO DEBRIS SIGNATURE WAS INDICATED ON RADAR IN THESE LOCATIONS. THE TORNADO UPROOTED AND SNAPPED MANY TREES IN THIS REGION. IT ALSO OVERTURNED A SMALL TRACTOR TRAILER ON OAKVALE ROAD AND CAUSED SOME MINOR SHINGLE DAMAGE TO A HOME. AFTER CROSSING OAKVALE ROAD TWICE, THE TORNADO LIFTED SOON AFTER BEFORE CROSSING HIGHWAY 35. THIS TORNADO WAS RATED EF1 WITH WINDS OF 105MPH. THE PATH LENGTH WAS 2.91 MILES AND WIDTH WAS 440 YARDS.</SimpleData>
+		<SimpleData name="ugc">MSC065</SimpleData>
+		<SimpleData name="ugcname">Jefferson Davis</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.76,31.73</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.40">
+	<name>5 SW MOUNT OLIVE: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/06 23:22</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/07 04:22</SimpleData>
+		<SimpleData name="County">COVINGTON</SimpleData>
+		<SimpleData name="Location">5 SW MOUNT OLIVE</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">EMERGENCY MNGR</SimpleData>
+		<SimpleData name="Lat">31.71</SimpleData>
+		<SimpleData name="Lon">-89.73</SimpleData>
+		<SimpleData name="Remark">TREE DOWNED ACROSS LEONARD RD. TDS NOTED ON RADAR AT THE TIME.</SimpleData>
+		<SimpleData name="ugc">MSC031</SimpleData>
+		<SimpleData name="ugcname">Covington</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.73,31.71</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.41">
+	<name>5 NNW COLLINS: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/06 23:33</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/07 04:33</SimpleData>
+		<SimpleData name="County">COVINGTON</SimpleData>
+		<SimpleData name="Location">5 NNW COLLINS</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">31.71</SimpleData>
+		<SimpleData name="Lon">-89.58</SimpleData>
+		<SimpleData name="Remark">THIS TORNADO TOUCHED DOWN SOUTHEAST OF MOUNT OLIVE JUST TO THE WEST OF LINDA SANFORD LANE, NEAR THE INTERSECTION OF WILLIAM WARREN ROAD. SOME TREES WERE SNAPPED AND UPROOTED JUST WEST AND ALONG WILLIAM WARREN ROAD. IT THEN CONTINUED EAST-SOUTHEAST BEFORE CROSSING SALEM CHURCH ROAD. SOME LARGE LIMBS WERE SNAPPED IN THIS AREA. IT THEN CROSSED ROCKY VALLEY ROAD, WHERE SOME LIMBS WERE SNAPPED AND FEW PINE TREES WERE UPROOTED. ALSO SOME MINOR SHINGLE DAMAGE OCCURRED TO THE HOME. THE TORNADO BECAME WEAKER AND LIFTED SOON AFTER CROSSING THE ROAD. THIS TORNADO WAS RATED EF1 WITH WIND SPEEDS OF 90MPH. THE PATH LENGTH WAS 1.75 MILES AND WIDTH WAS 125 YARDS.</SimpleData>
+		<SimpleData name="ugc">MSC031</SimpleData>
+		<SimpleData name="ugcname">Covington</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.58,31.71</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.42">
+	<name>5 SSE ABBEVILLE: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/14 04:48</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/14 09:48</SimpleData>
+		<SimpleData name="County">LAFAYETTE</SimpleData>
+		<SimpleData name="Location">5 SSE ABBEVILLE</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">34.45</SimpleData>
+		<SimpleData name="Lon">-89.46</SimpleData>
+		<SimpleData name="Remark">THE TORNADO DAMAGED THE ROOFS OF SEVERAL HOMES AND FARM BUILDINGS AND DESTROYED 3 SMALLER OUTBUILDINGS. AFTER CROSSING CR 215...THE TORNADO CAUSED EF1 DAMAGE TO A RESIDENCE AND UPROOTED SEVERAL TREES. THE TORNADO DISSIPATED ROUGHLY 1/4 MILE EAST OF CR 215.</SimpleData>
+		<SimpleData name="ugc">MSC071</SimpleData>
+		<SimpleData name="ugcname">Lafayette</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.46,34.45</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.43">
+	<name>4 ENE OXFORD: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">MEG</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/14 04:49</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/14 09:49</SimpleData>
+		<SimpleData name="County">LAFAYETTE</SimpleData>
+		<SimpleData name="Location">4 ENE OXFORD</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">34.39</SimpleData>
+		<SimpleData name="Lon">-89.46</SimpleData>
+		<SimpleData name="Remark">AN EF0 TORNADO MOVED ALONG HIGHWAY 30 TO THE NORTH AND EAST OF OXFORD. THIS TORNADO UPROOTED SEVERAL TREES AND CAUSED MINOR ROOF DAMAGE TO HOMES ALONG HIGHWAY 30.</SimpleData>
+		<SimpleData name="ugc">MSC071</SimpleData>
+		<SimpleData name="ugcname">Lafayette</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.46,34.39</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.44">
+	<name>1 N FLOWOOD: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/14 07:44</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/14 12:44</SimpleData>
+		<SimpleData name="County">RANKIN</SimpleData>
+		<SimpleData name="Location">1 N FLOWOOD</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">32.33</SimpleData>
+		<SimpleData name="Lon">-90.11</SimpleData>
+		<SimpleData name="Remark">NWS SURVEY TEAM FOUND AN EF1 TORNADO WITH MAXIMUM WINDS OF 90MPH, PATH LENGTH OF 6.15 MILES AND PATH WIDTH OF 50 YDS. THIS TORNADO BEGAN NEAR JACKSON PREPARATORY SCHOOL ALONG LAKELAND DRIVE AND TRACKED EAST-NORTHEAST JUST NORTH OF THE LAKELAND DRIVE. MOST OF THE DAMAGE WAS LIMITED TO TREES WITH THE MOST SIGNIFICANT TREE DAMAGE INVOLVING SNAPPED AND UPROOTED HARDWOOD TREES. THERE WAS SCATTERED MINOR STRUCTURAL DAMAGE, MAINLY TO ROOFS, AS LARGE LIMBS AND TREES FELL UPON RESIDENCES. A FEW BUSINESSES ALSO SUSTAINED MINOR STRUCTURAL DAMAGE DUE DIRECTLY TO WINDS NEAR THE INTERSECTION OF GRANTS FERRY ROAD AND LAKELAND DRIVE. ALONG A PORTION OF THE TORNADO'S PATH THROUGH FLOWOOD AND MILLCREEK COMMUNITIES THE TRACK SHOWED EVIDENCE OF SKIPPING AND PRODUCING VERY LIMITED DAMAGE.</SimpleData>
+		<SimpleData name="ugc">MSC121</SimpleData>
+		<SimpleData name="ugcname">Rankin</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-90.11,32.33</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.45">
+	<name>13 ESE COLUMBIA: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/14 09:06</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/14 14:06</SimpleData>
+		<SimpleData name="County">LAMAR</SimpleData>
+		<SimpleData name="Location">13 ESE COLUMBIA</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">31.16</SimpleData>
+		<SimpleData name="Lon">-89.63</SimpleData>
+		<SimpleData name="Remark">THIS EF1 TORNADO BEGAN NEAR JOHNSON ROAD AND LUTHER SAUCIER ROAD, SNAPPING A FEW SOFTWOOD TREES AND UPROOTING SOME HARDWOOD TREES. IT THEN CONTINUED NORTHEAST, CAUSING TREE DAMAGE ACROSS CANEY CHURCH ROAD AND PURVIS TO COLUMBIA ROAD. IT THEN CROSSED NEAR THE SOUTH AND EAST SIDE OF BIG BAY LAKE., ONCE AGAIN CAUSING SPORADIC TREE DAMAGE. THE TORNADO LIFTED NEAR PURVIS OLOH ROAD.</SimpleData>
+		<SimpleData name="ugc">MSC073</SimpleData>
+		<SimpleData name="ugcname">Lamar</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.63,31.16</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.46">
+	<name>3 SW NOXAPATER: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/14 09:23</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/14 14:23</SimpleData>
+		<SimpleData name="County">WINSTON</SimpleData>
+		<SimpleData name="Location">3 SW NOXAPATER</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">32.96</SimpleData>
+		<SimpleData name="Lon">-89.1</SimpleData>
+		<SimpleData name="Remark">THIS EF1 TORNADO BEGAN SOUTHWEST OF ROBERTS RD AND TRAVELED NORTHEAST. ALONG ITS PATH, SOME TIN WAS RIPPED OFF OF A LARGE SHED AND SEVERAL TREES WERE SNAPPED OR UPROOTED. AS THE TORNADO CROSSED ROBERTS RD, IT RIPPED OFF PART OF THE ROOF OF A HOME. SEVERAL MORE LARGE TREES WERE UPROOTED AND SNAPPED IN THIS AREA. THE TORNADO CONTINUED NORTHEAST INTO A WOODED AREA WHERE THE END POINT HAD TO BE ESTIMATED.</SimpleData>
+		<SimpleData name="ugc">MSC159</SimpleData>
+		<SimpleData name="ugcname">Winston</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.1,32.96</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.47">
+	<name>13 ESE COLUMBIA: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/14 10:06</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/14 15:06</SimpleData>
+		<SimpleData name="County">LAMAR</SimpleData>
+		<SimpleData name="Location">13 ESE COLUMBIA</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">31.16</SimpleData>
+		<SimpleData name="Lon">-89.63</SimpleData>
+		<SimpleData name="Remark">(CORRECTS TIME FOR PREVIOUS TORNADO REPORT FROM 13 ESE COLUMBIA) THIS EF1 TORNADO BEGAN NEAR JOHNSON ROAD AND LUTHER SAUCIER ROAD, SNAPPING A FEW SOFTWOOD TREES AND UPROOTING SOME HARDWOOD TREES. IT THEN CONTINUED NORTHEAST, CAUSING TREE DAMAGE ACROSS CANEY CHURCH ROAD AND PURVIS TO COLUMBIA ROAD. IT THEN CROSSED NEAR THE SOUTH AND EAST SIDE OF BIG BAY LAKE., ONCE AGAIN CAUSING SPORADIC TREE DAMAGE. THE TORNADO LIFTED NEAR PURVIS OLOH ROAD.</SimpleData>
+		<SimpleData name="ugc">MSC073</SimpleData>
+		<SimpleData name="ugcname">Lamar</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.63,31.16</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.48">
+	<name>13 ESE COLUMBIA: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/14 10:07</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/14 15:07</SimpleData>
+		<SimpleData name="County">LAMAR</SimpleData>
+		<SimpleData name="Location">13 ESE COLUMBIA</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">31.16</SimpleData>
+		<SimpleData name="Lon">-89.63</SimpleData>
+		<SimpleData name="Remark">(CORRECTS BEGIN TIME FOR PREVIOUS TORNADO REPORT FROM 13 ESE COLUMBIA) THIS EF1 TORNADO BEGAN NEAR JOHNSON ROAD AND LUTHER SAUCIER ROAD, SNAPPING A FEW SOFTWOOD TREES AND UPROOTING SOME HARDWOOD TREES. IT THEN CONTINUED NORTHEAST, CAUSING TREE DAMAGE ACROSS CANEY CHURCH ROAD AND PURVIS TO COLUMBIA ROAD. IT THEN CROSSED NEAR THE SOUTH AND EAST SIDE OF BIG BAY LAKE., ONCE AGAIN CAUSING SPORADIC TREE DAMAGE. THE TORNADO LIFTED NEAR PURVIS OLOH ROAD.</SimpleData>
+		<SimpleData name="ugc">MSC073</SimpleData>
+		<SimpleData name="ugcname">Lamar</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.63,31.16</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.49">
+	<name>2 SSW MERIDIAN: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/14 10:43</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/14 15:43</SimpleData>
+		<SimpleData name="County">LAUDERDALE</SimpleData>
+		<SimpleData name="Location">2 SSW MERIDIAN</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">32.36</SimpleData>
+		<SimpleData name="Lon">-88.73</SimpleData>
+		<SimpleData name="Remark">*** 2 INJ *** UPDATED TO INCLUDE 2 INJURIES. THIS EF2 TORNADO DEVELOPED JUST TO THE NORTH OF I-20 ALONG HIGHWAY 19N. IT CROSSED THROUGH DOWNTOWN MERIDIAN, CAUSING TREE DAMAGE TO MUCH OF THE AREA. IT CAUSED STRUCTURE DAMAGE TO A FEW BUILDINGS ALONG 14TH STREET, INCLUDING ROOF AND FAÃ§ADE DAMAGE. THE TORNADO REACHED ITS STRONGEST INTENSITY OF EF2 STRENGTH AS IT NEARED 23RD STREET. HERE IT SNAPPED A COUPLE OF POWER POLES, ALONG WITH MULTIPLE HARDWOOD AND SOFTWOOD TREES. IN ADDITION, IT TORE THE ROOF OFF OF AN APARTMENT BUILDING AND A PORTION OF A BUILDING AT MAGNOLIA MIDDLE SCHOOL. VIDEO EVIDENCE ALSO INDICATED THE TORNADO TORE THE ROOF OFF OF A HOME NEAR GRANDVIEW AVENUE ALONG WITH THE LOSS OF SOME EXTERIOR WALLS. THE TORNADO CONTINUED TO TRACK NORTHEAST AND GENERALLY FOLLOWED HIGHWAY 45. DAMAGE MAINLY CONSISTED OF TREES BEING SNAPPED OR UPROOTED. SOME OF THESE TREES FELL ONTO HOMES. THE TORNADO LIFTED NEAR WILLOWLAKE ROAD.</SimpleData>
+		<SimpleData name="ugc">MSC075</SimpleData>
+		<SimpleData name="ugcname">Lauderdale</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.73,32.36</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.50">
+	<name>2 SSW MERIDIAN: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">JAN</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/14 10:43</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/14 15:43</SimpleData>
+		<SimpleData name="County">LAUDERDALE</SimpleData>
+		<SimpleData name="Location">2 SSW MERIDIAN</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">32.36</SimpleData>
+		<SimpleData name="Lon">-88.73</SimpleData>
+		<SimpleData name="Remark">THIS EF2 TORNADO DEVELOPED JUST TO THE NORTH OF I-20 ALONG HIGHWAY 19N. IT CROSSED THROUGH DOWNTOWN MERIDIAN, CAUSING TREE DAMAGE TO MUCH OF THE AREA. IT CAUSED STRUCTURE DAMAGE TO A FEW BUILDINGS ALONG 14TH STREET, INCLUDING ROOF AND FAçADE DAMAGE. THE TORNADO REACHED ITS STRONGEST INTENSITY OF EF2 STRENGTH AS IT NEARED 23RD STREET. HERE IT SNAPPED A COUPLE OF POWER POLES, ALONG WITH MULTIPLE HARDWOOD AND SOFTWOOD TREES. IN ADDITION, IT TORE THE ROOF OFF OF AN APARTMENT BUILDING AND A PORTION OF A BUILDING AT MAGNOLIA MIDDLE SCHOOL. VIDEO EVIDENCE ALSO INDICATED THE TORNADO TORE THE ROOF OFF OF A HOME NEAR GRANDVIEW AVENUE ALONG WITH THE LOSS OF SOME EXTERIOR WALLS. THE TORNADO CONTINUED TO TRACK NORTHEAST AND GENERALLY FOLLOWED HIGHWAY 45. DAMAGE MAINLY CONSISTED OF TREES BEING SNAPPED OR UPROOTED. SOME OF THESE TREES FELL ONTO HOMES. THE TORNADO LIFTED NEAR WILLOWLAKE ROAD.</SimpleData>
+		<SimpleData name="ugc">MSC075</SimpleData>
+		<SimpleData name="ugcname">Lauderdale</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.73,32.36</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.51">
+	<name>3 SSW MCNEIL: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">LIX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/14 11:30</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/14 16:30</SimpleData>
+		<SimpleData name="County">PEARL RIVER</SimpleData>
+		<SimpleData name="Location">3 SSW MCNEIL</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Mag.">0</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">30.62</SimpleData>
+		<SimpleData name="Lon">-89.65</SimpleData>
+		<SimpleData name="Remark">TORNADO SIGHTED BY PUBLIC TOUCHING DOWN VERY CLOSE TO THE CARRIERE QUICK STOP ON U.S. HIGHWAY 11, REMOVING A PIECE OF TIN FROM THE AWNING AND STRIKING A VEHICLE. TORNADO CROSSED HIGHWAY AND STRUCK THE FIRST SOUTHERN BANK BRANCH OFFICE, REMOVING THE ENTIRE AWNING ACROSS THE FRONT DECK AND LIGHTING. MATERIAL HURLED INTO THE YARDS OF RESIDENCES ALONG OLD HIGHWAY 11 AND SUSPENDED IN TREES. LARGE OAK TREE BRANCHES BROKEN IN FAMILY DOLLAR PARKING LOT. ESTIMATED 75 MPH. LENGTH 0.2 MILES, WIDTH 25 YDS.</SimpleData>
+		<SimpleData name="ugc">MSC109</SimpleData>
+		<SimpleData name="ugcname">Pearl River</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.65,30.62</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.52">
+	<name>1 S LONG BEACH: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">LIX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/14 14:09</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/14 19:09</SimpleData>
+		<SimpleData name="County">HARRISON</SimpleData>
+		<SimpleData name="Location">1 S LONG BEACH</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Mag.">0</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">30.35</SimpleData>
+		<SimpleData name="Lon">-89.17</SimpleData>
+		<SimpleData name="Remark">COMBINATION OF YOUTUBE STORM CHASER VIDEO AND STORM SURVEY INDICATED A MULTIPLE VORTEX WATERSPOUT MOVED THROUGH THE LONG BEACH HARBOR, REMOVING THE ROOF OFF AN OUTBUILDING AND TOPPLING TWO TALL MASTED SAIL BOATS. WATERSPOUT PROCEEDED ONSHORE ONTO THE BEACH AND CROSSED U.S. HIGHWAY 90 NEAR NICHOLSON STREET, LIFTING IN THE REAR OF ST. THOMAS THE APOSTLE CATHOLIC CHURCH. MEASURED TRACK LENGTH FROM VIDEO FOOTAGE IS 0.57 MILES, WIDTH 75 YARDS. ESTIMATED 70 MPH WINDS.</SimpleData>
+		<SimpleData name="ugc">MSC047</SimpleData>
+		<SimpleData name="ugcname">Harrison</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-89.17,30.35</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.53">
+	<name>9 NW VANCLEAVE: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">LIX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/14 18:18</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/14 23:18</SimpleData>
+		<SimpleData name="County">JACKSON</SimpleData>
+		<SimpleData name="Location">9 NW VANCLEAVE</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">30.65</SimpleData>
+		<SimpleData name="Lon">-88.76</SimpleData>
+		<SimpleData name="Remark">SURVEY INDICATED A NARROW PATH ABOUT 30 TO 50 YARDS WIDE OF SPORADIC OAK AND PINE TREES SNAPPED NEAR THE BASE OVER A 1.7 MILE LONG EASTERLY TRACK. ONE SHED WAS DAMAGED OR DESTROYED ON PRIVATE PROPERTY. PEAK WINDS 95 MPH. TIME ESTIMATED BY KMOB SRM DATA.</SimpleData>
+		<SimpleData name="ugc">MSC059</SimpleData>
+		<SimpleData name="ugcname">Jackson</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.76,30.65</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.54">
+	<name>4 NW OCEAN SPRINGS: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">LIX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/14 18:19</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/14 23:19</SimpleData>
+		<SimpleData name="County">JACKSON</SimpleData>
+		<SimpleData name="Location">4 NW OCEAN SPRINGS</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">30.45</SimpleData>
+		<SimpleData name="Lon">-88.85</SimpleData>
+		<SimpleData name="Remark">A TORNADO TOUCHED DOWN IN THE COMMUNITY OF ST MARTIN JUST SOUTH OF LEMOYNE BLVD AND TRACKED NORTHEAST ON AN INTERMITTENT PATH ENDING NEAR THE INTERSECTION OF INTERSTATE 10 AND MS HIGHWAY 609. THE MOST SIGNIFICANT DAMAGE OCCURRED AT A STRIP SHOPPING CENTER. PLATE GLASS WINDOWS WERE BLOWN OUT...A PORTION OF THE ROOF WAS REMOVED ALONG WITH A PORTION OF THE WALL. SEVERAL CARS WERE OVERTURNED AND ROLLED IN THE PAKING LOT. PATH LENGTH 1.8 MI. MAX PATH WIDTH 75 YD. ESTIMATED MAX WIND 105MPH.</SimpleData>
+		<SimpleData name="ugc">MSC059</SimpleData>
+		<SimpleData name="ugcname">Jackson</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.85,30.45</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.55">
+	<name>3 NNW WADE: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">LIX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/14 18:39</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/14 23:39</SimpleData>
+		<SimpleData name="County">JACKSON</SimpleData>
+		<SimpleData name="Location">3 NNW WADE</SimpleData>
+		<SimpleData name="ST">MS</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Mag.">1</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">30.68</SimpleData>
+		<SimpleData name="Lon">-88.58</SimpleData>
+		<SimpleData name="Remark">VERY CONFINED AREA OF DAMAGE WHERE SEVERAL PINES AND A LARGE OAK TREE WERE SNAPPED NEAR THE BASE. PATH LENGTH SURVEYED AS 0.21 MILES, MAX WIDTH 25 YARDS. PEAK WINDS ESTIMATED 95 MPH. TRACK MAY HAVE BEEN LONGER FARTHER WEST BUT INACCESSIBLE DUE TO WETLANDS. TIMES ESTIMATED BY KMOB SRM DATA.</SimpleData>
+		<SimpleData name="ugc">MSC059</SimpleData>
+		<SimpleData name="ugcname">Jackson</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-88.58,30.68</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.56">
+	<name>1 SSW FORT RUCKER: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">TAE</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/22 14:11</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/22 18:11</SimpleData>
+		<SimpleData name="County">DALE</SimpleData>
+		<SimpleData name="Location">1 SSW FORT RUCKER</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">31.33</SimpleData>
+		<SimpleData name="Lon">-85.71</SimpleData>
+		<SimpleData name="Remark">EF0 TORNADO TOUCHED TOUCHED AT FORT RUCKER. LARGE TREE LIMBS AND SMALL TREES WERE BROKEN OR UPROOTED ALONG THE PATH. A WOODEN DUGOUT STRUCTURE AT A BASEBALL FIELD WAS ALSO DAMAGED, ALONG WITH POWERLINES. MAXIMUM WINDS ARE ESTIMATED TO BE ABOUT 75MPH. THE TORNADO TOUCHED DOWN NEAR KINGSMAN STREET AND ANDREWS AVENUE AND MOVED NORTH- NORTHWEST, LIFTING NEAR BAKER STREET.</SimpleData>
+		<SimpleData name="ugc">ALC045</SimpleData>
+		<SimpleData name="ugcname">Dale</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-85.71,31.33</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.57">
+	<name>6 WNW RUTLEDGE: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">MOB</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/22 13:43</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/22 18:43</SimpleData>
+		<SimpleData name="County">CRENSHAW</SimpleData>
+		<SimpleData name="Location">6 WNW RUTLEDGE</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">31.75</SimpleData>
+		<SimpleData name="Lon">-86.4</SimpleData>
+		<SimpleData name="Remark">AN EF-1 TORNADO TOUCHED DOWN NEAR JEFFCOAT RD. ONE MOBILE HOME AND A SHED WERE DESTROYED. SEVERAL LARGE TREES WERE UPROOTED OR SNAPPED, ONE OF WHICH FELL ON A VEHICLE. THE TORNADO THEN CAUSED SPORADIC DAMAGE AS IT PASSED THROUGH MAINLY WOODED AREAS UPROOTING AND SNAPPING LARGE TREES, WITH ONE FALLING ON A HOUSE AND CAUSING MINOR DAMAGE. MAXIMUM WINDS ESTIMATED AROUND 95 MPH. THE TORNADO LIFTED NEAR CENTER RIDGE ROAD.</SimpleData>
+		<SimpleData name="ugc">ALC041</SimpleData>
+		<SimpleData name="ugcname">Crenshaw</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.4,31.75</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.58">
+	<name>3 NE SAVILLE: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">MOB</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/22 14:11</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/22 19:11</SimpleData>
+		<SimpleData name="County">CRENSHAW</SimpleData>
+		<SimpleData name="Location">3 NE SAVILLE</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">31.91</SimpleData>
+		<SimpleData name="Lon">-86.31</SimpleData>
+		<SimpleData name="Remark">A TORNADO TOUCHED DOWN NEAR DANIEL MILL RD CAUSING MINOR TREE DAMAGE, THEN STRENGTHENED TO AN EF-1 BEFORE REACHING OLIVER MYERS RD. SEVERAL LARGE TREES WERE UPROOTED OR SNAPPED. THE TORNADO CAUSED MINOR TO MODERATE ROOF AND SIDING DAMAGE TO SEVERAL HOMES AROUND A LAKE IN THE MAGNOLIA SHORES AREA. MAXIMUM WINDS ESTIMATED AROUND 100 MPH.</SimpleData>
+		<SimpleData name="ugc">ALC041</SimpleData>
+		<SimpleData name="ugcname">Crenshaw</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.31,31.91</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.59">
+	<name>3 WNW GRADY: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">BMX</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/22 14:25</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/22 19:25</SimpleData>
+		<SimpleData name="County">MONTGOMERY</SimpleData>
+		<SimpleData name="Location">3 WNW GRADY</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">32.01</SimpleData>
+		<SimpleData name="Lon">-86.24</SimpleData>
+		<SimpleData name="Remark">NWS METEOROLOGISTS SURVEYED DAMAGE IN SOUTHWEST MONTGOMERY COUNTY AND DETERMINED THAT THE DAMAGE WAS CONSISTENT WITH AN EF0 TORNADO. THE TORNADO TOUCHED DOWN JUST EAST OF PHILADELPHIA CHURCH ROAD, NORTHEAST OF LAPINE AND WEST OF GRADY. THE TORNADO MOVED NORTHEASTWARD AND CROSSED PHILADELPHIA CHURCH ROAD AND NAFTEL RAMER ROAD. THE TORNADO LIFTED JUST AFTER IT CROSSED SMILEY FERRY ROAD. SEVERAL TREES WERE UPROOTED OR SNAPPED ALONG THE DAMAGE PATH. THE MOST CONCENTRATED AREA OF DAMAGE WAS JUST AS THE TORNADO WAS LIFTING NEAR SMILEY FERRY ROAD, BUT STILL LIMITED TO TREE DAMAGE. THE TORNADO WAS ON THE GROUND FOR 2.57 MILES AND WAS 250 YARDS WIDE AT ITS WIDEST POINT.</SimpleData>
+		<SimpleData name="ugc">ALC101</SimpleData>
+		<SimpleData name="ugcname">Montgomery</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-86.24,32.01</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.60">
+	<name>4 ESE GASQUE: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">MOB</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/22 15:05</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/22 20:05</SimpleData>
+		<SimpleData name="County">BALDWIN</SimpleData>
+		<SimpleData name="Location">4 ESE GASQUE</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">30.24</SimpleData>
+		<SimpleData name="Lon">-87.76</SimpleData>
+		<SimpleData name="Remark">A STRONG WATERSPOUT MOVED ONSHORE AT THE 2200 BLOCK OF WEST BEACH BLVD. THE EF-1 TORNADO PRODUCED ROOF AND SIDING DAMAGE TO TWO HOMES. SEVERAL WINDOWS WERE ALSO BLOWN OUT. MAXIMUM WINDS ESTIMATED AROUND 95 MPH.</SimpleData>
+		<SimpleData name="ugc">ALC003</SimpleData>
+		<SimpleData name="ugcname">Baldwin</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-87.76,30.24</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.61">
+	<name>3 S FOLEY: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">MOB</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/22 15:25</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/22 20:25</SimpleData>
+		<SimpleData name="County">BALDWIN</SimpleData>
+		<SimpleData name="Location">3 S FOLEY</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">30.36</SimpleData>
+		<SimpleData name="Lon">-87.69</SimpleData>
+		<SimpleData name="Remark">*** 3 INJ *** AN EF-0 TORNADO TOUCHED DOWN AT THE ANCHORS AWEIGH RV RESORT WHERE 5 RVS WERE OVERTURNED. 3 PEOPLE INSIDE THE RVS WERE INJURED. THE TORNADO CONTINUED NORTHEAST TO JUST EAST OF HWY 59 AND CR-20. MINOR DAMAGE TO A CONVENIENCE STORY CANOPY AND TO THE LOWE'S WERE OBSERVED. THE TORNADO LIFTED NEAR THE INTERSECTION OF PRIDE DR AND JUNIPER ST. MAXIMUM WINDS ESTIMATED AROUND 80 MPH.</SimpleData>
+		<SimpleData name="ugc">ALC003</SimpleData>
+		<SimpleData name="ugcname">Baldwin</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-87.69,30.36</coordinates></Point>
+  </Placemark>
+  <Placemark id="cdf692abab3043438d8732993c74cc59.62">
+	<name>3 NNE ELBERTA: TORNADO</name>
+	<ExtendedData><SchemaData schemaUrl="#cdf692abab3043438d8732993c74cc59">
+		<SimpleData name="Office">MOB</SimpleData>
+		<SimpleData name="Report Time (Local WFO Timezone)">2018/04/22 15:38</SimpleData>
+		<SimpleData name="Report Time (UTC Timezone)">2018/04/22 20:38</SimpleData>
+		<SimpleData name="County">BALDWIN</SimpleData>
+		<SimpleData name="Location">3 NNE ELBERTA</SimpleData>
+		<SimpleData name="ST">AL</SimpleData>
+		<SimpleData name="Event Type">TORNADO</SimpleData>
+		<SimpleData name="Source">NWS STORM SURVEY</SimpleData>
+		<SimpleData name="Lat">30.45</SimpleData>
+		<SimpleData name="Lon">-87.58</SimpleData>
+		<SimpleData name="Remark">AN EF-0 TORNADO TOUCHED DOWN NEAR THE INTERSECTION OF CHATELAINE DR AND CR-87. A FEW HOMES EXPERIENCED SHINGLE DAMAGE. SOME TREES UPROOTED. THE TORNADO CONTINUED MOVING ALMOST DUE NORTH, PARALLELING CR-87, AND LIFTED NORTH OF THE DIXIE RD INTERSECTION. ISOLATED INSTANCES OF VERY MINOR STRUCTURAL DAMAGE TO A FEW RESIDENCES. MAXIMUM WINDS ESTIMATED AROUND 80 MPH.</SimpleData>
+		<SimpleData name="ugc">ALC003</SimpleData>
+		<SimpleData name="ugcname">Baldwin</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-87.58,30.45</coordinates></Point>
+  </Placemark>
 </Folder>
 </Document></kml>
